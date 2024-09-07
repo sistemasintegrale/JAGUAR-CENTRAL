@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+    </configSections>
+    <connectionStrings>
+        <add name="SGE.DataAccess.Properties.Settings.SGE_SERVICENConnectionString"
+            connectionString="Data Source=SISTEMA3;Initial Catalog=SGE_SERVICEN;User ID=sa;Password=123456"
+            providerName="System.Data.SqlClient" />
+        <add name="SGE.DataAccess.Properties.Settings.SVC_2ConnectionString"
+            connectionString="Data Source=sistema3;Initial Catalog=SVC_2;User ID=sa;Password=123456"
+            providerName="System.Data.SqlClient" />
+        <add name="SGE.DataAccess.Properties.Settings.SGE_SVC_2ConnectionString"
+            connectionString="Data Source=SISTEMA3;Initial Catalog=SGE_SVC_2;User ID=sa;Password=123456"
+            providerName="System.Data.SqlClient" />
+        <add name="SGE.DataAccess.Properties.Settings.SGE_SVC_2ConnectionString1"
+            connectionString="Data Source=sistema3;Initial Catalog=SGE_SVC_2;User ID=sa;Password=123456"
+            providerName="System.Data.SqlClient" />
+    </connectionStrings>
+</configuration>

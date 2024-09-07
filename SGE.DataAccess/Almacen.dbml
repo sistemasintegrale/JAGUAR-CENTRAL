@@ -1,0 +1,2089 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="jaguar_com_pe_CJ" Class="AlmacenDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=tcp:95.217.194.247,1433;Initial Catalog=jaguar_com_pe_CJ;Persist Security Info=True;User ID=jaguar_com_pe_CJ" SettingsObjectName="SGE.DataAccess.Properties.Settings" SettingsPropertyName="jaguar_com_pe_CJConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.SGEA_ALMACEN_ELIMINAR" Method="SGEA_ALMACEN_ELIMINAR">
+    <Parameter Name="almac_icod_almacen" Type="System.Int32" DbType="Int" />
+    <Parameter Name="almac_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="almac_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_UNIDAD_MEDIDA_ELIMINAR" Method="SGEA_UNIDAD_MEDIDA_ELIMINAR">
+    <Parameter Name="unidc_icod_unidad_medida" Type="System.Int32" DbType="Int" />
+    <Parameter Name="unidc_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_FAMILIA_CAB_ELIMINAR" Method="SGEA_FAMILIA_CAB_ELIMINAR">
+    <Parameter Name="famic_icod_familia" Type="System.Int32" DbType="Int" />
+    <Parameter Name="famic_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_EXTEND_DOC_VENTA_DIRECTA_DETALLE_INSERTAR" Method="SGE_EXTEND_DOC_VENTA_DIRECTA_DETALLE_INSERTAR">
+    <Parameter Name="dvdc_icod_doc_venta_directa" Type="System.Int32" DbType="Int" />
+    <Parameter Name="dvdd_iitem_doc_venta_directa" Type="System.Int32" DbType="Int" />
+    <Parameter Name="dvdd_iid_almacen" Type="System.Int32" DbType="Int" />
+    <Parameter Name="dvdd_iid_producto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="dvdd_ncantidad" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="dvdd_vdescripcion" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="dvdd_bbonificacion" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="dvdd_nprecio_unitario_item" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="dvdd_nmonto_impuesto_item" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="dvdd_nprecio_total_item" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPc" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_ALMACEN_SALDO_INICIAL_LISTAR" Method="SGEA_ALMACEN_SALDO_INICIAL_LISTAR">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEA_ALMACEN_SALDO_INICIAL_LISTARResult">
+      <Column Name="kardc_icod_correlativo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="kardc_fecha_movimiento" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="almac_icod_almacen" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_icod_producto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="kardc_numero_doc" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="kardc_icantidad_prod" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="strDesAlmacen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="strCodProducto" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="strDesProducto" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strTipoDoc" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="strUnidadMedida" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_INVENTARIO_CAB_ELIMINAR" Method="SGEA_INVENTARIO_CAB_ELIMINAR">
+    <Parameter Name="invc_icod_inventario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPC" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_INVENTARIO_DET_ELIMINAR" Method="SGEA_INVENTARIO_DET_ELIMINAR">
+    <Parameter Name="invc_icod_inventario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPc" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_INVENTARIO_DET_INSERTAR" Method="SGEA_INVENTARIO_DET_INSERTAR">
+    <Parameter Name="invc_icod_inventario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="invd_inro_item" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prdc_icod_producto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="invd_sis_stock" Type="System.Decimal" DbType="Decimal(8,4)" />
+    <Parameter Name="invd_icantidad" Type="System.Decimal" DbType="Decimal(8,4)" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPc" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_INVENTARIO_DET_MODIFICAR" Method="SGEA_INVENTARIO_DET_MODIFICAR">
+    <Parameter Name="invd_icod_detalle" Type="System.Int32" DbType="Int" />
+    <Parameter Name="invc_icod_inventario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="invd_inro_item" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prdc_icod_producto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="invd_sis_stock" Type="System.Decimal" DbType="Decimal(8,4)" />
+    <Parameter Name="invd_icantidad" Type="System.Decimal" DbType="Decimal(8,4)" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPc" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_INVENTARIO_CAB_INSERTAR" Method="SGEA_INVENTARIO_CAB_INSERTAR">
+    <Parameter Name="invc_icod_inventario" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="invc_iid_correlativo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="almac_icod_almacen" Type="System.Int32" DbType="Int" />
+    <Parameter Name="invc_sfecha_inventario" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="tablc_iid_tipo_inventario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tablc_iid_situacion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="invc_vobservaciones" Type="System.String" DbType="VarChar(80)" />
+    <Parameter Name="ningc_icod_nota_ingreso" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nsalc_icod_nota_salida" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPC" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_INVENTARIO_CAB_MODIFICAR" Method="SGEA_INVENTARIO_CAB_MODIFICAR">
+    <Parameter Name="invc_icod_inventario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="invc_iid_correlativo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="almac_icod_almacen" Type="System.Int32" DbType="Int" />
+    <Parameter Name="invc_sfecha_inventario" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="tablc_iid_tipo_inventario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tablc_iid_situacion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="invc_vobservaciones" Type="System.String" DbType="VarChar(80)" />
+    <Parameter Name="ningc_icod_nota_ingreso" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nsalc_icod_nota_salida" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPC" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_RESUMEN_MOV_PRODUCTOS" Method="SGEA_RESUMEN_MOV_PRODUCTOS">
+    <Parameter Name="dtFechaDesde" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="dtFechaHasta" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="intAlmacen" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEA_RESUMEN_MOV_PRODUCTOSResult">
+      <Column Name="almac_icod_almacen" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_icod_producto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dblSaldoAnterior" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="dblIngresos" Type="System.Decimal" DbType="Decimal(38,2) NOT NULL" CanBeNull="false" />
+      <Column Name="dblSalidas" Type="System.Decimal" DbType="Decimal(38,2) NOT NULL" CanBeNull="false" />
+      <Column Name="dblSaldoActual" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="strAlmacen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="strCodProducto" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="strProducto" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strUnidadMedida" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_INVENTARIO_CAB_LISTAR" Method="SGEA_INVENTARIO_CAB_LISTAR">
+    <Parameter Name="intPeriodo" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEA_INVENTARIO_CAB_LISTARResult">
+      <Column Name="invc_icod_inventario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="invc_iid_correlativo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="almac_icod_almacen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="invc_sfecha_inventario" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_inventario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tablc_iid_situacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="invc_vobservaciones" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="ningc_icod_nota_ingreso" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nsalc_icod_nota_salida" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="strTipoInventario" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strSituacion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strAlmacen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_CIERRE_ANUAL" Method="SGE_CIERRE_ANUAL">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_CIERRE_ANUALResult">
+      <Column Name="almac_icod_almacen" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_icod_producto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dblStock" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_SALDO_INICIAL_POR_CIERRE" Method="SGE_SALDO_INICIAL_POR_CIERRE">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_SALDO_INICIAL_POR_CIERREResult">
+      <Column Name="kardc_icod_correlativo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="almac_icod_almacen" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_icod_producto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="kardc_icantidad_prod" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_KARDEX_ACTUALIZAR_DOC" Method="SGE_KARDEX_ACTUALIZAR_DOC">
+    <Parameter Name="id_kardex" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="id_tipo_doc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strNroDoc" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPC" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_KARDEX_INSERTAR" Method="SGEA_KARDEX_INSERTAR">
+    <Parameter Name="kardc_icod_correlativo" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="kardc_ianio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="kardc_fecha_movimiento" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="almac_icod_almacen" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prdc_icod_producto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="kardc_icantidad_prod" Type="System.Decimal" DbType="Decimal(12,4)" />
+    <Parameter Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="kardc_numero_doc" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="kardc_tipo_movimiento" Type="System.Int32" DbType="Int" />
+    <Parameter Name="kardc_iid_motivo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="kardc_beneficiario" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="kardc_observaciones" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="kardc_flag_pase" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPC" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_KARDEX_MODIFICAR" Method="SGEA_KARDEX_MODIFICAR">
+    <Parameter Name="kardc_icod_correlativo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="kardc_ianio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="kardc_fecha_movimiento" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="almac_icod_almacen" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prdc_icod_producto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="kardc_icantidad_prod" Type="System.Decimal" DbType="Decimal(12,4)" />
+    <Parameter Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="kardc_numero_doc" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="kardc_tipo_movimiento" Type="System.Int32" DbType="Int" />
+    <Parameter Name="kardc_iid_motivo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="kardc_beneficiario" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="kardc_observaciones" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPC" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_KARDEX_LISTAR_X_MOTIVO_PRODUCTO" Method="SGEA_KARDEX_LISTAR_X_MOTIVO_PRODUCTO">
+    <Parameter Name="dtFechaDesde" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="dtFechaHasta" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="intTipoMov" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intMotivo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intProducto" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEA_KARDEX_LISTAR_X_MOTIVO_PRODUCTOResult">
+      <Column Name="kardc_fecha_movimiento" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="almac_icod_almacen" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_icod_producto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="kardc_icantidad_prod" Type="System.Decimal" DbType="Decimal(12,4)" CanBeNull="true" />
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="kardc_numero_doc" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="kardc_tipo_movimiento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="kardc_iid_motivo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="kardc_beneficiario" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="kardc_observaciones" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="dblIngreso" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="dblSalida" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="dblSaldo" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="strDocumento" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="strMotivo" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="strAlmacen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_KARDEX_ELIMINAR" Method="SGEA_KARDEX_ELIMINAR">
+    <Parameter Name="kardc_icod_correlativo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPC" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_KARDEX_VALORIZADO_ELIMINAR" Method="SGE_KARDEX_VALORIZADO_ELIMINAR">
+    <Parameter Name="kardv_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPc" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_KARDEX_VALORIZADO_INSERTAR" Method="SGE_KARDEX_VALORIZADO_INSERTAR">
+    <Parameter Name="kardv_icod_correlativo" Type="System.Int64" DbType="BigInt" Direction="InOut" />
+    <Parameter Name="kardv_ianio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="kardv_sfecha_movimiento" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="almcc_icod_almacen" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prdc_icod_producto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="kardv_icantidad_prod" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="kardv_inumero_doc" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="kardv_itipo_movimiento" Type="System.Int32" DbType="Int" />
+    <Parameter Name="kardv_iid_motivo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="kardv_vbeneficiario" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="kardv_vobservaciones" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="kardv_monto_total_compra" Type="System.Decimal" DbType="Decimal(12,4)" />
+    <Parameter Name="kardv_precio_costo_promedio" Type="System.Decimal" DbType="Decimal(12,4)" />
+    <Parameter Name="kardv_monto_saldo_valorizado" Type="System.Decimal" DbType="Decimal(12,4)" />
+    <Parameter Name="kardv_monto_unitario_compra" Type="System.Decimal" DbType="Decimal(12,4)" />
+    <Parameter Name="kardv_nmonto_ingreso_manual" Type="System.Decimal" DbType="Decimal(12,4)" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPc" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="kardv_itipo_actualizacion" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_KARDEX_VALORIZADO_MODIFICAR" Method="SGE_KARDEX_VALORIZADO_MODIFICAR">
+    <Parameter Name="kardv_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="kardv_ianio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="kardv_sfecha_movimiento" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="almcc_icod_almacen" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prdc_icod_producto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="kardv_icantidad_prod" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="kardv_inumero_doc" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="kardv_itipo_movimiento" Type="System.Int32" DbType="Int" />
+    <Parameter Name="kardv_iid_motivo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="kardv_vbeneficiario" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="kardv_vobservaciones" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="kardv_monto_total_compra" Type="System.Decimal" DbType="Decimal(12,4)" />
+    <Parameter Name="kardv_precio_costo_promedio" Type="System.Decimal" DbType="Decimal(12,4)" />
+    <Parameter Name="kardv_monto_saldo_valorizado" Type="System.Decimal" DbType="Decimal(12,4)" />
+    <Parameter Name="kardv_monto_unitario_compra" Type="System.Decimal" DbType="Decimal(12,4)" />
+    <Parameter Name="kardv_nmonto_ingreso_manual" Type="System.Decimal" DbType="Decimal(12,4)" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPc" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="kardv_itipo_actualizacion" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_KARDEX_VALORIZADO_SALDO_INICIAL_LISTAR" Method="SGE_KARDEX_VALORIZADO_SALDO_INICIAL_LISTAR">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_KARDEX_VALORIZADO_SALDO_INICIAL_LISTARResult">
+      <Column Name="kardv_icod_correlativo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="kardv_ianio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="kardv_sfecha_movimiento" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="almcc_icod_almacen" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_icod_producto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="kardv_icantidad_prod" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="kardv_inumero_doc" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="kardv_itipo_movimiento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="kardv_iid_motivo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="kardv_vbeneficiario" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="kardv_vobservaciones" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="kardv_monto_total_compra" Type="System.Decimal" DbType="Decimal(12,4) NOT NULL" CanBeNull="false" />
+      <Column Name="kardv_precio_costo_promedio" Type="System.Decimal" DbType="Decimal(12,4) NOT NULL" CanBeNull="false" />
+      <Column Name="kardv_monto_saldo_valorizado" Type="System.Decimal" DbType="Decimal(12,4) NOT NULL" CanBeNull="false" />
+      <Column Name="kardv_monto_unitario_compra" Type="System.Decimal" DbType="Decimal(12,4) NOT NULL" CanBeNull="false" />
+      <Column Name="kardv_nmonto_ingreso_manual" Type="System.Decimal" DbType="Decimal(12,4) NOT NULL" CanBeNull="false" />
+      <Column Name="kardv_itipo_actualizacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="strDesAlmacenCtbl" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="strCodProducto" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="strDesProducto" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strTipoDoc" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_STOCK_VALORIZADO_INSERTAR" Method="SGE_STOCK_VALORIZADO_INSERTAR">
+    <Parameter Name="stocv_icod_stock" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="stocv_ianio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="almcc_icod_almacen" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prdc_icod_producto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="stocv_nstock_prod" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="stocv_nprecio_costo_prom_prod" Type="System.Decimal" DbType="Decimal(12,4)" />
+    <Parameter Name="stocv_ntotal_costo_prod" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_STOCK_VALORIZADO_PRODUCTO_LISTAR" Method="SGE_STOCK_VALORIZADO_PRODUCTO_LISTAR">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="almcc_icod_almacen" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prdc_icod_producto" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_STOCK_VALORIZADO_PRODUCTO_LISTARResult">
+      <Column Name="stocv_icod_stock" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="stocv_ianio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="almcc_icod_almacen" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_icod_producto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="stocv_nstock_prod" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="stocv_nprecio_costo_prom_prod" Type="System.Decimal" DbType="Decimal(12,4) NOT NULL" CanBeNull="false" />
+      <Column Name="stocv_ntotal_costo_prod" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="almcc_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="strCodProducto" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="strDesProducto" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="unidc_vabreviatura_unidad_medida" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_STOCK_VALORIZADO_ACTUALIZAR_COSTOS" Method="SGE_STOCK_VALORIZADO_ACTUALIZAR_COSTOS">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="almcc_icod_almacen" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prdc_icod_producto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="stocv_nprecio_costo_prom_prod" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="stocv_ntotal_costo_prod" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_KARDEX_VALORIZADO_ELIMINAR_ACTUALIZACION" Method="SGE_KARDEX_VALORIZADO_ELIMINAR_ACTUALIZACION">
+    <Parameter Name="FechaInicio" Parameter="fechaInicio" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="FechaFin" Parameter="fechaFin" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="anio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tipo_actualizacion" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_KARDEX_VALORIZADO_ACTUALIZAR_NOTAS_DE_CREDITO" Method="SGE_KARDEX_VALORIZADO_ACTUALIZAR_NOTAS_DE_CREDITO">
+    <Parameter Name="FechaInicio" Parameter="fechaInicio" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="FechaFin" Parameter="fechaFin" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="anio" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_KARDEX_VALORIZADO_ACTUALIZAR_NOTAS_DE_CREDITOResult">
+      <Column Name="anio" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="alco_icod_almacen_contable" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="icod_producto_especifico" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="icod_tipo_doc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="doc_numero" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="tip_movimiento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="icod_motivo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="flag_estado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="costo_unitario" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="alco_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="prodc_vdescripcion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="estac_vdescripcion" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="situc_vdescripcion" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="documento" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="motivo" Type="System.String" DbType="VarChar(21) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="cant_salida" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="unidad_medida" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="monto_total" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="referencia" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="observacion" Type="System.String" DbType="VarChar(111)" CanBeNull="true" />
+      <Column Name="prodc_iid_producto_generico" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_KARDEX_VALORIZADO_ACTUALIZAR_FECHA" Method="SGE_KARDEX_VALORIZADO_ACTUALIZAR_FECHA">
+    <Parameter Name="kardv_iid_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="kardv_sfecha_movimiento" Type="System.DateTime" DbType="SmallDateTime" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_KARDEX_VALORIZADO_INVENTARIO_RESUMEN" Method="SGE_KARDEX_VALORIZADO_INVENTARIO_RESUMEN">
+    <Parameter Name="FechaDesde" Parameter="fechaDesde" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="FechaHasta" Parameter="fechaHasta" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="SGE_KARDEX_VALORIZADO_INVENTARIO_RESUMENResult">
+      <Column Name="kardv_ianio" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="almcc_icod_almacen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="almcc_iid_almacen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="almcc_vdescripcion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="prdc_icod_producto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="prdc_vdescripcion_larga" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="prdc_vcode_producto" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="unidc_vabreviatura_unidad_medida" Type="System.String" DbType="VarChar(22)" CanBeNull="true" />
+      <Column Name="Stock" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="stocv_nprecio_costo_prom_prod" Type="System.Decimal" DbType="Decimal(12,4)" CanBeNull="true" />
+      <Column Name="stocv_ntotal_costo_prod" Type="System.Decimal" DbType="Decimal(25,6)" CanBeNull="true" />
+      <Column Name="PrimerCosto" Type="System.Decimal" DbType="Decimal(12,4)" CanBeNull="true" />
+      <Column Name="CostoAlto" Type="System.Decimal" DbType="Decimal(12,4)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_KARDEX_VALORIZADO_ACTUALIZAR_MONTO_MANUAL" Method="SGE_KARDEX_VALORIZADO_ACTUALIZAR_MONTO_MANUAL">
+    <Parameter Name="kardv_iid_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="kardv_nmonto_ingreso_manual" Type="System.Decimal" DbType="Decimal(12,4)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_RESUMEN_VALORIZADO_LISTAR" Method="SGE_RESUMEN_VALORIZADO_LISTAR">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="dtFechaInicio" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="dtFechaFin" Type="System.DateTime" DbType="SmallDateTime" />
+    <ElementType Name="SGE_RESUMEN_VALORIZADO_LISTARResult">
+      <Column Name="intAlmaCont" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="intIidAlmaCont" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="strAlmaCont" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="intProdEsp" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="strCodeProd" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="strProdEsp" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strUnidadMed" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="dblStockAnterior" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="dblEntradas" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="dblSalidas" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="dblAnteriorCosto" Type="System.Decimal" DbType="Decimal(16,4) NOT NULL" CanBeNull="false" />
+      <Column Name="dblEntradasCosto" Type="System.Decimal" DbType="Decimal(16,4) NOT NULL" CanBeNull="false" />
+      <Column Name="dblSalidasCosto" Type="System.Decimal" DbType="Decimal(16,4) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_KARDEX_VALORIZADO_POR_TIPO_MOTIVO_FECHA" Method="SGE_KARDEX_VALORIZADO_POR_TIPO_MOTIVO_FECHA">
+    <Parameter Name="intPeriodo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="dtFechaInicio" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="dtFechaFin" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="intTipoMov" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intMotivoMov" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_KARDEX_VALORIZADO_POR_TIPO_MOTIVO_FECHAResult">
+      <Column Name="almcc_icod_almacen" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="almcc_iid_almacen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="almcc_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="prdc_icod_producto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_vcode_producto" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="prdc_vdescripcion_larga" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="unidc_vabreviatura_unidad_medida" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="documento" Type="System.String" DbType="VarChar(24)" CanBeNull="true" />
+      <Column Name="kardv_sfecha_movimiento" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="kardv_icantidad_prod" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="kardv_precio_costo_promedio" Type="System.Decimal" DbType="Decimal(12,4) NOT NULL" CanBeNull="false" />
+      <Column Name="intPrecionUniCompra" Type="System.Decimal" DbType="Decimal(27,17)" CanBeNull="true" />
+      <Column Name="dblMontoMovimiento" Type="System.Decimal" DbType="Decimal(25,6)" CanBeNull="true" />
+      <Column Name="dblMontoCompra" Type="System.Decimal" DbType="Decimal(12,4) NOT NULL" CanBeNull="false" />
+      <Column Name="kardv_vbeneficiario" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_ACTUALIZAR_VENTAS" Method="SGE_ACTUALIZAR_VENTAS">
+    <Parameter Name="FechaInicio" Parameter="fechaInicio" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="FechaFin" Parameter="fechaFin" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="anio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="kardv_itipo_actualizacion" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_ACTUALIZAR_PCP_KARDEX_VALORIZADO" Method="SGE_ACTUALIZAR_PCP_KARDEX_VALORIZADO">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_ACTUALIZAR_PCP_KARDEX_VALORIZADO_X_Al_pro" Method="SGE_ACTUALIZAR_PCP_KARDEX_VALORIZADO_X_Al_pro">
+    <Parameter Name="prdc_icod_producto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="almcc_icod_almacen" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_ULTIMO_PRECIO_COMPRA" Method="SGE_ULTIMO_PRECIO_COMPRA">
+    <Parameter Name="intProducto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_ULTIMO_PRECIO_COMPRAResult">
+      <Column Name="strDesProveedor" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="facd_ncantidad" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="strTipoMoneda" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="dcmlPrecioUnitario" Type="System.Decimal" DbType="Decimal(16,6)" CanBeNull="true" />
+      <Column Name="dcmlPrecioTotal" Type="System.Decimal" DbType="Decimal(29,8)" CanBeNull="true" />
+      <Column Name="strTipoDoc" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="facc_num_doc" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="facc_sfecha_doc" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_PRODUCTO_MODIFICAR_PRECIO_COSTO" Method="SGEA_PRODUCTO_MODIFICAR_PRECIO_COSTO">
+    <Parameter Name="prdc_icod_producto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prdc_precio_costo" Type="System.Decimal" DbType="Decimal(8,4)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_STOCK_ACTUALIZAR_CON_KADEX" Method="SGEA_STOCK_ACTUALIZAR_CON_KADEX">
+    <Parameter Name="kardc_ianio" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_STOCK_PRODUCTO_CIERRE" Method="SGEA_STOCK_PRODUCTO_CIERRE">
+    <Parameter Name="ANIO" Parameter="aNIO" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IUSUARIO" Parameter="iUSUARIO" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_STOCK_VALORIZADO_A_UNA_FECHA" Method="SGE_STOCK_VALORIZADO_A_UNA_FECHA">
+    <Parameter Name="FechaDesde" Parameter="fechaDesde" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="FechaHasta" Parameter="fechaHasta" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="SGE_STOCK_VALORIZADO_A_UNA_FECHAResult">
+      <Column Name="kardv_ianio" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="almcc_icod_almacen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="almcc_iid_almacen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="almcc_vdescripcion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="prdc_icod_producto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="prdc_vdescripcion_larga" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="prdc_vcode_producto" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="unidc_vabreviatura_unidad_medida" Type="System.String" DbType="VarChar(22)" CanBeNull="true" />
+      <Column Name="Stock" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="stocv_nprecio_costo_prom_prod" Type="System.Decimal" DbType="Decimal(12,4)" CanBeNull="true" />
+      <Column Name="stocv_ntotal_costo_prod" Type="System.Decimal" DbType="Decimal(25,6)" CanBeNull="true" />
+      <Column Name="prdc_precio_costo" Type="System.Decimal" DbType="Decimal(8,4) NOT NULL" CanBeNull="false" />
+      <Column Name="precio_compra_total" Type="System.Decimal" DbType="Decimal(21,6)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_STOCK_CONSOLIDADO_X_ALMACEN" Method="SGEA_STOCK_CONSOLIDADO_X_ALMACEN">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEA_STOCK_CONSOLIDADO_X_ALMACENResult">
+      <Column Name="prdc_icod_producto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="strCodProducto" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="strProducto" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strUnidadMedida" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="dblStock" Type="System.Decimal" DbType="Decimal(38,4)" CanBeNull="true" />
+      <Column Name="almac_icod_almacen" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="almac_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_KARDEX_MAX_CORRELATIVO" Method="SGEA_KARDEX_MAX_CORRELATIVO">
+    <Parameter Name="kardc_icod_correlativo" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_SALDO_INICIAL_POR_CIERRE_DELETE" Method="SGE_SALDO_INICIAL_POR_CIERRE_DELETE">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_NOTA_INGRESO_DETALLE_ELIMINAR" Method="SGEA_NOTA_INGRESO_DETALLE_ELIMINAR">
+    <Parameter Name="dninc_icod_detalle_ingreso" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPC" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_NOTA_INGRESO_ELIMINAR" Method="SGEA_NOTA_INGRESO_ELIMINAR">
+    <Parameter Name="ningc_icod_nota_ingreso" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPC" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_NOTA_SALIDA_DETALLE_ELIMINAR" Method="SGEA_NOTA_SALIDA_DETALLE_ELIMINAR">
+    <Parameter Name="dnsalc_icod_detalle_salida" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPC" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_NOTA_SALIDA_DETALLE_INSERTAR" Method="SGEA_NOTA_SALIDA_DETALLE_INSERTAR">
+    <Parameter Name="nsalc_icod_nota_salida" Type="System.Int32" DbType="Int" />
+    <Parameter Name="dnsalc_nro_item" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prdc_icod_producto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="dnsalc_cantidad" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="dnsalc_monto_unitario" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="dnsalc_monto_total" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="kardc_icod_correlativo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPC" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_NOTA_SALIDA_DETALLE_MODIFICAR" Method="SGEA_NOTA_SALIDA_DETALLE_MODIFICAR">
+    <Parameter Name="dnsalc_icod_detalle_salida" Type="System.Int32" DbType="Int" />
+    <Parameter Name="dnsalc_nro_item" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prdc_icod_producto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="dnsalc_cantidad" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="dnsalc_monto_unitario" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="dnsalc_monto_total" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="kardc_icod_correlativo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPC" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_NOTA_SALIDA_ELIMINAR" Method="SGEA_NOTA_SALIDA_ELIMINAR">
+    <Parameter Name="nsalc_icod_nota_salida" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPC" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_NOTA_SALIDA_INSERTAR" Method="SGEA_NOTA_SALIDA_INSERTAR">
+    <Parameter Name="nsalc_icod_nota_salida" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="nsalc_ianio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nsalc_numero_nota_salida" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="almac_icod_almacen" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nsalc_iid_motivo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nsalc_fecha_nota_salida" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nsalc_numero_doc" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="nsalc_referencia" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="nsalc_observaciones" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPC" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_NOTA_SALIDA_LISTAR" Method="SGEA_NOTA_SALIDA_LISTAR">
+    <Parameter Name="nsalc_ianio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="almac_icod_almacen" Type="System.Int32" DbType="Int" />
+    <Parameter Name="dtFechaDesde" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="dtFechaHasta" Type="System.DateTime" DbType="SmallDateTime" />
+    <ElementType Name="SGEA_NOTA_SALIDA_LISTARResult">
+      <Column Name="nsalc_icod_nota_salida" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nsalc_ianio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nsalc_numero_nota_salida" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="almac_icod_almacen" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nsalc_iid_motivo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nsalc_fecha_nota_salida" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nsalc_numero_doc" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="nsalc_referencia" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="nsalc_observaciones" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="strAlmacen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="strMotivo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strTipoDoc" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_NOTA_SALIDA_MODIFICAR" Method="SGEA_NOTA_SALIDA_MODIFICAR">
+    <Parameter Name="nsalc_icod_nota_salida" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nsalc_ianio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nsalc_numero_nota_salida" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="almac_icod_almacen" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nsalc_iid_motivo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nsalc_fecha_nota_salida" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nsalc_numero_doc" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="nsalc_referencia" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="nsalc_observaciones" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPC" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_PLANTILLA_EMPAQUE_CAB_ELIMINAR" Method="SGEA_PLANTILLA_EMPAQUE_CAB_ELIMINAR">
+    <Parameter Name="plemc_iid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="plemc_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="plemc_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_PLANTILLA_EMPAQUE_CAB_INSERTAR" Method="SGEA_PLANTILLA_EMPAQUE_CAB_INSERTAR">
+    <Parameter Name="plemc_iid" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="plemc_icod" Type="System.Int32" DbType="Int" />
+    <Parameter Name="plemc_sfecha" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="plemc_vobservacion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="prdc_icod_producto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="plemc_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="plemc_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_PLANTILLA_EMPAQUE_CAB_MODIFICAR" Method="SGEA_PLANTILLA_EMPAQUE_CAB_MODIFICAR">
+    <Parameter Name="plemc_iid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="plemc_icod" Type="System.Int32" DbType="Int" />
+    <Parameter Name="plemc_sfecha" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="plemc_vobservacion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="prdc_icod_producto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="plemc_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="plemc_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_PLANTILLA_EMPAQUE_DET_MODIFICAR" Method="SGEA_PLANTILLA_EMPAQUE_DET_MODIFICAR">
+    <Parameter Name="plemd_iid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="plemd_iitem" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prdc_icod_producto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="plemd_ncantidad" Type="System.Decimal" DbType="Decimal(8,2)" />
+    <Parameter Name="plemd_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="plemd_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_PLANTILLA_EMPAQUE_DET_INSERTAR" Method="SGEA_PLANTILLA_EMPAQUE_DET_INSERTAR">
+    <Parameter Name="plemd_iid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="plemc_iid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="plemd_iitem" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prdc_icod_producto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="plemd_ncantidad" Type="System.Decimal" DbType="Decimal(8,2)" />
+    <Parameter Name="plemd_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="plemd_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_PLANTILLA_EMPAQUE_DET_ELIMINAR" Method="SGEA_PLANTILLA_EMPAQUE_DET_ELIMINAR">
+    <Parameter Name="plemd_iid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="plemc_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="plemc_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_PLANTILLA_EMPAQUE_CAB_LISTAR" Method="SGEA_PLANTILLA_EMPAQUE_CAB_LISTAR">
+    <ElementType Name="SGEA_PLANTILLA_EMPAQUE_CAB_LISTARResult">
+      <Column Name="plemc_iid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="plemc_icod" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="plemc_sfecha" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="plemc_vobservacion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="prdc_icod_producto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_vdescripcion_larga" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="prdc_vcode_producto" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="unidc_vabreviatura_unidad_medida" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_PLANTILLA_EMPAQUE_DET_LISTAR" Method="SGEA_PLANTILLA_EMPAQUE_DET_LISTAR">
+    <Parameter Name="plemc_iid" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEA_PLANTILLA_EMPAQUE_DET_LISTARResult">
+      <Column Name="plemd_iid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="plemc_iid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="plemd_iitem" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_icod_producto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="plemd_ncantidad" Type="System.Decimal" DbType="Decimal(8,2) NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_vdescripcion_larga" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="unidc_vabreviatura_unidad_medida" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="prdc_vcode_producto" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_EMPAQUE_DESEMPAQUE_CAB_ELIMINAR" Method="SGEA_EMPAQUE_DESEMPAQUE_CAB_ELIMINAR">
+    <Parameter Name="emp_icod_desempaque" Type="System.Int32" DbType="Int" />
+    <Parameter Name="emp_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="emp_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_EMPAQUE_DESEMPAQUE_DET_ELIMINAR" Method="SGEA_EMPAQUE_DESEMPAQUE_DET_ELIMINAR">
+    <Parameter Name="empd_icod_desempaque" Type="System.Int32" DbType="Int" />
+    <Parameter Name="empd_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="empd_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_EMPAQUE_DESEMPAQUE_DET_LISTAR" Method="SGEA_EMPAQUE_DESEMPAQUE_DET_LISTAR">
+    <Parameter Name="emp_icod_desempaque" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEA_EMPAQUE_DESEMPAQUE_DET_LISTARResult">
+      <Column Name="emp_icod_desempaque" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="empd_iitem_desempaque" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_icod_producto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="kardc_icod_correlativo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="empd_dcantidad_desempaque" Type="System.Decimal" DbType="Decimal(12,4) NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_vdescripcion_larga" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="prdc_vpart_number" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="prdc_vcode_producto" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="unidc_vabreviatura_unidad_medida" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_EMPAQUE_DESEMPAQUE_DET_MODIFICAR" Method="SGEA_EMPAQUE_DESEMPAQUE_DET_MODIFICAR">
+    <Parameter Name="empd_icod_desempaque" Type="System.Int32" DbType="Int" />
+    <Parameter Name="empd_dcantidad_desempaque" Type="System.Decimal" DbType="Decimal(12,4)" />
+    <Parameter Name="empd_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="empd_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_EMPAQUE_DESEMPAQUE_DET_INSERTAR" Method="SGEA_EMPAQUE_DESEMPAQUE_DET_INSERTAR">
+    <Parameter Name="emp_icod_desempaque" Type="System.Int32" DbType="Int" />
+    <Parameter Name="empd_iitem_desempaque" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prdc_icod_producto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="kardc_icod_correlativo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="empd_dcantidad_desempaque" Type="System.Decimal" DbType="Decimal(12,4)" />
+    <Parameter Name="empd_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="empd_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="empd_flag_estado" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_EMPAQUE_DESEMPAQUE_CAB_INSERTAR" Method="SGEA_EMPAQUE_DESEMPAQUE_CAB_INSERTAR">
+    <Parameter Name="emp_icod_desempaque" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="emp_vnuemro_desempaque" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="emp_sfecha_desempaque" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="plemc_iid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prdc_icod_producto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="kardc_icod_correlativo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="almac_icod_almacen" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Tablc_itipo_empaque" Parameter="tablc_itipo_empaque" Type="System.Int32" DbType="Int" />
+    <Parameter Name="emp_vobservaciones" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="emp_dcantidad_desempaque" Type="System.Decimal" DbType="Decimal(12,4)" />
+    <Parameter Name="emp_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="emp_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="emp_flag_estado" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_EMPAQUE_DESEMPAQUE_CAB_MODIFICAR" Method="SGEA_EMPAQUE_DESEMPAQUE_CAB_MODIFICAR">
+    <Parameter Name="emp_icod_desempaque" Type="System.Int32" DbType="Int" />
+    <Parameter Name="emp_vnuemro_desempaque" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="emp_sfecha_desempaque" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="emp_vobservaciones" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="emp_dcantidad_desempaque" Type="System.Decimal" DbType="Decimal(12,4)" />
+    <Parameter Name="emp_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="emp_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_EMPAQUE_DESEMPAQUE_CAB_LISTAR" Method="SGEA_EMPAQUE_DESEMPAQUE_CAB_LISTAR">
+    <ElementType Name="SGEA_EMPAQUE_DESEMPAQUE_CAB_LISTARResult">
+      <Column Name="emp_icod_desempaque" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="emp_sfecha_desempaque" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="plemc_iid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_icod_producto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="kardc_icod_correlativo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="almac_icod_almacen" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="emp_vobservaciones" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="emp_dcantidad_desempaque" Type="System.Decimal" DbType="Decimal(12,4) NOT NULL" CanBeNull="false" />
+      <Column Name="Tablc_itipo_empaque" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="emp_vnuemro_desempaque" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="DescripTipo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="prdc_vdescripcion_larga" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="prdc_vpart_number" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="prdc_vcode_producto" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="unidc_vabreviatura_unidad_medida" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="almac_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="plemc_icod" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_STOCK_PRODUCTO_X_ALMACEN" Method="SGE_STOCK_PRODUCTO_X_ALMACEN">
+    <Parameter Name="Stock" Parameter="stock" Type="System.Decimal" DbType="Decimal(12,4)" Direction="InOut" />
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intAlmacen" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prdc_icod_producto" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_TRANSFERENCIA_ALMACEN_DET_ELIMINAR" Method="SGEA_TRANSFERENCIA_ALMACEN_DET_ELIMINAR">
+    <Parameter Name="trfd_icod_detalle_transf" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPc" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_TRANSFERENCIA_ALMACEN_DET_INSERTAR" Method="SGEA_TRANSFERENCIA_ALMACEN_DET_INSERTAR">
+    <Parameter Name="trfc_icod_transf" Type="System.Int32" DbType="Int" />
+    <Parameter Name="trfd_nro_item" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prdc_icod_producto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="kardc_icod_correlativo_sal" Type="System.Int32" DbType="Int" />
+    <Parameter Name="kardc_icod_correlativo_ing" Type="System.Int32" DbType="Int" />
+    <Parameter Name="trfd_ncantidad" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPc" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_TRANSFERENCIA_ALMACEN_DET_LISTAR" Method="SGEA_TRANSFERENCIA_ALMACEN_DET_LISTAR">
+    <Parameter Name="trfc_icod_transf" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEA_TRANSFERENCIA_ALMACEN_DET_LISTARResult">
+      <Column Name="trfd_icod_detalle_transf" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="trfc_icod_transf" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="trfd_nro_item" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_icod_producto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="kardc_icod_correlativo_sal" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="kardc_icod_correlativo_ing" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="trfd_ncantidad" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="strCodProducto" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="strDesProducto" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strCodUnidadMedida" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="dblStockDisponible" Type="System.Decimal" DbType="Decimal(12,4) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_TRANSFERENCIA_ALMACEN_ELIMINAR" Method="SGEA_TRANSFERENCIA_ALMACEN_ELIMINAR">
+    <Parameter Name="trfc_icod_transf" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPc" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_TRANSFERENCIA_ALMACEN_INSERTAR" Method="SGEA_TRANSFERENCIA_ALMACEN_INSERTAR">
+    <Parameter Name="trfc_icod_transf" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="trfc_inum_transf" Type="System.Int32" DbType="Int" />
+    <Parameter Name="trfc_sfecha_transf" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="almac_icod_alm_sal" Type="System.Int32" DbType="Int" />
+    <Parameter Name="almac_icod_alm_ing" Type="System.Int32" DbType="Int" />
+    <Parameter Name="trnfc_iid_motivo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="trnfc_vobservaciones" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPc" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_TRANSFERENCIA_ALMACEN_LISTAR" Method="SGEA_TRANSFERENCIA_ALMACEN_LISTAR">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="dtFechaInicio" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="dtFechaFin" Type="System.DateTime" DbType="SmallDateTime" />
+    <ElementType Name="SGEA_TRANSFERENCIA_ALMACEN_LISTARResult">
+      <Column Name="trfc_icod_transf" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="trfc_inum_transf" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="trfc_sfecha_transf" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="almac_icod_alm_sal" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="almac_icod_alm_ing" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="trnfc_iid_motivo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="trnfc_vobservaciones" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="strAlmacenSal" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="strAlmacenIng" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="strMotivo" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_TRANSFERENCIA_ALMACEN_MODIFICAR" Method="SGEA_TRANSFERENCIA_ALMACEN_MODIFICAR">
+    <Parameter Name="trfc_icod_transf" Type="System.Int32" DbType="Int" />
+    <Parameter Name="trfc_inum_transf" Type="System.Int32" DbType="Int" />
+    <Parameter Name="trfc_sfecha_transf" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="trnfc_iid_motivo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="trnfc_vobservaciones" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPc" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_TRANSFERENCIA_ALMACEN_DET_MODIFICAR" Method="SGEA_TRANSFERENCIA_ALMACEN_DET_MODIFICAR">
+    <Parameter Name="trfd_icod_detalle_transf" Type="System.Int32" DbType="Int" />
+    <Parameter Name="trfd_nro_item" Type="System.Int32" DbType="Int" />
+    <Parameter Name="trfd_ncantidad" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPc" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_EDITORIAL_ELIMINAR" Method="SGEA_EDITORIAL_ELIMINAR">
+    <Parameter Name="edit_icod_editorial" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_CATEGORIA_ELIMINAR" Method="SGEA_CATEGORIA_ELIMINAR">
+    <Parameter Name="Catc_iid_tipo_tabla" Parameter="catc_iid_tipo_tabla" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_CATEGORIA_INSERTAR" Method="SGEA_CATEGORIA_INSERTAR">
+    <Parameter Name="Catc_iid_tipo_tabla" Parameter="catc_iid_tipo_tabla" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="Catc_vdescripcion" Parameter="catc_vdescripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Catc_cestado" Parameter="catc_cestado" Type="System.Char" DbType="Char(1)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_CATEGORIA_LISTAR" Method="SGEA_CATEGORIA_LISTAR">
+    <ElementType Name="SGEA_CATEGORIA_LISTARResult">
+      <Column Name="Catc_iid_tipo_tabla" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Catc_vdescripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Catc_cestado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="estado" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_CATEGORIA_MODIFICAR" Method="SGEA_CATEGORIA_MODIFICAR">
+    <Parameter Name="Catc_iid_tipo_tabla" Parameter="catc_iid_tipo_tabla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Catc_vdescripcion" Parameter="catc_vdescripcion" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_SUB_CATEGORIA_NIVEL_DOS_ELIMINAR" Method="SGEA_SUB_CATEGORIA_NIVEL_DOS_ELIMINAR">
+    <Parameter Name="CatNDos_iid_tabla_registro" Parameter="catNDos_iid_tabla_registro" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CatNUno_iusuario_modifica" Parameter="catNUno_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_SUB_CATEGORIA_NIVEL_DOS_INSERTAR" Method="SGEA_SUB_CATEGORIA_NIVEL_DOS_INSERTAR">
+    <Parameter Name="CatNDos_iid_tabla_registro" Parameter="catNDos_iid_tabla_registro" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="CatNUno_iid_tabla_registro" Parameter="catNUno_iid_tabla_registro" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CatNDos_icorrelativo_registro" Parameter="catNDos_icorrelativo_registro" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CatNDos_vdescripcion" Parameter="catNDos_vdescripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="CatNDos_nvalor_numerico" Parameter="catNDos_nvalor_numerico" Type="System.Decimal" DbType="Decimal(8,2)" />
+    <Parameter Name="CatNDos_vvalor_texto" Parameter="catNDos_vvalor_texto" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="CatNDos_cestado" Parameter="catNDos_cestado" Type="System.Char" DbType="Char(1)" />
+    <Parameter Name="CatNDos_iusuario_crea" Parameter="catNDos_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_SUB_CATEGORIA_NIVEL_DOS_LISTAR" Method="SGEA_SUB_CATEGORIA_NIVEL_DOS_LISTAR">
+    <Parameter Name="CatNUno_iid_tabla_registro" Parameter="catNUno_iid_tabla_registro" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEA_SUB_CATEGORIA_NIVEL_DOS_LISTARResult">
+      <Column Name="CatNUno_iid_tabla_registro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CatNUno_iid_tabla_registro1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CatNDos_icorrelativo_registro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CatNDos_vdescripcion" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CatNDos_cestado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="estado" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="CatNDos_vvalor_texto" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_SUB_CATEGORIA_NIVEL_DOS_MODIFICAR" Method="SGEA_SUB_CATEGORIA_NIVEL_DOS_MODIFICAR">
+    <Parameter Name="CatNDos_iid_tabla_registro" Parameter="catNDos_iid_tabla_registro" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CatNDos_vdescripcion" Parameter="catNDos_vdescripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="CatNDos_vvalor_texto" Parameter="catNDos_vvalor_texto" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="CatNDos_iusuario_crea" Parameter="catNDos_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_SUB_CATEGORIA_NIVEL_DOS_X_CODIGO_LISTAR" Method="SGEA_SUB_CATEGORIA_NIVEL_DOS_X_CODIGO_LISTAR">
+    <Parameter Name="CatNUno_iid_tabla_registro" Parameter="catNUno_iid_tabla_registro" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEA_SUB_CATEGORIA_NIVEL_DOS_X_CODIGO_LISTARResult">
+      <Column Name="CatNDos_iid_tabla_registro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CatNUno_iid_tabla_registro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CatNDos_icorrelativo_registro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CatNDos_vdescripcion" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CatNDos_cestado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="estado" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="CatNDos_vvalor_texto" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_SUB_CATEGORIA_NIVEL_UNO_ELIMINAR" Method="SGEA_SUB_CATEGORIA_NIVEL_UNO_ELIMINAR">
+    <Parameter Name="CatNUno_iid_tabla_registro" Parameter="catNUno_iid_tabla_registro" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CatNUno_iusuario_modifica" Parameter="catNUno_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_SUB_CATEGORIA_NIVEL_UNO_INSERTAR" Method="SGEA_SUB_CATEGORIA_NIVEL_UNO_INSERTAR">
+    <Parameter Name="CatNUno_iid_tabla_registro" Parameter="catNUno_iid_tabla_registro" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="CatNUno_iid_tipo_tabla" Parameter="catNUno_iid_tipo_tabla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CatNUno_icorrelativo_registro" Parameter="catNUno_icorrelativo_registro" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CatNUno_vdescripcion" Parameter="catNUno_vdescripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="CatNUno_nvalor_numerico" Parameter="catNUno_nvalor_numerico" Type="System.Decimal" DbType="Decimal(8,2)" />
+    <Parameter Name="CatNUno_vvalor_texto" Parameter="catNUno_vvalor_texto" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="CatNUno_cestado" Parameter="catNUno_cestado" Type="System.Char" DbType="Char(1)" />
+    <Parameter Name="CatNUno_iusuario_crea" Parameter="catNUno_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_SUB_CATEGORIA_NIVEL_UNO_LISTAR" Method="SGEA_SUB_CATEGORIA_NIVEL_UNO_LISTAR">
+    <Parameter Name="CatNUno_iid_tipo_tabla" Parameter="catNUno_iid_tipo_tabla" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEA_SUB_CATEGORIA_NIVEL_UNO_LISTARResult">
+      <Column Name="CatNUno_iid_tabla_registro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CatNUno_iid_tipo_tabla" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CatNUno_icorrelativo_registro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CatNUno_vdescripcion" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CatNUno_cestado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="estado" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="CatNUno_vvalor_texto" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_SUB_CATEGORIA_NIVEL_UNO_MODIFICAR" Method="SGEA_SUB_CATEGORIA_NIVEL_UNO_MODIFICAR">
+    <Parameter Name="CatNUno_iid_tabla_registro" Parameter="catNUno_iid_tabla_registro" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CatNUno_vdescripcion" Parameter="catNUno_vdescripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="CatNUno_vvalor_texto" Parameter="catNUno_vvalor_texto" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="CatNUno_iusuario_modifica" Parameter="catNUno_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_SUB_CATEGORIA_NIVEL_UNO_X_CODIGO_LISTAR" Method="SGEA_SUB_CATEGORIA_NIVEL_UNO_X_CODIGO_LISTAR">
+    <Parameter Name="CatNUno_iid_tipo_tabla" Parameter="catNUno_iid_tipo_tabla" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEA_SUB_CATEGORIA_NIVEL_UNO_X_CODIGO_LISTARResult">
+      <Column Name="CatNUno_iid_tabla_registro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CatNUno_iid_tipo_tabla" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CatNUno_icorrelativo_registro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CatNUno_vdescripcion" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CatNUno_cestado" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="estado" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="CatNUno_vvalor_texto" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_PRODUCTO_ELIMINAR" Method="SGEA_PRODUCTO_ELIMINAR">
+    <Parameter Name="prdc_icod_producto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prdc_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_INVENTARIO_DET_LISTAR_EXCEL" Method="SGEA_INVENTARIO_DET_LISTAR_EXCEL">
+    <Parameter Name="invc_icod_inventario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="dtFechaHasta" Type="System.DateTime" DbType="SmallDateTime" />
+    <ElementType Name="SGEA_INVENTARIO_DET_LISTAR_EXCELResult">
+      <Column Name="invc_iid_correlativo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="invc_sfecha_inventario" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_inventario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="invc_vobservaciones" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="invd_icod_detalle" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="invc_icod_inventario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="invd_inro_item" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="prdc_icod_producto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="invd_icantidad" Type="System.Decimal" DbType="Decimal(8,4)" CanBeNull="true" />
+      <Column Name="strCodProducto" Type="System.String" DbType="VarChar(14) NOT NULL" CanBeNull="false" />
+      <Column Name="strDesProducto" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strUnidadMedida" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="dblStock" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="PCP" Type="System.Decimal" DbType="Decimal(12,4) NOT NULL" CanBeNull="false" />
+      <Column Name="almcc_icod_almacen" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_icod_producto1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dcPrecioProducto" Type="System.Decimal" DbType="Decimal(12,4) NOT NULL" CanBeNull="false" />
+      <Column Name="strCategoria" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="strSubCategoriaUno" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strSubCategoriaDos" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strEditorial" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_EDITORIAL_INSERTAR" Method="SGEA_EDITORIAL_INSERTAR">
+    <Parameter Name="edit_icod_editorial" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="edit_iid_editorial" Type="System.Int32" DbType="Int" />
+    <Parameter Name="edit_iSituacion" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="edit_vdescripcion" Type="System.String" DbType="VarChar(40)" />
+    <Parameter Name="tarec_festado" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="proc_icod_proveedor" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_EDITORIAL_LISTAR" Method="SGEA_EDITORIAL_LISTAR">
+    <ElementType Name="SGEA_EDITORIAL_LISTARResult">
+      <Column Name="edit_icod_editorial" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="edit_iid_editorial" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="edit_iSituacion" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="strSituacion" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="edit_vdescripcion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="proc_icod_proveedor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="proc_vcod_proveedor" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="proc_vnombrecompleto" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_EDITORIAL_MODIFICAR" Method="SGEA_EDITORIAL_MODIFICAR">
+    <Parameter Name="edit_icod_editorial" Type="System.Int32" DbType="Int" />
+    <Parameter Name="edit_iSituacion" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="edit_vdescripcion" Type="System.String" DbType="VarChar(40)" />
+    <Parameter Name="proc_icod_proveedor" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_PRODUCTO_LISTAR_X_CODIGO" Method="SGEA_PRODUCTO_LISTAR_X_CODIGO">
+    <Parameter Name="anio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prdc_vcode_producto" Type="System.String" DbType="VarChar(25)" />
+    <ElementType Name="SGEA_PRODUCTO_LISTAR_X_CODIGOResult">
+      <Column Name="prdc_icod_producto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_vcode_producto" Type="System.String" DbType="VarChar(18) NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_vdescripcion_larga" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_vdescripcion_corta" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Catc_iid_tipo_tabla" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CatNUno_iid_tabla_registro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CatNDos_iid_tabla_registro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="edit_icod_editorial" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="prdc_vAutor" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="unidc_icod_unidad_medida" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="proc_icod_proveedor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="prdc_vUbicacion" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="prdc_bAfecto" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_bCombo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_isituacion" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_stock_minimo" Type="System.Decimal" DbType="Decimal(8,2) NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_mprecio_costo" Type="System.Decimal" DbType="Decimal(8,2) NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_mprecio_venta" Type="System.Decimal" DbType="Decimal(8,2) NOT NULL" CanBeNull="false" />
+      <Column Name="strCategoria" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="strSubCategoriaUno" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strSubCategoriaDos" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strEditorial" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="StrUnidadMedida" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="proc_vnombrecompleto" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="dblStock" Type="System.Decimal" DbType="Decimal(38,4)" CanBeNull="true" />
+      <Column Name="prdc_nMonto_stock" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="prdc_nPrecio_soles" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="prdc_nPrecio_dolares" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="prdc_nPor_Descuento" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="prdc_nPrecio_venta" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="prdc_Codigo_Precio" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="prdc_ntipo_cambio" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_STOCK_POR_ALMACEN" Method="SGE_STOCK_POR_ALMACEN">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intAlmacen" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_STOCK_POR_ALMACENResult">
+      <Column Name="prdc_icod_producto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="almac_icod_almacen" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="stocc_stock_producto" Type="System.Decimal" DbType="Decimal(12,4) NOT NULL" CanBeNull="false" />
+      <Column Name="strAlmacen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="strDesProducto" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strCodProducto" Type="System.String" DbType="VarChar(18) NOT NULL" CanBeNull="false" />
+      <Column Name="strCodUM" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="strDesUM" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="strCategoria" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="strSubCategoriaUno" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strSubCategoriaDos" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strEditorial" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="prdc_nPrecio_soles" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="prdc_nPrecio_dolares" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_NOTA_INGRESO_INSERTAR" Method="SGEA_NOTA_INGRESO_INSERTAR">
+    <Parameter Name="ningc_icod_nota_ingreso" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ningc_ianio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ningc_numero_nota_ingreso" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="almac_icod_almacen" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ningc_iid_motivo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ningc_fecha_nota_ingreso" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ningc_numero_doc" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ningc_referencia" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ningc_observaciones" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPC" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="fcoc_icod_doc" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_NOTA_INGRESO_LISTAR" Method="SGEA_NOTA_INGRESO_LISTAR">
+    <Parameter Name="ningc_ianio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="almac_icod_almacen" Type="System.Int32" DbType="Int" />
+    <Parameter Name="dtFechaDesde" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="dtFechaHasta" Type="System.DateTime" DbType="SmallDateTime" />
+    <ElementType Name="SGEA_NOTA_INGRESO_LISTARResult">
+      <Column Name="ningc_icod_nota_ingreso" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ningc_ianio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ningc_numero_nota_ingreso" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="almac_icod_almacen" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ningc_iid_motivo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ningc_fecha_nota_ingreso" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ningc_numero_doc" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ningc_referencia" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ningc_observaciones" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="fcoc_icod_doc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="strAlmacen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="strMotivo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strTipoDoc" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_NOTA_INGRESO_MODIFICAR" Method="SGEA_NOTA_INGRESO_MODIFICAR">
+    <Parameter Name="ningc_icod_nota_ingreso" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ningc_ianio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ningc_numero_nota_ingreso" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="almac_icod_almacen" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ningc_iid_motivo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ningc_fecha_nota_ingreso" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ningc_numero_doc" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ningc_referencia" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ningc_observaciones" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPC" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="fcoc_icod_doc" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_NOTA_INGRESO_DETALLE_INSERTAR" Method="SGEA_NOTA_INGRESO_DETALLE_INSERTAR">
+    <Parameter Name="ningc_icod_nota_ingreso" Type="System.Int32" DbType="Int" />
+    <Parameter Name="dninc_nro_item" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prdc_icod_producto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="dninc_cantidad" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="dninc_monto_unitario" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="dninc_monto_total" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="kardc_icod_correlativo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPC" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="dnicc_ncantidad_recibida" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_NOTA_INGRESO_DETALLE_MODIFICAR" Method="SGEA_NOTA_INGRESO_DETALLE_MODIFICAR">
+    <Parameter Name="dninc_icod_detalle_ingreso" Type="System.Int32" DbType="Int" />
+    <Parameter Name="dninc_nro_item" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prdc_icod_producto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="dninc_cantidad" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="dninc_monto_unitario" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="dninc_monto_total" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="kardc_icod_correlativo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPC" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="dnicc_ncantidad_recibida" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_STOCK_ACTUALIZAR" Method="SGEA_STOCK_ACTUALIZAR">
+    <Parameter Name="stocc_ianio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="almac_icod_almacen" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prdc_icod_producto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="stocc_stock_producto" Type="System.Decimal" DbType="Decimal(12,4)" />
+    <Parameter Name="intTipoMovimiento" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_STOCK_POR_ALMACEN_OPTIMIZADO_AFECTO" Method="SGE_STOCK_POR_ALMACEN_OPTIMIZADO_AFECTO">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intAlmacen" Type="System.Int32" DbType="Int" />
+    <Parameter Name="codigo_producto" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Descripcion_producto" Parameter="descripcion_producto" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="afecto" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="SGE_STOCK_POR_ALMACEN_OPTIMIZADO_AFECTOResult">
+      <Column Name="prdc_icod_producto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="almac_icod_almacen" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="stocc_stock_producto" Type="System.Decimal" DbType="Decimal(12,4) NOT NULL" CanBeNull="false" />
+      <Column Name="strAlmacen" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="strDesProducto" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strCodProducto" Type="System.String" DbType="VarChar(18) NOT NULL" CanBeNull="false" />
+      <Column Name="strCodUM" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="strDesUM" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="strCategoria" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="strSubCategoriaUno" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strSubCategoriaDos" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="strEditorial" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_nPrecio_soles" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="prdc_nPrecio_dolares" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="prdc_nPor_Descuento" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="prdc_nPrecio_venta" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="prdc_nPrecio_venta_Dol" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_NOTA_INGRESO_DETALLE_LISTAR" Method="SGEA_NOTA_INGRESO_DETALLE_LISTAR">
+    <Parameter Name="ningc_icod_nota_ingreso" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEA_NOTA_INGRESO_DETALLE_LISTARResult">
+      <Column Name="dninc_icod_detalle_ingreso" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ningc_icod_nota_ingreso" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dninc_nro_item" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_icod_producto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dninc_cantidad" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="dninc_monto_unitario" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="dninc_monto_total" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="kardc_icod_correlativo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="strCodeProducto" Type="System.String" DbType="VarChar(18)" CanBeNull="true" />
+      <Column Name="strProducto" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strUnidadMedida" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="dnicc_ncantidad_recibida" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_NOTA_SALIDA_DETALLE_LISTAR" Method="SGEA_NOTA_SALIDA_DETALLE_LISTAR">
+    <Parameter Name="nsalc_icod_nota_salida" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEA_NOTA_SALIDA_DETALLE_LISTARResult">
+      <Column Name="dnsalc_icod_detalle_salida" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nsalc_icod_nota_salida" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dnsalc_nro_item" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_icod_producto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dnsalc_cantidad" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="dnsalc_monto_unitario" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="dnsalc_monto_total" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="kardc_icod_correlativo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="strCodeProducto" Type="System.String" DbType="VarChar(18)" CanBeNull="true" />
+      <Column Name="strProducto" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strUnidadMedida" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="dblStockDisponible" Type="System.Decimal" DbType="Decimal(12,4) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_STOCK_CONSOLIDADO" Method="SGEA_STOCK_CONSOLIDADO">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEA_STOCK_CONSOLIDADOResult">
+      <Column Name="prdc_icod_producto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="strCodProducto" Type="System.String" DbType="VarChar(18)" CanBeNull="true" />
+      <Column Name="strProducto" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strUnidadMedida" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="dblStock" Type="System.Decimal" DbType="Decimal(38,4)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_KARDEX_LISTAR" Method="SGEA_KARDEX_LISTAR">
+    <ElementType Name="SGEA_KARDEX_LISTARResult">
+      <Column Name="kardc_icod_correlativo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="kardc_ianio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="almac_icod_almacen" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_icod_producto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_VERIFICAR_STOCK_REQUERIMIENTOS_MATERIALES_DETALLE_LISTAR" Method="SGE_VERIFICAR_STOCK_REQUERIMIENTOS_MATERIALES_DETALLE_LISTAR">
+    <Parameter Name="rqmc_icod_requerimiento_materiales" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_VERIFICAR_STOCK_REQUERIMIENTOS_MATERIALES_DETALLE_LISTARResult">
+      <Column Name="rqmd_icod_req_materiales_detalle" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="rqmd_vcodigo_item_requerim" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="hjcd3_icod_rubros_hc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="hjcd3_vdescripcion" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="hjcd3_vcodigo_relacion" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Unidad" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="hjcd3_ncantidad" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="rqmd_cantidad_pedida" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="rqmd_cantidad_aprobada" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="Stock" Type="System.Decimal" DbType="Decimal(38,4)" CanBeNull="true" />
+      <Column Name="StockDiferencia" Type="System.Decimal" DbType="Decimal(38,4)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_ALMACEN_LISTAR_PROYECTOS" Method="SGEA_ALMACEN_LISTAR_PROYECTOS">
+    <ElementType Name="SGEA_ALMACEN_LISTAR_PROYECTOSResult">
+      <Column Name="almac_icod_almacen" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="almac_iid_almacen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="almac_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="almac_vdireccion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="almac_vrepresentante" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="almac_sflag_estado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="almac_tipo_event" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="almac_iestado_almacen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DescripcionEstaAlmacen" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="pryc_icod_proyecto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_INVENTARIO_DET_LISTAR" Method="SGEA_INVENTARIO_DET_LISTAR">
+    <Parameter Name="invc_icod_inventario" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEA_INVENTARIO_DET_LISTARResult">
+      <Column Name="invd_icod_detalle" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="invc_icod_inventario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="invd_inro_item" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="prdc_icod_producto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="invd_icantidad" Type="System.Decimal" DbType="Decimal(8,4)" CanBeNull="true" />
+      <Column Name="strCodProducto" Type="System.String" DbType="VarChar(18)" CanBeNull="true" />
+      <Column Name="strDesProducto" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strUnidadMedida" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="dblStock" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_INVENTARIO_DET_ACTUALIZACION_LISTAR" Method="SGEA_INVENTARIO_DET_ACTUALIZACION_LISTAR">
+    <Parameter Name="invc_icod_inventario" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEA_INVENTARIO_DET_ACTUALIZACION_LISTARResult">
+      <Column Name="invd_icod_detalle" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="invc_icod_inventario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="invd_inro_item" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="prdc_icod_producto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="invd_icantidad" Type="System.Decimal" DbType="Decimal(8,4)" CanBeNull="true" />
+      <Column Name="strCodProducto" Type="System.String" DbType="VarChar(18)" CanBeNull="true" />
+      <Column Name="strDesProducto" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strUnidadMedida" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="dblStock" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_PRODUCTO_LISTAR_CODIGO_DESCRIP" Method="SGEA_PRODUCTO_LISTAR_CODIGO_DESCRIP">
+    <Parameter Name="CODIGO" Parameter="cODIGO" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="DESCRIPCION" Parameter="dESCRIPCION" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="anio" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEA_PRODUCTO_LISTAR_CODIGO_DESCRIPResult">
+      <Column Name="prdc_icod_producto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_vcode_producto" Type="System.String" DbType="VarChar(18) NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_vdescripcion_larga" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_vdescripcion_corta" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="famic_icod_familia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="famid_icod_familia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="unidc_icod_unidad_medida" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="prdc_isituacion" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_stock_minimo" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="StrUnidadMedida" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="prdc_nMonto_stock" Type="System.Decimal" DbType="Decimal(38,4)" CanBeNull="true" />
+      <Column Name="prdc_vmarca" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="prdc_vmodelo" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="prdc_vparte" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="prdc_vserie" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="prdc_vcaracteristica" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="prdc_vcodigo_fabricante" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="famic_vabreviatura" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="famic_vdescripcion" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="famid_vabreviatura" Type="System.String" DbType="Char(5)" CanBeNull="true" />
+      <Column Name="famid_vdescripcion" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="ctacc_icod_cuenta_contable" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NumCunetaContable" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_ALMACEN_LISTAR_GR" Method="SGEA_ALMACEN_LISTAR_GR">
+    <ElementType Name="SGEA_ALMACEN_LISTAR_GRResult">
+      <Column Name="almac_icod_almacen" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="almac_iid_almacen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="almac_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="almac_vdireccion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="almac_vrepresentante" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="almac_sflag_estado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="almac_tipo_event" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="almac_iestado_almacen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DescripcionEstaAlmacen" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="cecoc_icod_centro_costo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cecoc_vcodigo_centro_costo" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_KARDEX_VALORIZADO_ACTUALIZAR_COMPRAS_IMPORTACION" Method="SGE_KARDEX_VALORIZADO_ACTUALIZAR_COMPRAS_IMPORTACION">
+    <Parameter Name="FechaInicio" Parameter="fechaInicio" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="FechaFin" Parameter="fechaFin" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="anio" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_KARDEX_VALORIZADO_ACTUALIZAR_COMPRAS_IMPORTACIONResult">
+      <Column Name="anio" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="alco_icod_almacen_contable" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="icod_producto_especifico" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="icod_tipo_doc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="doc_numero" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="tip_movimiento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="icod_motivo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="flag_estado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="costo_unitario" Type="System.Decimal" DbType="Decimal(16,6) NOT NULL" CanBeNull="false" />
+      <Column Name="alco_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="prodc_vdescripcion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="estac_vdescripcion" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="situc_vdescripcion" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="documento" Type="System.String" DbType="VarChar(19)" CanBeNull="true" />
+      <Column Name="motivo" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="cant_ingreso" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="unidad_medida" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="monto_total" Type="System.Decimal" DbType="Decimal(29,9)" CanBeNull="true" />
+      <Column Name="referencia" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="prodc_iid_producto_generico" Type="System.String" DbType="VarChar(18)" CanBeNull="true" />
+      <Column Name="fcoc_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(12,4) NOT NULL" CanBeNull="false" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_KARDEX_VALORIZADO_ACTUALIZAR_COMPRAS" Method="SGE_KARDEX_VALORIZADO_ACTUALIZAR_COMPRAS">
+    <Parameter Name="FechaInicio" Parameter="fechaInicio" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="FechaFin" Parameter="fechaFin" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="anio" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_KARDEX_VALORIZADO_ACTUALIZAR_COMPRASResult">
+      <Column Name="anio" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="alco_icod_almacen_contable" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="icod_producto_especifico" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="icod_tipo_doc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="doc_numero" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="tip_movimiento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="icod_motivo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="flag_estado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="costo_unitario" Type="System.Decimal" DbType="Decimal(16,6) NOT NULL" CanBeNull="false" />
+      <Column Name="alco_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="prodc_vdescripcion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="estac_vdescripcion" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="situc_vdescripcion" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="documento" Type="System.String" DbType="VarChar(19)" CanBeNull="true" />
+      <Column Name="motivo" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="cant_ingreso" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="unidad_medida" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="monto_total" Type="System.Decimal" DbType="Decimal(38,9)" CanBeNull="true" />
+      <Column Name="referencia" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="prodc_iid_producto_generico" Type="System.String" DbType="VarChar(18)" CanBeNull="true" />
+      <Column Name="fcoc_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(12,4) NOT NULL" CanBeNull="false" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_KARDEX_VALORIZADO_ACTUALIZAR_IMPORTACION" Method="SGE_KARDEX_VALORIZADO_ACTUALIZAR_IMPORTACION">
+    <Parameter Name="FechaInicio" Parameter="fechaInicio" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="FechaFin" Parameter="fechaFin" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="anio" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_KARDEX_VALORIZADO_ACTUALIZAR_IMPORTACIONResult">
+      <Column Name="anio" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="alco_icod_almacen_contable" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="icod_producto_especifico" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="icod_tipo_doc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="doc_numero" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="tip_movimiento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="icod_motivo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="flag_estado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="costo_unitario" Type="System.Decimal" DbType="Decimal(16,6) NOT NULL" CanBeNull="false" />
+      <Column Name="alco_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="prodc_vdescripcion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="estac_vdescripcion" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="situc_vdescripcion" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="documento" Type="System.String" DbType="VarChar(19)" CanBeNull="true" />
+      <Column Name="motivo" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="cant_ingreso" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="unidad_medida" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="monto_total" Type="System.Decimal" DbType="Decimal(38,7)" CanBeNull="true" />
+      <Column Name="referencia" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="prodc_iid_producto_generico" Type="System.String" DbType="VarChar(18)" CanBeNull="true" />
+      <Column Name="fcoc_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(12,4) NOT NULL" CanBeNull="false" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_COMPRAS_PRECIOS_PRODUCTOS" Method="SGE_COMPRAS_PRECIOS_PRODUCTOS">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_COMPRAS_PRECIOS_PRODUCTOSResult">
+      <Column Name="prd_icod_producto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="prdc_vdescripcion_larga" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="unidc_vabreviatura" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="dcmlCostoSol" Type="System.Decimal" DbType="Decimal(26,12)" CanBeNull="true" />
+      <Column Name="dcmlCostoDol" Type="System.Decimal" DbType="Decimal(26,12)" CanBeNull="true" />
+      <Column Name="prdc_vcode_producto" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_COMPRAS_PRECIOS_PRODUCTOS_DETALLE" Method="SGE_COMPRAS_PRECIOS_PRODUCTOS_DETALLE">
+    <Parameter Name="intProducto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_COMPRAS_PRECIOS_PRODUCTOS_DETALLEResult">
+      <Column Name="strDesProveedor" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="facd_ncantidad" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="strTipoMoneda" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="dcmlPrecioUnitario" Type="System.Decimal" DbType="Decimal(16,6)" CanBeNull="true" />
+      <Column Name="dcmlPrecioTotal" Type="System.Decimal" DbType="Decimal(29,8)" CanBeNull="true" />
+      <Column Name="strTipoDoc" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="facc_num_doc" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="facc_sfecha_doc" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_KARDEX_LISTAR_ALMACEN_PRODUCTO_VERIFICAR" Method="SGEA_KARDEX_LISTAR_ALMACEN_PRODUCTO_VERIFICAR">
+    <Parameter Name="intAlmacen" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intProducto" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEA_KARDEX_LISTAR_ALMACEN_PRODUCTO_VERIFICARResult">
+      <Column Name="kardc_fecha_movimiento" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="almac_icod_almacen" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_icod_producto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="kardc_icantidad_prod" Type="System.Decimal" DbType="Decimal(12,4)" CanBeNull="true" />
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="kardc_numero_doc" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="kardc_tipo_movimiento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="kardc_iid_motivo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="kardc_beneficiario" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="kardc_observaciones" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="dblIngreso" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="dblSalida" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="dblSaldo" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="strDocumento" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="strMotivo" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="strAlmacen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="strCodProducto" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="strProducto" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_KARDEX_STOCK_LISTAR_X_FECHA_ALMACEN_PRODUCTO" Method="SGEA_KARDEX_STOCK_LISTAR_X_FECHA_ALMACEN_PRODUCTO">
+    <Parameter Name="dtFechaDesde" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="dtFechaHasta" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="intAlmacen" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intProducto" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEA_KARDEX_STOCK_LISTAR_X_FECHA_ALMACEN_PRODUCTOResult">
+      <Column Name="almac_icod_almacen" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_icod_producto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="strAlmacen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="strCodProducto" Type="System.String" DbType="VarChar(18)" CanBeNull="true" />
+      <Column Name="strProducto" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strUnidadMedida" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="stock" Type="System.Decimal" DbType="Decimal(38,4)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_KARDEX_VALORIZADO_LISTAR_X_FECHA_ALMACEN_PRODUCTO" Method="SGEA_KARDEX_VALORIZADO_LISTAR_X_FECHA_ALMACEN_PRODUCTO">
+    <Parameter Name="dtFechaDesde" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="dtFechaHasta" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="intAlmacen" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intProducto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="anio" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEA_KARDEX_VALORIZADO_LISTAR_X_FECHA_ALMACEN_PRODUCTOResult">
+      <Column Name="kardc_fecha_movimiento" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="almac_icod_almacen" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_icod_producto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="kardc_icantidad_prod" Type="System.Decimal" DbType="Decimal(12,4)" CanBeNull="true" />
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="kardc_numero_doc" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="kardc_tipo_movimiento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="kardc_iid_motivo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="kardc_beneficiario" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="kardc_observaciones" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="dblIngreso" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="dblSalida" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="dblSaldo" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="strDocumento" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="strMotivo" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="strAlmacen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="strCodProducto" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="strProducto" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="kardv_precio_costo_promedio" Type="System.Decimal" DbType="Decimal(12,4)" CanBeNull="true" />
+      <Column Name="kardv_monto_total_compra" Type="System.Decimal" DbType="Decimal(12,4)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_KARDEX_VALORIZADO_INVENTARIO" Method="SGE_KARDEX_VALORIZADO_INVENTARIO">
+    <Parameter Name="IdAlmacenContable" Parameter="idAlmacenContable" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IdProductoEspecifico" Parameter="idProductoEspecifico" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FechaDesde" Parameter="fechaDesde" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="FechaHasta" Parameter="fechaHasta" Type="System.DateTime" DbType="SmallDateTime" />
+    <ElementType Name="SGE_KARDEX_VALORIZADO_INVENTARIOResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="kardv_iid_correlativo" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="kardv_ianio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="kardv_sfecha_movimiento" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="kardv_icod_almacen_contable" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="alco_iid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="alco_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="prdc_icod_producto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_vcode_producto" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_vdescripcion_larga" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="unidc_vabreviatura_unidad_medida" Type="System.String" DbType="Char(3)" CanBeNull="true" />
+      <Column Name="kardv_iid_tipo_doc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tdocc_vabreviatura_tipo_doc" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="kardv_inumero_doc" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Motivo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="kardv_vbeneficiario" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="kardv_vobservaciones" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Ingresos" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="Salidas" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="Stock" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="kardv_precio_costo_promedio" Type="System.Decimal" DbType="Decimal(12,4)" CanBeNull="true" />
+      <Column Name="kardv_monto_total_compra" Type="System.Decimal" DbType="Decimal(12,4)" CanBeNull="true" />
+      <Column Name="kardv_itipo_movimiento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CostoPresupuesto" Type="System.Decimal" DbType="Decimal(12,4)" CanBeNull="true" />
+      <Column Name="ValorPresupuesto" Type="System.Decimal" DbType="Decimal(12,4)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_VERIFICAR_STOCK" Method="SGEA_VERIFICAR_STOCK">
+    <Parameter Name="anio" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEA_VERIFICAR_STOCKResult">
+      <Column Name="almac_icod_almacen" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_icod_producto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="strAlmacen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="strCodProducto" Type="System.String" DbType="VarChar(18)" CanBeNull="true" />
+      <Column Name="strProducto" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strUnidadMedida" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="stock" Type="System.Decimal" DbType="Decimal(38,4)" CanBeNull="true" />
+      <Column Name="StockReal" Type="System.Decimal" DbType="Decimal(38,4)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_KARDEX_VALORIZADO_ACTUALIZAR_VENTAS" Method="SGE_KARDEX_VALORIZADO_ACTUALIZAR_VENTAS">
+    <Parameter Name="FechaInicio" Parameter="fechaInicio" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="FechaFin" Parameter="fechaFin" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="anio" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_KARDEX_VALORIZADO_ACTUALIZAR_VENTASResult">
+      <Column Name="anio" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="alco_icod_almacen_contable" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="icod_producto_especifico" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="icod_tipo_doc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="doc_numero" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="tip_movimiento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="icod_motivo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="flag_estado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="alco_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="prodc_vdescripcion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="estac_vdescripcion" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="documento" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="motivo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="fecha" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="cant_salida" Type="System.Decimal" DbType="Decimal(16,4) NOT NULL" CanBeNull="false" />
+      <Column Name="unidad_medida" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="referencia" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="observacion" Type="System.String" DbType="VarChar(19)" CanBeNull="true" />
+      <Column Name="prodc_iid_producto_generico" Type="System.String" DbType="VarChar(18)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_PRODUCTO_GET_CODIGO_CORRELATIVO" Method="SGE_PRODUCTO_GET_CODIGO_CORRELATIVO">
+    <Parameter Name="intFamilia" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strCorrelativo" Type="System.String" DbType="VarChar(14)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_FAMILIA_DET_ELIMINAR" Method="SGEA_FAMILIA_DET_ELIMINAR">
+    <Parameter Name="famid_icod_familia_tipo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="famid_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_FAMILIA_DET_INSERTAR" Method="SGEA_FAMILIA_DET_INSERTAR">
+    <Parameter Name="famid_icod_familia_tipo" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="famic_icod_familia" Type="System.Int32" DbType="Int" />
+    <Parameter Name="famid_vabreviatura" Type="System.String" DbType="Char(5)" />
+    <Parameter Name="famid_vdescripcion" Type="System.String" DbType="VarChar(60)" />
+    <Parameter Name="cuenta_iservicio_tercero" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cuenta_iservicio_propio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="famid_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="famid_flag_estado" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_FAMILIA_DET_LISTAR" Method="SGEA_FAMILIA_DET_LISTAR">
+    <Parameter Name="famic_icod_familia" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEA_FAMILIA_DET_LISTARResult">
+      <Column Name="famid_icod_familia_tipo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="famic_icod_familia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="famid_vabreviatura" Type="System.String" DbType="Char(5)" CanBeNull="true" />
+      <Column Name="famid_vdescripcion" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="famid_flag_estado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="famic_vabreviatura" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="famic_vdescripcion" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="cuenta_iservicio_tercero" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cuenta_iservicio_propio" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NumeroCuentaSerTer" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="DesCuentaSerTer" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="NumeroCuentaSerPro" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="DesCuentaSerPro" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_FAMILIA_DET_MODIFICAR" Method="SGEA_FAMILIA_DET_MODIFICAR">
+    <Parameter Name="famid_icod_familia_tipo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="famid_vabreviatura" Type="System.String" DbType="Char(5)" />
+    <Parameter Name="famid_vdescripcion" Type="System.String" DbType="VarChar(60)" />
+    <Parameter Name="cuenta_iservicio_tercero" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cuenta_iservicio_propio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="famid_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_PVT_PRODUCTOS_INSERTAR" Method="SGE_PVT_PRODUCTOS_INSERTAR">
+    <Parameter Name="pr_iid_producto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pr_iid_marca" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pr_iid_modelo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pr_iid_color" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pr_iid_talla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pr_vcodigo_externo" Type="System.String" DbType="VarChar(22)" />
+    <Parameter Name="pr_vdescripcion_producto" Type="System.String" DbType="VarChar(60)" />
+    <Parameter Name="pr_vabreviatura_producto" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="pr_isituacion_producto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pr_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pr_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="pr_tarec_icorrelativo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="unidc_icod_unidad_medida" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_PVT_PRODUCTOS_MODIFICAR" Method="SGE_PVT_PRODUCTOS_MODIFICAR">
+    <Parameter Name="pr_icod_producto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pr_iid_marca" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pr_iid_modelo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pr_iid_color" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pr_iid_talla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pr_vcodigo_externo" Type="System.String" DbType="VarChar(22)" />
+    <Parameter Name="pr_vdescripcion_producto" Type="System.String" DbType="VarChar(60)" />
+    <Parameter Name="pr_vabreviatura_producto" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="pr_isituacion_producto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pr_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pr_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="pr_tarec_icorrelativo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="unidc_icod_unidad_medida" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_PRODUCTO_INSERTAR" Method="SGEA_PRODUCTO_INSERTAR">
+    <Parameter Name="prdc_icod_producto" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="prdc_vcode_producto" Type="System.String" DbType="VarChar(14)" />
+    <Parameter Name="prdc_vdescripcion_larga" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="prdc_vdescripcion_corta" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="famic_icod_familia" Type="System.Int32" DbType="Int" />
+    <Parameter Name="famid_icod_familia" Type="System.Int32" DbType="Int" />
+    <Parameter Name="unidc_icod_unidad_medida" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prdc_isituacion" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="prdc_stock_minimo" Type="System.Decimal" DbType="Decimal(8,2)" />
+    <Parameter Name="prdc_calibre" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="tarec_icorrelativo_colorprod" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prdc_icod_proveedor" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prdc_precio_costo" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="prdc_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prdc_flag_estado" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="prdc_nMonto_stock" Type="System.Decimal" DbType="Decimal(8,2)" />
+    <Parameter Name="prdc_vmarca" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="prdc_vmodelo" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="prdc_vparte" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="prdc_vserie" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="prdc_vcaracteristica" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="prdc_vcodigo_fabricante" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="ctacc_icod_cuenta_contable" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prdc_italla" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_PRODUCTO_MODIFICAR" Method="SGEA_PRODUCTO_MODIFICAR">
+    <Parameter Name="prdc_icod_producto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prdc_vcode_producto" Type="System.String" DbType="VarChar(14)" />
+    <Parameter Name="prdc_vdescripcion_larga" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="prdc_vdescripcion_corta" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="famic_icod_familia" Type="System.Int32" DbType="Int" />
+    <Parameter Name="famid_icod_familia" Type="System.Int32" DbType="Int" />
+    <Parameter Name="unidc_icod_unidad_medida" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prdc_isituacion" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="prdc_stock_minimo" Type="System.Decimal" DbType="Decimal(8,2)" />
+    <Parameter Name="prdc_calibre" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="tarec_icorrelativo_colorprod" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prdc_icod_proveedor" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prdc_precio_costo" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="prdc_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prdc_nMonto_stock" Type="System.Decimal" DbType="Decimal(8,2)" />
+    <Parameter Name="prdc_vmarca" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="prdc_vmodelo" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="prdc_vparte" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="prdc_vserie" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="prdc_vcaracteristica" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="prdc_vcodigo_fabricante" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="ctacc_icod_cuenta_contable" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prdc_italla" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_PVT_ICOD_STOCK_MODIFICAR" Method="SGE_PVT_ICOD_STOCK_MODIFICAR">
+    <Parameter Name="stocc_icod_stock_producto" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_VERIFICAR_PRODUCTO" Method="SGE_VERIFICAR_PRODUCTO">
+    <Parameter Name="prdc_vdescripcion_larga" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="SGE_VERIFICAR_PRODUCTOResult">
+      <Column Name="prdc_icod_producto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_vdescripcion_larga" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="prdc_vcode_producto" Type="System.String" DbType="VarChar(18)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_PVT_ICOD_STOCK_LISTAR" Method="SGE_PVT_ICOD_STOCK_LISTAR">
+    <ElementType Name="SGE_PVT_ICOD_STOCK_LISTARResult">
+      <Column Name="stocc_icod_stock_producto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="stocc_ianio" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="stocc_iid_almacen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="stocc_iid_producto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="stocc_nstock_prod" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="puvec_icod_punto_venta" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="stocc_codigo_producto" Type="System.String" DbType="VarChar(22)" CanBeNull="true" />
+      <Column Name="stocc_nprecio_costo_prom_prod" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="stocc_ntotal_costo_prod" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_STOCK_POR_ALMACEN_OPTIMIZADO" Method="SGE_STOCK_POR_ALMACEN_OPTIMIZADO">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intAlmacen" Type="System.Int32" DbType="Int" />
+    <Parameter Name="codigo_producto" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Descripcion_producto" Parameter="descripcion_producto" Type="System.String" DbType="VarChar(20)" />
+    <ElementType Name="SGE_STOCK_POR_ALMACEN_OPTIMIZADOResult">
+      <Column Name="prdc_icod_producto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="almac_icod_almacen" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="stocc_stock_producto" Type="System.Decimal" DbType="Decimal(12,4) NOT NULL" CanBeNull="false" />
+      <Column Name="strAlmacen" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="strDesProducto" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strCodProducto" Type="System.String" DbType="VarChar(18)" CanBeNull="true" />
+      <Column Name="strCodUM" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="strDesUM" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CodigoSUNAT" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="unidc_icod_unidad_medida" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_PRODUCTO_LISTAR" Method="SGEA_PRODUCTO_LISTAR">
+    <Parameter Name="anio" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEA_PRODUCTO_LISTARResult">
+      <Column Name="prdc_icod_producto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_vcode_producto" Type="System.String" DbType="VarChar(18) NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_vdescripcion_larga" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_vdescripcion_corta" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="famic_icod_familia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="famid_icod_familia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="unidc_icod_unidad_medida" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="prdc_isituacion" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_stock_minimo" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="prdc_calibre" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="tarec_icorrelativo_colorprod" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="prdc_icod_proveedor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="prdc_precio_costo" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="StrUnidadMedida" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="prdc_nMonto_stock" Type="System.Decimal" DbType="Decimal(38,4)" CanBeNull="true" />
+      <Column Name="prdc_vmarca" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="prdc_vmodelo" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="prdc_vparte" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="prdc_vserie" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="prdc_vcaracteristica" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="prdc_vcodigo_fabricante" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="famic_vabreviatura" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="famic_vdescripcion" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="famid_vabreviatura" Type="System.String" DbType="Char(5)" CanBeNull="true" />
+      <Column Name="famid_vdescripcion" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="ctacc_icod_cuenta_contable" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NumCunetaContable" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="prdc_icod_tipo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="strcolor" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="prdc_italla" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CodigoSUNAT" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_FAMILIA_CAB_INSERTAR" Method="SGEA_FAMILIA_CAB_INSERTAR">
+    <Parameter Name="famic_icod_familia" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="famic_vabreviatura" Type="System.String" DbType="Char(4)" />
+    <Parameter Name="famic_vdescripcion" Type="System.String" DbType="VarChar(40)" />
+    <Parameter Name="famic_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="famic_flag_estado" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="clasc_icod_clasificacion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="famic_icod_tipo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="almcc_icod_almacen" Type="System.Int32" DbType="Int" />
+    <Parameter Name="famic_flag_serie" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="famic_vtipo_existencia" Type="System.String" DbType="VarChar(2)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_FAMILIA_CAB_LISTAR" Method="SGEA_FAMILIA_CAB_LISTAR">
+    <ElementType Name="SGEA_FAMILIA_CAB_LISTARResult">
+      <Column Name="famic_icod_familia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="famic_vabreviatura" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="famic_vdescripcion" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="famic_flag_estado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="clasc_icod_clasificacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="strClasificacion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="famic_icod_tipo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Tipo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="almcc_icod_almacen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="almcc_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="famic_flag_serie" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="famic_vtipo_existencia" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_FAMILIA_CAB_MODIFICAR" Method="SGEA_FAMILIA_CAB_MODIFICAR">
+    <Parameter Name="famic_icod_familia" Type="System.Int32" DbType="Int" />
+    <Parameter Name="famic_vabreviatura" Type="System.String" DbType="Char(4)" />
+    <Parameter Name="famic_vdescripcion" Type="System.String" DbType="VarChar(40)" />
+    <Parameter Name="famic_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="clasc_icod_clasificacion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="famic_icod_tipo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="almcc_icod_almacen" Type="System.Int32" DbType="Int" />
+    <Parameter Name="famic_flag_serie" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="famic_vtipo_existencia" Type="System.String" DbType="VarChar(2)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_INVENTARIO_PERMANENTE_UNIDADES_LISTAR" Method="SGEA_INVENTARIO_PERMANENTE_UNIDADES_LISTAR">
+    <Parameter Name="dtFechaDesde" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="dtFechaHasta" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="intAlmacen" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEA_INVENTARIO_PERMANENTE_UNIDADES_LISTARResult">
+      <Column Name="almac_icod_almacen" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_icod_producto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dblSaldoAnterior" Type="System.Decimal" DbType="Decimal(38,4)" CanBeNull="true" />
+      <Column Name="dblIngresos" Type="System.Decimal" DbType="Decimal(38,4) NOT NULL" CanBeNull="false" />
+      <Column Name="dblSalidas" Type="System.Decimal" DbType="Decimal(38,4) NOT NULL" CanBeNull="false" />
+      <Column Name="dblSaldoActual" Type="System.Decimal" DbType="Decimal(38,4)" CanBeNull="true" />
+      <Column Name="strAlmacen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="strCodProducto" Type="System.String" DbType="VarChar(18)" CanBeNull="true" />
+      <Column Name="strProducto" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strUnidadMedida" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_UNIDAD_MEDIDA_INSERTAR" Method="SGEA_UNIDAD_MEDIDA_INSERTAR">
+    <Parameter Name="unidc_icod_unidad_medida" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="unidc_iid_unidad_medida" Type="System.Int32" DbType="Int" />
+    <Parameter Name="unidc_vabreviatura_unidad_medida" Type="System.String" DbType="VarChar(3)" />
+    <Parameter Name="unidc_vdescripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="unidc_vcodigo_sunat" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="unidc_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="unidc_sflag_estado" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="unidc_cod_unid_med" Type="System.String" DbType="VarChar(5)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_UNIDAD_MEDIDA_LISTAR" Method="SGEA_UNIDAD_MEDIDA_LISTAR">
+    <ElementType Name="SGEA_UNIDAD_MEDIDA_LISTARResult">
+      <Column Name="unidc_icod_unidad_medida" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="unidc_iid_unidad_medida" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="unidc_vabreviatura_unidad_medida" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="unidc_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="unidc_vcodigo_sunat" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="unidc_sflag_estado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="unidc_cod_unid_med" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_UNIDAD_MEDIDA_MODIFICAR" Method="SGEA_UNIDAD_MEDIDA_MODIFICAR">
+    <Parameter Name="unidc_icod_unidad_medida" Type="System.Int32" DbType="Int" />
+    <Parameter Name="unidc_vabreviatura_unidad_medida" Type="System.String" DbType="VarChar(3)" />
+    <Parameter Name="unidc_vdescripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="unidc_vcodigo_sunat" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="unidc_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="unidc_cod_unid_med" Type="System.String" DbType="VarChar(5)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_KARDEX_LISTAR_X_FECHA_ALMACEN_PRODUCTO" Method="SGEA_KARDEX_LISTAR_X_FECHA_ALMACEN_PRODUCTO">
+    <Parameter Name="dtFechaDesde" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="dtFechaHasta" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="intAlmacen" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intProducto" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEA_KARDEX_LISTAR_X_FECHA_ALMACEN_PRODUCTOResult">
+      <Column Name="kardc_fecha_movimiento" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="almac_icod_almacen" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_icod_producto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="kardc_icantidad_prod" Type="System.Decimal" DbType="Decimal(12,4)" CanBeNull="true" />
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="kardc_numero_doc" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="kardc_tipo_movimiento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="kardc_iid_motivo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="kardc_beneficiario" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="kardc_observaciones" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="dblIngreso" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="dblSalida" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="tarec_vtipo_operacion" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="dblSaldo" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="strDocumento" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="strMotivo" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="strAlmacen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="strCodProducto" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="strProducto" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="kardc_stock" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="kardc_unidMed" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="kardc_codUnidMEd" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="unidc_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tdocc_coa" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="clasc_vdescripcion" Type="System.String" DbType="VarChar(35)" CanBeNull="true" />
+      <Column Name="famic_vtipo_existencia" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_ALMACEN_INSERTAR" Method="SGEA_ALMACEN_INSERTAR">
+    <Parameter Name="almac_icod_almacen" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="almac_iid_almacen" Type="System.Int32" DbType="Int" />
+    <Parameter Name="almac_vdescripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="almac_vdireccion" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="almac_vrepresentante" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="almac_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="almac_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="almac_sflag_estado" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="almac_tipo_event" Type="System.Int32" DbType="Int" />
+    <Parameter Name="almac_iestado_almacen" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pryc_icod_proyecto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cecoc_icod_centro_costo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="almac_vubigeo" Type="System.String" DbType="VarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_ALMACEN_LISTAR" Method="SGEA_ALMACEN_LISTAR">
+    <ElementType Name="SGEA_ALMACEN_LISTARResult">
+      <Column Name="almac_icod_almacen" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="almac_iid_almacen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="almac_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="almac_vdireccion" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="almac_vrepresentante" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="almac_sflag_estado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="almac_tipo_event" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TipoEventos" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="almac_iestado_almacen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pryc_icod_proyecto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DescripcionEstaAlmacen" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="pryc_vdescripcion" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="cecoc_icod_centro_costo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cecoc_vcodigo_centro_costo" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="almac_vubigeo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_ALMACEN_MODIFICAR" Method="SGEA_ALMACEN_MODIFICAR">
+    <Parameter Name="almac_icod_almacen" Type="System.Int32" DbType="Int" />
+    <Parameter Name="almac_vdescripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="almac_vdireccion" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="almac_vrepresentante" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="almac_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="almac_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="almac_tipo_event" Type="System.Int32" DbType="Int" />
+    <Parameter Name="almac_iestado_almacen" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pryc_icod_proyecto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cecoc_icod_centro_costo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="almac_vubigeo" Type="System.String" DbType="VarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_ENTREGA_MATERIAL_GET_BY_ID" Method="SGE_ENTREGA_MATERIAL_GET_BY_ID">
+    <Parameter Name="icod_entrega_material" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_ENTREGA_MATERIAL_GET_BY_IDResult">
+      <Column Name="icod_entrega_material" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="rqmad_icod_item_requerimiento_material" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="em_sfecha_entrega" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="prdc_icod_producto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="em_ncantidad" Type="System.Decimal" DbType="Decimal(14,6) NOT NULL" CanBeNull="false" />
+      <Column Name="perc_icod_personal" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="em_iusuario_crea" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="em_sfecha_crea" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="em_spc_crea" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="em_iusuario_modifica" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="em_sfecha_modifica" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="em_spc_modifica" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="em_bflag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CodigoProducto" Type="System.String" DbType="VarChar(18)" CanBeNull="true" />
+      <Column Name="DescripcionProducto" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="IdUnidadMedida" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NombrePersonal" Type="System.String" DbType="VarChar(122) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_ENTREGA_MATERIAL_SAVE" Method="SGE_ENTREGA_MATERIAL_SAVE">
+    <Parameter Name="icod_entrega_material" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="rqmad_icod_item_requerimiento_material" Type="System.Int32" DbType="Int" />
+    <Parameter Name="em_sfecha_entrega" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="prdc_icod_producto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="em_ncantidad" Type="System.Decimal" DbType="Decimal(14,6)" />
+    <Parameter Name="perc_icod_personal" Type="System.Int32" DbType="Int" />
+    <Parameter Name="em_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="em_sfecha_crea" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="em_spc_crea" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="em_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="em_sfecha_modifica" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="em_spc_modifica" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="rqmad_kardc_icod_correlativo" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

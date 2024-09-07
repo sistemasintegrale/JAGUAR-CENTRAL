@@ -1,0 +1,1619 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SGE_CALZADOS_JAGUAR" Class="CuentasPorCobrarDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=SGE_CALZADOS_JAGUAR;Integrated Security=True" SettingsObjectName="SGE.DataAccess.Properties.Settings" SettingsPropertyName="SGE_CALZADOS_JAGUARConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.SGECPC_DOC_X_COBRAR_PAGO_INSERTAR" Method="SGECPC_DOC_X_COBRAR_PAGO_INSERTAR">
+    <Parameter Name="pdxcc_icod_correlativo" Type="System.Int64" DbType="BigInt" Direction="InOut" />
+    <Parameter Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pdxcc_vnumero_doc" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="pdxcc_sfecha_cobro" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pdxcc_nmonto_cobro" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="pdxcc_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(12,4)" />
+    <Parameter Name="pdxcc_vobservacion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="efctc_icod_enti_financiera_cuenta" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cliec_icod_cliente" Type="System.Int32" DbType="Int" />
+    <Parameter Name="proc_icod_proveedor" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctacc_iid_cuenta_contable" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cecoc_icod_centro_costo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="anac_icod_analitica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="anac_icod_analitica_det" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pdxcc_isituacion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pdxcc_vorigen" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="pdxcc_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pdxcc_vpc_crea" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="pdxcc_flag_estado" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGECPC_DOC_X_COBRAR_PAGO_ACTUALIZAR" Method="SGECPC_DOC_X_COBRAR_PAGO_ACTUALIZAR">
+    <Parameter Name="pdxcc_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pdxcc_vnumero_doc" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="pdxcc_sfecha_cobro" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pdxcc_nmonto_cobro" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="pdxcc_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(12,4)" />
+    <Parameter Name="pdxcc_vobservacion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="efctc_icod_enti_financiera_cuenta" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cliec_icod_cliente" Type="System.Int32" DbType="Int" />
+    <Parameter Name="proc_icod_proveedor" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctacc_iid_cuenta_contable" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cecoc_icod_centro_costo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="anac_icod_analitica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="anac_icod_analitica_det" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pdxcc_isituacion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pdxcc_vorigen" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="pdxcc_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pdxcc_vpc_modifica" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="pdxcc_flag_estado" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SIGTS_DOC_X_COBRAR_DOC_X_PAGAR_CANJE_INSERTAR" Method="SIGTS_DOC_X_COBRAR_DOC_X_PAGAR_CANJE_INSERTAR">
+    <Parameter Name="canjec_icod_correlativo" Type="System.Int64" DbType="BigInt" Direction="InOut" />
+    <Parameter Name="doxpc_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="canjec_vobservacion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="canjec_sfecha_pago" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" />
+    <Parameter Name="canjec_nmonto_pago" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="canjec_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(12,4)" />
+    <Parameter Name="canjec_iorigen" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="canjec_isituacion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pdxpc_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="pdxcc_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="usuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pc" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SIGTS_DOC_X_COBRAR_DOC_X_PAGAR_CANJE_ACTUALIZAR" Method="SIGTS_DOC_X_COBRAR_DOC_X_PAGAR_CANJE_ACTUALIZAR">
+    <Parameter Name="canjec_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="canjec_vobservacion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="canjec_sfecha_pago" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="canjec_nmonto_pago" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="canjec_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(12,4)" />
+    <Parameter Name="usuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pc" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SIGTS_DOC_X_COBRAR_DOC_X_PAGAR_CANJE_ELIMINAR" Method="SIGTS_DOC_X_COBRAR_DOC_X_PAGAR_CANJE_ELIMINAR">
+    <Parameter Name="canjec_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="usuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pc" Type="System.String" DbType="VarChar(1)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SIGTS_DOC_X_COBRAR_ACTUALIZAR_MONTO_PAGADO_SALDO" Method="SIGTS_DOC_X_COBRAR_ACTUALIZAR_MONTO_PAGADO_SALDO">
+    <Parameter Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SIGTS_DOC_X_COBRAR_VERIFICAR_EXISTEN_PAGOS" Method="SIGTS_DOC_X_COBRAR_VERIFICAR_EXISTEN_PAGOS">
+    <Parameter Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="resultado" Type="System.Boolean" DbType="Bit" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SIGTS_DOC_X_COBRAR_CUENTA_CONTABLE_ELIMINAR" Method="SIGTS_DOC_X_COBRAR_CUENTA_CONTABLE_ELIMINAR">
+    <Parameter Name="ccdcc_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="pc" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="usuario" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SIGTS_DXC_PAGO_CON_NCREDITO_LISTAR_X_ICOD_NC" Method="SIGTS_DXC_PAGO_CON_NCREDITO_LISTAR_X_ICOD_NC">
+    <Parameter Name="doxcc_icod_correlativo_nota_credito" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="SIGTS_DXC_PAGO_CON_NCREDITO_LISTAR_X_ICOD_NCResult">
+      <Column Name="ncpac_icod_correlativo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ncpac_vnumero_doc_nota_credito" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="tdocc_vabreviatura_tipo_doc" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="ncpac_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ncpac_nmonto_pago" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="ncpac_sfecha_pago" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_icod_correlativo_nota_credito" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SIGTS_DOC_X_COBRAR_BUSCAR_X_CLIENTE_TODA_SITUACION" Method="SIGTS_DOC_X_COBRAR_BUSCAR_X_CLIENTE_TODA_SITUACION">
+    <Parameter Name="cliec_icod_cliente" Type="System.Int32" DbType="Int" />
+    <Parameter Name="doxcc_ianio" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SIGTS_DOC_X_COBRAR_BUSCAR_X_CLIENTE_TODA_SITUACIONResult">
+      <Column Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Abreviatura" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="tdodc_iid_correlativo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CodigoClaseDocumento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tablc_iid_situacion_documento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Situacion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="doxcc_vnumero_doc" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="doxcc_sfecha_doc" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="doxcc_nmonto_total" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="doxcc_nmonto_pagado" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_saldo" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="doxcc_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(8,4)" CanBeNull="true" />
+      <Column Name="doxcc_vobservaciones" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="doxcc_sfecha_vencimiento_doc" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="mesec_iid_mes" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="ValorVenta" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SIGTS_RPT_ESTADO_CUENTA_DETALLE_CLIENTE" Method="SIGTS_RPT_ESTADO_CUENTA_DETALLE_CLIENTE">
+    <Parameter Name="cliec_icod_cliente" Type="System.Int32" DbType="Int" />
+    <Parameter Name="doxcc_ianio" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SIGTS_RPT_ESTADO_CUENTA_DETALLE_CLIENTEResult">
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_vnumero_doc" Type="System.String" DbType="VarChar(19)" CanBeNull="true" />
+      <Column Name="doxcc_sfecha_doc" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="doxcc_nmonto_pagado" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_saldo" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_vobservaciones" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="doxcc_sfecha_vencimiento_doc" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="doxcc_sfecha_entrega" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ValorVenta" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="tablc_iid_situacion_documento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SIGTS_RPT_ESTADO_CUENTA_DETALLE_PAGO_CLIENTE" Method="SIGTS_RPT_ESTADO_CUENTA_DETALLE_PAGO_CLIENTE">
+    <Parameter Name="cliec_icod_cliente" Type="System.Int32" DbType="Int" />
+    <Parameter Name="doxcc_ianio" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SIGTS_RPT_ESTADO_CUENTA_DETALLE_PAGO_CLIENTEResult">
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_vnumero_doc" Type="System.String" DbType="VarChar(19)" CanBeNull="true" />
+      <Column Name="doxcc_sfecha_doc" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SimboloMoneda" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="doxcc_nmonto_pagado" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_saldo" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_vobservaciones" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="doxcc_sfecha_vencimiento_doc" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="doxcc_sfecha_entrega" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ValorVenta" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="tablc_iid_situacion_documento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DocPago" Type="System.String" DbType="VarChar(19)" CanBeNull="true" />
+      <Column Name="FechaPago" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="MonedaPago" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="MontoPago" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SIGTS_RPT_ESTADO_CUENTA_DOCUMENTOS" Method="SIGTS_RPT_ESTADO_CUENTA_DOCUMENTOS">
+    <Parameter Name="doxcc_ianio" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SIGTS_RPT_ESTADO_CUENTA_DOCUMENTOSResult">
+      <Column Name="cliec_icod_cliente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cliec_vnombre_cliente" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="cliec_vcod_cliente" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="giroc_icod_giro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="giroc_vnombre_giro" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idTipodocuemnto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="doxcc_vnumero_doc" Type="System.String" DbType="VarChar(19)" CanBeNull="true" />
+      <Column Name="doxcc_sfecha_doc" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="doxcc_nmonto_pagado" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_saldo" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_vobservaciones" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="doxcc_sfecha_vencimiento_doc" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="doxcc_sfecha_entrega" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ValorVenta" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="tablc_iid_situacion_documento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SIGTS_RPT_CLIENTES_SALDOS_COBRANZA_DUDOSA" Method="SIGTS_RPT_CLIENTES_SALDOS_COBRANZA_DUDOSA">
+    <Parameter Name="doxcc_ianio" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SIGTS_RPT_CLIENTES_SALDOS_COBRANZA_DUDOSAResult">
+      <Column Name="cliec_icod_cliente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cliec_vcod_cliente" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="giroc_icod_giro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="giroc_vnombre_giro" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Situacion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="cliec_vnombre_cliente" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="doxcc_nmonto_saldo_soles" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="doxcc_nmonto_saldo_dolares" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SIGTS_NOTA_CREDITO_PAGO_LISTAR_X_ICOD_DXC_A_UNA_FECHA" Method="SIGTS_NOTA_CREDITO_PAGO_LISTAR_X_ICOD_DXC_A_UNA_FECHA">
+    <Parameter Name="doxcc_icod_correlativo_dxc" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="anio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sfecha" Type="System.DateTime" DbType="SmallDateTime" />
+    <ElementType Name="SIGTS_NOTA_CREDITO_PAGO_LISTAR_X_ICOD_DXC_A_UNA_FECHAResult">
+      <Column Name="ncpac_icod_correlativo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_icod_correlativo_nota_credito" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AbreviaturaNotaCredito" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="tdocc_iid_correlativo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ncpac_vnumero_doc_nota_credito" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="SaldoDXCNotaCredito" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Moneda" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ncpac_nmonto_pago" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="ncpac_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(12,4)" CanBeNull="true" />
+      <Column Name="ncpac_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ncpac_sfecha_pago" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ncpac_iorigen" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="efctc_icod_enti_financiera_cuenta" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ncpac_iusuario_crea" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ncpac_sfecha_crea" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ncpac_vpc_crea" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ncpac_iusuario_modifica" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ncpac_sfecha_modifica" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ncpac_vpc_modifica" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ncpac_isituacion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_icod_correlativo1" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SIGTS_DOC_X_COBRAR_PAGO_LISTAR_X_ICOD_DXC_A_UNA_FECHA" Method="SIGTS_DOC_X_COBRAR_PAGO_LISTAR_X_ICOD_DXC_A_UNA_FECHA">
+    <Parameter Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ANIO" Parameter="aNIO" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SFECHA" Parameter="sFECHA" Type="System.DateTime" DbType="SmallDateTime" />
+    <ElementType Name="SIGTS_DOC_X_COBRAR_PAGO_LISTAR_X_ICOD_DXC_A_UNA_FECHAResult">
+      <Column Name="pdxcc_icod_correlativo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Abreviatura" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="pdxcc_vnumero_doc" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="pdxcc_sfecha_cobro" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Moneda" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="pdxcc_nmonto_cobro" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="pdxcc_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(12,4)" CanBeNull="true" />
+      <Column Name="pdxcc_vobservacion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="efctc_icod_enti_financiera_cuenta" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CuentaBancaria" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="EntidadFinanciera" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="cliec_icod_cliente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="proc_icod_proveedor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ctacc_iid_cuenta_contable" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CuentaContable" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="DescripcionCuentaContable" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="IndicadorCosto" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="cecoc_icod_centro_costo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CentroCosto" Type="System.String" DbType="Char(8) NOT NULL" CanBeNull="false" />
+      <Column Name="CentroCostoDesc" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="anac_icod_analitica" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="anac_icod_analitica_det" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Analitica" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="TipoAnalitica" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="pdxcc_isituacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pdxcc_vorigen" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="adpac_icod_correlativo" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ncpac_icod_correlativo" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SIGTS_RPT_ESTADO_CUENTA_DETALLE_CLIENTE_A_UNA_FECHA" Method="SIGTS_RPT_ESTADO_CUENTA_DETALLE_CLIENTE_A_UNA_FECHA">
+    <Parameter Name="doxcc_ianio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Fecha" Parameter="fecha" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="cliec_icod_cliente" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SIGTS_RPT_ESTADO_CUENTA_DETALLE_CLIENTE_A_UNA_FECHAResult">
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_vnumero_doc" Type="System.String" DbType="VarChar(24)" CanBeNull="true" />
+      <Column Name="doxcc_sfecha_doc" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="doxcc_nmonto_pagado" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_saldo" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_vobservaciones" Type="System.String" DbType="VarChar(400)" CanBeNull="true" />
+      <Column Name="doxcc_sfecha_vencimiento_doc" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="doxcc_sfecha_entrega" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ValorVenta" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="tablc_iid_situacion_documento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SIGTS_RPT_ESTADO_CUENTA_DETALLE_PAGO_CLIENTE_A_UNA_FECHA" Method="SIGTS_RPT_ESTADO_CUENTA_DETALLE_PAGO_CLIENTE_A_UNA_FECHA">
+    <Parameter Name="doxcc_ianio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Fecha" Parameter="fecha" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="cliec_icod_cliente" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SIGTS_RPT_ESTADO_CUENTA_DETALLE_PAGO_CLIENTE_A_UNA_FECHAResult">
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_vnumero_doc" Type="System.String" DbType="VarChar(24)" CanBeNull="true" />
+      <Column Name="doxcc_sfecha_doc" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SimboloMoneda" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="doxcc_nmonto_pagado" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_saldo" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_vobservaciones" Type="System.String" DbType="VarChar(400)" CanBeNull="true" />
+      <Column Name="doxcc_sfecha_vencimiento_doc" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="doxcc_sfecha_entrega" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ValorVenta" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="tablc_iid_situacion_documento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DocPago" Type="System.String" DbType="VarChar(19)" CanBeNull="true" />
+      <Column Name="FechaPago" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="MonedaPago" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="MontoPago" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SIGTS_RPT_ESTADO_CUENTA_DOCUMENTOS_A_UNA_FECHA" Method="SIGTS_RPT_ESTADO_CUENTA_DOCUMENTOS_A_UNA_FECHA">
+    <Parameter Name="doxcc_ianio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Fecha" Parameter="fecha" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="cliec_icod_cliente" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SIGTS_RPT_ESTADO_CUENTA_DOCUMENTOS_A_UNA_FECHAResult">
+      <Column Name="cliec_icod_cliente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cliec_vnombre_cliente" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="cliec_vcod_cliente" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="giroc_icod_giro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="giroc_vnombre_giro" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idTipodocuemnto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="doxcc_vnumero_doc" Type="System.String" DbType="VarChar(24)" CanBeNull="true" />
+      <Column Name="doxcc_sfecha_doc" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="doxcc_nmonto_pagado" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_saldo" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_vobservaciones" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="doxcc_sfecha_vencimiento_doc" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="doxcc_sfecha_entrega" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ValorVenta" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="tablc_iid_situacion_documento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SIGTS_RPT_CLIENTES_SALDOS_COBRANZA_DUDOSA_A_UNA_FECHA" Method="SIGTS_RPT_CLIENTES_SALDOS_COBRANZA_DUDOSA_A_UNA_FECHA">
+    <Parameter Name="doxcc_ianio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Fecha" Parameter="fecha" Type="System.DateTime" DbType="SmallDateTime" />
+    <ElementType Name="SIGTS_RPT_CLIENTES_SALDOS_COBRANZA_DUDOSA_A_UNA_FECHAResult">
+      <Column Name="cliec_icod_cliente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cliec_vcod_cliente" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="giroc_icod_giro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="giroc_vnombre_giro" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Situacion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="cliec_vnombre_cliente" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="doxcc_nmonto_saldo_soles" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="doxcc_nmonto_saldo_dolares" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SIGTS_NOTA_CREDITO_CLIENTE_LISTAR" Method="SIGTS_NOTA_CREDITO_CLIENTE_LISTAR">
+    <Parameter Name="doxcc_ianio" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SIGTS_NOTA_CREDITO_CLIENTE_LISTARResult">
+      <Column Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_vnumero_doc" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="tarec_vdescripcion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="doxcc_sfecha_doc" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="cliec_vnombre_cliente" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="doxcc_nmonto_total" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_pagado" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_saldo" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(8,4) NOT NULL" CanBeNull="false" />
+      <Column Name="cliec_icod_cliente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tdocd_descripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tablc_iid_situacion_documento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SIGTS_DXC_PAGO_CON_NCREDITO_LISTAR" Method="SIGTS_DXC_PAGO_CON_NCREDITO_LISTAR">
+    <ElementType Name="SIGTS_DXC_PAGO_CON_NCREDITO_LISTARResult">
+      <Column Name="ncpac_icod_correlativo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_vnumero_doc" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="tdocc_vabreviatura_tipo_doc" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="doxcc_vobservaciones" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ncpac_nmonto_pago" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="ncpac_sfecha_pago" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_icod_correlativo_nota_credito" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_LETRA_X_COBRAR_ELIMINAR" Method="SGE_LETRA_X_COBRAR_ELIMINAR">
+    <Parameter Name="lexcc_icod_correlativo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="vcocc_iid_voucher_contable" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPc" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_LETRA_X_COBRAR_MODIFICAR" Method="SGE_LETRA_X_COBRAR_MODIFICAR">
+    <Parameter Name="lexcc_icod_correlativo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="lexcc_icorrelativo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="anioc_iid_anio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="mesec_iid_mes" Type="System.Int32" DbType="Int" />
+    <Parameter Name="lexcc_vnumero_letra" Type="System.String" DbType="VarChar(8)" />
+    <Parameter Name="lexcc_inumero_renovacion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="lexcc_sfecha_letra" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="cliec_icod_cliente" Type="System.Int32" DbType="Int" />
+    <Parameter Name="lexcc_vaval" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" />
+    <Parameter Name="lexcc_nmonto_total" Type="System.Decimal" DbType="Decimal(8,2)" />
+    <Parameter Name="lexcc_nmonto_pagado" Type="System.Decimal" DbType="Decimal(8,2)" />
+    <Parameter Name="lexcc_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(6,4)" />
+    <Parameter Name="lexcc_sfecha_vencimiento" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="tablc_iid_situacion_letra" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tablc_iid_condicion_letra" Type="System.Int32" DbType="Int" />
+    <Parameter Name="efinc_icod_entidad_financiera" Type="System.Int32" DbType="Int" />
+    <Parameter Name="lexcc_vnumero_ubd" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="lexcc_vobservaciones" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="tablc_iid_ubicacion_letra" Type="System.Int32" DbType="Int" />
+    <Parameter Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="lexcc_icod_correlativo_renovacion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vcocc_iid_voucher_contable" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPc" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_LETRA_X_COBRAR_INSERTAR" Method="SGE_LETRA_X_COBRAR_INSERTAR">
+    <Parameter Name="lexcc_icod_correlativo" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="lexcc_icorrelativo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="anioc_iid_anio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="mesec_iid_mes" Type="System.Int32" DbType="Int" />
+    <Parameter Name="lexcc_vnumero_letra" Type="System.String" DbType="VarChar(8)" />
+    <Parameter Name="lexcc_inumero_renovacion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="lexcc_sfecha_letra" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="cliec_icod_cliente" Type="System.Int32" DbType="Int" />
+    <Parameter Name="lexcc_vaval" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" />
+    <Parameter Name="lexcc_nmonto_total" Type="System.Decimal" DbType="Decimal(8,2)" />
+    <Parameter Name="lexcc_nmonto_pagado" Type="System.Decimal" DbType="Decimal(8,2)" />
+    <Parameter Name="lexcc_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(6,4)" />
+    <Parameter Name="lexcc_sfecha_vencimiento" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="tablc_iid_situacion_letra" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tablc_iid_condicion_letra" Type="System.Int32" DbType="Int" />
+    <Parameter Name="efinc_icod_entidad_financiera" Type="System.Int32" DbType="Int" />
+    <Parameter Name="lexcc_vnumero_ubd" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="lexcc_vobservaciones" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="tablc_iid_ubicacion_letra" Type="System.Int32" DbType="Int" />
+    <Parameter Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="lexcc_icod_correlativo_renovacion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vcocc_iid_voucher_contable" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPc" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_LETRA_X_COBRAR_LISTAR" Method="SGE_LETRA_X_COBRAR_LISTAR">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intPeriodo" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_LETRA_X_COBRAR_LISTARResult">
+      <Column Name="lexcc_icod_correlativo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="lexcc_icorrelativo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="anioc_iid_anio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="mesec_iid_mes" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="lexcc_vnumero_letra" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="lexcc_inumero_renovacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="lexcc_sfecha_letra" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="cliec_icod_cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="lexcc_vaval" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="lexcc_nmonto_total" Type="System.Decimal" DbType="Decimal(8,2) NOT NULL" CanBeNull="false" />
+      <Column Name="lexcc_nmonto_pagado" Type="System.Decimal" DbType="Decimal(8,2) NOT NULL" CanBeNull="false" />
+      <Column Name="lexcc_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(6,4) NOT NULL" CanBeNull="false" />
+      <Column Name="lexcc_sfecha_vencimiento" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="tablc_iid_situacion_letra" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tablc_iid_condicion_letra" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="efinc_icod_entidad_financiera" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="lexcc_vnumero_ubd" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="lexcc_vobservaciones" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tablc_iid_ubicacion_letra" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="lexcc_icod_correlativo_renovacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vcocc_iid_voucher_contable" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="strSituacion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strCondicion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strUbicacion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strCliente" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="strMoneda" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_LETRA_X_COBRAR_DET_ELIMINAR" Method="SGE_LETRA_X_COBRAR_DET_ELIMINAR">
+    <Parameter Name="lxcpc_icod_correlativo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPc" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_LETRA_X_COBRAR_DET_MODIFICAR" Method="SGE_LETRA_X_COBRAR_DET_MODIFICAR">
+    <Parameter Name="lxcpc_icod_correlativo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" />
+    <Parameter Name="lxcpc_nmonto_pago" Type="System.Decimal" DbType="Decimal(8,2)" />
+    <Parameter Name="lxcpc_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(8,2)" />
+    <Parameter Name="lxcpc_sfecha_doc" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="lxcpc_sfecha_pago" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="lxcpc_vconcepto" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="pdxcc_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tdocc_iid_clase_doc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pdxcc_vnumero_doc" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="tablc_iid_tipo_cuenta_debe_haber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctacc_iid_cuenta_contable" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cecoc_icod_centro_costo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="anac_icod_analitica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="lxcpc_isituacion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="lxcpc_tipo_pago" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPc" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_LETRA_X_COBRAR_DET_INSERTAR" Method="SGE_LETRA_X_COBRAR_DET_INSERTAR">
+    <Parameter Name="lexcc_icod_correlativo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" />
+    <Parameter Name="lxcpc_nmonto_pago" Type="System.Decimal" DbType="Decimal(8,2)" />
+    <Parameter Name="lxcpc_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(8,2)" />
+    <Parameter Name="lxcpc_sfecha_doc" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="lxcpc_sfecha_pago" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="lxcpc_vconcepto" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="pdxcc_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tdocc_iid_clase_doc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pdxcc_vnumero_doc" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="tablc_iid_tipo_cuenta_debe_haber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctacc_iid_cuenta_contable" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cecoc_icod_centro_costo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="anac_icod_analitica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="lxcpc_isituacion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="lxcpc_tipo_pago" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPc" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_LETRA_X_COBRAR_DET_LISTAR" Method="SGE_LETRA_X_COBRAR_DET_LISTAR">
+    <Parameter Name="lexcc_icod_correlativo" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_LETRA_X_COBRAR_DET_LISTARResult">
+      <Column Name="lxcpc_icod_correlativo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="lexcc_icod_correlativo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="lxcpc_nmonto_pago" Type="System.Decimal" DbType="Decimal(8,2) NOT NULL" CanBeNull="false" />
+      <Column Name="lxcpc_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="lxcpc_sfecha_doc" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="lxcpc_sfecha_pago" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="lxcpc_vconcepto" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="pdxcc_icod_correlativo" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tdocc_iid_clase_doc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pdxcc_vnumero_doc" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_cuenta_debe_haber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ctacc_iid_cuenta_contable" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cecoc_icod_centro_costo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="anac_icod_analitica" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="lxcpc_isituacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="lxcpc_tipo_pago" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="strDesCuenta" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="strCodCCosto" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="strDesCCosto" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="strCodAnalitica" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="strCodSubAnalitica" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strTipoDoc" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="strTipoCuenta" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="dblMontoDoc" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="dblSalDoc" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SIGTS_DOC_X_COBRAR_LISTAR_ADELANTOS_NOTA_CREDITO_POR_CLIENTE" Method="SIGTS_DOC_X_COBRAR_LISTAR_ADELANTOS_NOTA_CREDITO_POR_CLIENTE">
+    <Parameter Name="IdCliente" Parameter="idCliente" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SIGTS_DOC_X_COBRAR_LISTAR_ADELANTOS_NOTA_CREDITO_POR_CLIENTEResult">
+      <Column Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="docxc_icod_documento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tdodc_iid_correlativo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tdocc_vabreviatura_tipo_doc" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="doxcc_vnumero_doc" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="doxcc_sfecha_doc" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Moneda" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="doxcc_nmonto_total" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="doxcc_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(8,4)" CanBeNull="true" />
+      <Column Name="MontoDolares" Type="System.Decimal" DbType="Decimal(29,11)" CanBeNull="true" />
+      <Column Name="doxcc_nmonto_saldo" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="SaldoDolares" Type="System.Decimal" DbType="Decimal(29,11)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGECPC_DOC_X_COBRAR_PAGO_ELIMINAR" Method="SGECPC_DOC_X_COBRAR_PAGO_ELIMINAR">
+    <Parameter Name="pdxcc_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPc" Type="System.String" DbType="VarChar(20)" />
+    <ElementType Name="SGECPC_DOC_X_COBRAR_PAGO_ELIMINARResult">
+      <Column Name="pdxcc_icod_correlativo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pdxcc_vnumero_doc" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="pdxcc_sfecha_cobro" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pdxcc_nmonto_cobro" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="pdxcc_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(12,4)" CanBeNull="true" />
+      <Column Name="pdxcc_vobservacion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="efctc_icod_enti_financiera_cuenta" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cliec_icod_cliente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="proc_icod_proveedor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ctacc_iid_cuenta_contable" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cecoc_icod_centro_costo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="anac_icod_analitica" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pdxcc_isituacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pdxcc_vorigen" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="pdxcc_iusuario_crea" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pdxcc_sfecha_crea" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="pdxcc_vpc_crea" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="pdxcc_iusuario_modifica" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pdxcc_sfecha_modifica" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="pdxcc_vpc_modifica" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="pdxcc_flag_estado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="anac_icod_analitica_det" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vcocc_iid_voucher_contable" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_GET_LETRA_X_COBRAR_CAB" Method="SGE_GET_LETRA_X_COBRAR_CAB">
+    <Parameter Name="intLxc" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_GET_LETRA_X_COBRAR_CABResult">
+      <Column Name="lexcc_icod_correlativo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="lexcc_icorrelativo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="anioc_iid_anio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="mesec_iid_mes" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="lexcc_vnumero_letra" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="lexcc_inumero_renovacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="lexcc_sfecha_letra" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="cliec_icod_cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="lexcc_vaval" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="lexcc_nmonto_total" Type="System.Decimal" DbType="Decimal(8,2) NOT NULL" CanBeNull="false" />
+      <Column Name="lexcc_nmonto_pagado" Type="System.Decimal" DbType="Decimal(8,2) NOT NULL" CanBeNull="false" />
+      <Column Name="lexcc_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(6,4) NOT NULL" CanBeNull="false" />
+      <Column Name="lexcc_sfecha_vencimiento" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="tablc_iid_situacion_letra" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tablc_iid_condicion_letra" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="efinc_icod_entidad_financiera" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="lexcc_vnumero_ubd" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="lexcc_vobservaciones" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tablc_iid_ubicacion_letra" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="lexcc_icod_correlativo_renovacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vcocc_iid_voucher_contable" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="strSituacion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strCondicion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strUbicacion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strCliente" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="strMoneda" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_GET_DXC_DATOS" Method="SGE_GET_DXC_DATOS">
+    <Parameter Name="intIcodDXC" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="SGE_GET_DXC_DATOSResult">
+      <Column Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="mesec_iid_mes" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Abreviatura" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="tdodc_iid_correlativo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ClaseDocumento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DescripcionClaseDocumento" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="doxcc_vnumero_doc" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="cliec_icod_cliente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cliec_vnombre_cliente" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="doxcc_sfecha_doc" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="doxcc_sfecha_vencimiento_doc" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Moneda" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="doxcc_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(8,4)" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_pago" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FormaPago" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="doxcc_vdescrip_transaccion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="doxcc_nmonto_afecto" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_inafecto" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_exportacion" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_servicio_no_domic" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="ValorVenta" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="doxcc_nporcentaje_igv" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="doxcc_nmonto_impuesto" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_total" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="doxcc_nmonto_saldo" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="doxcc_nmonto_pagado" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="doxcc_nporcentaje_isc" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="doxcc_nmonto_isc" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="tablc_iid_situacion_documento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Situacion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="doxcc_vobservaciones" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="doxc_bind_cuenta_corriente" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="tabl_iid_tipo_indicador_motivo_cta_xcobrar" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="doxcc_sfecha_entrega" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="doxcc_bind_impresion_nogerencia" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_icod_vendedor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="doxcc_nmonto_iva" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxc_bind_situacion_legal" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="doxc_bind_cierre_cuenta_corriente" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_tipo_comprobante_referencia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="doxcc_num_serie_referencia" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="doxcc_num_comprobante_referencia" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="doxcc_sfecha_emision_referencia" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="docxc_icod_documento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="doxcc_ianio" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="doxcc_origen" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGECPC_DOC_X_PAGAR_ACTUALIZAR_DESCRIPCION" Method="SGECPC_DOC_X_PAGAR_ACTUALIZAR_DESCRIPCION">
+    <Parameter Name="doxpc_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="doxcc_vobservaciones" Type="System.String" DbType="VarChar(400)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEV_DOC_X_COBRAR_CIERRE" Method="SGEV_DOC_X_COBRAR_CIERRE">
+    <Parameter Name="ANIO" Parameter="aNIO" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IUSUARIO" Parameter="iUSUARIO" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEV_VERIFICAR_EXISTENCIA_AÑO_SIGUIENTE" Method="SGEV_VERIFICAR_EXISTENCIA_AÑO_SIGUIENTE">
+    <Parameter Name="anioc_inumero_anho" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEV_VERIFICAR_EXISTENCIA_AÑO_SIGUIENTEResult">
+      <Column Name="anioc_icod_anio_ejercicio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="anioc_iid_anio_ejercicio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="anioc_iactivo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="anioc_flag_estado" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_ACTUALIZAR_TIPO_CAMBIO" Method="SGE_ACTUALIZAR_TIPO_CAMBIO">
+    <Parameter Name="opcion" Type="System.String" DbType="VarChar(3)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEDXC_DOC_X_COBRAR_ACTUALIZAR_DESCRIPCION" Method="SGEDXC_DOC_X_COBRAR_ACTUALIZAR_DESCRIPCION">
+    <Parameter Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="doxcc_vobservaciones" Type="System.String" DbType="VarChar(400)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEDXC_DOC_X_COBRAR_ANULAR" Method="SGEDXC_DOC_X_COBRAR_ANULAR">
+    <Parameter Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="usuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pc" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEDXC_DOC_X_COBRAR_ELIMINAR" Method="SGEDXC_DOC_X_COBRAR_ELIMINAR">
+    <Parameter Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="usuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pc" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEDXC_DOC_X_COBRAR_GET_SITUACION" Method="SGEDXC_DOC_X_COBRAR_GET_SITUACION">
+    <Parameter Name="id_situacion" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="id_dxc" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEDXC_DOC_X_COBRAR_PAGO_DIRECTO_ELIMINAR" Method="SGEDXC_DOC_X_COBRAR_PAGO_DIRECTO_ELIMINAR">
+    <Parameter Name="pdxcc_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="pdxcc_vpc_modifica" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="pdxcc_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEDXC_DOC_X_COBRAR_ADELANTO_PAGO_ELIMINAR" Method="SGEDXC_DOC_X_COBRAR_ADELANTO_PAGO_ELIMINAR">
+    <Parameter Name="adpac_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="adpac_vpc_modifica" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="adpac_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEDXC_DOC_X_COBRAR_NOTA_CREDITO_PAGO_ELIMINAR" Method="SGEDXC_DOC_X_COBRAR_NOTA_CREDITO_PAGO_ELIMINAR">
+    <Parameter Name="ncpac_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ncpac_vpc_modifica" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ncpac_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEDXC_DOC_X_COBRAR_LISTAR_X_CLIENTE" Method="SGEDXC_DOC_X_COBRAR_LISTAR_X_CLIENTE">
+    <Parameter Name="IdCliente" Parameter="idCliente" Type="System.Int32" DbType="Int" />
+    <Parameter Name="doxcc_ianio" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEDXC_DOC_X_COBRAR_LISTAR_X_CLIENTEResult">
+      <Column Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tdodc_iid_correlativo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tdocc_vabreviatura_tipo_doc" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="doxcc_vnumero_doc" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_sfecha_doc" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Moneda" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="doxcc_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(8,4) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_total" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_saldo" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="anac_icod_analitica" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEDXC_DOC_X_COBRAR_LISTAR_SALDOS" Method="SGEDXC_DOC_X_COBRAR_LISTAR_SALDOS">
+    <Parameter Name="doxcc_ianio" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEDXC_DOC_X_COBRAR_LISTAR_SALDOSResult">
+      <Column Name="cliec_icod_cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="cliec_vcod_cliente" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="Situacion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="cliec_vnombre_cliente" Type="System.String" DbType="VarChar(120) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_saldo_soles" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="doxcc_nmonto_saldo_dolares" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="giroc_icod_giro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="giroc_vnombre_giro" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEDXC_DOC_X_COBRAR_ADELANTO_PAGO_INSERTAR" Method="SGEDXC_DOC_X_COBRAR_ADELANTO_PAGO_INSERTAR">
+    <Parameter Name="adpac_icod_correlativo" Type="System.Int64" DbType="BigInt" Direction="InOut" />
+    <Parameter Name="doxcc_icod_correlativo_pago" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="doxcc_icod_correlativo_adelanto" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" />
+    <Parameter Name="adpac_nmonto_pago" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="adpac_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(12,4)" />
+    <Parameter Name="adpac_vdescripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="adpac_sfecha_pago" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="adpac_iorigen" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="efctc_icod_enti_financiera_cuenta" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pdxcc_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="adpac_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="adpac_vpc_crea" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="adpac_flag_estado" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="mobac_icod_correlativo" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEDXC_DOC_X_COBRAR_ADELANTO_PAGO_ACTUALIZAR" Method="SGEDXC_DOC_X_COBRAR_ADELANTO_PAGO_ACTUALIZAR">
+    <Parameter Name="adpac_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="adpac_nmonto_pago" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="adpac_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(12,4)" />
+    <Parameter Name="adpac_vdescripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="adpac_sfecha_pago" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="efctc_icod_enti_financiera_cuenta" Type="System.Int32" DbType="Int" />
+    <Parameter Name="adpac_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="adpac_vpc_modifica" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="mobac_icod_correlativo" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEDXC_DOC_X_COBRAR_NOTA_CREDITO_PAGO_INSERTAR" Method="SGEDXC_DOC_X_COBRAR_NOTA_CREDITO_PAGO_INSERTAR">
+    <Parameter Name="ncpac_icod_correlativo" Type="System.Int64" DbType="BigInt" Direction="InOut" />
+    <Parameter Name="doxcc_icod_correlativo_pago" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="doxcc_icod_correlativo_nota_credito" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ncpac_nmonto_pago" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="ncpac_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(12,4)" />
+    <Parameter Name="ncpac_vdescripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ncpac_sfecha_pago" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="ncpac_iorigen" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="efctc_icod_enti_financiera_cuenta" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ncpac_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ncpac_vpc_crea" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="pdxcc_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ncpac_flag_estado" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="mobac_icod_correlativo" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEDXC_DOC_X_COBRAR_NOTA_CREDITO_PAGO_ACTUALIZAR" Method="SGEDXC_DOC_X_COBRAR_NOTA_CREDITO_PAGO_ACTUALIZAR">
+    <Parameter Name="ncpac_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ncpac_nmonto_pago" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="ncpac_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(12,4)" />
+    <Parameter Name="ncpac_vdescripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ncpac_sfecha_pago" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="efctc_icod_enti_financiera_cuenta" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ncpac_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ncpac_vpc_modifica" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="mobac_icod_correlativo" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEDXC_DOC_X_COBRAR_NOTA_CREDITO_PAGO_LISTAR" Method="SGEDXC_DOC_X_COBRAR_NOTA_CREDITO_PAGO_LISTAR">
+    <Parameter Name="doxcc_icod_correlativo_pago" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="doxcc_icod_correlativo_NC" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IndicaTodoLosRegistros" Parameter="indicaTodoLosRegistros" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ANIO" Parameter="aNIO" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEDXC_DOC_X_COBRAR_NOTA_CREDITO_PAGO_LISTARResult">
+      <Column Name="ncpac_icod_correlativo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_icod_correlativo_pago" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_icod_correlativo_nota_credito" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AbreviaturaNotaCredito" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="AbreviaturaPago" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="iid_correlativo_nota_credito" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="iid_correlativo_pago" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vnumero_documento_NC" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="vnumero_documento_pago" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="SaldoDXCNotaCredito" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_pagado" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_total" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Moneda" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ncpac_nmonto_pago" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="ncpac_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(12,4) NOT NULL" CanBeNull="false" />
+      <Column Name="ncpac_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ncpac_sfecha_pago" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ncpac_iorigen" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="efctc_icod_enti_financiera_cuenta" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ncpac_iusuario_crea" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ncpac_sfecha_crea" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ncpac_vpc_crea" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ncpac_iusuario_modifica" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ncpac_sfecha_modifica" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ncpac_vpc_modifica" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="pdxpc_icod_correlativo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="cliec_icod_cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="cliec_vnombre_cliente" Type="System.String" DbType="VarChar(120) NOT NULL" CanBeNull="false" />
+      <Column Name="mobac_icod_correlativo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="iid_tipo_moneda_pago" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEDXC_DOC_X_COBRAR_ADELANTO_PAGO_LISTAR" Method="SGEDXC_DOC_X_COBRAR_ADELANTO_PAGO_LISTAR">
+    <Parameter Name="doxcc_icod_correlativo_pago" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="doxcc_icod_correlativo_adelanto" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="SGEDXC_DOC_X_COBRAR_ADELANTO_PAGO_LISTARResult">
+      <Column Name="adpac_icod_correlativo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="pdxcc_icod_correlativo" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="doxcc_icod_correlativo_pago" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_icod_correlativo_adelanto" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AbreviaturaAdelanto" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="AbreviaturaPago" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="tdocc_iid_correlativo_adelanto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tdocc_iid_correlativo_pago" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vnumero_doc_adelanto" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="vnumero_doc_pago" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="SaldoDXCAdelanto" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="doxcc_nmonto_pagado" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="cliec_icod_cliente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Moneda" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="adpac_nmonto_pago" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="adpac_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(12,4) NOT NULL" CanBeNull="false" />
+      <Column Name="adpac_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="adpac_sfecha_pago" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="adpac_iorigen" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="efctc_icod_enti_financiera_cuenta" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mobac_icod_correlativo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="iid_tipo_moneda_pago" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEDXC_DOC_X_COBRAR_NOTA_CREDITO_PAGO_LISTAR2" Method="SGEDXC_DOC_X_COBRAR_NOTA_CREDITO_PAGO_LISTAR2">
+    <Parameter Name="doxcc_icod_correlativo_pago" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ANIO" Parameter="aNIO" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEDXC_DOC_X_COBRAR_NOTA_CREDITO_PAGO_LISTAR2Result">
+      <Column Name="ncpac_icod_correlativo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_icod_correlativo_pago" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_icod_correlativo_nota_credito" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AbreviaturaNotaCredito" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="AbreviaturaPago" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="iid_correlativo_nota_credito" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="iid_correlativo_pago" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vnumero_documento_NC" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="vnumero_documento_pago" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="SaldoDXCNotaCredito" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_pagado" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_total" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Moneda" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ncpac_nmonto_pago" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="ncpac_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(12,4) NOT NULL" CanBeNull="false" />
+      <Column Name="ncpac_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ncpac_sfecha_pago" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ncpac_iorigen" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="efctc_icod_enti_financiera_cuenta" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ncpac_iusuario_crea" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ncpac_sfecha_crea" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ncpac_vpc_crea" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ncpac_iusuario_modifica" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ncpac_sfecha_modifica" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ncpac_vpc_modifica" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="pdxpc_icod_correlativo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="cliec_icod_cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="cliec_vnombre_cliente" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="mobac_icod_correlativo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="iid_tipo_moneda_pago" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEDXC_DOC_X_COBRAR_LISTAR_SALDOS_GARANTIA" Method="SGEDXC_DOC_X_COBRAR_LISTAR_SALDOS_GARANTIA">
+    <Parameter Name="doxcc_ianio" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEDXC_DOC_X_COBRAR_LISTAR_SALDOS_GARANTIAResult">
+      <Column Name="cliec_icod_cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="cliec_vcod_cliente" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="Situacion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="cliec_vnombre_cliente" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="doxcc_nmonto_saldo_soles" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="doxcc_nmonto_saldo_dolares" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="giroc_icod_giro" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="giroc_vnombre_giro" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SIGTS_DOC_X_COBRAR_BUSCAR_X_CLIENTE_TODA_SITUACION_GARANTIA" Method="SIGTS_DOC_X_COBRAR_BUSCAR_X_CLIENTE_TODA_SITUACION_GARANTIA">
+    <Parameter Name="cliec_icod_cliente" Type="System.Int32" DbType="Int" />
+    <Parameter Name="doxcc_ianio" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SIGTS_DOC_X_COBRAR_BUSCAR_X_CLIENTE_TODA_SITUACION_GARANTIAResult">
+      <Column Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Abreviatura" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="tdodc_iid_correlativo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CodigoClaseDocumento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tablc_iid_situacion_documento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Situacion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="doxcc_vnumero_doc" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_sfecha_doc" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_total" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_pagado" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_saldo" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(8,4) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_vobservaciones" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="doxcc_sfecha_vencimiento_doc" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="mesec_iid_mes" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="ValorVenta" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEDXC_DOC_X_COBRAR_ADELANTO_PAGO_LISTAR2" Method="SGEDXC_DOC_X_COBRAR_ADELANTO_PAGO_LISTAR2">
+    <Parameter Name="mes" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEDXC_DOC_X_COBRAR_ADELANTO_PAGO_LISTAR2Result">
+      <Column Name="adpac_icod_correlativo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="pdxcc_icod_correlativo" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="doxcc_icod_correlativo_pago" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_icod_correlativo_adelanto" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AbreviaturaAdelanto" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="AbreviaturaPago" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="tdocc_iid_correlativo_adelanto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tdocc_iid_correlativo_pago" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vnumero_doc_adelanto" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="vnumero_doc_pago" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="SaldoDXCAdelanto" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="doxcc_nmonto_pagado" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="cliec_icod_cliente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Moneda" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="adpac_nmonto_pago" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="adpac_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(12,4) NOT NULL" CanBeNull="false" />
+      <Column Name="adpac_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="adpac_sfecha_pago" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="adpac_iorigen" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="efctc_icod_enti_financiera_cuenta" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mobac_icod_correlativo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="iid_tipo_moneda_pago" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SIGTS_ADELANTO_PAGO_LISTAR_X_ICOD_DXC_A_UNA_FECHA" Method="SIGTS_ADELANTO_PAGO_LISTAR_X_ICOD_DXC_A_UNA_FECHA">
+    <Parameter Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="anio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sfecha" Type="System.DateTime" DbType="SmallDateTime" />
+    <ElementType Name="SIGTS_ADELANTO_PAGO_LISTAR_X_ICOD_DXC_A_UNA_FECHAResult">
+      <Column Name="adpac_icod_correlativo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_icod_correlativo_adelanto" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_icod_correlativo_adelanto1" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AbreviaturaAdelanto" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="SaldoDXCAdelanto" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Moneda" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="adpac_nmonto_pago" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="adpac_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(12,4) NOT NULL" CanBeNull="false" />
+      <Column Name="adpac_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="adpac_sfecha_pago" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="adpac_iorigen" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="efctc_icod_enti_financiera_cuenta" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="adpac_iusuario_crea" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="adpac_sfecha_crea" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="adpac_vpc_crea" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="adpac_iusuario_modifica" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="adpac_sfecha_modifica" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="adpac_vpc_modifica" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="pdxcc_icod_correlativo" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_GET_GARANTIA_CLIENTES_CAB" Method="SGE_GET_GARANTIA_CLIENTES_CAB">
+    <Parameter Name="intLxc" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_GET_GARANTIA_CLIENTES_CABResult">
+      <Column Name="garc_icod_garantia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="garc_vnumero_garantia" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="garc_sfecha_garantia" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="tablc_iid_situacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Situacion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="cliec_icod_cliente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NomClie" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="pryc_icod_proyecto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cecoc_icod_centro_costo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CentroCostos" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="DesProyecto" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Moneda" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="garc_nmonto" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="favc_icod_factura" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NumDoc" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="intDXP" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="pdxpc_icod_correlativo" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ClaseFactura" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NumDXC" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SIGTS_VERIFICAR_PAGOS_PARA_VCO" Method="SIGTS_VERIFICAR_PAGOS_PARA_VCO">
+    <Parameter Name="ANIO" Parameter="aNIO" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MES" Parameter="mES" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SIGTS_VERIFICAR_PAGOS_PARA_VCOResult">
+      <Column Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="origen" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SIGTS_DOC_X_COBRAR_BUSCAR_X_CLIENTE_TODA_SITUACION_A_UNA_FECHA" Method="SIGTS_DOC_X_COBRAR_BUSCAR_X_CLIENTE_TODA_SITUACION_A_UNA_FECHA">
+    <Parameter Name="doxcc_ianio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Fecha" Parameter="fecha" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="cliec_icod_cliente" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SIGTS_DOC_X_COBRAR_BUSCAR_X_CLIENTE_TODA_SITUACION_A_UNA_FECHAResult">
+      <Column Name="doxcc_icod_correlativo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Abreviatura" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="tdodc_iid_correlativo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CodigoClaseDocumento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tablc_iid_situacion_documento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Situacion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="doxcc_vnumero_doc" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="doxcc_sfecha_doc" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="doxcc_nmonto_total" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="doxcc_nmonto_pagado" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_saldo" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="doxcc_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="doxcc_vobservaciones" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="doxcc_sfecha_vencimiento_doc" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="mesec_iid_mes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ValorVenta" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEDXC_DOC_X_COBRAR_NOTA_CREDITO_PAGO_LISTAR_BANCOS" Method="SGEDXC_DOC_X_COBRAR_NOTA_CREDITO_PAGO_LISTAR_BANCOS">
+    <Parameter Name="mes" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEDXC_DOC_X_COBRAR_NOTA_CREDITO_PAGO_LISTAR_BANCOSResult">
+      <Column Name="ncpac_icod_correlativo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_icod_correlativo_pago" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_icod_correlativo_nota_credito" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AbreviaturaNotaCredito" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="AbreviaturaPago" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="iid_correlativo_nota_credito" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="iid_correlativo_pago" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vnumero_documento_NC" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="vnumero_documento_pago" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="SaldoDXCNotaCredito" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_pagado" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_total" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Moneda" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ncpac_nmonto_pago" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="ncpac_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(12,4) NOT NULL" CanBeNull="false" />
+      <Column Name="ncpac_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ncpac_sfecha_pago" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ncpac_iorigen" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="efctc_icod_enti_financiera_cuenta" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ncpac_iusuario_crea" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ncpac_sfecha_crea" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ncpac_vpc_crea" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ncpac_iusuario_modifica" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ncpac_sfecha_modifica" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ncpac_vpc_modifica" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="pdxpc_icod_correlativo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="cliec_icod_cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="cliec_vnombre_cliente" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="mobac_icod_correlativo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="iid_tipo_moneda_pago" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TDEntidadFinanciera" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AbreviaturaEF" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="NumDOCEF" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="GlosaEF" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CuentaBanco" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SIGTS_CLIENTES_SALDOS_LISTAR_A_UNA_FECHA" Method="SIGTS_CLIENTES_SALDOS_LISTAR_A_UNA_FECHA">
+    <Parameter Name="ANIO" Parameter="aNIO" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Fecha" Parameter="fecha" Type="System.DateTime" DbType="SmallDateTime" />
+    <ElementType Name="SIGTS_CLIENTES_SALDOS_LISTAR_A_UNA_FECHAResult">
+      <Column Name="cliec_icod_cliente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cliec_vcod_cliente" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="Situacion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="cliec_vnombre_cliente" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="doxcc_nmonto_saldo_soles" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="doxcc_nmonto_saldo_dolares" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="giroc_icod_giro" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="giroc_vnombre_giro" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEDXC_DOC_X_COBRAR_PAGO_DIRECTO_ACTUALIZAR" Method="SGEDXC_DOC_X_COBRAR_PAGO_DIRECTO_ACTUALIZAR">
+    <Parameter Name="pdxcc_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pdxcc_vnumero_doc" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="pdxcc_sfecha_cobro" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pdxcc_nmonto_cobro" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="pdxcc_nmonto_cobro_dxc" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="pdxcc_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(12,4)" />
+    <Parameter Name="pdxcc_vobservacion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="efctc_icod_enti_financiera_cuenta" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctacc_iid_cuenta_contable" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cecoc_icod_centro_costo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="anac_icod_analitica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="anac_icod_analitica_det" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pdxcc_vorigen" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="pdxcc_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pdxcc_vpc_modifica" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="pdxcc_flag_estado" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="doxcc_nmonto_saldo" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="doxpc_nmonto_total_pagado" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="doxcc_icod_correlativo_pago" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="doxcc_nmonto_saldo_pago" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="doxpc_nmonto_total_pagado_pago" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="anac_iid_anio" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEDXC_DOC_X_COBRAR_PAGO_DIRECTO_INSERTAR" Method="SGEDXC_DOC_X_COBRAR_PAGO_DIRECTO_INSERTAR">
+    <Parameter Name="pdxcc_icod_correlativo" Type="System.Int64" DbType="BigInt" Direction="InOut" />
+    <Parameter Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pdxcc_vnumero_doc" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="pdxcc_sfecha_cobro" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pdxcc_nmonto_cobro" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="pdxcc_nmonto_cobro_dxc" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="pdxcc_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(12,4)" />
+    <Parameter Name="pdxcc_vobservacion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="efctc_icod_enti_financiera_cuenta" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctacc_iid_cuenta_contable" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cecoc_icod_centro_costo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="anac_icod_analitica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="anac_icod_analitica_det" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pdxcc_vorigen" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="pdxcc_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pdxcc_vpc_crea" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="pdxcc_flag_estado" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="doxcc_icod_correlativo_pago" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="anac_iid_anio" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEDXC_DOC_X_COBRAR_PAGO_DIRECTO_LISTAR" Method="SGEDXC_DOC_X_COBRAR_PAGO_DIRECTO_LISTAR">
+    <Parameter Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="SGEDXC_DOC_X_COBRAR_PAGO_DIRECTO_LISTARResult">
+      <Column Name="pdxcc_icod_correlativo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Abreviatura" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="pdxcc_vnumero_doc" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="pdxcc_sfecha_cobro" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_tipo_moneda_dxc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Moneda" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="pdxcc_nmonto_cobro" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="pdxcc_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(12,4) NOT NULL" CanBeNull="false" />
+      <Column Name="pdxcc_vobservacion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="efctc_icod_enti_financiera_cuenta" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CuentaBancaria" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="EntidadFinanciera" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="intTipoDoc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tdodc_iid_correlativo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cliec_icod_cliente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pdxcc_vorigen" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="anac_icod_analitica" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="anac_icod_analitica_det" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Analitica" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="TipoAnalitica" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="cecoc_icod_centro_costo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CentroCosto" Type="System.String" DbType="Char(8) NOT NULL" CanBeNull="false" />
+      <Column Name="CentroCostoDesc" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CuentaContable" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="DescripcionCuentaContable" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="IndicadorCosto" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ctacc_iid_cuenta_contable" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="strNroDoc" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="anac_iid_anio" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_DOC_X_COBRAR_CON_PAGOS_LISTAR" Method="SGE_DOC_X_COBRAR_CON_PAGOS_LISTAR">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intCliente" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_DOC_X_COBRAR_CON_PAGOS_LISTARResult">
+      <Column Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="mesec_iid_mes" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Abreviatura" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="tdodc_iid_correlativo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ClaseDocumento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DescripcionClaseDocumento" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="doxcc_vnumero_doc" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="cliec_icod_cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="cliec_vnombre_cliente" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="DireccionCliente" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="NumDocCliente" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="doxcc_sfecha_doc" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_sfecha_vencimiento_doc" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Moneda" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="doxcc_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(8,4) NOT NULL" CanBeNull="false" />
+      <Column Name="tablc_iid_tipo_pago" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FormaPago" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="doxcc_vdescrip_transaccion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_afecto" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_inafecto" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="ValorVenta" Type="System.Decimal" DbType="Decimal(17,2)" CanBeNull="true" />
+      <Column Name="doxcc_nporcentaje_igv" Type="System.Decimal" DbType="Decimal(6,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_impuesto" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_total" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_saldo" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_pagado" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="tablc_iid_situacion_documento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Situacion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="doxcc_vobservaciones" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="doxc_bind_cuenta_corriente" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_sfecha_entrega" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="doxcc_bind_impresion_nogerencia" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="doxc_bind_situacion_legal" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="doxc_bind_cierre_cuenta_corriente" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_tipo_comprobante_referencia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="doxcc_num_serie_referencia" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="doxcc_num_comprobante_referencia" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="doxcc_sfecha_emision_referencia" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="doxcc_ianio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEDXC_DOC_X_COBRAR_LISTAR_PENDIENTES" Method="SGEDXC_DOC_X_COBRAR_LISTAR_PENDIENTES">
+    <Parameter Name="ANIO" Parameter="aNIO" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEDXC_DOC_X_COBRAR_LISTAR_PENDIENTESResult">
+      <Column Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="mesec_iid_mes" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Abreviatura" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="tdodc_iid_correlativo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ClaseDocumento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DescripcionClaseDocumento" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="doxcc_vnumero_doc" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="cliec_icod_cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="cliec_vnombre_cliente" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="cliec_cruc" Type="System.String" DbType="Char(11)" CanBeNull="true" />
+      <Column Name="DireccionCliente" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="NumDocCliente" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="doxcc_sfecha_doc" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_sfecha_vencimiento_doc" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Moneda" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="doxcc_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(8,4) NOT NULL" CanBeNull="false" />
+      <Column Name="tablc_iid_tipo_pago" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FormaPago" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="doxcc_vdescrip_transaccion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_afecto" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_inafecto" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="ValorVenta" Type="System.Decimal" DbType="Decimal(17,2)" CanBeNull="true" />
+      <Column Name="doxcc_nporcentaje_igv" Type="System.Decimal" DbType="Decimal(6,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_impuesto" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_total" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_saldo" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_pagado" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="tablc_iid_situacion_documento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Situacion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="doxcc_vobservaciones" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="doxc_bind_cuenta_corriente" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_sfecha_entrega" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="doxcc_bind_impresion_nogerencia" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="doxc_bind_situacion_legal" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="doxc_bind_cierre_cuenta_corriente" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_tipo_comprobante_referencia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="doxcc_num_serie_referencia" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="doxcc_num_comprobante_referencia" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="doxcc_sfecha_emision_referencia" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_DOC_X_COBRAR_CON_PAGOS_LISTAR_SUMINISTROS" Method="SGE_DOC_X_COBRAR_CON_PAGOS_LISTAR_SUMINISTROS">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intCliente" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_DOC_X_COBRAR_CON_PAGOS_LISTAR_SUMINISTROSResult">
+      <Column Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="mesec_iid_mes" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Abreviatura" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="tdodc_iid_correlativo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ClaseDocumento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DescripcionClaseDocumento" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="doxcc_vnumero_doc" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="cliec_icod_cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="cliec_vnombre_cliente" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="DireccionCliente" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="NumDocCliente" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="doxcc_sfecha_doc" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_sfecha_vencimiento_doc" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Moneda" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="doxcc_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(8,4) NOT NULL" CanBeNull="false" />
+      <Column Name="tablc_iid_tipo_pago" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FormaPago" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="doxcc_vdescrip_transaccion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_afecto" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_inafecto" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="ValorVenta" Type="System.Decimal" DbType="Decimal(17,2)" CanBeNull="true" />
+      <Column Name="doxcc_nporcentaje_igv" Type="System.Decimal" DbType="Decimal(6,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_impuesto" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_total" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_saldo" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_pagado" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="tablc_iid_situacion_documento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Situacion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="doxcc_vobservaciones" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="doxc_bind_cuenta_corriente" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_sfecha_entrega" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="doxcc_bind_impresion_nogerencia" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="doxc_bind_situacion_legal" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="doxc_bind_cierre_cuenta_corriente" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_tipo_comprobante_referencia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="doxcc_num_serie_referencia" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="doxcc_num_comprobante_referencia" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="doxcc_sfecha_emision_referencia" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="doxcc_ianio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEDXC_DOC_X_COBRAR_INSERTAR" Method="SGEDXC_DOC_X_COBRAR_INSERTAR">
+    <Parameter Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt" Direction="InOut" />
+    <Parameter Name="mesec_iid_mes" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tdodc_iid_correlativo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="doxcc_vnumero_doc" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="cliec_icod_cliente" Type="System.Int32" DbType="Int" />
+    <Parameter Name="doxcc_sfecha_doc" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="doxcc_sfecha_vencimiento_doc" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" />
+    <Parameter Name="doxcc_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(8,4)" />
+    <Parameter Name="tablc_iid_tipo_pago" Type="System.Int32" DbType="Int" />
+    <Parameter Name="doxcc_vdescrip_transaccion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="doxcc_nmonto_afecto" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="doxcc_nmonto_inafecto" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="doxcc_nporcentaje_igv" Type="System.Decimal" DbType="Decimal(6,2)" />
+    <Parameter Name="doxcc_nmonto_impuesto" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="doxcc_nmonto_total" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="doxcc_nmonto_saldo" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="doxcc_nmonto_pagado" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="tablc_iid_situacion_documento" Type="System.Int32" DbType="Int" />
+    <Parameter Name="doxcc_vobservaciones" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="doxc_bind_cuenta_corriente" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="doxcc_sfecha_entrega" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="doxcc_bind_impresion_nogerencia" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="doxc_bind_situacion_legal" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="doxc_bind_cierre_cuenta_corriente" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="doxcc_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="doxcc_vpc_crea" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="doxcc_tipo_comprobante_referencia" Type="System.Int32" DbType="Int" />
+    <Parameter Name="doxcc_num_serie_referencia" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="doxcc_num_comprobante_referencia" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="doxcc_sfecha_emision_referencia" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="docxc_icod_documento" Type="System.Int32" DbType="Int" />
+    <Parameter Name="doxcc_ianio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="doxcc_flag_estado" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="doxcc_origen" Type="System.String" DbType="VarChar(2)" />
+    <Parameter Name="tablc_iid_tipo_docxpagar" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pryc_icod_proyecto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="puvec_icod_punto_venta" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEDXC_DOC_X_COBRAR_LISTAR" Method="SGEDXC_DOC_X_COBRAR_LISTAR">
+    <Parameter Name="año" Type="System.Int32" DbType="Int" />
+    <Parameter Name="mes" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEDXC_DOC_X_COBRAR_LISTARResult">
+      <Column Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="mesec_iid_mes" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Abreviatura" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="tdodc_iid_correlativo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ClaseDocumento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DescripcionClaseDocumento" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="doxcc_vnumero_doc" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="cliec_icod_cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="cliec_vnombre_cliente" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="doxcc_sfecha_doc" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_sfecha_vencimiento_doc" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Moneda" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="doxcc_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(8,4) NOT NULL" CanBeNull="false" />
+      <Column Name="tablc_iid_tipo_pago" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FormaPago" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="doxcc_vdescrip_transaccion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_afecto" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_inafecto" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="ValorVenta" Type="System.Decimal" DbType="Decimal(17,2)" CanBeNull="true" />
+      <Column Name="doxcc_nporcentaje_igv" Type="System.Decimal" DbType="Decimal(6,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_impuesto" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_total" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_saldo" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_pagado" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="tablc_iid_situacion_documento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Situacion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="doxcc_vobservaciones" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="doxc_bind_cuenta_corriente" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_sfecha_entrega" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="doxcc_bind_impresion_nogerencia" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="doxc_bind_situacion_legal" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="doxc_bind_cierre_cuenta_corriente" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_tipo_comprobante_referencia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="doxcc_num_serie_referencia" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="doxcc_num_comprobante_referencia" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="doxcc_sfecha_emision_referencia" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="docxc_icod_documento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="doxcc_ianio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_origen" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="DescripcionOrigen" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="tablc_iid_tipo_docxpagar" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TipoDXC" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="pryc_icod_proyecto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NomProyecto" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="CentroCossto" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="puvec_icod_punto_venta" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEDXC_DOC_X_COBRAR_ACTUALIZAR" Method="SGEDXC_DOC_X_COBRAR_ACTUALIZAR">
+    <Parameter Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="mesec_iid_mes" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="doxcc_sfecha_doc" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="doxcc_sfecha_vencimiento_doc" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="doxcc_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(8,4)" />
+    <Parameter Name="tablc_iid_tipo_pago" Type="System.Int32" DbType="Int" />
+    <Parameter Name="doxcc_vdescrip_transaccion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="doxcc_nmonto_afecto" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="doxcc_nmonto_inafecto" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="doxcc_nporcentaje_igv" Type="System.Decimal" DbType="Decimal(6,2)" />
+    <Parameter Name="doxcc_nmonto_impuesto" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="doxcc_nmonto_total" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="doxcc_nmonto_saldo" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="doxcc_nmonto_pagado" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="doxcc_vobservaciones" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="doxc_bind_cuenta_corriente" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="doxcc_sfecha_entrega" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="doxcc_bind_impresion_nogerencia" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="doxc_bind_situacion_legal" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="doxc_bind_cierre_cuenta_corriente" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="doxcc_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="doxcc_vpc_crea" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="doxcc_tipo_comprobante_referencia" Type="System.Int32" DbType="Int" />
+    <Parameter Name="doxcc_num_serie_referencia" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="doxcc_num_comprobante_referencia" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="doxcc_sfecha_emision_referencia" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="docxc_icod_documento" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cliec_icod_cliente" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tablc_iid_tipo_docxpagar" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pryc_icod_proyecto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="puvec_icod_punto_venta" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SIGTS_DOC_X_COBRAR_CUENTA_CONTABLE_BUSCAR" Method="SIGTS_DOC_X_COBRAR_CUENTA_CONTABLE_BUSCAR">
+    <Parameter Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="SIGTS_DOC_X_COBRAR_CUENTA_CONTABLE_BUSCARResult">
+      <Column Name="ccdcc_icod_correlativo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ctacc_iid_cuenta_contable" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CuentaContable" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="DescripcionCuentaContable" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="cecoc_icod_centro_costo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CentroCosto" Type="System.String" DbType="Char(8) NOT NULL" CanBeNull="false" />
+      <Column Name="IndicadorCentroCosto" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="anac_icod_analitica" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TipoAnalitica" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Analitica" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="ccdcc_nmonto" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="ccdcc_vglosa" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ccdcc_isituacion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SIGTS_DOC_X_COBRAR_CUENTA_CONTABLE_INSERTAR" Method="SIGTS_DOC_X_COBRAR_CUENTA_CONTABLE_INSERTAR">
+    <Parameter Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ctacc_iid_cuenta_contable" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="cecoc_icod_centro_costo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="anac_icod_analitica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ccdcc_nmonto" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="ccdcc_vglosa" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ccdcc_isituacion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="usuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pc" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SIGTS_DOC_X_COBRAR_CUENTA_CONTABLE_ACTUALIZAR" Method="SIGTS_DOC_X_COBRAR_CUENTA_CONTABLE_ACTUALIZAR">
+    <Parameter Name="ccdcc_icod_correlativo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ccdcc_nmonto" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="ccdcc_vglosa" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="usuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pc" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ctacc_iid_cuenta_contable" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="cecoc_icod_centro_costo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="anac_icod_analitica" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_DXC_PARA_VCO_LISTAR" Method="SGE_DXC_PARA_VCO_LISTAR">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intPeriodo" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_DXC_PARA_VCO_LISTARResult">
+      <Column Name="intCtaTotal" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="intCtaIGV" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="intCtaServicios" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="intCtaMercaderia" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="mesec_iid_mes" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Abreviatura" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="tdodc_iid_correlativo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ClaseDocumento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DescripcionClaseDocumento" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="doxcc_vnumero_doc" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="cliec_icod_cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="cliec_vnombre_cliente" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_sfecha_doc" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(8,4) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_vdescrip_transaccion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_afecto" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_inafecto" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nporcentaje_igv" Type="System.Decimal" DbType="Decimal(6,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_impuesto" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_total" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_vobservaciones" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="docxc_icod_documento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="doxcc_ianio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_origen" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="anac_icod_analitica" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="anad_iid_analitica" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="tablc_iid_situacion_documento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="docxc_icod_documento1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

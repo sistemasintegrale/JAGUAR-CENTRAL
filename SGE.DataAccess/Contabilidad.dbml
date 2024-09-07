@@ -1,0 +1,1992 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SGE_CALZADOS_JAGUAR" Class="ContabilidadDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=SGE_CALZADOS_JAGUAR;Integrated Security=True" SettingsObjectName="SGE.DataAccess.Properties.Settings" SettingsPropertyName="SGE_CALZADOS_JAGUARConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.SGECONTA_CENTRO_COSTO_ELIMINAR" Method="SGECONTA_CENTRO_COSTO_ELIMINAR">
+    <Parameter Name="cecoc_icod_centro_costo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cecoc_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGECONTA_ANALITICA_DETALLE_ELIMINAR" Method="SGECONTA_ANALITICA_DETALLE_ELIMINAR">
+    <Parameter Name="anad_icod_analitica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="anad_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGECONTA_ANALITICA_DETALLE_INSERTAR" Method="SGECONTA_ANALITICA_DETALLE_INSERTAR">
+    <Parameter Name="anad_icod_analitica" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="anad_iid_analitica" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="anad_vdescripcion" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="tarec_icorrelativo_tipo_analitica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="anad_nombre" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="anad_apepaterno" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="anad_apematerno" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="tarec_icorrelativo_tipo_persona" Type="System.Int32" DbType="Int" />
+    <Parameter Name="anad_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="anad_origen" Type="System.Int32" DbType="Int" />
+    <Parameter Name="anad_situacion" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGECONTA_ANALITICA_DETALLE_MODIFICAR" Method="SGECONTA_ANALITICA_DETALLE_MODIFICAR">
+    <Parameter Name="anad_icod_analitica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="anad_vdescripcion" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="anad_nombre" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="anad_apepaterno" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="anad_apematerno" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="tarec_icorrelativo_tipo_persona" Type="System.Int32" DbType="Int" />
+    <Parameter Name="anad_situacion" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="anad_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGECONTA_SUBDIARIO_ELIMINAR" Method="SGECONTA_SUBDIARIO_ELIMINAR">
+    <Parameter Name="subdi_icod_subdiario" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGECONTA_SUBDIARIO_MODIFICAR" Method="SGECONTA_SUBDIARIO_MODIFICAR">
+    <Parameter Name="subdi_icod_subdiario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="subdi_vdescripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="subdi_iactivo" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="subdi_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGECONTA_SUBDIARIO_INSERTAR" Method="SGECONTA_SUBDIARIO_INSERTAR">
+    <Parameter Name="subdi_icod_subdiario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="subdi_vdescripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="subdi_iactivo" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="subdi_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGECONTA_SUBDIARIO_LISTAR" Method="SGECONTA_SUBDIARIO_LISTAR">
+    <ElementType Name="SGECONTA_SUBDIARIO_LISTARResult">
+      <Column Name="subdi_icod_subdiario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="subdi_vdescripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="subdi_iactivo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGECONTA_VOUCHER_CONTABLE_CAB_MODIFICAR" Method="SGECONTA_VOUCHER_CONTABLE_CAB_MODIFICAR">
+    <Parameter Name="vcocc_icod_vcontable" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vcocc_glosa" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="vcocc_observacion" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="tarec_icorrelativo_situacion_vcontable" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vcocc_nmto_tot_debe_sol" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="vcocc_nmto_tot_haber_sol" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="vcocc_nmto_tot_debe_dol" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="vcocc_nmto_tot_haber_dol" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="vcocc_usuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vcocc_pc_modifica" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="tbl_origen" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="tbl_origen_icod" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGECONTA_VOUCHER_CONTABLE_DET_ELIMINAR" Method="SGECONTA_VOUCHER_CONTABLE_DET_ELIMINAR">
+    <Parameter Name="vcocd_icod_det" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGECONTA_VOUCHER_CONTABLE_DET_MODIFICAR" Method="SGECONTA_VOUCHER_CONTABLE_DET_MODIFICAR">
+    <Parameter Name="vcocd_icod_det" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vcocd_numero_doc" Type="System.String" DbType="VarChar(16)" />
+    <Parameter Name="vcocd_vglosa_linea" Type="System.String" DbType="VarChar(60)" />
+    <Parameter Name="vcocd_nmto_tot_debe_sol" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="vcocd_nmto_tot_haber_sol" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="vcocd_nmto_tot_debe_dol" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="vcocd_nmto_tot_haber_dol" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="vcocd_usuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vcocd_pc_modifica" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGECONTA_VOUCHER_CONTABLE_CAB_ELIMINAR" Method="SGECONTA_VOUCHER_CONTABLE_CAB_ELIMINAR">
+    <Parameter Name="vcocc_icod_vcontable" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGECONTA_VOUCHER_CONTABLE_ACTUALIZAR_SITUACION" Method="SGECONTA_VOUCHER_CONTABLE_ACTUALIZAR_SITUACION">
+    <Parameter Name="vcocc_icod_vcontable" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGECONTA_VOUCHER_CONTABLE_REDONDEO_ELIMINAR" Method="SGECONTA_VOUCHER_CONTABLE_REDONDEO_ELIMINAR">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intMes" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGECONTA_VOUCHER_CONTABLE_REDONDEO_ELIMINARResult">
+      <Column Name="iid_voucher_contable" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGECONTA_ANIO_EJERCICIO_ELIMINAR" Method="SGECONTA_ANIO_EJERCICIO_ELIMINAR">
+    <Parameter Name="anioc_icod_anio_ejercicio" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGECONTA_ANIO_EJERCICIO_MODIFICAR" Method="SGECONTA_ANIO_EJERCICIO_MODIFICAR">
+    <Parameter Name="anioc_icod_anio_ejercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="anioc_iactivo" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGECONTA_ANIO_EJERCICIO_INSERTAR" Method="SGECONTA_ANIO_EJERCICIO_INSERTAR">
+    <Parameter Name="anioc_icod_anio_ejercicio" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="anioc_iid_anio_ejercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="anioc_iactivo" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGECONTA_ANIO_EJERCICIO_LISTAR" Method="SGECONTA_ANIO_EJERCICIO_LISTAR">
+    <ElementType Name="SGECONTA_ANIO_EJERCICIO_LISTARResult">
+      <Column Name="anioc_icod_anio_ejercicio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="anioc_iid_anio_ejercicio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="anioc_iactivo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="strEstado" Type="System.String" DbType="VarChar(7)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGECONTA_IMPRESION_CUENTA_CONTABLE" Method="SGECONTA_IMPRESION_CUENTA_CONTABLE">
+    <Parameter Name="CuentaI" Parameter="cuentaI" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="CuentaF" Parameter="cuentaF" Type="System.String" DbType="VarChar(15)" />
+    <ElementType Name="SGECONTA_IMPRESION_CUENTA_CONTABLEResult">
+      <Column Name="anioc_iid_anio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ctacc_icod_cuenta_contable" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ctacc_numero_cuenta_contable" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="ctacc_nombre_descripcion" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="ctacc_iid_cuenta_padre" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ctacc_" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ctacc_nivel_cuenta" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ctacc_cflag_relacion" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_analitica" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tablc_iid_clasificacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tablc_iid_elemento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_cuenta" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_saldo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ctacc_icod_cuenta_debe_auto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="strNumeroCuentaDebeAuto" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="strDesCuentaDebeAuto" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="ctacc_icod_cuenta_haber_auto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="strNumeroCuentaHaberAuto" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="strDesCuentaHaberAuto" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="identificador" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="strTipoCuenta" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ctacc_iccosto" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="centrocosto" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="alafanumerico" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_MAYO_AUXILIAR_MENSUAL" Method="SGE_MAYO_AUXILIAR_MENSUAL">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intMes" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intCuentaInicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intCuentaFin" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intOpcion" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_MAYO_AUXILIAR_MENSUALResult">
+      <Column Name="icod_cuenta_contable" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ctacc_numero_cuenta_contable" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="ctacc_nombre_descripcion" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="iid_tipo_analitica" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="icod_analitica" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="anad_iid_analitica" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="icod_centro_costo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cecoc_Vcodigo_centro_costo" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="mto_sal_anterior_sol" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="mto_sal_anterior_dol" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="anad_vdescripcion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="cecoc_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_MAYO_AUXILIAR_DETALLADO" Method="SGE_MAYO_AUXILIAR_DETALLADO">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intMes" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intCuentaInicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intCuentaFin" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intOpcion" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_MAYO_AUXILIAR_DETALLADOResult">
+      <Column Name="icod_cuenta_contable" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ctacc_numero_cuenta_contable" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="ctacc_nombre_descripcion" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="mto_sal_anterior_sol" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="mto_sal_anterior_dol" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_BALANCE_COMPROBACION_LISTAR_2" Method="SGE_BALANCE_COMPROBACION_LISTAR_2">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intMes" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intOpcion" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_BALANCE_COMPROBACION_LISTAR_2Result">
+      <Column Name="ctacc_icod_cuenta_contable" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ctacc_numero_cuenta_contable" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="ctacc_nombre_descripcion" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="iid_tipo_analitica" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="icod_analitica" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="anad_iid_analitica" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="icod_centro_costo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="cecoc_vcodigo_centro_costo" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="vcocd_nmto_tot_debe_sol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocd_nmto_tot_haber_sol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocd_nmto_tot_debe_dol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocd_nmto_tot_haber_dol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocd_numero_doc" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="vcocc_fecha_vcontable" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="vcocd_vglosa_linea" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="tablc_iid_moneda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vmoneda" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="vcocc_tipo_cambio" Type="System.Decimal" DbType="Decimal(8,4)" CanBeNull="true" />
+      <Column Name="vnumero_voucher" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="vcocd_nro_item_det" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_MAYO_AUXILIAR_CCOSTO_MENSUAL" Method="SGE_MAYO_AUXILIAR_CCOSTO_MENSUAL">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intMes" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intOpcion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intCuentaInicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intCuentaFin" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strCCostoInicio" Type="System.String" DbType="VarChar(8)" />
+    <Parameter Name="strCCostoFin" Type="System.String" DbType="VarChar(8)" />
+    <ElementType Name="SGE_MAYO_AUXILIAR_CCOSTO_MENSUALResult">
+      <Column Name="icod_cuenta_contable" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ctacc_numero_cuenta_contable" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="ctacc_nombre_descripcion" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="icod_centro_costo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cecoc_vcodigo_centro_costo" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="mto_sal_anterior_sol" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="mto_sal_anterior_dol" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="cecoc_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_MAYO_AUXILIAR_RESUMEN" Method="SGE_MAYO_AUXILIAR_RESUMEN">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intMes" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intCuentaInicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intCuentaFin" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_MAYO_AUXILIAR_RESUMENResult">
+      <Column Name="icod_cuenta_contable" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ctacc_numero_cuenta_contable" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="iid_mes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ctacc_nombre_descripcion" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_MAYO_AUXILIAR_RESUMEN_2" Method="SGE_MAYO_AUXILIAR_RESUMEN_2">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intMes" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intCuentaInicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intCuentaFin" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_MAYO_AUXILIAR_RESUMEN_2Result">
+      <Column Name="ctacc_icod_cuenta_contable" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="vcocd_nmto_tot_debe_sol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocd_nmto_tot_haber_sol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocd_nmto_tot_debe_dol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocd_nmto_tot_haber_dol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="mesec_iid_mes" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="subdi_icod_subdiario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_BALANCE_COMPROBACION_LISTAR" Method="SGE_BALANCE_COMPROBACION_LISTAR">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intMes" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intMoneda" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intDigito" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intOpcion" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_BALANCE_COMPROBACION_LISTARResult">
+      <Column Name="icod_cuenta_contable" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ctacc_numero_cuenta_contable" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="ctacc_nombre_descripcion" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="mto_sal_anterior_sol" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="cta_iid__padre" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="cta_vdes__padre" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGECONTA_ANALITICA_DETALLE_LISTAR" Method="SGECONTA_ANALITICA_DETALLE_LISTAR">
+    <Parameter Name="tarec_icorrelativo_tipo_analitica" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGECONTA_ANALITICA_DETALLE_LISTARResult">
+      <Column Name="anad_icod_analitica" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="anad_iid_analitica" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="anad_vdescripcion" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="tarec_icorrelativo_tipo_analitica" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="anad_nombre" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="anad_apepaterno" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="anad_apematerno" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="tarec_icorrelativo_tipo_persona" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="anad_origen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="anad_situacion" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="strTipoAnalitica" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strTipoPersona" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="id_entidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_VOUCHER_CAB_GET_CORRELATIVO" Method="SGE_VOUCHER_CAB_GET_CORRELATIVO">
+    <Parameter Name="anioc_iid_anio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="mesec_iid_mes" Type="System.Int32" DbType="Int" />
+    <Parameter Name="subdi_icod_subdiario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intCorrelativo" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_GET_TIPO_CAMBIO_POR_FECHA" Method="SGE_GET_TIPO_CAMBIO_POR_FECHA">
+    <Parameter Name="dblTC" Type="System.Decimal" DbType="Decimal(8,4)" Direction="InOut" />
+    <Parameter Name="fecha" Type="System.DateTime" DbType="SmallDateTime" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_ALMACEN_CONTABLE_ELIMINAR" Method="SGEA_ALMACEN_CONTABLE_ELIMINAR">
+    <Parameter Name="almcc_icod_almacen" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPc" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_ALMACEN_CONTABLE_INSERTAR" Method="SGEA_ALMACEN_CONTABLE_INSERTAR">
+    <Parameter Name="almcc_icod_almacen" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="almcc_iid_almacen" Type="System.Int32" DbType="Int" />
+    <Parameter Name="almcc_vabreviatura" Type="System.String" DbType="VarChar(3)" />
+    <Parameter Name="almcc_vdescripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPc" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_ALMACEN_CONTABLE_LISTAR" Method="SGEA_ALMACEN_CONTABLE_LISTAR">
+    <ElementType Name="SGEA_ALMACEN_CONTABLE_LISTARResult">
+      <Column Name="almcc_icod_almacen" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="almcc_iid_almacen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="almcc_vabreviatura" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="almcc_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_ALMACEN_CONTABLE_MODIFICAR" Method="SGEA_ALMACEN_CONTABLE_MODIFICAR">
+    <Parameter Name="almcc_icod_almacen" Type="System.Int32" DbType="Int" />
+    <Parameter Name="almcc_iid_almacen" Type="System.Int32" DbType="Int" />
+    <Parameter Name="almcc_vabreviatura" Type="System.String" DbType="VarChar(3)" />
+    <Parameter Name="almcc_vdescripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPc" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_CLASIFICACION_PRODUCTO_ELIMINAR" Method="SGE_CLASIFICACION_PRODUCTO_ELIMINAR">
+    <Parameter Name="clasc_icod_clasificacion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPc" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_CLASIFICACION_PRODUCTO_MODIFICAR" Method="SGE_CLASIFICACION_PRODUCTO_MODIFICAR">
+    <Parameter Name="clasc_icod_clasificacion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="clasc_iid_clasificacion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="clasc_vdescripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ctacc_icod_cuenta_contable_producto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctacc_icod_cuenta_contable_importacion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctacc_icod_cuenta_contable_compra" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctacc_icod_cuenta_contable_costos" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPc" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="almcc_icod_almacen" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_CLASIFICACION_PRODUCTO_INSERTAR" Method="SGE_CLASIFICACION_PRODUCTO_INSERTAR">
+    <Parameter Name="clasc_icod_clasificacion" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="clasc_iid_clasificacion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="clasc_vdescripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ctacc_icod_cuenta_contable_producto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctacc_icod_cuenta_contable_importacion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctacc_icod_cuenta_contable_compra" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctacc_icod_cuenta_contable_costos" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPc" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="almcc_icod_almacen" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_CLASIFICACION_PRODUCTO_LISTAR" Method="SGE_CLASIFICACION_PRODUCTO_LISTAR">
+    <ElementType Name="SGE_CLASIFICACION_PRODUCTO_LISTARResult">
+      <Column Name="clasc_icod_clasificacion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="clasc_iid_clasificacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="clasc_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ctacc_icod_cuenta_contable_producto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ctacc_icod_cuenta_contable_importacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ctacc_icod_cuenta_contable_compra" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ctacc_icod_cuenta_contable_costos" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="almcc_icod_almacen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="strDesAlmacenCtbl" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="strCuentaProducto" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="strCuentaImportacion" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="strCuentaCompra" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="strCuentaCostos" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="strDesCuentaProducto" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="strDesCuentaImportacion" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="strDesCuentaCompra" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="strDesCuentaCostos" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_GET_VOUCHER_CONTABLE_CAB" Method="SGE_GET_VOUCHER_CONTABLE_CAB">
+    <Parameter Name="strOrigen" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="intIcod" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_GET_VOUCHER_CONTABLE_CABResult">
+      <Column Name="anioc_iid_anio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="mesec_iid_mes" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="vcocc_icod_vcontable" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="subdi_icod_subdiario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="vcocc_numero_vcontable" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="vcocc_fecha_vcontable" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="vcocc_glosa" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="vcocc_observacion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tarec_icorrelativo_situacion_vcontable" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tarec_icorrelativo_origen_vcontable" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tablc_iid_moneda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vcocc_tipo_cambio" Type="System.Decimal" DbType="Decimal(8,4)" CanBeNull="true" />
+      <Column Name="vcocc_nmto_tot_debe_sol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocc_nmto_tot_haber_sol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocc_nmto_tot_debe_dol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocc_nmto_tot_haber_dol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="tbl_origen" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="tbl_origen_icod" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="strTipoMoneda" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strVcoSituacion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="intMovimientos" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="strSubdiario" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_COSTO_VENTA_NCV_DET" Method="SGE_COSTO_VENTA_NCV_DET">
+    <Parameter Name="intCorrelativo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="dtmFecha" Type="System.DateTime" DbType="SmallDateTime" />
+    <ElementType Name="SGE_COSTO_VENTA_NCV_DETResult">
+      <Column Name="dfacc_ncantidad_producto" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="dcmlPcp" Type="System.Decimal" DbType="Decimal(12,4)" CanBeNull="true" />
+      <Column Name="intCuentaCostos" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="intCentroCosto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="strCodCentroCosto" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="strDesProducto" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="intCuentaProducto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGECONTA_VOUCHER_CONTABLE_CAB_INSERTAR" Method="SGECONTA_VOUCHER_CONTABLE_CAB_INSERTAR">
+    <Parameter Name="anioc_iid_anio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="mesec_iid_mes" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vcocc_icod_vcontable" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="subdi_icod_subdiario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vcocc_numero_vcontable" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="vcocc_fecha_vcontable" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="vcocc_glosa" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="vcocc_observacion" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="tarec_icorrelativo_situacion_vcontable" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tarec_icorrelativo_origen_vcontable" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tablc_iid_moneda" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vcocc_tipo_cambio" Type="System.Decimal" DbType="Decimal(8,4)" />
+    <Parameter Name="vcocc_nmto_tot_debe_sol" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="vcocc_nmto_tot_haber_sol" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="vcocc_nmto_tot_debe_dol" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="vcocc_nmto_tot_haber_dol" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="doxpc_viid_correlativo" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="vcocc_usuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vcocc_pc_crea" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="tbl_origen" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="tbl_origen_icod" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SIGT_VOUCHER_CONTABLE_CAB_LISTAR_X_SUBDIARIO" Method="SIGT_VOUCHER_CONTABLE_CAB_LISTAR_X_SUBDIARIO">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intMes" Type="System.Int32" DbType="Int" />
+    <Parameter Name="subInicial" Type="System.Int32" DbType="Int" />
+    <Parameter Name="subFinal" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SIGT_VOUCHER_CONTABLE_CAB_LISTAR_X_SUBDIARIOResult">
+      <Column Name="anioc_iid_anio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="mesec_iid_mes" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="vcocc_icod_vcontable" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="subdi_icod_subdiario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="vcocc_fecha_vcontable" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="vcocc_vglosa" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="vcocc_observacion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="vcocc_numero_vcontable" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="tarec_icorrelativo_situacion_vcontable" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tarec_icorrelativo_origen_vcontable" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tablc_iid_moneda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vcocc_tipo_cambio" Type="System.Decimal" DbType="Decimal(8,4)" CanBeNull="true" />
+      <Column Name="vcocc_nmto_tot_debe_sol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocc_nmto_tot_haber_sol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocc_nmto_tot_debe_dol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocc_nmto_tot_haber_dol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="subdi_icod_subdiario1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="subdiario_des" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="dia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Estado" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tipocambio" Type="System.Decimal" DbType="Decimal(8,4) NOT NULL" CanBeNull="false" />
+      <Column Name="tipomoneda" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="movimientos" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vcocc_tipo_cambio1" Type="System.Decimal" DbType="Decimal(8,4)" CanBeNull="true" />
+      <Column Name="tbl_origen" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="tbl_origen_icod" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SIGT_VOUCHER_CONTABLE_DET_LISTAR" Method="SIGT_VOUCHER_CONTABLE_DET_LISTAR">
+    <Parameter Name="vcocc_iid_voucher_contable" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SIGT_VOUCHER_CONTABLE_DET_LISTARResult">
+      <Column Name="vcocd_icod_det" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="vcocd_nro_item_det" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="vcocd_numero_doc" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="ctacc_icod_cuenta_contable" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ctacc_vnumero_cuenta_contable" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="ctacc_vnombre_descripcion_larga" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="cecoc_icod_centro_costo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_analitica" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="anad_icod_analitica" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vcocd_vglosa_linea" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="vcocd_nmto_tot_debe_sol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocd_nmto_tot_haber_sol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocd_nmto_tot_debe_dol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocd_nmto_tot_haber_dol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="tarec_icorrelativo_origen_vcontable" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="centrocosto" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="cecoc_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tipoanalitica" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="analitica" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="anac_vdescripcion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="identificador" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="vcocc_icod_vcontable" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ctacc_icod_cuenta_debe_auto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ctacc_icod_cuenta_haber_auto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vcocd_tipo_cambio" Type="System.Decimal" DbType="Decimal(8,4)" CanBeNull="true" />
+      <Column Name="tdocc_vabreviatura_tipo_doc" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="ctacc_iid_cuenta_contable_ref" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SIGT_VOUCHER_CONTABLE_DET_LISTAR_X_SUBDIARIO" Method="SIGT_VOUCHER_CONTABLE_DET_LISTAR_X_SUBDIARIO">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intMes" Type="System.Int32" DbType="Int" />
+    <Parameter Name="subInicial" Type="System.Int32" DbType="Int" />
+    <Parameter Name="subFinal" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SIGT_VOUCHER_CONTABLE_DET_LISTAR_X_SUBDIARIOResult">
+      <Column Name="vcocd_icod_det" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="vcocc_fecha_vcontable" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ctacc_numero_cuenta_contable" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="vcocd_nmto_tot_debe_sol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocd_nmto_tot_haber_sol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocc_icod_vcontable" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vcocd_vglosa_linea" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="subdi_icod_subdiario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vcocc_numero_vcontable" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="ctacc_nombre_descripcion" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SpInsertWithTypeTable" Method="SpInsertWithTypeTable">
+    <Parameter Name="list" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGECONTA_VOUCHER_CONTABLE_CAB_ULTIMO_CORRELATVO" Method="SGECONTA_VOUCHER_CONTABLE_CAB_ULTIMO_CORRELATVO">
+    <Parameter Name="vcocc_icod_vcontable" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_VOUCHER_CONTABLE_NO_CUADRADOS_CAB_LISTAR" Method="SGE_VOUCHER_CONTABLE_NO_CUADRADOS_CAB_LISTAR">
+    <Parameter Name="anioc_inumero_anho" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_VOUCHER_CONTABLE_NO_CUADRADOS_CAB_LISTARResult">
+      <Column Name="anioc_iid_anio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="mesec_iid_mes" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="vcocc_icod_vcontable" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="subdi_icod_subdiario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="vcocc_fecha_vcontable" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="vcocc_vglosa" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="vcocc_observacion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="vcocc_numero_vcontable" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="tarec_icorrelativo_situacion_vcontable" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tarec_icorrelativo_origen_vcontable" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tablc_iid_moneda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vcocc_tipo_cambio" Type="System.Decimal" DbType="Decimal(8,4)" CanBeNull="true" />
+      <Column Name="vcocc_nmto_tot_debe_sol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocc_nmto_tot_haber_sol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocc_nmto_tot_debe_dol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocc_nmto_tot_haber_dol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="subdi_icod_subdiario1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="subdiario_des" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Estado" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tipocambio" Type="System.Decimal" DbType="Decimal(8,4) NOT NULL" CanBeNull="false" />
+      <Column Name="tipomoneda" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="movimientos" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGECONTA_CENTRO_COSTO_INSERTAR" Method="SGECONTA_CENTRO_COSTO_INSERTAR">
+    <Parameter Name="cecoc_icod_centro_costo" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="cecoc_vcodigo_centro_costo" Type="System.String" DbType="Char(8)" />
+    <Parameter Name="cecoc_vdescripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="cecoc_situacion_centro_costo" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="cecoc_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pryc_icod_proyecto" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGECONTA_CENTRO_COSTO_LISTAR" Method="SGECONTA_CENTRO_COSTO_LISTAR">
+    <ElementType Name="SGECONTA_CENTRO_COSTO_LISTARResult">
+      <Column Name="cecoc_icod_centro_costo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="cecoc_vcodigo_centro_costo" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="cecoc_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="cecoc_situacion_centro_costo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="cecoc_iusuario_crea" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cecoc_sfecha_crea" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="cecoc_iusuario_modifica" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cecoc_sfecha_modifica" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="cecoc_flag_estado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="pryc_icod_proyecto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGECONTA_CENTRO_COSTO_LISTAR_PROYECTOS" Method="SGECONTA_CENTRO_COSTO_LISTAR_PROYECTOS">
+    <ElementType Name="SGECONTA_CENTRO_COSTO_LISTAR_PROYECTOSResult">
+      <Column Name="cecoc_icod_centro_costo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="cecoc_vcodigo_centro_costo" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="cecoc_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="cecoc_situacion_centro_costo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="cecoc_iusuario_crea" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cecoc_sfecha_crea" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="cecoc_iusuario_modifica" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cecoc_sfecha_modifica" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="cecoc_flag_estado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="pryc_icod_proyecto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEP_LOCALIDADES_LISTAR" Method="SGEP_LOCALIDADES_LISTAR">
+    <ElementType Name="SGEP_LOCALIDADES_LISTARResult">
+      <Column Name="lafc_icod_localidades" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="lafc_iid_localidades" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="lafc_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="lafc_flag_estado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEP_LOCALIDADES_INSERTAR" Method="SGEP_LOCALIDADES_INSERTAR">
+    <Parameter Name="lafc_icod_localidades" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="lafc_iid_localidades" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="lafc_vdescripcion" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="lafc_flag_estado" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="lafc_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="lafc_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_LOCALIDADES_MODIFICAR" Method="SGEP_LOCALIDADES_MODIFICAR">
+    <Parameter Name="lafc_icod_localidades" Type="System.Int32" DbType="Int" />
+    <Parameter Name="lafc_vdescripcion" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="lafc_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="lafc_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_LOCALIDADES_ELIMINAR" Method="SGEP_LOCALIDADES_ELIMINAR">
+    <Parameter Name="lafc_icod_localidades" Type="System.Int32" DbType="Int" />
+    <Parameter Name="lafc_iusuario_elimina" Type="System.Int32" DbType="Int" />
+    <Parameter Name="lafc_vcp_elimina" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_ACTIVO_FIJO_LISTAR" Method="SGEP_ACTIVO_FIJO_LISTAR">
+    <ElementType Name="SGEP_ACTIVO_FIJO_LISTARResult">
+      <Column Name="acfc_icod_activo_fijo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="acfc_iid_activo_fijo" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="tarec_iid_clasificacion_af" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NClasificacion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tarec_iid_situacion_af" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NSituacion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="acfc_vdescripcion" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="acfc_vmarca" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="acfc_vmodelo" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="acfc_vserie" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="acfc_vcaracterist" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="acfc_icantidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tarec_iid_tip_moneda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NMoneda" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="acfc_ncosto_act" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="acfc_ntotal_deprec" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="acfc_vcodigo_invent" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="lafc_icod_localidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="acfc_sfech_adqui" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="acfc_ncosto_adqui" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="acfc_ianio_vida" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="acfc_nporct_deprec" Type="System.Decimal" DbType="Decimal(4,2)" CanBeNull="true" />
+      <Column Name="acfc_sfech_alta" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="acfc_sfecha_inic_uso" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ccoc_icod_centro_costo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ctacc_icod_cuenta_contable" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="proc_icod_proveedor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="acfc_sfecha_baja" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="acfc_vmotivo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="acfc_vfoto" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="ccoc_numero_centro_costo" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="ctacc_numero_cuenta_contable" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="acfc_flag_estado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="lafc_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="proc_vnombrecompleto" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEP_ACTIVO_FIJO_INSERTAR" Method="SGEP_ACTIVO_FIJO_INSERTAR">
+    <Parameter Name="acfc_icod_activo_fijo" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="acfc_iid_activo_fijo" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="tarec_iid_clasificacion_af" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tarec_iid_situacion_af" Type="System.Int32" DbType="Int" />
+    <Parameter Name="acfc_vdescripcion" Type="System.String" DbType="VarChar(80)" />
+    <Parameter Name="acfc_vmarca" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="acfc_vmodelo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="acfc_vserie" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="acfc_vcaracterist" Type="System.String" DbType="VarChar(300)" />
+    <Parameter Name="acfc_icantidad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tarec_iid_tip_moneda" Type="System.Int32" DbType="Int" />
+    <Parameter Name="acfc_ncosto_act" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="acfc_ntotal_deprec" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="acfc_vcodigo_invent" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="lafc_icod_localidad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="acfc_sfech_adqui" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="acfc_ncosto_adqui" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="acfc_ianio_vida" Type="System.Int32" DbType="Int" />
+    <Parameter Name="acfc_nporct_deprec" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="acfc_sfech_alta" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="acfc_sfecha_inic_uso" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="ccoc_icod_centro_costo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctacc_icod_cuenta_contable" Type="System.Int32" DbType="Int" />
+    <Parameter Name="proc_icod_proveedor" Type="System.Int32" DbType="Int" />
+    <Parameter Name="acfc_sfecha_baja" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="acfc_vmotivo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ccoc_numero_centro_costo" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="ctacc_numero_cuenta_contable" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="acfc_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="acfc_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="acfc_flag_estado" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="lafc_vdescripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="proc_vnombrecompleto" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="acfc_vfoto" Type="System.String" DbType="VarChar(150)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_ACTIVO_FIJO_MODIFICAR" Method="SGEP_ACTIVO_FIJO_MODIFICAR">
+    <Parameter Name="acfc_icod_activo_fijo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tarec_iid_clasificacion_af" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tarec_iid_situacion_af" Type="System.Int32" DbType="Int" />
+    <Parameter Name="acfc_vdescripcion" Type="System.String" DbType="VarChar(80)" />
+    <Parameter Name="acfc_vmarca" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="acfc_vmodelo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="acfc_vserie" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="acfc_vcaracterist" Type="System.String" DbType="VarChar(300)" />
+    <Parameter Name="acfc_icantidad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tarec_iid_tip_moneda" Type="System.Int32" DbType="Int" />
+    <Parameter Name="acfc_ncosto_act" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="acfc_ntotal_deprec" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="acfc_vcodigo_invent" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="lafc_icod_localidades" Type="System.Int32" DbType="Int" />
+    <Parameter Name="acfc_sfech_adqui" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="acfc_ncosto_adqui" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="acfc_ianio_vida" Type="System.Int32" DbType="Int" />
+    <Parameter Name="acfc_nporct_deprec" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="acfc_sfech_alta" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="acfc_sfecha_inic_uso" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="ccoc_icod_centro_costo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctacc_icod_cuenta_contable" Type="System.Int32" DbType="Int" />
+    <Parameter Name="proc_icod_proveedor" Type="System.Int32" DbType="Int" />
+    <Parameter Name="acfc_sfecha_baja" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="acfc_vmotivo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ccoc_numero_centro_costo" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="ctacc_numero_cuenta_contable" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="acfc_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="acfc_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="lafc_vdescripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="proc_vnombrecompleto" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="acfc_vfoto" Type="System.String" DbType="VarChar(150)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_ACTIVO_FIJO_ELIMINAR" Method="SGEP_ACTIVO_FIJO_ELIMINAR">
+    <Parameter Name="acfc_icod_activo_fijo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="acfc_iusuario_elimina" Type="System.Int32" DbType="Int" />
+    <Parameter Name="acfc_vcp_elimina" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGECONTA_VOUCHER_CONTABLE_CAB_LISTAR" Method="SGECONTA_VOUCHER_CONTABLE_CAB_LISTAR">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intPeriodo" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGECONTA_VOUCHER_CONTABLE_CAB_LISTARResult">
+      <Column Name="anioc_iid_anio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="mesec_iid_mes" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="vcocc_icod_vcontable" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="subdi_icod_subdiario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="vcocc_numero_vcontable" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="vcocc_fecha_vcontable" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="vcocc_glosa" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="vcocc_observacion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tarec_icorrelativo_situacion_vcontable" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tarec_icorrelativo_origen_vcontable" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tablc_iid_moneda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vcocc_tipo_cambio" Type="System.Decimal" DbType="Decimal(8,4)" CanBeNull="true" />
+      <Column Name="vcocc_nmto_tot_debe_sol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocc_nmto_tot_haber_sol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocc_nmto_tot_debe_dol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocc_nmto_tot_haber_dol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="tbl_origen" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="tbl_origen_icod" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="strTipoMoneda" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strVcoSituacion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="intMovimientos" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="strSubdiario" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGECONTA_CENTRO_COSTO_MODIFICAR" Method="SGECONTA_CENTRO_COSTO_MODIFICAR">
+    <Parameter Name="cecoc_icod_centro_costo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cecoc_vdescripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="cecoc_situacion_centro_costo" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="cecoc_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pryc_icod_proyecto" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_REGISTRO_VENTAS_LISTAR" Method="SGE_REGISTRO_VENTAS_LISTAR">
+    <Parameter Name="anio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="mes" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_REGISTRO_VENTAS_LISTARResult">
+      <Column Name="doxcc_icod_correlativo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="tdocc_vcodigo_tipo_doc_sunat" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="tdocc_vabreviatura_tipo_doc" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="doxcc_vnumero_doc" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_sfecha_doc" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="cliec_icod_cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="cliec_vcod_cliente" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="cliec_vnombre_cliente" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(8,4) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nporcentaje_igv" Type="System.Decimal" DbType="Decimal(6,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_afecto" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_inafecto" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="valor_venta" Type="System.Decimal" DbType="Decimal(17,2)" CanBeNull="true" />
+      <Column Name="doxcc_nmonto_impuesto" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_nmonto_total" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="tip_doc_cliente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="num_doc_cliente" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="nc_dxc_numdoc" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="doxcc_tipo_comprobante_referencia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="doxcc_num_serie_referencia" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="doxcc_num_comprobante_referencia" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="doxcc_sfecha_emision_referencia" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="doxcc_sfecha_vencimiento_doc" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="tablc_iid_situacion_documento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tdocc_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="vcocc_numero_vcontable" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="subdi_icod_subdiario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_DESPACHO_TRANSFERENCIA_DET" Method="SGE_DESPACHO_TRANSFERENCIA_DET">
+    <Parameter Name="intCorrelativo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="dtmFecha" Type="System.DateTime" DbType="SmallDateTime" />
+    <ElementType Name="SGE_DESPACHO_TRANSFERENCIA_DETResult">
+      <Column Name="dremc_ncantidad_producto" Type="System.Decimal" DbType="Decimal(16,4) NOT NULL" CanBeNull="false" />
+      <Column Name="dcmlPcp" Type="System.Decimal" DbType="Decimal(12,4)" CanBeNull="true" />
+      <Column Name="intCuentaCostos" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ctacc_icod_cuenta_contable" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="strDesProducto" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="intCuentaProducto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_DESPACHO_CAB_LISTAR" Method="SGE_DESPACHO_CAB_LISTAR">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intMes" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_DESPACHO_CAB_LISTARResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="remic_icod_remision" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="remic_vnumero_remision" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="remic_sfecha_remision" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="cliec_icod_cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="almac_icod_almacen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="almac_icod_almacen_ingreso" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="remic_ianio" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tipoCambio" Type="System.Decimal" DbType="Decimal(16,4)" CanBeNull="true" />
+      <Column Name="tipoVenta" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="icod_tipo_doc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vglosa" Type="System.String" DbType="VarChar(35)" CanBeNull="true" />
+      <Column Name="cecoc_icod_centro_costo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tablc_iid_motivo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_COSTO_VENTA_DET" Method="SGE_COSTO_VENTA_DET">
+    <Parameter Name="intCorrelativo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="dtmFecha" Type="System.DateTime" DbType="SmallDateTime" />
+    <ElementType Name="SGE_COSTO_VENTA_DETResult">
+      <Column Name="dremc_ncantidad_producto" Type="System.Decimal" DbType="Decimal(16,4) NOT NULL" CanBeNull="false" />
+      <Column Name="dcmlPcp" Type="System.Decimal" DbType="Decimal(12,4)" CanBeNull="true" />
+      <Column Name="almcc_icod_almacen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="prdc_icod_producto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="intCuentaCostos" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ctacc_icod_cuenta_contable" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="strDesProducto" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="intCuentaProducto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_DESPACHO_VENTA_DET" Method="SGE_DESPACHO_VENTA_DET">
+    <Parameter Name="intCorrelativo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="dtmFecha" Type="System.DateTime" DbType="SmallDateTime" />
+    <ElementType Name="SGE_DESPACHO_VENTA_DETResult">
+      <Column Name="dremc_ncantidad_producto" Type="System.Decimal" DbType="Decimal(16,4) NOT NULL" CanBeNull="false" />
+      <Column Name="dcmlPcp" Type="System.Decimal" DbType="Decimal(12,4)" CanBeNull="true" />
+      <Column Name="intCuentaCostos" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ctacc_icod_cuenta_contable" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="strDesProducto" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="intCuentaProducto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_DESPACHO_VENTAS_CAB_LISTAR" Method="SGE_DESPACHO_VENTAS_CAB_LISTAR">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intMes" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_DESPACHO_VENTAS_CAB_LISTARResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="remic_icod_remision" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="remic_vnumero_remision" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="remic_sfecha_remision" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="cliec_icod_cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="almac_icod_almacen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="almac_icod_almacen_ingreso" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="remic_ianio" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tipoCambio" Type="System.Decimal" DbType="Decimal(16,4)" CanBeNull="true" />
+      <Column Name="tipoVenta" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="icod_tipo_doc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vglosa" Type="System.String" DbType="VarChar(35)" CanBeNull="true" />
+      <Column Name="cecoc_icod_centro_costo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tablc_iid_motivo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_DESPACHO_TRANSFERENCIA_CAB_LISTAR" Method="SGE_DESPACHO_TRANSFERENCIA_CAB_LISTAR">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intMes" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_DESPACHO_TRANSFERENCIA_CAB_LISTARResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="remic_icod_remision" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="remic_vnumero_remision" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="remic_sfecha_remision" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="cliec_icod_cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="almac_icod_almacen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="almac_icod_almacen_ingreso" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="remic_ianio" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tipoCambio" Type="System.Decimal" DbType="Decimal(16,4)" CanBeNull="true" />
+      <Column Name="tipoVenta" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="icod_tipo_doc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vglosa" Type="System.String" DbType="VarChar(35)" CanBeNull="true" />
+      <Column Name="cecoc_icod_centro_costo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tablc_iid_motivo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_MAYO_AUXILIAR_MENSUAL_02" Method="SGE_MAYO_AUXILIAR_MENSUAL_02">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intMes" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intCuentaInicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intCuentaFin" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intOpcion" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_MAYO_AUXILIAR_MENSUAL_02Result">
+      <Column Name="ctacc_icod_cuenta_contable" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="iid_tipo_analitica" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="icod_analitica" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="icod_centro_costo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="vcocd_nmto_tot_debe_sol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocd_nmto_tot_haber_sol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocd_nmto_tot_debe_dol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocd_nmto_tot_haber_dol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocd_numero_doc" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="vcocc_fecha_vcontable" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="vcocd_vglosa_linea" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="tablc_iid_moneda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vmoneda" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="vcocc_tipo_cambio" Type="System.Decimal" DbType="Decimal(8,4)" CanBeNull="true" />
+      <Column Name="vnumero_voucher" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="vcocd_nro_item_det" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_ESTADO_GAN_PER_INSERTAR" Method="SGE_ESTADO_GAN_PER_INSERTAR">
+    <Parameter Name="egpc_icod_estado_gan_per" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="egpc_vlinea" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="tablc_icod_linea_registro" Type="System.Int32" DbType="Int" />
+    <Parameter Name="egpc_vconcepto" Type="System.String" DbType="VarChar(60)" />
+    <Parameter Name="tablc_icod_signo_monto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tablc_icod_tipo_total" Type="System.Int32" DbType="Int" />
+    <Parameter Name="egpc_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="egpc_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_ESTADO_GAN_PER_MODIFICAR" Method="SGE_ESTADO_GAN_PER_MODIFICAR">
+    <Parameter Name="egpc_icod_estado_gan_per" Type="System.Int32" DbType="Int" />
+    <Parameter Name="egpc_vlinea" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="tablc_icod_linea_registro" Type="System.Int32" DbType="Int" />
+    <Parameter Name="egpc_vconcepto" Type="System.String" DbType="VarChar(60)" />
+    <Parameter Name="tablc_icod_signo_monto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tablc_icod_tipo_total" Type="System.Int32" DbType="Int" />
+    <Parameter Name="egpc_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="egpc_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_ESTADO_GAN_PER_ELIMINAR" Method="SGE_ESTADO_GAN_PER_ELIMINAR">
+    <Parameter Name="egpc_icod_estado_gan_per" Type="System.Int32" DbType="Int" />
+    <Parameter Name="egpc_iusuario_elimina" Type="System.Int32" DbType="Int" />
+    <Parameter Name="egpc_vpc_elimina" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_ESTADO_GAN_PER_CTAS_INSERTAR" Method="SGE_ESTADO_GAN_PER_CTAS_INSERTAR">
+    <Parameter Name="egpd_icod_ctas_estado_gan_per" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="egpd_icod_estado_gan_per" Type="System.Int32" DbType="Int" />
+    <Parameter Name="egpd_iid_cuenta_contable" Type="System.Int32" DbType="Int" />
+    <Parameter Name="egpd_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="egpd_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_ESTADO_GAN_PER_CTAS_LISTAR_X_ICOD_EST" Method="SGE_ESTADO_GAN_PER_CTAS_LISTAR_X_ICOD_EST">
+    <Parameter Name="egpd_icod_estado_gan_per" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_ESTADO_GAN_PER_CTAS_LISTAR_X_ICOD_ESTResult">
+      <Column Name="egpd_icod_ctas_estado_gan_per" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="egpd_icod_estado_gan_per" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="egpd_iid_cuenta_contable" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ctacc_nombre_descripcion" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="ctacc_numero_cuenta_contable" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_ESTADO_GAN_PER_CTAS_ELIMINAR" Method="SGE_ESTADO_GAN_PER_CTAS_ELIMINAR">
+    <Parameter Name="egpd_icod_ctas_estado_gan_per" Type="System.Int32" DbType="Int" />
+    <Parameter Name="egpd_iusuario_elimina" Type="System.Int32" DbType="Int" />
+    <Parameter Name="egpd_vpc_elimina" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_ESTADO_GAN_PER_LISTAR" Method="SGE_ESTADO_GAN_PER_LISTAR">
+    <ElementType Name="SGE_ESTADO_GAN_PER_LISTARResult">
+      <Column Name="egpc_icod_estado_gan_per" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="egpc_vlinea" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="tablc_icod_linea_registro" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DesLinea" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="egpc_vconcepto" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="tablc_icod_signo_monto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Signo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tablc_icod_tipo_total" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Total" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGECONTA_DIFERENCIA_CAMBIO_CUENTAS_4" Method="SGECONTA_DIFERENCIA_CAMBIO_CUENTAS_4">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intMes" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intCuentaInicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intCuentaFin" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGECONTA_DIFERENCIA_CAMBIO_CUENTAS_4Result">
+      <Column Name="ctacc_icod_cuenta_contable" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="iid_tipo_analitica" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="icod_analitica" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="icod_centro_costo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="vcocd_nmto_tot_debe_sol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocd_nmto_tot_haber_sol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocd_nmto_tot_debe_dol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocd_nmto_tot_haber_dol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcodc_vnumero_documento" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="vcocc_fecha_vcontable" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="vcocd_vglosa_linea" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="tablc_iid_moneda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vmoneda" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="vcocc_tipo_cambio" Type="System.Decimal" DbType="Decimal(8,4)" CanBeNull="true" />
+      <Column Name="vnumero_voucher" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="vcocd_nro_item_det" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGECONTA_DIFERENCIA_CAMBIO_CUENTAS_2" Method="SGECONTA_DIFERENCIA_CAMBIO_CUENTAS_2">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intMes" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intCuentaInicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intCuentaFin" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGECONTA_DIFERENCIA_CAMBIO_CUENTAS_2Result">
+      <Column Name="ctacc_icod_cuenta_contable" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="iid_tipo_analitica" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="icod_analitica" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="icod_centro_costo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="vcocd_nmto_tot_debe_sol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocd_nmto_tot_haber_sol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocd_nmto_tot_debe_dol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocd_nmto_tot_haber_dol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcodc_vnumero_documento" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="vcocc_fecha_vcontable" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="vcocd_vglosa_linea" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="tablc_iid_moneda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vmoneda" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="vcocc_tipo_cambio" Type="System.Decimal" DbType="Decimal(8,4)" CanBeNull="true" />
+      <Column Name="vnumero_voucher" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="vcocd_nro_item_det" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGECONTA_DIFERENCIA_CAMBIO_CUENTAS" Method="SGECONTA_DIFERENCIA_CAMBIO_CUENTAS">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intMes" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intCuentaInicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intCuentaFin" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGECONTA_DIFERENCIA_CAMBIO_CUENTASResult">
+      <Column Name="icod_cuenta_contable" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ctacc_numero_cuenta_contable" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="ctacc_nombre_descripcion" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="iid_tipo_analitica" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="icod_analitica" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="anad_iid_analitica" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="icod_centro_costo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cecoc_vcodigo_centro_costo" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="mto_sal_anterior_sol" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="mto_sal_anterior_dol" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="anad_vdescripcion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="cecoc_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_BALANCE_CTAS_ELIMINAR" Method="SGE_BALANCE_CTAS_ELIMINAR">
+    <Parameter Name="blgd_icod_ctas_balance" Type="System.Int32" DbType="Int" />
+    <Parameter Name="blgd_iusuario_elimina" Type="System.Int32" DbType="Int" />
+    <Parameter Name="blgd_vpc_elimina" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_BALANCE_CTAS_INSERTAR" Method="SGE_BALANCE_CTAS_INSERTAR">
+    <Parameter Name="blgd_icod_ctas_balance" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="blgc_icod_balance" Type="System.Int32" DbType="Int" />
+    <Parameter Name="blgd_iid_cuenta_contable" Type="System.Int32" DbType="Int" />
+    <Parameter Name="blgd_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="blgd_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_BALANCE_ELIMINAR" Method="SGE_BALANCE_ELIMINAR">
+    <Parameter Name="blgc_icod_balance" Type="System.Int32" DbType="Int" />
+    <Parameter Name="blgc_iusuario_elimina" Type="System.Int32" DbType="Int" />
+    <Parameter Name="blgc_vpc_elimina" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_BALANCE_INSERTAR" Method="SGE_BALANCE_INSERTAR">
+    <Parameter Name="blgc_icod_balance" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="blgc_vlinea" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="tablc_icod_linea_registro" Type="System.Int32" DbType="Int" />
+    <Parameter Name="blgc_vconcepto" Type="System.String" DbType="VarChar(60)" />
+    <Parameter Name="tablc_icod_signo_monto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tablc_icod_tipo_total" Type="System.Int32" DbType="Int" />
+    <Parameter Name="blgc_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="blgc_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_BALANCE_LISTAR" Method="SGE_BALANCE_LISTAR">
+    <ElementType Name="SGE_BALANCE_LISTARResult">
+      <Column Name="blgc_icod_balance" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="blgc_vlinea" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="tablc_icod_linea_registro" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DesLinea" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="blgc_vconcepto" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="tablc_icod_signo_monto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Signo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tablc_icod_tipo_total" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Total" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_BALANCE_MODIFICAR" Method="SGE_BALANCE_MODIFICAR">
+    <Parameter Name="blgc_icod_balance" Type="System.Int32" DbType="Int" />
+    <Parameter Name="blgc_vlinea" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="tablc_icod_linea_registro" Type="System.Int32" DbType="Int" />
+    <Parameter Name="blgc_vconcepto" Type="System.String" DbType="VarChar(60)" />
+    <Parameter Name="tablc_icod_signo_monto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tablc_icod_tipo_total" Type="System.Int32" DbType="Int" />
+    <Parameter Name="blgc_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="blgc_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_BALANCE_CTAS_LISTAR_X_ICOD" Method="SGE_BALANCE_CTAS_LISTAR_X_ICOD">
+    <Parameter Name="blgc_icod_balance" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_BALANCE_CTAS_LISTAR_X_ICODResult">
+      <Column Name="blgd_icod_ctas_balance" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="blgc_icod_balance" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="blgd_iid_cuenta_contable" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ctacc_nombre_descripcion" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="ctacc_numero_cuenta_contable" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_BALANCE_CTAS_LISTAR_X_ICOD_MONTOS" Method="SGE_BALANCE_CTAS_LISTAR_X_ICOD_MONTOS">
+    <Parameter Name="blgc_icod_balance" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vcocc_fecha_vcontable" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_BALANCE_CTAS_LISTAR_X_ICOD_MONTOSResult">
+      <Column Name="blgd_icod_ctas_balance" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="blgc_icod_balance" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="blgd_iid_cuenta_contable" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ctacc_nombre_descripcion" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="ctacc_numero_cuenta_contable" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="MontosCC" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_MAYO_AUXILIAR_CCOSTO_MENSUAL_BALANCE" Method="SGE_MAYO_AUXILIAR_CCOSTO_MENSUAL_BALANCE">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intMes" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intOpcion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intCuentaInicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intCuentaFin" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strCCostoInicio" Type="System.String" DbType="VarChar(8)" />
+    <Parameter Name="strCCostoFin" Type="System.String" DbType="VarChar(8)" />
+    <ElementType Name="SGE_MAYO_AUXILIAR_CCOSTO_MENSUAL_BALANCEResult">
+      <Column Name="ctacc_icod_cuenta_contable" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ctacc_numero_cuenta_contable" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="ctacc_nombre_descripcion" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="iid_tipo_analitica" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="icod_analitica" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="anac_iid_analitica" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="icod_centro_costo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="cecoc_vcodigo_centro_costo" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="vcocd_nmto_tot_debe_sol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocd_nmto_tot_haber_sol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocd_nmto_tot_debe_dol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocd_nmto_tot_haber_dol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocd_numero_doc" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="vcocc_fecha_vcontable" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="vcocd_vglosa_linea" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="tablc_iid_moneda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vmoneda" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="vcocc_tipo_cambio" Type="System.Decimal" DbType="Decimal(8,4)" CanBeNull="true" />
+      <Column Name="vnumero_voucher" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="vcocd_nro_item_det" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_ESTADO_GAN_PER_CTAS_LISTAR_X_ICOD_EST_MONTOS" Method="SGE_ESTADO_GAN_PER_CTAS_LISTAR_X_ICOD_EST_MONTOS">
+    <Parameter Name="egpd_icod_estado_gan_per" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cecoc_icod_centro_costo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vcocc_fecha_vcontable" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Indicador" Parameter="indicador" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_ESTADO_GAN_PER_CTAS_LISTAR_X_ICOD_EST_MONTOSResult">
+      <Column Name="egpd_icod_ctas_estado_gan_per" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="egpd_icod_estado_gan_per" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="egpd_iid_cuenta_contable" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ctacc_nombre_descripcion" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="ctacc_numero_cuenta_contable" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="MontosCC" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_MAYO_AUXILIAR_CCOSTO_MENSUAL_2" Method="SGE_MAYO_AUXILIAR_CCOSTO_MENSUAL_2">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intMes" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intOpcion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intCuentaInicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intCuentaFin" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strCCostoInicio" Type="System.String" DbType="VarChar(8)" />
+    <Parameter Name="strCCostoFin" Type="System.String" DbType="VarChar(8)" />
+    <ElementType Name="SGE_MAYO_AUXILIAR_CCOSTO_MENSUAL_2Result">
+      <Column Name="ctacc_icod_cuenta_contable" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ctacc_numero_cuenta_contable" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="ctacc_nombre_descripcion" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="iid_tipo_analitica" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="icod_analitica" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="anac_iid_analitica" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="icod_centro_costo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="cecoc_vcodigo_centro_costo" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="vcocd_nmto_tot_debe_sol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocd_nmto_tot_haber_sol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocd_nmto_tot_debe_dol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocd_nmto_tot_haber_dol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocd_numero_doc" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="vcocc_fecha_vcontable" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="vcocd_vglosa_linea" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="tablc_iid_moneda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vmoneda" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="vcocc_tipo_cambio" Type="System.Decimal" DbType="Decimal(8,4)" CanBeNull="true" />
+      <Column Name="vnumero_voucher" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="vcocd_nro_item_det" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_ESTADO_GAN_PER_FUNCION_ELIMINAR" Method="SGE_ESTADO_GAN_PER_FUNCION_ELIMINAR">
+    <Parameter Name="egpfc_icod_estado_gan_per_funcion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="egpfc_iusuario_elimina" Type="System.Int32" DbType="Int" />
+    <Parameter Name="egpfc_vpc_elimina" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_ESTADO_GAN_PER_FUNCION_INSERTAR" Method="SGE_ESTADO_GAN_PER_FUNCION_INSERTAR">
+    <Parameter Name="egpfc_icod_estado_gan_per_funcion" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="egpfc_vlinea" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="tablc_icod_linea_registro" Type="System.Int32" DbType="Int" />
+    <Parameter Name="egpfc_vconcepto" Type="System.String" DbType="VarChar(60)" />
+    <Parameter Name="tablc_icod_signo_monto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tablc_icod_tipo_total" Type="System.Int32" DbType="Int" />
+    <Parameter Name="egpfc_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="egpfc_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_ESTADO_GAN_PER_FUNCION_LISTAR" Method="SGE_ESTADO_GAN_PER_FUNCION_LISTAR">
+    <ElementType Name="SGE_ESTADO_GAN_PER_FUNCION_LISTARResult">
+      <Column Name="egpfc_icod_estado_gan_per_funcion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="egpfc_vlinea" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="tablc_icod_linea_registro" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DesLinea" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="egpfc_vconcepto" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="tablc_icod_signo_monto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Signo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tablc_icod_tipo_total" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Total" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_ESTADO_GAN_PER_FUNCION_MODIFICAR" Method="SGE_ESTADO_GAN_PER_FUNCION_MODIFICAR">
+    <Parameter Name="egpfc_icod_estado_gan_per_funcion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="egpfc_vlinea" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="tablc_icod_linea_registro" Type="System.Int32" DbType="Int" />
+    <Parameter Name="egpfc_vconcepto" Type="System.String" DbType="VarChar(60)" />
+    <Parameter Name="tablc_icod_signo_monto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tablc_icod_tipo_total" Type="System.Int32" DbType="Int" />
+    <Parameter Name="egpfc_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="egpfc_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_ESTADO_GAN_PER_CTAS_FUNCION_ELIMINAR" Method="SGE_ESTADO_GAN_PER_CTAS_FUNCION_ELIMINAR">
+    <Parameter Name="egpfd_icod_ctas_estado_gan_per_funcion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="egpfd_iusuario_elimina" Type="System.Int32" DbType="Int" />
+    <Parameter Name="egpfd_vpc_elimina" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_ESTADO_GAN_PER_CTAS_FUNCION_INSERTAR" Method="SGE_ESTADO_GAN_PER_CTAS_FUNCION_INSERTAR">
+    <Parameter Name="egpfd_icod_ctas_estado_gan_per_funcion" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="egpfc_icod_estado_gan_per_funcion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="egpfd_iid_cuenta_contable" Type="System.Int32" DbType="Int" />
+    <Parameter Name="egpfd_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="egpfd_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_ESTADO_GAN_PER_CTAS_FUNCION_LISTAR_X_ICOD_EST" Method="SGE_ESTADO_GAN_PER_CTAS_FUNCION_LISTAR_X_ICOD_EST">
+    <Parameter Name="egfc_icod_estado_gan_per_funcion" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_ESTADO_GAN_PER_CTAS_FUNCION_LISTAR_X_ICOD_ESTResult">
+      <Column Name="egpfd_icod_ctas_estado_gan_per_funcion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="egfc_icod_estado_gan_per_funcion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="egpfd_iid_cuenta_contable" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ctacc_nombre_descripcion" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="ctacc_numero_cuenta_contable" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_REGISTRO_COMPRAS_LISTAR_GENERAL" Method="SGE_REGISTRO_COMPRAS_LISTAR_GENERAL">
+    <Parameter Name="anio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="mes" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_REGISTRO_COMPRAS_LISTAR_GENERALResult">
+      <Column Name="doxpc_icod_correlativo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_iid_correlativo" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="tdocc_vabreviatura_tipo_doc" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="tdocd_iid_correlativo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="doxpc_vnumero_doc" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_sfecha_doc" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="proc_vcod_proveedor" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="proc_vnombrecompleto" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(12,4) NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_nmonto_destino_gravado" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_nmonto_destino_mixto" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_nmonto_destino_nogravado" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_nmonto_nogravado" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_nmonto_referencial_cif" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_nmonto_servicio_no_domic" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="valor_compra" Type="System.Decimal" DbType="Decimal(21,2)" CanBeNull="true" />
+      <Column Name="doxpc_nmonto_imp_destino_gravado" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_nmonto_imp_destino_mixto" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_nmonto_imp_destino_nogravado" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_nmonto_total_documento" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_nmonto_total_pagado" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_nmonto_total_saldo" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="tdocc_vcodigo_tipo_doc_sunat" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="tip_doc_proveedor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="num_doc_proveedor" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="nc_dxc_numdoc" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="situacion_documento" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="doxpc_sfecha_vencimiento_doc" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="doxpc_vnro_deposito_detraccion" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="doxpc_sfec_deposito_detraccion" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="tdocc_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="doxpc_numdoc_tipo" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_tipo_comprobante_referencia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="doxpc_num_serie_referencia" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="doxpc_num_comprobante_referencia" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="doxpc_sfecha_emision_referencia" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="doxpc_vnumero_serio" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="doxpc_vnumero_correlativo" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="doxpc_numdoc_tipo1" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="vcocc_numero_vcontable" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="subdi_icod_subdiario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ViddAdquisicion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="doxpc_iid_correlativo1" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="doxpc_codigo_aduana" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="doxpc_anio" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="doxpc_numero_declaracion" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="MontoDUA" Type="System.Decimal" DbType="Decimal(17,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_INVENTARIO_RESULTADO_CTAS_ELIMINAR" Method="SGE_INVENTARIO_RESULTADO_CTAS_ELIMINAR">
+    <Parameter Name="ird_icod_ctas_inventario_resultado" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ird_iusuario_elimina" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ird_vpc_elimina" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_INVENTARIO_RESULTADO_CTAS_INSERTAR" Method="SGE_INVENTARIO_RESULTADO_CTAS_INSERTAR">
+    <Parameter Name="ird_icod_ctas_inventario_resultado" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="irc_icod_inventario_resultado" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ird_iid_cuenta_contable" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ird_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ird_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_INVENTARIO_RESULTADO_CTAS_LISTAR_X_ICOD" Method="SGE_INVENTARIO_RESULTADO_CTAS_LISTAR_X_ICOD">
+    <Parameter Name="irc_icod_inventario_resultado" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_INVENTARIO_RESULTADO_CTAS_LISTAR_X_ICODResult">
+      <Column Name="ird_icod_ctas_inventario_resultado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="irc_icod_inventario_resultado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ird_iid_cuenta_contable" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ctacc_nombre_descripcion" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="ctacc_numero_cuenta_contable" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_INVENTARIO_RESULTADO_ELIMINAR" Method="SGE_INVENTARIO_RESULTADO_ELIMINAR">
+    <Parameter Name="irc_icod_inventario_resultado" Type="System.Int32" DbType="Int" />
+    <Parameter Name="irc_iusuario_elimina" Type="System.Int32" DbType="Int" />
+    <Parameter Name="irc_vpc_elimina" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_INVENTARIO_RESULTADO_INSERTAR" Method="SGE_INVENTARIO_RESULTADO_INSERTAR">
+    <Parameter Name="irc_icod_inventario_resultado" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="irc_vlinea" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="tablc_icod_linea_registro" Type="System.Int32" DbType="Int" />
+    <Parameter Name="irc_vconcepto" Type="System.String" DbType="VarChar(60)" />
+    <Parameter Name="tablc_icod_signo_monto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tablc_icod_tipo_total" Type="System.Int32" DbType="Int" />
+    <Parameter Name="irc_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="irc_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_INVENTARIO_RESULTADO_LISTAR" Method="SGE_INVENTARIO_RESULTADO_LISTAR">
+    <ElementType Name="SGE_INVENTARIO_RESULTADO_LISTARResult">
+      <Column Name="irc_icod_inventario_resultado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="irc_vlinea" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="tablc_icod_linea_registro" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DesLinea" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="irc_vconcepto" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="tablc_icod_signo_monto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Signo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tablc_icod_tipo_total" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Total" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_INVENTARIO_RESULTADO_MODIFICAR" Method="SGE_INVENTARIO_RESULTADO_MODIFICAR">
+    <Parameter Name="irc_icod_inventario_resultado" Type="System.Int32" DbType="Int" />
+    <Parameter Name="irc_vlinea" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="tablc_icod_linea_registro" Type="System.Int32" DbType="Int" />
+    <Parameter Name="irc_vconcepto" Type="System.String" DbType="VarChar(60)" />
+    <Parameter Name="tablc_icod_signo_monto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tablc_icod_tipo_total" Type="System.Int32" DbType="Int" />
+    <Parameter Name="irc_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="irc_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_BALANCE_CTAS_LISTAR_X_Fecha_Contable" Method="SGE_BALANCE_CTAS_LISTAR_X_Fecha_Contable">
+    <Parameter Name="vcocc_fecha_vcontable" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_BALANCE_CTAS_LISTAR_X_Fecha_ContableResult">
+      <Column Name="blgd_icod_ctas_balance" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="blgc_icod_balance" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="blgd_iid_cuenta_contable" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ctacc_nombre_descripcion" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="ctacc_numero_cuenta_contable" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="MontosCC" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_ESTADO_GAN_PER_CTAS_LISTAR_X_FECHA_CONTABLE" Method="SGE_ESTADO_GAN_PER_CTAS_LISTAR_X_FECHA_CONTABLE">
+    <Parameter Name="cecoc_icod_centro_costo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vcocc_fecha_vcontable" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Indicador" Parameter="indicador" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_ESTADO_GAN_PER_CTAS_LISTAR_X_FECHA_CONTABLEResult">
+      <Column Name="egpfd_icod_ctas_estado_gan_per_funcion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="egfc_icod_estado_gan_per_funcion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="egpfd_iid_cuenta_contable" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ctacc_nombre_descripcion" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="ctacc_numero_cuenta_contable" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="MontosCC" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGECONTA_VOUCHER_CONTABLE_REDONDEO" Method="SGECONTA_VOUCHER_CONTABLE_REDONDEO">
+    <Parameter Name="vcocc_icod_vcontable" Type="System.Int32" DbType="Int" />
+    <Parameter Name="caso" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vcodc_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vcodc_vpc_crea" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGET_GET_TIPO_CAMBIO_MENSUAL_LISTAR" Method="SGET_GET_TIPO_CAMBIO_MENSUAL_LISTAR">
+    <Parameter Name="dblTC" Type="System.Decimal" DbType="Decimal(8,4)" Direction="InOut" />
+    <Parameter Name="mes" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGECONTA_PARAMETRO_CONTABLE_INSERTAR" Method="SGECONTA_PARAMETRO_CONTABLE_INSERTAR">
+    <Parameter Name="parac_vnombre" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="parac_vdescripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="parac_nvalor_numerico" Type="System.Decimal" DbType="Decimal(8,2)" />
+    <Parameter Name="parac_vvalor_texto" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="parac_cflag_visible" Type="System.Char" DbType="Char(1)" />
+    <Parameter Name="parac_id_sd_ingbco" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_id_sd_egrbco" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_id_sd_cjachic" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_id_sd_cosvta" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_id_sd_docxpag" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_id_sd_docxcob" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_id_sd_apert" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_id_sd_cieanual" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_id_cta_gdifc_mn" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_id_cta_gdifc_me" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_id_cta_pdifc_mn" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_id_cta_pdifc_me" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_id_sd_difc_mn" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_id_sd_difc_me" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_nro_comp_difc_mn" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="parac_nro_comp_difc_me" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="parac_id_ccosto_difc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_id_cta_gredo_mn" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_id_cta_gredo_me" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_id_cta_predo_mn" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_id_cta_predo_me" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_id_cta_retencion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_id_cta_planilla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_id_ccos_base" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tablc_iid_modulo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_cestado" Type="System.Char" DbType="Char(1)" />
+    <Parameter Name="parac_vpc_crea" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="parac_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_vmascara" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ctacc_icod_cta_ctbl_serv_propio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctacc_icod_cta_ctbl_serv_externo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Porcentaje_de_Retencion" Parameter="porcentaje_de_Retencion" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="parac_id_cta_4ta_cat" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_Porcentaje_Retencion_ventas" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="parac_id_sd_planillas" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGECONTA_PARAMETRO_CONTABLE_LISTAR" Method="SGECONTA_PARAMETRO_CONTABLE_LISTAR">
+    <ElementType Name="SGECONTA_PARAMETRO_CONTABLE_LISTARResult">
+      <Column Name="parac_iid_parametro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="parac_vnombre" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="parac_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="parac_nvalor_numerico" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="parac_vvalor_texto" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="parac_cflag_visible" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="parac_id_sd_ingbco" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="parac_id_sd_egrbco" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="parac_id_sd_cjachic" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="parac_id_sd_cosvta" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="parac_id_sd_docxpag" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="parac_id_sd_docxcob" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="parac_id_sd_apert" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="parac_id_sd_cieanual" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="parac_id_cta_gdifc_mn" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="parac_id_cta_gdifc_me" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="parac_id_cta_pdifc_mn" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="parac_id_cta_pdifc_me" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="parac_id_sd_difc_mn" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="parac_id_sd_difc_me" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="parac_nro_comp_difc_mn" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="parac_nro_comp_difc_me" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="parac_id_ccosto_difc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="strCodeCCostoDifCambio" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="strDesCCostoDifCambio" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="parac_id_cta_gredo_mn" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="parac_id_cta_gredo_me" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="parac_id_cta_predo_mn" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="parac_id_cta_predo_me" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="parac_id_cta_retencion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="parac_id_cta_planilla" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="parac_id_ccos_base" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="strCodeCCostoBase" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="strDesCCostoBase" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tablc_iid_modulo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="parac_cestado" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="parac_vmascara" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ctacc_icod_cta_ctbl_serv_propio" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ctacc_icod_cta_ctbl_serv_externo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="strCodCuentaServPropio" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="strDesCuentaServPropio" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="strCodCuentaServExterno" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="strDesCuentaServExterno" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="Porcentaje_de_Retencion" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="parac_id_cta_4ta_cat" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="strCod4taCategoria" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="parac_Porcentaje_Retencion_ventas" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="parac_id_sd_planillas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGECONTA_PARAMETRO_CONTABLE_MODIFICAR" Method="SGECONTA_PARAMETRO_CONTABLE_MODIFICAR">
+    <Parameter Name="parac_iid_parametro" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_vnombre" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="parac_vdescripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="parac_nvalor_numerico" Type="System.Decimal" DbType="Decimal(8,2)" />
+    <Parameter Name="parac_vvalor_texto" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="parac_cflag_visible" Type="System.Char" DbType="Char(1)" />
+    <Parameter Name="parac_id_sd_ingbco" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_id_sd_egrbco" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_id_sd_cjachic" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_id_sd_cosvta" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_id_sd_docxpag" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_id_sd_docxcob" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_id_sd_apert" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_id_sd_cieanual" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_id_cta_gdifc_mn" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_id_cta_gdifc_me" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_id_cta_pdifc_mn" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_id_cta_pdifc_me" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_id_sd_difc_mn" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_id_sd_difc_me" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_nro_comp_difc_mn" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="parac_nro_comp_difc_me" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="parac_id_ccosto_difc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_id_cta_gredo_mn" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_id_cta_gredo_me" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_id_cta_predo_mn" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_id_cta_predo_me" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_id_cta_retencion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_id_cta_planilla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_id_ccos_base" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tablc_iid_modulo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_cestado" Type="System.Char" DbType="Char(1)" />
+    <Parameter Name="parac_vpc_modifica" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="parac_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_vmascara" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ctacc_icod_cta_ctbl_serv_propio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctacc_icod_cta_ctbl_serv_externo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Porcentaje_de_Retencion" Parameter="porcentaje_de_Retencion" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="parac_id_cta_4ta_cat" Type="System.Int32" DbType="Int" />
+    <Parameter Name="parac_Porcentaje_Retencion_ventas" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="parac_id_sd_planillas" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGECONTA_VOUCHER_CONTABLE_POR_ORIGEN_ELIMINAR" Method="SGECONTA_VOUCHER_CONTABLE_POR_ORIGEN_ELIMINAR">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intPeriodo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strOrigen" Type="System.String" DbType="VarChar(12)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGECONTA_DIFERENCIA_CAMBIO_CUENTAS_3" Method="SGECONTA_DIFERENCIA_CAMBIO_CUENTAS_3">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intMes" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intCuentaInicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intCuentaFin" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGECONTA_DIFERENCIA_CAMBIO_CUENTAS_3Result">
+      <Column Name="icod_cuenta_contable" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ctacc_numero_cuenta_contable" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="ctacc_nombre_descripcion" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="iid_tipo_analitica" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="icod_analitica" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="anad_iid_analitica" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="mto_sal_anterior_sol" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="mto_sal_anterior_dol" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="anad_vdescripcion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_REGISTRO_COMPRAS_LISTAR" Method="SGE_REGISTRO_COMPRAS_LISTAR">
+    <Parameter Name="anio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="mes" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_REGISTRO_COMPRAS_LISTARResult">
+      <Column Name="doxpc_icod_correlativo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_iid_correlativo" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="tdocc_vabreviatura_tipo_doc" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="tdocd_iid_correlativo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="doxpc_vnumero_doc" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_sfecha_doc" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="proc_vcod_proveedor" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="proc_vnombrecompleto" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(12,4) NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_nmonto_destino_gravado" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_nmonto_destino_mixto" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_nmonto_destino_nogravado" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_nmonto_nogravado" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_nmonto_referencial_cif" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_nmonto_servicio_no_domic" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="valor_compra" Type="System.Decimal" DbType="Decimal(21,2)" CanBeNull="true" />
+      <Column Name="doxpc_nmonto_imp_destino_gravado" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_nmonto_imp_destino_mixto" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_nmonto_imp_destino_nogravado" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_nmonto_total_documento" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_nmonto_total_pagado" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_nmonto_total_saldo" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="tdocc_vcodigo_tipo_doc_sunat" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="tip_doc_proveedor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="num_doc_proveedor" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="nc_dxc_numdoc" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="situacion_documento" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="doxpc_sfecha_vencimiento_doc" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="doxpc_vnro_deposito_detraccion" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="doxpc_sfec_deposito_detraccion" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="tdocc_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="doxpc_numdoc_tipo" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_tipo_comprobante_referencia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="doxpc_num_serie_referencia" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="doxpc_num_comprobante_referencia" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="doxpc_sfecha_emision_referencia" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="doxpc_vnumero_serio" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="doxpc_vnumero_correlativo" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="doxpc_numdoc_tipo1" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="vcocc_numero_vcontable" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="subdi_icod_subdiario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ViddAdquisicion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="doxpc_iid_correlativo1" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="doxpc_codigo_aduana" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="doxpc_anio" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="doxpc_numero_declaracion" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="MontoDUA" Type="System.Decimal" DbType="Decimal(17,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_REGISTRO_COMPRAS_NO_DOMIC_LISTAR" Method="SGE_REGISTRO_COMPRAS_NO_DOMIC_LISTAR">
+    <Parameter Name="anio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="mes" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_REGISTRO_COMPRAS_NO_DOMIC_LISTARResult">
+      <Column Name="doxpc_icod_correlativo" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_iid_correlativo" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="tdocc_vabreviatura_tipo_doc" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="tdocd_iid_correlativo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="doxpc_vnumero_doc" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_sfecha_doc" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="proc_vcod_proveedor" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="proc_vnombrecompleto" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_nmonto_tipo_cambio" Type="System.Decimal" DbType="Decimal(12,4) NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_nmonto_destino_gravado" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_nmonto_destino_mixto" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_nmonto_destino_nogravado" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_nmonto_nogravado" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_nmonto_referencial_cif" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_nmonto_servicio_no_domic" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="valor_compra" Type="System.Decimal" DbType="Decimal(21,2)" CanBeNull="true" />
+      <Column Name="doxpc_nmonto_imp_destino_gravado" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_nmonto_imp_destino_mixto" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_nmonto_imp_destino_nogravado" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_nmonto_total_documento" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_nmonto_total_pagado" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_nmonto_total_saldo" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="tdocc_vcodigo_tipo_doc_sunat" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="tip_doc_proveedor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="num_doc_proveedor" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="nc_dxc_numdoc" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="situacion_documento" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="doxpc_sfecha_vencimiento_doc" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="doxpc_vnro_deposito_detraccion" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="doxpc_sfec_deposito_detraccion" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="tdocc_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="doxpc_numdoc_tipo" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="doxpc_tipo_comprobante_referencia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="doxpc_num_serie_referencia" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="doxpc_num_comprobante_referencia" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="doxpc_sfecha_emision_referencia" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="doxpc_vnumero_serio" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="doxpc_vnumero_correlativo" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="doxpc_numdoc_tipo1" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="vcocc_numero_vcontable" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="subdi_icod_subdiario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ViddAdquisicion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="doxpc_iid_correlativo1" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="doxpc_codigo_aduana" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="doxpc_anio" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="doxpc_numero_declaracion" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="proc_pais_nodomic" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="proc_vnombrecompleto1" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="proc_vdireccion" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="proc_vdni" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_MAYO_AUXILIAR_ANALITICAS_MENSUAL" Method="SGE_MAYO_AUXILIAR_ANALITICAS_MENSUAL">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intMes" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intOpcion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intTipoAnalitica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strAnaliticaInicio" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="strAnaliticaFin" Type="System.String" DbType="VarChar(12)" />
+    <ElementType Name="SGE_MAYO_AUXILIAR_ANALITICAS_MENSUALResult">
+      <Column Name="icod_cuenta_contable" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ctacc_numero_cuenta_contable" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="ctacc_nombre_descripcion" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="iid_tipo_analitica" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="icod_analitica" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="anad_iid_analitica" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="mto_sal_anterior_sol" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="mto_sal_anterior_dol" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="anad_vdescripcion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_MAYO_AUXILIAR_ANALITICAS_MENSUAL_2" Method="SGE_MAYO_AUXILIAR_ANALITICAS_MENSUAL_2">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intMes" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intOpcion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intTipoAnalitica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strAnaliticaInicio" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="strAnaliticaFin" Type="System.String" DbType="VarChar(12)" />
+    <ElementType Name="SGE_MAYO_AUXILIAR_ANALITICAS_MENSUAL_2Result">
+      <Column Name="ctacc_icod_cuenta_contable" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ctacc_numero_cuenta_contable" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="ctacc_nombre_descripcion" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="iid_tipo_analitica" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="icod_analitica" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="anad_iid_analitica" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="icod_centro_costo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="anad_vdescripcion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="vcocd_nmto_tot_debe_sol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocd_nmto_tot_haber_sol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocd_nmto_tot_debe_dol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocd_nmto_tot_haber_dol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocd_numero_doc" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="vcocc_fecha_vcontable" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="vcocd_vglosa_linea" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="tablc_iid_moneda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vmoneda" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="vcocc_tipo_cambio" Type="System.Decimal" DbType="Decimal(8,4)" CanBeNull="true" />
+      <Column Name="vnumero_voucher" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="vcocd_nro_item_det" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SIGT_VOUCHER_CONTABLE_CAB_LISTAR_X_SUBDIARIO_TXT" Method="SIGT_VOUCHER_CONTABLE_CAB_LISTAR_X_SUBDIARIO_TXT">
+    <Parameter Name="anio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="mes" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SIGT_VOUCHER_CONTABLE_CAB_LISTAR_X_SUBDIARIO_TXTResult">
+      <Column Name="anioc_iid_anio" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mesec_iid_mes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vcocc_icod_vcontable" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="subdi_icod_subdiario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vcocc_fecha_vcontable" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="tablc_iid_moneda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vcocc_vglosa" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="vcocc_numero_vcontable" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="tarec_icorrelativo_situacion_vcontable" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vcocc_tipo_cambio" Type="System.Decimal" DbType="Decimal(8,4)" CanBeNull="true" />
+      <Column Name="tarec_icorrelativo_origen_vcontable" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="vcocd_nro_item_det" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="vcocd_nmto_tot_debe_sol" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="vcocd_nmto_tot_haber_sol" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="ctacc_icod_cuenta_contable" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="vcocd_numero_doc" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="tdocc_coa" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="anio_txt" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="form_txt" Type="System.String" DbType="VarChar(132)" CanBeNull="true" />
+      <Column Name="tipoaMC_txt" Type="System.String" DbType="VarChar(7)" CanBeNull="true" />
+      <Column Name="vcocc_icod_vcontable1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="moneda_txt" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="tdocc_coa_txt" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="abre_txt" Type="System.String" DbType="VarChar(8000) NOT NULL" CanBeNull="false" />
+      <Column Name="abre_nex_txt" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="vglosa_txt" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_txt" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="anad_icod_analitica" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="anad_iid_analitica" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="tarec_icorrelativo_tipo_analitica" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="doxpc_codigo_aduana" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_VERFICAR_ANALITICA" Method="SGE_VERFICAR_ANALITICA">
+    <Parameter Name="anad_icod_analitica" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_VERFICAR_ANALITICAResult">
+      <Column Name="vcocc_icod_vcontable" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGECONTA_ANALITICA_DETALLE_LISTAR_TODO" Method="SGECONTA_ANALITICA_DETALLE_LISTAR_TODO">
+    <ElementType Name="SGECONTA_ANALITICA_DETALLE_LISTAR_TODOResult">
+      <Column Name="anad_icod_analitica" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="anad_iid_analitica" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="anad_vdescripcion" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="tarec_icorrelativo_tipo_analitica" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="anad_nombre" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="anad_apepaterno" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="anad_apematerno" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="tarec_icorrelativo_tipo_persona" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="anad_origen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="anad_situacion" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="strTipoAnalitica" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strTipoPersona" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="id_entidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGECONTA_CUENTA_CONTABLE_LISTAR" Method="SGECONTA_CUENTA_CONTABLE_LISTAR">
+    <ElementType Name="SGECONTA_CUENTA_CONTABLE_LISTARResult">
+      <Column Name="anioc_iid_anio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ctacc_icod_cuenta_contable" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ctacc_numero_cuenta_contable" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="ctacc_nombre_descripcion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ctacc_iid_cuenta_padre" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ctacc_" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ctacc_nivel_cuenta" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ctacc_cflag_relacion" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_analitica" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tablc_iid_clasificacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tablc_iid_elemento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_cuenta" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_saldo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ctacc_icod_cuenta_debe_auto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ctacc_icod_cuenta_haber_auto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ctacc_flag_estado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ctacc_iccosto" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="strTipoMoneda" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strTipoCuenta" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strTipoAnalitica" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGECONTA_CUENTA_CONTABLE_ELIMINAR" Method="SGECONTA_CUENTA_CONTABLE_ELIMINAR">
+    <Parameter Name="ctacc_icod_cuenta_contable" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGECONTA_VOUCHER_CONTABLE_DET_INSERTAR" Method="SGECONTA_VOUCHER_CONTABLE_DET_INSERTAR">
+    <Parameter Name="vcocc_icod_vcontable" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vcocd_nro_item_det" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vcocd_numero_doc" Type="System.String" DbType="VarChar(16)" />
+    <Parameter Name="ctacc_icod_cuenta_contable" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="cecoc_icod_centro_costo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tablc_iid_tipo_analitica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="anad_icod_analitica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vcocd_vglosa_linea" Type="System.String" DbType="VarChar(60)" />
+    <Parameter Name="tablc_iid_moneda" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vcocd_tipo_cambio" Type="System.Decimal" DbType="Decimal(8,4)" />
+    <Parameter Name="vcocd_nmto_tot_debe_sol" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="vcocd_nmto_tot_haber_sol" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="vcocd_nmto_tot_debe_dol" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="vcocd_nmto_tot_haber_dol" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="vcocd_usuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vcocd_pc_crea" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ctacc_iid_cuenta_contable_ref" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="tarec_icorrelativo_origen_vcontable" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGECONTA_VOUCHER_CONTABLE_DET_LISTAR" Method="SGECONTA_VOUCHER_CONTABLE_DET_LISTAR">
+    <Parameter Name="vcocc_icod_vcontable" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGECONTA_VOUCHER_CONTABLE_DET_LISTARResult">
+      <Column Name="vcocd_icod_det" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="vcocc_icod_vcontable" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="vcocd_nro_item_det" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="vcocd_numero_doc" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="ctacc_icod_cuenta_contable" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="cecoc_icod_centro_costo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_analitica" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="anad_icod_analitica" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vcocd_vglosa_linea" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="tablc_iid_moneda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vcocd_tipo_cambio" Type="System.Decimal" DbType="Decimal(8,4)" CanBeNull="true" />
+      <Column Name="vcocd_nmto_tot_debe_sol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocd_nmto_tot_haber_sol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocd_nmto_tot_debe_dol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="vcocd_nmto_tot_haber_dol" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="ctacc_iid_cuenta_contable_ref" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="strTipoDoc" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="strNroCuenta" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="strDesCuenta" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strCodCCosto" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="strDesCCosto" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="strTipoAnalitica" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strCodAnaliica" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="strDesAnalitica" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGECONTA_CUENTA_CONTABLE_MODIFICAR" Method="SGECONTA_CUENTA_CONTABLE_MODIFICAR">
+    <Parameter Name="anioc_iid_anio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctacc_icod_cuenta_contable" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ctacc_numero_cuenta_contable" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ctacc_nombre_descripcion" Type="System.String" DbType="VarChar(80)" />
+    <Parameter Name="ctacc_iid_cuenta_padre" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ctacc_" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctacc_nivel_cuenta" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctacc_cflag_relacion" Type="System.Char" DbType="Char(1)" />
+    <Parameter Name="tablc_iid_tipo_analitica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tablc_iid_clasificacion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tablc_iid_elemento" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tablc_iid_tipo_cuenta" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tablc_iid_tipo_saldo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctacc_icod_cuenta_debe_auto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctacc_icod_cuenta_haber_auto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctacc_usuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctacc_pc_modifica" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ctacc_flag_estado" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ctacc_iccosto" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGECONTA_CUENTA_CONTABLE_INSERTAR" Method="SGECONTA_CUENTA_CONTABLE_INSERTAR">
+    <Parameter Name="anioc_iid_anio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctacc_icod_cuenta_contable" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ctacc_numero_cuenta_contable" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="ctacc_nombre_descripcion" Type="System.String" DbType="VarChar(80)" />
+    <Parameter Name="ctacc_iid_cuenta_padre" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ctacc_" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctacc_nivel_cuenta" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctacc_cflag_relacion" Type="System.Char" DbType="Char(1)" />
+    <Parameter Name="tablc_iid_tipo_analitica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tablc_iid_clasificacion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tablc_iid_elemento" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tablc_iid_tipo_cuenta" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tablc_iid_tipo_saldo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctacc_icod_cuenta_debe_auto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctacc_icod_cuenta_haber_auto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctacc_usuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctacc_pc_crea" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ctacc_flag_estado" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ctacc_iccosto" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

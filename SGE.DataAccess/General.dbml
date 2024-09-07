@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SGE_CALZADOS_JAGUAR" Class="GeneralDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=SIDE;Initial Catalog=SGE_CALZADOS_JAGUAR;Integrated Security=True" SettingsObjectName="SGE.DataAccess.Properties.Settings" SettingsPropertyName="SGE_CALZADOS_JAGUARConnectionString2" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.SGET_TIPO_CAMBIO_MENSUAL_ACTUALIZAR" Method="SGET_TIPO_CAMBIO_MENSUAL_ACTUALIZAR">
+    <Parameter Name="tcamm_iid_anio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="mesec_iid_mes" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tcamm_ntipo_cambio_compra" Type="System.Decimal" DbType="Decimal(8,4)" />
+    <Parameter Name="tcamm_ntipo_cambio_venta" Type="System.Decimal" DbType="Decimal(8,4)" />
+    <Parameter Name="tcamm_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tcamm_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGET_TIPO_CAMBIO_MENSUAL_ELIMINAR" Method="SGET_TIPO_CAMBIO_MENSUAL_ELIMINAR">
+    <Parameter Name="tcamm_icod_tcam_mensual" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGET_TIPO_CAMBIO_MENSUAL_INSERTAR" Method="SGET_TIPO_CAMBIO_MENSUAL_INSERTAR">
+    <Parameter Name="tcamm_iid_anio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="mesec_iid_mes" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tcamm_ntipo_cambio_compra" Type="System.Decimal" DbType="Decimal(8,4)" />
+    <Parameter Name="tcamm_ntipo_cambio_venta" Type="System.Decimal" DbType="Decimal(8,4)" />
+    <Parameter Name="tcamm_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tcamm_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGET_TIPO_CAMBIO_MENSUAL_LISTAR" Method="SGET_TIPO_CAMBIO_MENSUAL_LISTAR">
+    <ElementType Name="SGET_TIPO_CAMBIO_MENSUAL_LISTARResult">
+      <Column Name="tcamm_icod_tcam_mensual" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tcamm_iid_anio" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mesec_iid_mes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vdes_mesec_iid_mes" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tcamm_ntipo_cambio_compra" Type="System.Decimal" DbType="Decimal(8,4)" CanBeNull="true" />
+      <Column Name="tcamm_ntipo_cambio_venta" Type="System.Decimal" DbType="Decimal(8,4)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEG_TABLA_REGISTRO_POR_TIPO_TABLA" Method="SGEG_TABLA_REGISTRO_POR_TIPO_TABLA">
+    <Parameter Name="tablc_iid_tipo_tabla" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEG_TABLA_REGISTRO_POR_TIPO_TABLAResult">
+      <Column Name="tarec_icorrelativo_registro" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tarec_vdescripcion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tarec_vtipo_operacion" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="tarec_iid_tabla_registro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tarec_cestado" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="tarec_iid_tabla_registro_ingreso" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tarec_iid_tabla_registro_salida" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

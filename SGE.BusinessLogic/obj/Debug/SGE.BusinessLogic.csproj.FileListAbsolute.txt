@@ -1,0 +1,609 @@
+D:\GESTIONEMPRESARIAL\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\GESTIONEMPRESARIAL\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\GESTIONEMPRESARIAL\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\GESTIONEMPRESARIAL\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\GESTIONEMPRESARIAL\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\GESTIONEMPRESARIAL\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\GESTIONEMPRESARIAL\SGE.Solution\SGE.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+D:\GESTIONEMPRESARIAL\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\GESTIONEMPRESARIAL\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\SERVICEN\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\SERVICEN\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\SERVICEN\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\SERVICEN\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\SERVICEN\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\SERVICEN\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\SERVICEN\SGE.Solution\SGE.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+D:\SERVICEN\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\SERVICEN\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+C:\Users\Edgar\Desktop\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+C:\Users\Edgar\Desktop\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+C:\Users\Edgar\Desktop\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+C:\Users\Edgar\Desktop\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+C:\Users\Edgar\Desktop\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+C:\Users\Edgar\Desktop\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+C:\Users\Edgar\Desktop\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\Edgar\Desktop\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+C:\Users\Edgar\Desktop\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+C:\Users\Edgar\Desktop\123456\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\Edgar\Desktop\123456\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+C:\Users\Edgar\Desktop\123456\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+C:\Users\Edgar\Desktop\123456\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+C:\Users\Edgar\Desktop\123456\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+C:\Users\Edgar\Desktop\123456\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+C:\Users\Edgar\Desktop\123456\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+C:\Users\Edgar\Desktop\123456\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+C:\Users\Edgar\Desktop\123456\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+F:\SGE\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+F:\SGE\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+F:\SGE\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+F:\SGE\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+F:\SGE\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+F:\SGE\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+F:\SGE\SGE.Solution\SGE.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+F:\SGE\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+F:\SGE\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\SERVICEN\Jabsa\SGE.Solution\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\SERVICEN\Jabsa\SGE.Solution\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\SERVICEN\Jabsa\SGE.Solution\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\SERVICEN\Jabsa\SGE.Solution\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\SERVICEN\Jabsa\SGE.Solution\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\SERVICEN\Jabsa\SGE.Solution\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\SERVICEN\Jabsa\SGE.Solution\SGE.Solution\SGE.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+D:\SERVICEN\Jabsa\SGE.Solution\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\SERVICEN\Jabsa\SGE.Solution\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\SERVICEN\Jabsa\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\SERVICEN\Jabsa\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\SERVICEN\Jabsa\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\SERVICEN\Jabsa\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\SERVICEN\Jabsa\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\SERVICEN\Jabsa\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\SERVICEN\Jabsa\SGE.Solution\SGE.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+D:\SERVICEN\Jabsa\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\SERVICEN\Jabsa\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+C:\Users\Edgar\Desktop\Jabsa\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+C:\Users\Edgar\Desktop\Jabsa\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+C:\Users\Edgar\Desktop\Jabsa\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+C:\Users\Edgar\Desktop\Jabsa\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+C:\Users\Edgar\Desktop\Jabsa\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+C:\Users\Edgar\Desktop\Jabsa\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+C:\Users\Edgar\Desktop\Jabsa\SGE.Solution\SGE.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Edgar\Desktop\Jabsa\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+C:\Users\Edgar\Desktop\Jabsa\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+C:\Users\Edgar\Documents\SERVICEN\JABSA\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+C:\Users\Edgar\Documents\SERVICEN\JABSA\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+C:\Users\Edgar\Documents\SERVICEN\JABSA\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+C:\Users\Edgar\Documents\SERVICEN\JABSA\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+C:\Users\Edgar\Documents\SERVICEN\JABSA\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+C:\Users\Edgar\Documents\SERVICEN\JABSA\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+C:\Users\Edgar\Documents\SERVICEN\JABSA\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+C:\Users\Edgar\Documents\SERVICEN\JABSA\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+C:\Users\Edgar\Documents\SERVICEN\JABSA\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\EDGAR\Documents\PROYECTOS\JABSA\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+C:\Users\EDGAR\Documents\PROYECTOS\JABSA\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+C:\Users\EDGAR\Documents\PROYECTOS\JABSA\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+C:\Users\EDGAR\Documents\PROYECTOS\JABSA\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+C:\Users\EDGAR\Documents\PROYECTOS\JABSA\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+C:\Users\EDGAR\Documents\PROYECTOS\JABSA\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+C:\Users\EDGAR\Documents\PROYECTOS\JABSA\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\EDGAR\Documents\PROYECTOS\JABSA\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+C:\Users\EDGAR\Documents\PROYECTOS\JABSA\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\JORGE\PROYECTOS\JABSA\22 marzo\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\JORGE\PROYECTOS\JABSA\22 marzo\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\JORGE\PROYECTOS\JABSA\22 marzo\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\JORGE\PROYECTOS\JABSA\22 marzo\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\JORGE\PROYECTOS\JABSA\22 marzo\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\JORGE\PROYECTOS\JABSA\22 marzo\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\JORGE\PROYECTOS\JABSA\22 marzo\SGE.Solution\SGE.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+D:\JORGE\PROYECTOS\JABSA\22 marzo\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\JORGE\PROYECTOS\JABSA\22 marzo\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\Parse\&&&&&&&&&___JABSA___&&&&&&&&&\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\Parse\&&&&&&&&&___JABSA___&&&&&&&&&\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\Parse\&&&&&&&&&___JABSA___&&&&&&&&&\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\Parse\&&&&&&&&&___JABSA___&&&&&&&&&\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\Parse\&&&&&&&&&___JABSA___&&&&&&&&&\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\Parse\&&&&&&&&&___JABSA___&&&&&&&&&\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\Parse\&&&&&&&&&___JABSA___&&&&&&&&&\SGE.Solution\SGE.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+D:\Parse\&&&&&&&&&___JABSA___&&&&&&&&&\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\Parse\&&&&&&&&&___JABSA___&&&&&&&&&\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\EDGAR\PROYECTOS\JABSA\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\EDGAR\PROYECTOS\JABSA\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\EDGAR\PROYECTOS\JABSA\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\EDGAR\PROYECTOS\JABSA\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\EDGAR\PROYECTOS\JABSA\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\EDGAR\PROYECTOS\JABSA\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\EDGAR\PROYECTOS\JABSA\SGE.Solution\SGE.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+D:\EDGAR\PROYECTOS\JABSA\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\EDGAR\PROYECTOS\JABSA\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\edgar\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\edgar\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\edgar\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\edgar\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\edgar\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\edgar\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\edgar\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\edgar\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\edgar\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\SGE_JABSA\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\SGE_JABSA\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\SGE_JABSA\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\SGE_JABSA\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\SGE_JABSA\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\SGE_JABSA\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\SGE_JABSA\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\SGE_JABSA\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\SGE_JABSA\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\1-PROYECTOS EN DESARROLLO\SGE_JABSA\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\1-PROYECTOS EN DESARROLLO\SGE_JABSA\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\1-PROYECTOS EN DESARROLLO\SGE_JABSA\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\1-PROYECTOS EN DESARROLLO\SGE_JABSA\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\1-PROYECTOS EN DESARROLLO\SGE_JABSA\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\1-PROYECTOS EN DESARROLLO\SGE_JABSA\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\1-PROYECTOS EN DESARROLLO\SGE_JABSA\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\1-PROYECTOS EN DESARROLLO\SGE_JABSA\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\1-PROYECTOS EN DESARROLLO\SGE_JABSA\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\PROYECTOS\SGE_PRECISION\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\PROYECTOS\SGE_PRECISION\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\PROYECTOS\SGE_PRECISION\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\PROYECTOS\SGE_PRECISION\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\PROYECTOS\SGE_PRECISION\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\PROYECTOS\SGE_PRECISION\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\PROYECTOS\SGE_PRECISION\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\PROYECTOS\SGE_PRECISION\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\PROYECTOS\SGE_PRECISION\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\PROYECTOS\PRECISION\SGE_PRECISION\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\PROYECTOS\PRECISION\SGE_PRECISION\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\PROYECTOS\PRECISION\SGE_PRECISION\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\PROYECTOS\PRECISION\SGE_PRECISION\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\PROYECTOS\PRECISION\SGE_PRECISION\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\PROYECTOS\PRECISION\SGE_PRECISION\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\PROYECTOS\PRECISION\SGE_PRECISION\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\PROYECTOS\PRECISION\SGE_PRECISION\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\PROYECTOS\PRECISION\SGE_PRECISION\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\1-PROYECTOS EN DESARROLLO\SGE_PRECISION\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\1-PROYECTOS EN DESARROLLO\SGE_PRECISION\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\1-PROYECTOS EN DESARROLLO\SGE_PRECISION\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\1-PROYECTOS EN DESARROLLO\SGE_PRECISION\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\1-PROYECTOS EN DESARROLLO\SGE_PRECISION\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\1-PROYECTOS EN DESARROLLO\SGE_PRECISION\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\1-PROYECTOS EN DESARROLLO\SGE_PRECISION\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\1-PROYECTOS EN DESARROLLO\SGE_PRECISION\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\1-PROYECTOS EN DESARROLLO\SGE_PRECISION\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\1-PROYECTOS EN DESARROLLO\DESARROLLO CRISTIANO\DESARROLLO CRISTIANO V.2\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\1-PROYECTOS EN DESARROLLO\DESARROLLO CRISTIANO\DESARROLLO CRISTIANO V.2\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\1-PROYECTOS EN DESARROLLO\DESARROLLO CRISTIANO\DESARROLLO CRISTIANO V.2\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\1-PROYECTOS EN DESARROLLO\DESARROLLO CRISTIANO\DESARROLLO CRISTIANO V.2\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\1-PROYECTOS EN DESARROLLO\DESARROLLO CRISTIANO\DESARROLLO CRISTIANO V.2\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\1-PROYECTOS EN DESARROLLO\DESARROLLO CRISTIANO\DESARROLLO CRISTIANO V.2\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\1-PROYECTOS EN DESARROLLO\DESARROLLO CRISTIANO\DESARROLLO CRISTIANO V.2\SGE.Solution\SGE.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+D:\1-PROYECTOS EN DESARROLLO\DESARROLLO CRISTIANO\DESARROLLO CRISTIANO V.2\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\1-PROYECTOS EN DESARROLLO\DESARROLLO CRISTIANO\DESARROLLO CRISTIANO V.2\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.2\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.2\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.2\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.2\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.2\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.2\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.2\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.2\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.2\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\1-PROYECTOS EN DESARROLLO\DESARROLLO CRISTIANO\DESARROLLO CRISTIANO V.3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\1-PROYECTOS EN DESARROLLO\DESARROLLO CRISTIANO\DESARROLLO CRISTIANO V.3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\1-PROYECTOS EN DESARROLLO\DESARROLLO CRISTIANO\DESARROLLO CRISTIANO V.3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\1-PROYECTOS EN DESARROLLO\DESARROLLO CRISTIANO\DESARROLLO CRISTIANO V.3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\1-PROYECTOS EN DESARROLLO\DESARROLLO CRISTIANO\DESARROLLO CRISTIANO V.3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\1-PROYECTOS EN DESARROLLO\DESARROLLO CRISTIANO\DESARROLLO CRISTIANO V.3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\1-PROYECTOS EN DESARROLLO\DESARROLLO CRISTIANO\DESARROLLO CRISTIANO V.3\SGE.Solution\SGE.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+D:\1-PROYECTOS EN DESARROLLO\DESARROLLO CRISTIANO\DESARROLLO CRISTIANO V.3\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\1-PROYECTOS EN DESARROLLO\DESARROLLO CRISTIANO\DESARROLLO CRISTIANO V.3\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.3\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.3\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.3\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\1-PROYECTOS EN DESARROLLO\DESARROLLO CRISTIANO\DESARROLLO CRISTIANO V.4\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\1-PROYECTOS EN DESARROLLO\DESARROLLO CRISTIANO\DESARROLLO CRISTIANO V.4\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\1-PROYECTOS EN DESARROLLO\DESARROLLO CRISTIANO\DESARROLLO CRISTIANO V.4\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\1-PROYECTOS EN DESARROLLO\DESARROLLO CRISTIANO\DESARROLLO CRISTIANO V.4\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\1-PROYECTOS EN DESARROLLO\DESARROLLO CRISTIANO\DESARROLLO CRISTIANO V.4\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\1-PROYECTOS EN DESARROLLO\DESARROLLO CRISTIANO\DESARROLLO CRISTIANO V.4\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\1-PROYECTOS EN DESARROLLO\DESARROLLO CRISTIANO\DESARROLLO CRISTIANO V.4\SGE.Solution\SGE.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+D:\1-PROYECTOS EN DESARROLLO\DESARROLLO CRISTIANO\DESARROLLO CRISTIANO V.4\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\1-PROYECTOS EN DESARROLLO\DESARROLLO CRISTIANO\DESARROLLO CRISTIANO V.4\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.3\SGE.Solution\SGE.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.3\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.3\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.4\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.4\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.4\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.4\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.4\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.4\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.4\SGE.Solution\SGE.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.4\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.4\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+C:\Users\JONATHAN\Desktop\Desarrollo Cristiano\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+C:\Users\JONATHAN\Desktop\Desarrollo Cristiano\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+C:\Users\JONATHAN\Desktop\Desarrollo Cristiano\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+C:\Users\JONATHAN\Desktop\Desarrollo Cristiano\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+C:\Users\JONATHAN\Desktop\Desarrollo Cristiano\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+C:\Users\JONATHAN\Desktop\Desarrollo Cristiano\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+C:\Users\JONATHAN\Desktop\Desarrollo Cristiano\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\JONATHAN\Desktop\Desarrollo Cristiano\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+C:\Users\JONATHAN\Desktop\Desarrollo Cristiano\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.5\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.5\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.5\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.5\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.5\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.5\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.5\SGE.Solution\SGE.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.5\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.5\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.5\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.5\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.5\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.5\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.5\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.5\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.5\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.5\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.5\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.6\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.6\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.6\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.6\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.6\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.6\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.6\SGE.Solution\SGE.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.6\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.6\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.6\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.6\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.6\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.6\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.6\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.6\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.6\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.6\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.6\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.8\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.8\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.8\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.8\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.8\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.8\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.8\SGE.Solution\SGE.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.8\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.8\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.8\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.8\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.8\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.8\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.8\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.8\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.8\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.8\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+C:\Users\JONATHAN\Desktop\DESARROLLO CRISTIANO V.8\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.9\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.9\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.9\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.9\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.9\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.9\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.9\SGE.Solution\SGE.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.9\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.9\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\1-PROYECTOS EN DESARROLLO\SGE_DESCRISTIANO\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\GERSON\Solucion-DESCRIS 02032016\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\GERSON\Solucion-DESCRIS 02032016\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\GERSON\Solucion-DESCRIS 02032016\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\GERSON\Solucion-DESCRIS 02032016\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\GERSON\Solucion-DESCRIS 02032016\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\GERSON\Solucion-DESCRIS 02032016\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\GERSON\Solucion-DESCRIS 02032016\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+D:\GERSON\Solucion-DESCRIS 02032016\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\GERSON\Solucion-DESCRIS 02032016\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\GERSON\Solucion-DESCRIS-Pruebas2\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\GERSON\Solucion-DESCRIS-Pruebas2\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\GERSON\Solucion-DESCRIS-Pruebas2\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\GERSON\Solucion-DESCRIS-Pruebas2\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\GERSON\Solucion-DESCRIS-Pruebas2\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\GERSON\Solucion-DESCRIS-Pruebas2\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\GERSON\Solucion-DESCRIS-Pruebas2\SGE.Solution\SGE.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+D:\GERSON\Solucion-DESCRIS-Pruebas2\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\GERSON\Solucion-DESCRIS-Pruebas2\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\GERSON\Solucion-DESCRIS-Pruebas3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\GERSON\Solucion-DESCRIS-Pruebas3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\GERSON\Solucion-DESCRIS-Pruebas3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\GERSON\Solucion-DESCRIS-Pruebas3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\GERSON\Solucion-DESCRIS-Pruebas3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\GERSON\Solucion-DESCRIS-Pruebas3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\GERSON\Solucion-DESCRIS-Pruebas3\SGE.Solution\SGE.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+D:\GERSON\Solucion-DESCRIS-Pruebas3\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\GERSON\Solucion-DESCRIS-Pruebas3\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas3\SGE.Solution\SGE.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas3\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas3\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\Solucion-DESCRIS-Pruebas3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\Solucion-DESCRIS-Pruebas3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\Solucion-DESCRIS-Pruebas3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\Solucion-DESCRIS-Pruebas3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\Solucion-DESCRIS-Pruebas3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\Solucion-DESCRIS-Pruebas3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\Solucion-DESCRIS-Pruebas3\SGE.Solution\SGE.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+D:\Solucion-DESCRIS-Pruebas3\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\Solucion-DESCRIS-Pruebas3\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas4\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas4\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas4\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas4\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas4\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas4\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas4\SGE.Solution\SGE.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas4\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas4\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\GERSON\Ultima Actualizacion DESCRIS\Solucion-DESCRIS-Pruebas4\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\GERSON\Ultima Actualizacion DESCRIS\Solucion-DESCRIS-Pruebas4\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\GERSON\Ultima Actualizacion DESCRIS\Solucion-DESCRIS-Pruebas4\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\GERSON\Ultima Actualizacion DESCRIS\Solucion-DESCRIS-Pruebas4\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\GERSON\Ultima Actualizacion DESCRIS\Solucion-DESCRIS-Pruebas4\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\GERSON\Ultima Actualizacion DESCRIS\Solucion-DESCRIS-Pruebas4\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\GERSON\Ultima Actualizacion DESCRIS\Solucion-DESCRIS-Pruebas4\SGE.Solution\SGE.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+D:\GERSON\Ultima Actualizacion DESCRIS\Solucion-DESCRIS-Pruebas4\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\GERSON\Ultima Actualizacion DESCRIS\Solucion-DESCRIS-Pruebas4\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas4-1\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas4-1\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas4-1\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas4-1\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas4-1\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas4-1\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas4-1\SGE.Solution\SGE.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas4-1\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas4-1\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas4-2\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas4-2\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas4-2\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas4-2\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas4-2\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas4-2\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas4-2\SGE.Solution\SGE.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas4-2\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas4-2\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas4-3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas4-3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas4-3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas4-3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas4-3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas4-3\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas4-3\SGE.Solution\SGE.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas4-3\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\GERSON\Solucion-DESCRIS-Pruebas\Solucion-DESCRIS-Pruebas4-3\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+C:\Users\JONATHAN\Desktop\Proyectos ROGOLA SERVICE\DESARROLLO CRISTIANO V.9\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+C:\Users\JONATHAN\Desktop\Proyectos ROGOLA SERVICE\DESARROLLO CRISTIANO V.9\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+C:\Users\JONATHAN\Desktop\Proyectos ROGOLA SERVICE\DESARROLLO CRISTIANO V.9\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+C:\Users\JONATHAN\Desktop\Proyectos ROGOLA SERVICE\DESARROLLO CRISTIANO V.9\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+C:\Users\JONATHAN\Desktop\Proyectos ROGOLA SERVICE\DESARROLLO CRISTIANO V.9\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+C:\Users\JONATHAN\Desktop\Proyectos ROGOLA SERVICE\DESARROLLO CRISTIANO V.9\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+C:\Users\JONATHAN\Desktop\Proyectos ROGOLA SERVICE\DESARROLLO CRISTIANO V.9\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\JONATHAN\Desktop\Proyectos ROGOLA SERVICE\DESARROLLO CRISTIANO V.9\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+C:\Users\JONATHAN\Desktop\Proyectos ROGOLA SERVICE\DESARROLLO CRISTIANO V.9\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+C:\Users\Usuario\Desktop\nueva actualizacion descris\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+C:\Users\Usuario\Desktop\nueva actualizacion descris\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+C:\Users\Usuario\Desktop\nueva actualizacion descris\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+C:\Users\Usuario\Desktop\nueva actualizacion descris\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+C:\Users\Usuario\Desktop\nueva actualizacion descris\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+C:\Users\Usuario\Desktop\nueva actualizacion descris\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+C:\Users\Usuario\Desktop\nueva actualizacion descris\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Usuario\Desktop\nueva actualizacion descris\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+C:\Users\Usuario\Desktop\nueva actualizacion descris\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\GERSON\Solucion-DESCRIS-Pruebas\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\GERSON\Solucion-DESCRIS-Pruebas\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\GERSON\Solucion-DESCRIS-Pruebas\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\GERSON\Solucion-DESCRIS-Pruebas\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\GERSON\Solucion-DESCRIS-Pruebas\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\GERSON\Solucion-DESCRIS-Pruebas\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\GERSON\Solucion-DESCRIS-Pruebas\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+D:\GERSON\Solucion-DESCRIS-Pruebas\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\GERSON\Solucion-DESCRIS-Pruebas\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\GERSON\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\GERSON\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\GERSON\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\GERSON\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\GERSON\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\GERSON\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\GERSON\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+D:\GERSON\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\GERSON\DESARROLLO CRISTIANO V.10\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\GERSON\Otros\Copia Serviparamo\Ultima Sol\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\GERSON\Otros\Copia Serviparamo\Ultima Sol\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\GERSON\Otros\Copia Serviparamo\Ultima Sol\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\GERSON\Otros\Copia Serviparamo\Ultima Sol\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\GERSON\Otros\Copia Serviparamo\Ultima Sol\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\GERSON\Otros\Copia Serviparamo\Ultima Sol\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\GERSON\Otros\Copia Serviparamo\Ultima Sol\SGE.Solution\SGE.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+D:\GERSON\Otros\Copia Serviparamo\Ultima Sol\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\GERSON\Otros\Copia Serviparamo\Ultima Sol\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+C:\Users\Adeir\Desktop\serviparamo sac 28-01-2017\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\Adeir\Desktop\serviparamo sac 28-01-2017\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+C:\Users\Adeir\Desktop\serviparamo sac 28-01-2017\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+C:\Users\Adeir\Desktop\serviparamo sac 28-01-2017\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+C:\Users\Adeir\Desktop\serviparamo sac 28-01-2017\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+C:\Users\Adeir\Desktop\serviparamo sac 28-01-2017\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+C:\Users\Adeir\Desktop\serviparamo sac 28-01-2017\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+C:\Users\Adeir\Desktop\serviparamo sac 28-01-2017\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+C:\Users\Adeir\Desktop\serviparamo sac 28-01-2017\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\GERSON\SERVIPARAMO PERU SAC\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\GERSON\SERVIPARAMO PERU SAC\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\GERSON\SERVIPARAMO PERU SAC\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\GERSON\SERVIPARAMO PERU SAC\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\GERSON\SERVIPARAMO PERU SAC\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\GERSON\SERVIPARAMO PERU SAC\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\GERSON\SERVIPARAMO PERU SAC\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\GERSON\SERVIPARAMO PERU SAC\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\GERSON\SERVIPARAMO PERU SAC\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+C:\Users\Usuario\Desktop\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+C:\Users\Usuario\Desktop\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+C:\Users\Usuario\Desktop\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+C:\Users\Usuario\Desktop\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+C:\Users\Usuario\Desktop\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+C:\Users\Usuario\Desktop\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+C:\Users\Usuario\Desktop\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\Desktop\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+C:\Users\Usuario\Desktop\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+C:\Users\Adeir\Desktop\CALZADOS_JAGUAR\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+C:\Users\Adeir\Desktop\CALZADOS_JAGUAR\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+C:\Users\Adeir\Desktop\CALZADOS_JAGUAR\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+C:\Users\Adeir\Desktop\CALZADOS_JAGUAR\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+C:\Users\Adeir\Desktop\CALZADOS_JAGUAR\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+C:\Users\Adeir\Desktop\CALZADOS_JAGUAR\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+C:\Users\Adeir\Desktop\CALZADOS_JAGUAR\SGE.Solution\SGE.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Adeir\Desktop\CALZADOS_JAGUAR\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+C:\Users\Adeir\Desktop\CALZADOS_JAGUAR\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+C:\Users\Adeir\Desktop\SISTEMAS SIDE\JAGUAR\CALZADOS_JAGUAR\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+C:\Users\Adeir\Desktop\SISTEMAS SIDE\JAGUAR\CALZADOS_JAGUAR\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+C:\Users\Adeir\Desktop\SISTEMAS SIDE\JAGUAR\CALZADOS_JAGUAR\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+C:\Users\Adeir\Desktop\SISTEMAS SIDE\JAGUAR\CALZADOS_JAGUAR\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+C:\Users\Adeir\Desktop\SISTEMAS SIDE\JAGUAR\CALZADOS_JAGUAR\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+C:\Users\Adeir\Desktop\SISTEMAS SIDE\JAGUAR\CALZADOS_JAGUAR\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+C:\Users\Adeir\Desktop\SISTEMAS SIDE\JAGUAR\CALZADOS_JAGUAR\SGE.Solution\SGE.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Adeir\Desktop\SISTEMAS SIDE\JAGUAR\CALZADOS_JAGUAR\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+C:\Users\Adeir\Desktop\SISTEMAS SIDE\JAGUAR\CALZADOS_JAGUAR\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+C:\Users\Adeir\Desktop\SISTEMAS SIDE\JAGUAR\CALZADOS_JAGUAR\SGE.Solution\SGE.BusinessLogic\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\Adeir\Desktop\SISTEMAS SIDE\JAGUAR\CALZADOS_JAGUAR\SGE.Solution\SGE.BusinessLogic\bin\Debug\Ionic.Utils.Zip.dll
+D:\GERSON\Soluciones\JAGUAR\CALZADOS_JAGUAR\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\GERSON\Soluciones\JAGUAR\CALZADOS_JAGUAR\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\GERSON\Soluciones\JAGUAR\CALZADOS_JAGUAR\SGE.Solution\SGE.BusinessLogic\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\GERSON\Soluciones\JAGUAR\CALZADOS_JAGUAR\SGE.Solution\SGE.BusinessLogic\bin\Debug\Ionic.Utils.Zip.dll
+D:\GERSON\Soluciones\JAGUAR\CALZADOS_JAGUAR\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\GERSON\Soluciones\JAGUAR\CALZADOS_JAGUAR\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\GERSON\Soluciones\JAGUAR\CALZADOS_JAGUAR\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\GERSON\Soluciones\JAGUAR\CALZADOS_JAGUAR\SGE.Solution\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\GERSON\Soluciones\JAGUAR\CALZADOS_JAGUAR\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\GERSON\Soluciones\JAGUAR\CALZADOS_JAGUAR\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\GERSON\Soluciones\JAGUAR\CALZADOS_JAGUAR\SGE.Solution\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+C:\Users\Adeir\Desktop\SISTEMAS SIDE\JAGUAR\Calzado Jaguar 07-05-18\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+C:\Users\Adeir\Desktop\SISTEMAS SIDE\JAGUAR\Calzado Jaguar 07-05-18\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+C:\Users\Adeir\Desktop\SISTEMAS SIDE\JAGUAR\Calzado Jaguar 07-05-18\SGE.BusinessLogic\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\Adeir\Desktop\SISTEMAS SIDE\JAGUAR\Calzado Jaguar 07-05-18\SGE.BusinessLogic\bin\Debug\Ionic.Utils.Zip.dll
+C:\Users\Adeir\Desktop\SISTEMAS SIDE\JAGUAR\Calzado Jaguar 07-05-18\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+C:\Users\Adeir\Desktop\SISTEMAS SIDE\JAGUAR\Calzado Jaguar 07-05-18\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+C:\Users\Adeir\Desktop\SISTEMAS SIDE\JAGUAR\Calzado Jaguar 07-05-18\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+C:\Users\Adeir\Desktop\SISTEMAS SIDE\JAGUAR\Calzado Jaguar 07-05-18\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+C:\Users\Adeir\Desktop\SISTEMAS SIDE\JAGUAR\Calzado Jaguar 07-05-18\SGE.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Adeir\Desktop\SISTEMAS SIDE\JAGUAR\Calzado Jaguar 07-05-18\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+C:\Users\Adeir\Desktop\SISTEMAS SIDE\JAGUAR\Calzado Jaguar 07-05-18\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\GERSON\Soluciones\JAGUAR\Ultimo Jaguar Integral\Calzado Jaguar 07-05-18\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\GERSON\Soluciones\JAGUAR\Ultimo Jaguar Integral\Calzado Jaguar 07-05-18\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\GERSON\Soluciones\JAGUAR\Ultimo Jaguar Integral\Calzado Jaguar 07-05-18\SGE.BusinessLogic\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\GERSON\Soluciones\JAGUAR\Ultimo Jaguar Integral\Calzado Jaguar 07-05-18\SGE.BusinessLogic\bin\Debug\Ionic.Utils.Zip.dll
+D:\GERSON\Soluciones\JAGUAR\Ultimo Jaguar Integral\Calzado Jaguar 07-05-18\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\GERSON\Soluciones\JAGUAR\Ultimo Jaguar Integral\Calzado Jaguar 07-05-18\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\GERSON\Soluciones\JAGUAR\Ultimo Jaguar Integral\Calzado Jaguar 07-05-18\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\GERSON\Soluciones\JAGUAR\Ultimo Jaguar Integral\Calzado Jaguar 07-05-18\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\GERSON\Soluciones\JAGUAR\Ultimo Jaguar Integral\Calzado Jaguar 07-05-18\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\GERSON\Soluciones\JAGUAR\Ultimo Jaguar Integral\Calzado Jaguar 07-05-18\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\GERSON\Soluciones\JAGUAR\Ultimo Jaguar Integral\Calzado Jaguar 07-05-18\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\DEIVYS\SOLUCIONES QUE TENGO\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\DEIVYS\SOLUCIONES QUE TENGO\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\DEIVYS\SOLUCIONES QUE TENGO\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\DEIVYS\SOLUCIONES QUE TENGO\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\DEIVYS\SOLUCIONES QUE TENGO\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\DEIVYS\SOLUCIONES QUE TENGO\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\DEIVYS\SOLUCIONES QUE TENGO\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\DEIVYS\SOLUCIONES QUE TENGO\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\DEIVYS\SOLUCIONES QUE TENGO\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\DEIVYS\SOLUCIONES QUE TENGO\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\DEIVYS\SOLUCIONES QUE TENGO\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\DEIVYS\SOLUCIONES QUE TENGO\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\DEIVYS\SOLUCIONES QUE TENGO\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\Ionic.Utils.Zip.dll
+D:\DEIVYS\SOLUCIONES QUE TENGO\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\DEIVYS\SOLUCIONES QUE TENGO\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\DEIVYS\SOLUCIONES QUE TENGO\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\DEIVYS\SOLUCIONES QUE TENGO\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\DEIVYS\SOLUCIONES QUE TENGO\Calzado Jaguar\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\DEIVYS\SOLUCIONES QUE TENGO\Calzado Jaguar\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\DEIVYS\SOLUCIONES QUE TENGO\Calzado Jaguar\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\GERSON\Soluciones\JAGUAR\Actualizar Original\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\GERSON\Soluciones\JAGUAR\Actualizar Original\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\GERSON\Soluciones\JAGUAR\Actualizar Original\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\GERSON\Soluciones\JAGUAR\Actualizar Original\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\Ionic.Utils.Zip.dll
+D:\GERSON\Soluciones\JAGUAR\Actualizar Original\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\GERSON\Soluciones\JAGUAR\Actualizar Original\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\GERSON\Soluciones\JAGUAR\Actualizar Original\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\GERSON\Soluciones\JAGUAR\Actualizar Original\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\GERSON\Soluciones\JAGUAR\Actualizar Original\Calzado Jaguar\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\GERSON\Soluciones\JAGUAR\Actualizar Original\Calzado Jaguar\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\GERSON\Soluciones\JAGUAR\Actualizar Original\Calzado Jaguar\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\GERSON\Soluciones\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\GERSON\Soluciones\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\GERSON\Soluciones\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\GERSON\Soluciones\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\GERSON\Soluciones\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\GERSON\Soluciones\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\GERSON\Soluciones\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\GERSON\Soluciones\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\GERSON\Soluciones\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\PROYECTOS RAFHAEL\SOLUCIONES\CALZADOS JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\CALZADOS JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\PROYECTOS RAFHAEL\SOLUCIONES\CALZADOS JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\CALZADOS JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\CALZADOS JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\PROYECTOS RAFHAEL\SOLUCIONES\CALZADOS JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\PROYECTOS RAFHAEL\SOLUCIONES\CALZADOS JAGUAR\Calzado Jaguar\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\PROYECTOS RAFHAEL\SOLUCIONES\CALZADOS JAGUAR\Calzado Jaguar\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\CALZADOS JAGUAR\Calzado Jaguar\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb
+D:\PROYECTOS RAFHAEL\SOLUCIONES\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll.config
+D:\PROYECTOS RAFHAEL\SOLUCIONES\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.BusinessLogic.pdb
+D:\PROYECTOS RAFHAEL\SOLUCIONES\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\Firebase.Auth.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\Firebase.Storage.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\Newtonsoft.Json.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.Common.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.DataAccesDapper.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.Entity.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\System.Text.Json.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\Dapper.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\System.Memory.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\System.Text.Encodings.Web.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\System.Numerics.Vectors.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\System.Buffers.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.Common.pdb
+D:\PROYECTOS RAFHAEL\SOLUCIONES\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.DataAccesDapper.pdb
+D:\PROYECTOS RAFHAEL\SOLUCIONES\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.pdb
+D:\PROYECTOS RAFHAEL\SOLUCIONES\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.DataAccess.dll.config
+D:\PROYECTOS RAFHAEL\SOLUCIONES\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\SGE.Entity.pdb
+D:\PROYECTOS RAFHAEL\SOLUCIONES\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\Newtonsoft.Json.xml
+D:\PROYECTOS RAFHAEL\SOLUCIONES\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\bin\Debug\Dapper.xml
+D:\PROYECTOS RAFHAEL\SOLUCIONES\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.csproj.AssemblyReference.cache
+D:\PROYECTOS RAFHAEL\SOLUCIONES\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.csproj.CoreCompileInputs.cache
+D:\PROYECTOS RAFHAEL\SOLUCIONES\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.csproj.CopyComplete
+D:\PROYECTOS RAFHAEL\SOLUCIONES\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\JAGUAR\Calzado Jaguar\SGE.BusinessLogic\obj\Debug\SGE.BusinessLogic.pdb

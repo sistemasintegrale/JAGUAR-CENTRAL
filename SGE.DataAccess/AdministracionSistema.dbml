@@ -1,0 +1,702 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="jaguar_com_pe_CJ" Class="AdministracionSistemaDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=tcp:95.217.194.247,1433;Initial Catalog=jaguar_com_pe_CJ;Persist Security Info=True;User ID=jaguar_com_pe_CJ" SettingsObjectName="SGE.DataAccess.Properties.Settings" SettingsPropertyName="jaguar_com_pe_CJConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.SGES_USUARIO_ELIMINAR" Method="SGES_USUARIO_ELIMINAR">
+    <Parameter Name="usua_icod_usuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="usuario_modifica" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEAS_TIPO_DOCUMENTO_ELIMINAR" Method="SGEAS_TIPO_DOCUMENTO_ELIMINAR">
+    <Parameter Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tdocc_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEAS_TIPO_DOCUMENTO_MODULO_LISTAR" Method="SGEAS_TIPO_DOCUMENTO_MODULO_LISTAR">
+    <Parameter Name="tdodc_icod_modulo" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEAS_TIPO_DOCUMENTO_MODULO_LISTARResult">
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tdocc_iid_tipo_doc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tdocc_vabreviatura_tipo_doc" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="tdocc_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEAS_MODULO_ELIMINAR" Method="SGEAS_MODULO_ELIMINAR">
+    <Parameter Name="moduc_icod_modulo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="moduc_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEAS_MODULO_MODIFICAR" Method="SGEAS_MODULO_MODIFICAR">
+    <Parameter Name="moduc_icod_modulo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="moduc_vdescripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="moduc_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEAS_MODULO_INSERTAR" Method="SGEAS_MODULO_INSERTAR">
+    <Parameter Name="moduc_icod_modulo" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="moduc_vdescripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="moduc_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEAS_MODULO_LISTAR" Method="SGEAS_MODULO_LISTAR">
+    <ElementType Name="SGEAS_MODULO_LISTARResult">
+      <Column Name="moduc_icod_modulo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="moduc_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEAS_FORMULARIO_NO_PERMITIDO_LISTAR" Method="SGEAS_FORMULARIO_NO_PERMITIDO_LISTAR">
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEAS_FORMULARIO_NO_PERMITIDO_LISTARResult">
+      <Column Name="formc_icod_forms" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="moduc_icod_modulo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="moduc_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="formc_vnombre_forms" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="formc_vdescripcion" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEAS_FORMULARIO_PERMITIDO_LISTAR" Method="SGEAS_FORMULARIO_PERMITIDO_LISTAR">
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEAS_FORMULARIO_PERMITIDO_LISTARResult">
+      <Column Name="formc_icod_forms" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="moduc_icod_modulo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="moduc_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="formc_vnombre_forms" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="formc_vdescripcion" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEAS_ACCESO_USUARIO_INSERTAR" Method="SGEAS_ACCESO_USUARIO_INSERTAR">
+    <Parameter Name="acces_icod_acceso" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="usua_icod_usuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="formc_icod_forms" Type="System.Int32" DbType="Int" />
+    <Parameter Name="acces_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEAS_ACCESO_USUARIO_ELIMINAR" Method="SGEAS_ACCESO_USUARIO_ELIMINAR">
+    <Parameter Name="usua_icod_usuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="formc_icod_forms" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_TABLA_ELIMINAR" Method="SGEA_TABLA_ELIMINAR">
+    <Parameter Name="tablc_iid_tipo_tabla" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_TABLA_MODIFICAR" Method="SGEA_TABLA_MODIFICAR">
+    <Parameter Name="tablc_iid_tipo_tabla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tablc_vdescripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="tablc_cestado" Type="System.Char" DbType="Char(1)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_TABLA_INSERTAR" Method="SGEA_TABLA_INSERTAR">
+    <Parameter Name="tablc_iid_tipo_tabla" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="tablc_vdescripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="tablc_cestado" Type="System.Char" DbType="Char(1)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_TABLA_LISTAR" Method="SGEA_TABLA_LISTAR">
+    <ElementType Name="SGEA_TABLA_LISTARResult">
+      <Column Name="tablc_iid_tipo_tabla" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tablc_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tablc_cestado" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_TABLA_REGISTRO_ELIMINAR" Method="SGEA_TABLA_REGISTRO_ELIMINAR">
+    <Parameter Name="tarec_iid_tabla_registro" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEAS_TIPO_DOCUMENTO_DET_LISTAR" Method="SGEAS_TIPO_DOCUMENTO_DET_LISTAR">
+    <Parameter Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEAS_TIPO_DOCUMENTO_DET_LISTARResult">
+      <Column Name="moduc_icod_modulo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEAS_TIPO_DOCUMENTO_DET_INSERTAR" Method="SGEAS_TIPO_DOCUMENTO_DET_INSERTAR">
+    <Parameter Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="moduc_icod_modulo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tdocd_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEAS_TIPO_DOCUMENTO_DET_ELIMINAR" Method="SGEAS_TIPO_DOCUMENTO_DET_ELIMINAR">
+    <Parameter Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEAS_TIPO_DOCUMENTO_DET_CTA_ELIMINAR" Method="SGEAS_TIPO_DOCUMENTO_DET_CTA_ELIMINAR">
+    <Parameter Name="tdocd_iid_correlativo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEAS_TIPO_DOCUMENTO_LISTAR" Method="SGEAS_TIPO_DOCUMENTO_LISTAR">
+    <ElementType Name="SGEAS_TIPO_DOCUMENTO_LISTARResult">
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tdocc_iid_tipo_doc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tdocc_vabreviatura_tipo_doc" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="tdocc_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tdocc_coa" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="tdocc_nro_correlativo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tdocc_nro_serie" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="tdocc_nro_serie_2" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="tdocc_nro_correlativo_2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEAS_TIPO_DOCUMENTO_INSERTAR" Method="SGEAS_TIPO_DOCUMENTO_INSERTAR">
+    <Parameter Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="tdocc_iid_tipo_doc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tdocc_vabreviatura_tipo_doc" Type="System.String" DbType="VarChar(3)" />
+    <Parameter Name="tdocc_vdescripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="tdocc_coa" Type="System.String" DbType="VarChar(2)" />
+    <Parameter Name="tdocc_nro_correlativo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tdocc_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tdocc_nro_serie" Type="System.String" DbType="VarChar(3)" />
+    <Parameter Name="tdocc_nro_serie_2" Type="System.String" DbType="VarChar(3)" />
+    <Parameter Name="tdocc_nro_correlativo_2" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEAS_TIPO_DOCUMENTO_MODIFICAR" Method="SGEAS_TIPO_DOCUMENTO_MODIFICAR">
+    <Parameter Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tdocc_vdescripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="tdocc_coa" Type="System.String" DbType="VarChar(2)" />
+    <Parameter Name="tdocc_nro_correlativo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tdocc_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tdocc_nro_serie" Type="System.String" DbType="VarChar(3)" />
+    <Parameter Name="tdocc_nro_serie_2" Type="System.String" DbType="VarChar(3)" />
+    <Parameter Name="tdocc_nro_correlativo_2" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_GET_CORRELATIVO_TIPO_DOC" Method="SGE_GET_CORRELATIVO_TIPO_DOC">
+    <Parameter Name="intCorrelativo" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="strNroSerie" Type="System.String" DbType="VarChar(3)" Direction="InOut" />
+    <Parameter Name="intCorrelativo2" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="strNroSerie2" Type="System.String" DbType="VarChar(3)" Direction="InOut" />
+    <Parameter Name="intTipoDoc" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_UPDATE_CORRELATIVO_TIPO_DOC" Method="SGE_UPDATE_CORRELATIVO_TIPO_DOC">
+    <Parameter Name="intTipoDoc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intCorrelativo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intOpcion" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEAS_PARAMETRO_MODIFICAR_CORRELATIVO_OR" Method="SGEAS_PARAMETRO_MODIFICAR_CORRELATIVO_OR">
+    <Parameter Name="pm_icod_parametro" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pm_correlativo_OR" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEG_OBTENER_CORRELATIVO_DOCUMENTO" Method="SGEG_OBTENER_CORRELATIVO_DOCUMENTO">
+    <Parameter Name="serie" Type="System.String" DbType="Char(3)" />
+    <Parameter Name="Icod_tipo_documento" Parameter="icod_tipo_documento" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEG_OBTENER_CORRELATIVO_DOCUMENTOResult">
+      <Column Name="NumDocumento" Type="System.String" DbType="VarChar(7)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEG_OBTENER_CORRELATIVO_PROYECTO" Method="SGEG_OBTENER_CORRELATIVO_PROYECTO">
+    <Parameter Name="serie" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEG_OBTENER_CORRELATIVO_PROYECTOResult">
+      <Column Name="NumDocumento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEG_OBTENER_CORRELATIVO_OCL" Method="SGEG_OBTENER_CORRELATIVO_OCL">
+    <Parameter Name="serie" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEG_OBTENER_CORRELATIVO_OCLResult">
+      <Column Name="NumDocumento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEG_OBTENER_CORRELATIVO_OCS" Method="SGEG_OBTENER_CORRELATIVO_OCS">
+    <Parameter Name="serie" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEG_OBTENER_CORRELATIVO_OCSResult">
+      <Column Name="NumDocumento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEG_OBTENER_CORRELATIVO_OCI" Method="SGEG_OBTENER_CORRELATIVO_OCI">
+    <Parameter Name="serie" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEG_OBTENER_CORRELATIVO_OCIResult">
+      <Column Name="NumDocumento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEAS_TIPO_CAMBIO_EURO_ELIMINAR" Method="SGEAS_TIPO_CAMBIO_EURO_ELIMINAR">
+    <Parameter Name="tceu_icod_tipo_cambio_euro" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tceu_iusuario_elimina" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tceu_vpc_elimina" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEAS_TIPO_CAMBIO_EURO_INSERTAR" Method="SGEAS_TIPO_CAMBIO_EURO_INSERTAR">
+    <Parameter Name="tceu_icod_tipo_cambio_euro" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="tceu_sfecha_tipo_cambio_euro" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="tceu_tipo_cambio_euro_compra" Type="System.Decimal" DbType="Decimal(8,4)" />
+    <Parameter Name="tceu_tipo_cambio_euro_venta" Type="System.Decimal" DbType="Decimal(8,4)" />
+    <Parameter Name="tceu_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tceu_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="tceu_flag_estado" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEAS_TIPO_CAMBIO_EURO_LISTAR" Method="SGEAS_TIPO_CAMBIO_EURO_LISTAR">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEAS_TIPO_CAMBIO_EURO_LISTARResult">
+      <Column Name="tceu_icod_tipo_cambio_euro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tceu_sfecha_tipo_cambio_euro" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="tceu_tipo_cambio_euro_compra" Type="System.Decimal" DbType="Decimal(8,4)" CanBeNull="true" />
+      <Column Name="tceu_tipo_cambio_euro_venta" Type="System.Decimal" DbType="Decimal(8,4)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEAS_TIPO_CAMBIO_EURO_MODIFICAR" Method="SGEAS_TIPO_CAMBIO_EURO_MODIFICAR">
+    <Parameter Name="tceu_icod_tipo_cambio_euro" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tceu_tipo_cambio_euro_compra" Type="System.Decimal" DbType="Decimal(8,4)" />
+    <Parameter Name="tceu_tipo_cambio_euro_venta" Type="System.Decimal" DbType="Decimal(8,4)" />
+    <Parameter Name="tceu_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tceu_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEAS_TIPO_CAMBIO_ELIMINAR" Method="SGEAS_TIPO_CAMBIO_ELIMINAR">
+    <Parameter Name="ticac_icod_tipo_cambio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ticac_iusuario_elimina" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ticac_vpc_elimina" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEAS_TIPO_CAMBIO_LISTAR" Method="SGEAS_TIPO_CAMBIO_LISTAR">
+    <ElementType Name="SGEAS_TIPO_CAMBIO_LISTARResult">
+      <Column Name="ticac_icod_tipo_cambio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ticac_fecha_tipo_cambio" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ticac_tipo_cambio_compra" Type="System.Decimal" DbType="Decimal(8,4)" CanBeNull="true" />
+      <Column Name="ticac_tipo_cambio_venta" Type="System.Decimal" DbType="Decimal(8,4)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEAS_TIPO_CAMBIO_MODIFICAR" Method="SGEAS_TIPO_CAMBIO_MODIFICAR">
+    <Parameter Name="ticac_icod_tipo_cambio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ticac_fecha_tipo_cambio" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="ticac_tipo_cambio_compra" Type="System.Decimal" DbType="Decimal(8,4)" />
+    <Parameter Name="ticac_tipo_cambio_venta" Type="System.Decimal" DbType="Decimal(8,4)" />
+    <Parameter Name="ticac_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ticac_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_PVT_SEND_INFO_LISTAR" Method="SGE_PVT_SEND_INFO_LISTAR">
+    <ElementType Name="SGE_PVT_SEND_INFO_LISTARResult">
+      <Column Name="trans_icod_trans" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="trans_descripcion" Type="System.String" DbType="VarChar(70)" CanBeNull="true" />
+      <Column Name="trans_nombre_tabla" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="trans_nombre_archivo" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="sfecha_crea" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_OBTENER_CORRELATIVO_TABLA_REGISTRO_PROD" Method="SGE_OBTENER_CORRELATIVO_TABLA_REGISTRO_PROD">
+    <Parameter Name="tabla" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_OBTENER_CORRELATIVO_TABLA_REGISTRO_PRODResult">
+      <Column Name="Num" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEG_OBTENER_CORRELATIVO_RCS" Method="SGEG_OBTENER_CORRELATIVO_RCS">
+    <Parameter Name="serie" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEG_OBTENER_CORRELATIVO_RCSResult">
+      <Column Name="NumDocumento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEG_OBTENER_CORRELATIVO_OCL_MERCADERIA" Method="SGEG_OBTENER_CORRELATIVO_OCL_MERCADERIA">
+    <Parameter Name="serie" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEG_OBTENER_CORRELATIVO_OCL_MERCADERIAResult">
+      <Column Name="NumDocumento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_UPDATE_CORRELATIVO_PVT" Method="SGE_UPDATE_CORRELATIVO_PVT">
+    <Parameter Name="intPVT" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intCorrelativo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intOpcion" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_UPDATE_CORRELATIVO_PVT_MP" Method="SGE_UPDATE_CORRELATIVO_PVT_MP">
+    <Parameter Name="intPVT" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intCorrelativo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intOpcion" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_UPDATE_CORRELATIVO_SERIES" Method="SGE_UPDATE_CORRELATIVO_SERIES">
+    <Parameter Name="serie" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="intCorrelativo" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_UPDATE_CORRELATIVO_DOC_SUNAT" Method="SGE_UPDATE_CORRELATIVO_DOC_SUNAT">
+    <Parameter Name="icodParametro" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intCorrelativo" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_IMAGEN_CHEQUE_ELIMINAR" Method="SGE_IMAGEN_CHEQUE_ELIMINAR">
+    <Parameter Name="ic_icod_imagen_cheque" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ic_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ic_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_TABLA_REGISTRO_INSERTAR" Method="SGEA_TABLA_REGISTRO_INSERTAR">
+    <Parameter Name="tarec_iid_tabla_registro" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="tablc_iid_tipo_tabla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tarec_icorrelativo_registro" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tarec_vdescripcion" Type="System.String" DbType="VarChar(40)" />
+    <Parameter Name="tarec_vtipo_operacion" Type="System.String" DbType="VarChar(2)" />
+    <Parameter Name="tarec_cestado" Type="System.Char" DbType="Char(1)" />
+    <Parameter Name="tarec_iid_tabla_registro_ingreso" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tarec_iid_tabla_registro_salida" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEA_TABLA_REGISTRO_MODIFICAR" Method="SGEA_TABLA_REGISTRO_MODIFICAR">
+    <Parameter Name="tarec_iid_tabla_registro" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tarec_vdescripcion" Type="System.String" DbType="VarChar(40)" />
+    <Parameter Name="tarec_vtipo_operacion" Type="System.String" DbType="VarChar(2)" />
+    <Parameter Name="tarec_cestado" Type="System.Char" DbType="Char(1)" />
+    <Parameter Name="tarec_iid_tabla_registro_ingreso" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tarec_iid_tabla_registro_salida" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEAS_TIPO_DOCUMENTO_DET_CTA_INSERTAR" Method="SGEAS_TIPO_DOCUMENTO_DET_CTA_INSERTAR">
+    <Parameter Name="tdocd_iid_correlativo" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="tdocd_iid_codigo_doc_det" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tdocd_descripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctacc_icod_cuenta_contable_nac" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ctacc_icod_cuenta_contable_extra" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ctacc_icod_cuenta_matris_nac" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ctacc_icod_cuenta_matris_extra" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ctacc_icod_subcuenta_nac" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ctacc_icod_subcuenta_extra" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ctacc_icod_cuenta_asociada_nac" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ctacc_icod_cuenta_asociada_extra" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ctacc_icod_cuenta_igv_nac" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ctacc_icod_cuenta_isc" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ctacc_icod_cuenta_gastos_nac" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ctacc_icod_cuenta_ivap" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="tdocd_iestado_registro" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tdocd_estado_coa" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tdocd_usuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctacc_icod_cuenta_servicios" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEAS_TIPO_DOCUMENTO_DET_CTA_LISTAR" Method="SGEAS_TIPO_DOCUMENTO_DET_CTA_LISTAR">
+    <Parameter Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEAS_TIPO_DOCUMENTO_DET_CTA_LISTARResult">
+      <Column Name="tdocd_iid_correlativo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tdocd_iid_codigo_doc_det" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tdocd_descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ctacc_icod_cuenta_contable_nac" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ctacc_icod_cuenta_contable_extra" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ctacc_icod_cuenta_matris_nac" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ctacc_icod_cuenta_matris_extra" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ctacc_icod_subcuenta_nac" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ctacc_icod_subcuenta_extra" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ctacc_icod_cuenta_asociada_nac" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ctacc_icod_cuenta_asociada_extra" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ctacc_icod_cuenta_igv_nac" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ctacc_icod_cuenta_isc" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ctacc_icod_cuenta_gastos_nac" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ctacc_icod_cuenta_ivap" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="tdocd_iestado_registro" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tdocd_estado_coa" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tdocd_estado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ctacc_icod_cuenta_servicios" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEAS_TIPO_DOCUMENTO_DET_CTA_MODIFICAR" Method="SGEAS_TIPO_DOCUMENTO_DET_CTA_MODIFICAR">
+    <Parameter Name="tdocd_iid_correlativo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tdocd_descripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctacc_icod_cuenta_contable_nac" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ctacc_icod_cuenta_contable_extra" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ctacc_icod_cuenta_matris_nac" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ctacc_icod_cuenta_matris_extra" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ctacc_icod_subcuenta_nac" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ctacc_icod_subcuenta_extra" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ctacc_icod_cuenta_asociada_nac" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ctacc_icod_cuenta_asociada_extra" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ctacc_icod_cuenta_igv_nac" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ctacc_icod_cuenta_isc" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ctacc_icod_cuenta_gastos_nac" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ctacc_icod_cuenta_ivap" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="tdocd_iestado_registro" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tdocd_estado_coa" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tdocd_usuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctacc_icod_cuenta_servicios" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_IMAGEN_CHEQUE_LISTAR" Method="SGE_IMAGEN_CHEQUE_LISTAR">
+    <Parameter Name="mobac_icod_correlativo" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_IMAGEN_CHEQUE_LISTARResult">
+      <Column Name="ic_icod_imagen_cheque" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="mobac_icod_correlativo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ic_vruta" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_IMAGEN_CHEQUE_INSERTAR" Method="SGE_IMAGEN_CHEQUE_INSERTAR">
+    <Parameter Name="ic_icod_imagen_cheque" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="mobac_icod_correlativo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ic_vruta" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ic_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ic_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_IMAGEN_CHEQUE_MODIFICAR" Method="SGE_IMAGEN_CHEQUE_MODIFICAR">
+    <Parameter Name="ic_icod_imagen_cheque" Type="System.Int32" DbType="Int" />
+    <Parameter Name="mobac_icod_correlativo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ic_vruta" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ic_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ic_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_PVT_PARAMETRO_PRODUCCION_MODIFICAR_CORRELATIVO_OP" Method="SGE_PVT_PARAMETRO_PRODUCCION_MODIFICAR_CORRELATIVO_OP">
+    <Parameter Name="pmprc_icod_parametro_produccion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pmprc_inumero_orden_pedido" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pmprc_inumero_ficha_tecnica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pmprc_inumero_orden_produccion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pmprc_inumero_nota_pedido" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ACT_ACTUALIZACIONES_LISTAR" Method="ACT_ACTUALIZACIONES_LISTAR">
+    <ElementType Name="ACT_ACTUALIZACIONES_LISTARResult">
+      <Column Name="cvr_icod_version" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="cvr_vversion" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="cvr_sfecha_version" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="cvr_vurl" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEAS_TIPO_CAMBIO_INSERTAR" Method="SGEAS_TIPO_CAMBIO_INSERTAR">
+    <Parameter Name="ticac_icod_tipo_cambio" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ticac_fecha_tipo_cambio" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="ticac_tipo_cambio_compra" Type="System.Decimal" DbType="Decimal(8,4)" />
+    <Parameter Name="ticac_tipo_cambio_venta" Type="System.Decimal" DbType="Decimal(8,4)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_PVT_PARAMETRO_PRODUCCION_LISTAR" Method="SGE_PVT_PARAMETRO_PRODUCCION_LISTAR">
+    <ElementType Name="SGE_PVT_PARAMETRO_PRODUCCION_LISTARResult">
+      <Column Name="pmprc_icod_parametro_produccion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="pmprc_inumero_orden_pedido" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pmprc_inumero_ficha_tecnica" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pmprc_inumero_orden_produccion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pmprc_inumero_nota_pedido" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="pmprc_flag_estado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="pmprc_vruta" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="pmprc_vruta_base" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="pmprc_vficha_tecnica" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="pmprc_vorden_pedido" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="pmprc_vorden_produccion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="pmprc_vmodelo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_PVT_PARAMETRO_PRODUCCION_MODIFICAR" Method="SGE_PVT_PARAMETRO_PRODUCCION_MODIFICAR">
+    <Parameter Name="pmprc_icod_parametro_produccion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pmprc_inumero_orden_pedido" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pmprc_inumero_ficha_tecnica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pmprc_inumero_orden_produccion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pmprc_inumero_nota_pedido" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pmprc_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pmprc_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="pmprc_vruta" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="pmprc_vruta_base" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="pmprc_vficha_tecnica" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="pmprc_vorden_pedido" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="pmprc_vorden_produccion" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="pmprc_vmodelo" Type="System.String" DbType="VarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEAS_PARAMETRO_MODIFICAR" Method="SGEAS_PARAMETRO_MODIFICAR">
+    <Parameter Name="pm_icod_parametro" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pm_nigv_parametro" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="pm_nuit_parametro" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="pm_ncategoria_parametro" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="pm_nombre_empresa" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="pm_direccion_empresa" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="pm_vruc" Type="System.String" DbType="VarChar(11)" />
+    <Parameter Name="pm_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pm_correlativo_OR" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="pm_correlativo_doc_sunat" Type="System.Int32" DbType="Int" />
+    <Parameter Name="urlServicioFacturaElectronica" Type="System.String" DbType="VarChar(400)" />
+    <Parameter Name="urlServicioNotaCredito" Type="System.String" DbType="VarChar(400)" />
+    <Parameter Name="urlServicioNotaDebito" Type="System.String" DbType="VarChar(400)" />
+    <Parameter Name="Ruc" Parameter="ruc" Type="System.String" DbType="VarChar(11)" />
+    <Parameter Name="UsuarioSol" Parameter="usuarioSol" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="ClaveSol" Parameter="claveSol" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="EndPointUrlPrueba" Parameter="endPointUrlPrueba" Type="System.String" DbType="VarChar(400)" />
+    <Parameter Name="EndPointUrlDesarrollo" Parameter="endPointUrlDesarrollo" Type="System.String" DbType="VarChar(400)" />
+    <Parameter Name="PasswordCertificado" Parameter="passwordCertificado" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="CertificadoDigital" Parameter="certificadoDigital" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="urlServicioEnviarDocumento" Type="System.String" DbType="VarChar(400)" />
+    <Parameter Name="urlServicioFirma" Type="System.String" DbType="VarChar(400)" />
+    <Parameter Name="IdServiceValidacion" Parameter="idServiceValidacion" Type="System.String" DbType="VarChar(400)" />
+    <Parameter Name="pm_sfecha_inicio" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="DirecciónXML" Parameter="direcciónXML" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="urlServicioEnvioResumen" Type="System.String" DbType="VarChar(400)" />
+    <Parameter Name="urlServicoGenerarResumen" Type="System.String" DbType="VarChar(400)" />
+    <Parameter Name="IdServiceValidacionResumen" Parameter="idServiceValidacionResumen" Type="System.String" DbType="VarChar(2)" />
+    <Parameter Name="urlServicioDocumentoBaja" Type="System.String" DbType="VarChar(400)" />
+    <Parameter Name="ServiceConsultaTiket" Parameter="serviceConsultaTiket" Type="System.String" DbType="VarChar(400)" />
+    <Parameter Name="pm_ntipo_cambio" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEAS_PARAMETRO_MODIFICAR_CENTRAL" Method="SGEAS_PARAMETRO_MODIFICAR_CENTRAL">
+    <Parameter Name="pm_icod_parametro" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pm_nigv_parametro" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="pm_nuit_parametro" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="pm_ncategoria_parametro" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="pm_nombre_empresa" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="pm_direccion_empresa" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="pm_vruc" Type="System.String" DbType="VarChar(11)" />
+    <Parameter Name="pm_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pm_correlativo_OR" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="pm_correlativo_doc_sunat" Type="System.Int32" DbType="Int" />
+    <Parameter Name="urlServicioFacturaElectronica" Type="System.String" DbType="VarChar(400)" />
+    <Parameter Name="urlServicioNotaCredito" Type="System.String" DbType="VarChar(400)" />
+    <Parameter Name="urlServicioNotaDebito" Type="System.String" DbType="VarChar(400)" />
+    <Parameter Name="Ruc" Parameter="ruc" Type="System.String" DbType="VarChar(11)" />
+    <Parameter Name="UsuarioSol" Parameter="usuarioSol" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="ClaveSol" Parameter="claveSol" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="EndPointUrlPrueba" Parameter="endPointUrlPrueba" Type="System.String" DbType="VarChar(400)" />
+    <Parameter Name="EndPointUrlDesarrollo" Parameter="endPointUrlDesarrollo" Type="System.String" DbType="VarChar(400)" />
+    <Parameter Name="PasswordCertificado" Parameter="passwordCertificado" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="CertificadoDigital" Parameter="certificadoDigital" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="urlServicioEnviarDocumento" Type="System.String" DbType="VarChar(400)" />
+    <Parameter Name="urlServicioFirma" Type="System.String" DbType="VarChar(400)" />
+    <Parameter Name="IdServiceValidacion" Parameter="idServiceValidacion" Type="System.String" DbType="VarChar(400)" />
+    <Parameter Name="pm_sfecha_inicio" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="DirecciónXML" Parameter="direcciónXML" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="urlServicioEnvioResumen" Type="System.String" DbType="VarChar(400)" />
+    <Parameter Name="urlServicoGenerarResumen" Type="System.String" DbType="VarChar(400)" />
+    <Parameter Name="IdServiceValidacionResumen" Parameter="idServiceValidacionResumen" Type="System.String" DbType="VarChar(2)" />
+    <Parameter Name="urlServicioDocumentoBaja" Type="System.String" DbType="VarChar(400)" />
+    <Parameter Name="ServiceConsultaTiket" Parameter="serviceConsultaTiket" Type="System.String" DbType="VarChar(400)" />
+    <Parameter Name="pm_ntipo_cambio" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="pmprc_vruta_letra" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="pmprc_vruta_cheque" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="urlServicioGuiaRemisionDesarrollo" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="pm_vruta_resumen" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="urlTokenGREdesarrollo" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="usuarioGRE" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="claveGRE" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="urlServicioCDRGuiaRemisionPrueba" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="UsuarioSolGRE" Parameter="usuarioSolGRE" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ClaveSolGRE" Parameter="claveSolGRE" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="DireccionXmlGRE" Parameter="direccionXmlGRE" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="UrlBaseServicioGRE" Parameter="urlBaseServicioGRE" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="UrlBaseEnvioGRE" Parameter="urlBaseEnvioGRE" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="pm_porc_retencion" Type="System.Decimal" DbType="Decimal(10,4)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SIGAS_PARAMETRO_LISTAR" Method="SIGAS_PARAMETRO_LISTAR">
+    <ElementType Name="SIGAS_PARAMETRO_LISTARResult">
+      <Column Name="pm_icod_parametro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="pm_nigv_parametro" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="pm_ntope_parametro" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="pm_nuit_parametro" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="pm_ncategoria_parametro" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="pm_nivap_parametro" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="pm_nisc_parametro" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="pm_nombre_empresa" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="pm_direccion_empresa" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="pm_vruc" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="pm_correlativo_OR" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="pm_correlativo_doc_sunat" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="urlServicioFacturaElectronica" Type="System.String" DbType="VarChar(400)" CanBeNull="true" />
+      <Column Name="urlServicioNotaCredito" Type="System.String" DbType="VarChar(400)" CanBeNull="true" />
+      <Column Name="urlServicioNotaDebito" Type="System.String" DbType="VarChar(400)" CanBeNull="true" />
+      <Column Name="Ruc" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="UsuarioSol" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ClaveSol" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="EndPointUrlPrueba" Type="System.String" DbType="VarChar(400)" CanBeNull="true" />
+      <Column Name="EndPointUrlDesarrollo" Type="System.String" DbType="VarChar(400)" CanBeNull="true" />
+      <Column Name="PasswordCertificado" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CertificadoDigital" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="urlServicioEnviarDocumento" Type="System.String" DbType="VarChar(400)" CanBeNull="true" />
+      <Column Name="urlServicioFirma" Type="System.String" DbType="VarChar(400)" CanBeNull="true" />
+      <Column Name="IdServiceValidacion" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="pm_sfecha_inicio" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="DirecciónXML" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="urlServicioEnvioResumen" Type="System.String" DbType="VarChar(400)" CanBeNull="true" />
+      <Column Name="urlServicoGenerarResumen" Type="System.String" DbType="VarChar(400)" CanBeNull="true" />
+      <Column Name="IdServiceValidacionResumen" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="urlServicioDocumentoBaja" Type="System.String" DbType="VarChar(400)" CanBeNull="true" />
+      <Column Name="ServiceConsultaTiket" Type="System.String" DbType="VarChar(400)" CanBeNull="true" />
+      <Column Name="pm_ntipo_cambio" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="pm_direcctorio" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="pmprc_vruta_letra" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="pmprc_vruta_cheque" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="pm_vruta_resumen" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="urlTokenGREdesarrollo" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="usuarioGRE" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="claveGRE" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="urlServicioGuiaRemisionDesarrollo" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="urlServicioCDRGuiaRemisionPrueba" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="UsuarioSolGRE" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ClaveSolGRE" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="DireccionXmlGRE" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="UrlBaseServicioGRE" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="UrlBaseEnvioGRE" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="pm_porc_retencion" Type="System.Decimal" DbType="Decimal(10,4)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ACT_EQUIPO_MODIFICAR" Method="ACT_EQUIPO_MODIFICAR">
+    <Parameter Name="ceq_icod_equipo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ceq_vnombre_equipo" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="cvr_icod_version" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ceq_sfecha_actualizacion" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="cep_vubicacion_actualizador" Type="System.String" DbType="VarChar(250)" />
+    <Parameter Name="cep_id_pvt" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ACT_EQUIPO_DATOS_OBTENER" Method="ACT_EQUIPO_DATOS_OBTENER">
+    <Parameter Name="NOMBRE" Parameter="nOMBRE" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="cep_vid_cpu" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="ACT_EQUIPO_DATOS_OBTENERResult">
+      <Column Name="ceq_icod_equipo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ceq_vnombre_equipo" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="cvr_icod_version" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ceq_sfecha_actualizacion" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="cvr_vversion" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="cvr_sfecha_version" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="cep_vid_cpu" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="cep_bflag_acceso" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="cep_vubicacion_actualizador" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="cep_id_pvt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NombrePvt" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGES_USUARIO_MODIFICAR" Method="SGES_USUARIO_MODIFICAR">
+    <Parameter Name="usua_icod_usuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="usua_nombre_usuario" Type="System.String" DbType="VarChar(60)" />
+    <Parameter Name="usua_password_usuario" Type="System.String" DbType="Char(24)" />
+    <Parameter Name="usua_iactivo" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="usua_secured_key" Type="System.String" DbType="Char(9)" />
+    <Parameter Name="usuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="usua_bflag_indicador" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="usua_bpunto_venta" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="puvec_icod_punto_venta" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGES_USUARIO_LISTAR" Method="SGES_USUARIO_LISTAR">
+    <Parameter Name="usua_secured_key" Type="System.String" DbType="Char(9)" />
+    <ElementType Name="SGES_USUARIO_LISTARResult">
+      <Column Name="usua_icod_usuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="usua_codigo_usuario" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="usua_nombre_usuario" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="usua_password_usuario" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="usua_iactivo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="usua_bflag_indicador" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="usua_bpunto_venta" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="puvec_icod_punto_venta" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGES_USUARIO_INSERTAR" Method="SGES_USUARIO_INSERTAR">
+    <Parameter Name="usua_icod_usuario" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="usua_codigo_usuario" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="usua_nombre_usuario" Type="System.String" DbType="VarChar(60)" />
+    <Parameter Name="usua_password_usuario" Type="System.String" DbType="Char(24)" />
+    <Parameter Name="usua_iactivo" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="usua_secured_key" Type="System.String" DbType="Char(9)" />
+    <Parameter Name="usuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="usua_bflag_indicador" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="usua_bpunto_venta" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="puvec_icod_punto_venta" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_VERIFICAR_KARDEX_STOCK" Method="SGE_VERIFICAR_KARDEX_STOCK">
+    <Parameter Name="ANIO" Parameter="aNIO" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_VERIFICAR_KARDEX_STOCKResult">
+      <Column Name="IdProducto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CodigoProducto" Type="System.String" DbType="VarChar(22)" CanBeNull="true" />
+      <Column Name="DescripcionProducto" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="IdAlmacen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DescripcionAlmacen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CantidadStock" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="CantidadKardex" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

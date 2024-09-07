@@ -1,0 +1,1664 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SGE_SERVIPARAMO" Class="PlanillasDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=SGE_SERVIPARAMO;Integrated Security=True" SettingsObjectName="SGE.DataAccess.Properties.Settings" SettingsPropertyName="SGE_SERVIPARAMOConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.SGEA_EMPRESA_LISTAR" Method="SGEA_EMPRESA_LISTAR">
+    <ElementType Name="SGEA_EMPRESA_LISTARResult">
+      <Column Name="cia_icod_empresa" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="cia_vrazon_social" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="cia_vruc" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="cia_vdireccion_empr" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="cia_vtelefonos" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="cia_vregistro_patronal" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="cia_vrepresentante_legal" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="cia_vpagina_web" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEA_EMPRESA_MODIFICAR" Method="SGEA_EMPRESA_MODIFICAR">
+    <Parameter Name="cia_icod_empresa" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cia_vrazon_social" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="cia_vruc" Type="System.String" DbType="VarChar(11)" />
+    <Parameter Name="cia_vdireccion_empr" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="cia_vtelefonos" Type="System.String" DbType="VarChar(40)" />
+    <Parameter Name="cia_vregistro_patronal" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="cia_vrepresentante_legal" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="cia_vpagina_web" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="cia_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cia_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_AREAS_ELIMINAR" Method="SGEP_AREAS_ELIMINAR">
+    <Parameter Name="arec_icod_cargo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="arec_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="arec_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_AREAS_INSERTAR" Method="SGEP_AREAS_INSERTAR">
+    <Parameter Name="arec_icod_cargo" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="arec_vdescripcion" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="arec_vabreviado" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="arec_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="arec_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="arec_sflag_estado" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_AREAS_LISTAR" Method="SGEP_AREAS_LISTAR">
+    <ElementType Name="SGEP_AREAS_LISTARResult">
+      <Column Name="arec_icod_cargo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="arec_vdescripcion" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="arec_vabreviado" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEP_AREAS_MODIFICAR" Method="SGEP_AREAS_MODIFICAR">
+    <Parameter Name="arec_icod_cargo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="arec_vdescripcion" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="arec_vabreviado" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="arec_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="arec_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_CARGO_ELIMINAR" Method="SGEP_CARGO_ELIMINAR">
+    <Parameter Name="carg_icod_cargo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="carg_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="carg_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_CARGO_INSERTAR" Method="SGEP_CARGO_INSERTAR">
+    <Parameter Name="carg_icod_cargo" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="carg_vdescripcion" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="carg_vabreviado" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="carg_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="carg_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="carg_sflag_estado" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_CARGO_LISTAR" Method="SGEP_CARGO_LISTAR">
+    <ElementType Name="SGEP_CARGO_LISTARResult">
+      <Column Name="carg_icod_cargo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="carg_vdescripcion" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="carg_vabreviado" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEP_CARGO_MODIFICAR" Method="SGEP_CARGO_MODIFICAR">
+    <Parameter Name="carg_icod_cargo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="carg_vdescripcion" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="carg_vabreviado" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="carg_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="carg_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_LISTAR_COMBO_AREA" Method="SGEP_LISTAR_COMBO_AREA">
+    <ElementType Name="SGEP_LISTAR_COMBO_AREAResult">
+      <Column Name="arec_icod_cargo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="arec_vdescripcion" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="arec_vabreviado" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEP_LISTAR_COMBO_CARGO" Method="SGEP_LISTAR_COMBO_CARGO">
+    <ElementType Name="SGEP_LISTAR_COMBO_CARGOResult">
+      <Column Name="carg_icod_cargo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="carg_vdescripcion" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="carg_vabreviado" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEP_CONCEPTOS_FIJOS_ELIMINAR" Method="SGEP_CONCEPTOS_FIJOS_ELIMINAR">
+    <Parameter Name="fdpc_icod_fondo_pension" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fdpd_iusuario_elimina" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fdpd_vcp_elimina" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_CONCEPTOS_MIXTOS_ELIMINAR" Method="SGEP_CONCEPTOS_MIXTOS_ELIMINAR">
+    <Parameter Name="fdpc_icod_fondo_pension" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fdpd2_iusuario_elimina" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fdpd2_vcp_elimina" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_FONDOS_PENSIONES_CONCEPTO_ELIMINAR" Method="SGEP_FONDOS_PENSIONES_CONCEPTO_ELIMINAR">
+    <Parameter Name="fdpd_icod_fondo_pension_concepto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fdpd_iusuario_elimina" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fdpd_vcp_elimina" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_FONDOS_PENSIONES_CONCEPTO_MIXTAS_ELIMINAR" Method="SGEP_FONDOS_PENSIONES_CONCEPTO_MIXTAS_ELIMINAR">
+    <Parameter Name="fdpd2_icod_fp_concepto_mixto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fdpd2_iusuario_elimina" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fdpd2_vcp_elimina" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_FONDOS_PENSIONES_CONCEPTOS_INSERTAR" Method="SGEP_FONDOS_PENSIONES_CONCEPTOS_INSERTAR">
+    <Parameter Name="fdpd_icod_fondo_pension_concepto" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="fdpc_icod_fondo_pension" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fdpd_iid_vcodigo_fondo_concepto" Type="System.String" DbType="VarChar(2)" />
+    <Parameter Name="fdpd_vdescripcion_concepto" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="fdpd_nporcentaje_concepto" Type="System.Decimal" DbType="Decimal(5,2)" />
+    <Parameter Name="fdpd_ntope_concpeto" Type="System.Decimal" DbType="Decimal(8,2)" />
+    <Parameter Name="fdpd_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fdpd_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="fdpd_flag_estado" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_FONDOS_PENSIONES_CONCEPTOS_LISTAR" Method="SGEP_FONDOS_PENSIONES_CONCEPTOS_LISTAR">
+    <Parameter Name="fdpc_icod_fondo_pension" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEP_FONDOS_PENSIONES_CONCEPTOS_LISTARResult">
+      <Column Name="fdpd_icod_fondo_pension_concepto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fdpd_iid_vcodigo_fondo_concepto" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="fdpd_vdescripcion_concepto" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="fdpd_nporcentaje_concepto" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="fdpd_ntope_concpeto" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="fdpc_icod_fondo_pension" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEP_FONDOS_PENSIONES_CONCEPTOS_MIXTAS_INSERTAR" Method="SGEP_FONDOS_PENSIONES_CONCEPTOS_MIXTAS_INSERTAR">
+    <Parameter Name="fdpd2_icod_fp_concepto_mixto" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="fdpc_icod_fondo_pension" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fdpd2_iid_vcodigo_fp_concepto_mixto" Type="System.String" DbType="VarChar(2)" />
+    <Parameter Name="fdpd2_vdescripcion_concepto_mixto" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="fdpd2_nporcentaje_concepto_mixto" Type="System.Decimal" DbType="Decimal(5,2)" />
+    <Parameter Name="fdpd2_ntope_concepto_mixto" Type="System.Decimal" DbType="Decimal(8,2)" />
+    <Parameter Name="fdpd2_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fdpd2_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="fdpd2_flag_estado" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_FONDOS_PENSIONES_CONCEPTOS_MIXTAS_MODIFICAR" Method="SGEP_FONDOS_PENSIONES_CONCEPTOS_MIXTAS_MODIFICAR">
+    <Parameter Name="fdpd2_icod_fp_concepto_mixto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fdpd2_vdescripcion_concepto_mixto" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="fdpd2_nporcentaje_concepto_mixto" Type="System.Decimal" DbType="Decimal(5,2)" />
+    <Parameter Name="fdpd2_ntope_concepto_mixto" Type="System.Decimal" DbType="Decimal(8,2)" />
+    <Parameter Name="fdpd2_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fdpd2_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_FONDOS_PENSIONES_CONCEPTOS_MIXTOS_LISTAR" Method="SGEP_FONDOS_PENSIONES_CONCEPTOS_MIXTOS_LISTAR">
+    <Parameter Name="fdpc_icod_fondo_pension" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEP_FONDOS_PENSIONES_CONCEPTOS_MIXTOS_LISTARResult">
+      <Column Name="fdpd2_icod_fp_concepto_mixto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fdpd2_iid_vcodigo_fp_concepto_mixto" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="fdpd2_vdescripcion_concepto_mixto" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="fdpd2_nporcentaje_concepto_mixto" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="fdpd2_ntope_concepto_mixto" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="fdpc_icod_fondo_pension" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEP_FONDOS_PENSIONES_CONCEPTOS_MODIFICAR" Method="SGEP_FONDOS_PENSIONES_CONCEPTOS_MODIFICAR">
+    <Parameter Name="fdpd_icod_fondo_pension_concepto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fdpd_vdescripcion_concepto" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="fdpd_nporcentaje_concepto" Type="System.Decimal" DbType="Decimal(5,2)" />
+    <Parameter Name="fdpd_ntope_concpeto" Type="System.Decimal" DbType="Decimal(8,2)" />
+    <Parameter Name="fdpd_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fdpd_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_FONDOS_PENSIONES_ELIMINAR" Method="SGEP_FONDOS_PENSIONES_ELIMINAR">
+    <Parameter Name="fdpc_icod_fondo_pension" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fdpc_iusuario_elimina" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fdpc_vcp_elimina" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_FONDOS_PENSIONES_INSERTAR" Method="SGEP_FONDOS_PENSIONES_INSERTAR">
+    <Parameter Name="fdpc_icod_fondo_pension" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="fdpc_iid_vcodigo_fondo" Type="System.String" DbType="VarChar(2)" />
+    <Parameter Name="fdpc_vdescripcion" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="fdpc_nporcentaje_fijo" Type="System.Decimal" DbType="Decimal(5,2)" />
+    <Parameter Name="fdpc_nporcentaje_mixto" Type="System.Decimal" DbType="Decimal(5,2)" />
+    <Parameter Name="tablc_iid_tipo_fondo_pensiones" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="fdpc_situacion" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="fdpc_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fdpc_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="fdpc_flag_estado" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_FONDOS_PENSIONES_LISTAR" Method="SGEP_FONDOS_PENSIONES_LISTAR">
+    <ElementType Name="SGEP_FONDOS_PENSIONES_LISTARResult">
+      <Column Name="fdpc_icod_fondo_pension" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fdpc_iid_vcodigo_fondo" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="fdpc_vdescripcion" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="fdpc_nporcentaje_fijo" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="fdpc_nporcentaje_mixto" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_fondo_pensiones" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="fdpc_situacion" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEP_FONDOS_PENSIONES_MODIFICAR" Method="SGEP_FONDOS_PENSIONES_MODIFICAR">
+    <Parameter Name="fdpc_icod_fondo_pension" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fdpc_vdescripcion" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="fdpc_nporcentaje_fijo" Type="System.Decimal" DbType="Decimal(5,2)" />
+    <Parameter Name="fdpc_nporcentaje_mixto" Type="System.Decimal" DbType="Decimal(5,2)" />
+    <Parameter Name="tablc_iid_tipo_fondo_pensiones" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="fdpc_situacion" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="fdpc_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fdpc_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_ACTUALIZAR_FONDOS_PENSIONES_FIJO" Method="SGEP_ACTUALIZAR_FONDOS_PENSIONES_FIJO">
+    <Parameter Name="codigo" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEP_ACTUALIZAR_FONDOS_PENSIONES_FIJOResult">
+      <Column Name="fdpd_icod_fondo_pension_concepto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fdpc_icod_fondo_pension" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fdpd_iid_vcodigo_fondo_concepto" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="fdpd_vdescripcion_concepto" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="fdpd_nporcentaje_concepto" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="fdpd_ntope_concpeto" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="fdpd_flag_estado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="fdpd_iusuario_crea" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fdpd_vpc_crea" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="fdpd_sfecha_crea" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="fdpd_iusuario_modifica" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fdpd_vpc_modifica" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="fdpd_sfecha_modifica" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="fdpd_iusuario_elimina" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fdpd_vcp_elimina" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="fdpd_sfecha_elimina" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEP_ACTUALIZAR_FONDOS_PENSIONES_MIXTO" Method="SGEP_ACTUALIZAR_FONDOS_PENSIONES_MIXTO">
+    <Parameter Name="codigo" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_TABLA_PLANILLA_DETALLE_ELIMINAR" Method="SGEP_TABLA_PLANILLA_DETALLE_ELIMINAR">
+    <Parameter Name="tbpd_icod_tabla_planilla_detalle" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tbpd_iusuario_elimina" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tbpd_vcp_elimina" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_TABLA_PLANILLA_DETALLE_INSERTAR" Method="SGEP_TABLA_PLANILLA_DETALLE_INSERTAR">
+    <Parameter Name="tbpd_icod_tabla_planilla_detalle" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="tbpc_icod_tabla_planilla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tbpd_iid_vcodigo_tabla_planilla_detalle" Type="System.String" DbType="VarChar(8)" />
+    <Parameter Name="tbpd_vdescripcion_detalle" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="tbpd_vabreviado_detalle" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="tbpd_votros_datos" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="tbpd_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tbpd_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="tbpd_flag_estado" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_TABLA_PLANILLA_DETALLE_LISTAR" Method="SGEP_TABLA_PLANILLA_DETALLE_LISTAR">
+    <Parameter Name="tbpc_icod_tabla_planilla" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEP_TABLA_PLANILLA_DETALLE_LISTARResult">
+      <Column Name="tbpd_icod_tabla_planilla_detalle" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tbpd_iid_vcodigo_tabla_planilla_detalle" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="tbpd_vabreviado_detalle" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tbpd_vdescripcion_detalle" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="tbpd_votros_datos" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEP_TABLA_PLANILLA_DETALLE_MODIFICAR" Method="SGEP_TABLA_PLANILLA_DETALLE_MODIFICAR">
+    <Parameter Name="tbpd_icod_tabla_planilla_detalle" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tbpd_vdescripcion_detalle" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="tbpd_vabreviado_detalle" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="tbpd_votros_datos" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="tbpd_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tbpd_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_TABLA_PLANILLA_ELIMINAR" Method="SGEP_TABLA_PLANILLA_ELIMINAR">
+    <Parameter Name="tbpc_icod_tabla_planilla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tbpc_iusuario_elimina" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tbpc_vcp_elimina" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_TABLA_PLANILLA_INSERTAR" Method="SGEP_TABLA_PLANILLA_INSERTAR">
+    <Parameter Name="tbpc_icod_tabla_planilla" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="tbpc_iid_vcodigo_tabla_planilla" Type="System.String" DbType="VarChar(3)" />
+    <Parameter Name="tbpc_vdescripcion" Type="System.String" DbType="VarChar(60)" />
+    <Parameter Name="tbpc_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tbpc_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="tbpc_flag_estado" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_TABLA_PLANILLA_LISTAR" Method="SGEP_TABLA_PLANILLA_LISTAR">
+    <ElementType Name="SGEP_TABLA_PLANILLA_LISTARResult">
+      <Column Name="tbpc_icod_tabla_planilla" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tbpc_iid_vcodigo_tabla_planilla" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="tbpc_vdescripcion" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEP_TABLA_PLANILLA_MODIFICAR" Method="SGEP_TABLA_PLANILLA_MODIFICAR">
+    <Parameter Name="tbpc_icod_tabla_planilla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tbpc_vdescripcion" Type="System.String" DbType="VarChar(60)" />
+    <Parameter Name="tbpc_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tbpc_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_DETALLE_TABLA_ELIMINAR" Method="SGEP_DETALLE_TABLA_ELIMINAR">
+    <Parameter Name="tbpc_icod_tabla_planilla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tbpd_iusuario_elimina" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tbpd_vcp_elimina" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_INGRESO_LISTAR" Method="SGEP_INGRESO_LISTAR">
+    <ElementType Name="SGEP_INGRESO_LISTARResult">
+      <Column Name="cipc_icod_concepto_ingreso_plan" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tbpc_icod_tipo_planilla" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TipoPlanilla" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="tbpc_icod_situacion_concepto_plan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Situacion" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="cipc_iid_concepto_ing_plan" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="cipc_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="cipc_bafecto_renta_quinta" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="tbpc_icod_tipo_concepto_planilla" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Tipo" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="tbpc_icod_tipo_accion_planilla" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Accion" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="cipc_nmonto_calculo_planilla" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="cipc_nmonto_porcentaje_planilla" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="tbpc_icod_tipo_calculo_planilla" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TipoCalculo" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ctcc_icod_cuenta_contable_debe" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ctacc_numero_cuenta_contable" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="ctcc_icod_cuenta_contable_haber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ctacc_numero_cuenta_contable_haber" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="cipc_flag_estado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEP_INGRESO_INSERTAR" Method="SGEP_INGRESO_INSERTAR">
+    <Parameter Name="cipc_icod_concepto_ingreso_plan" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="tbpc_icod_tipo_planilla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tbpc_icod_situacion_concepto_plan" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cipc_iid_concepto_ing_plan" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="cipc_vdescripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="cipc_bafecto_renta_quinta" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="tbpc_icod_tipo_concepto_planilla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tbpc_icod_tipo_accion_planilla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cipc_nmonto_calculo_planilla" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="cipc_nmonto_porcentaje_planilla" Type="System.Decimal" DbType="Decimal(5,2)" />
+    <Parameter Name="tbpc_icod_tipo_calculo_planilla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctcc_icod_cuenta_contable_debe" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctcc_icod_cuenta_contable_haber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cipc_flag_estado" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="cipc_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cipc_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="ctacc_numero_cuenta_contable" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="ctacc_numero_cuenta_contable_haber" Type="System.String" DbType="VarChar(15)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_INGRESO_MODIFICAR" Method="SGEP_INGRESO_MODIFICAR">
+    <Parameter Name="cipc_icod_concepto_ingreso_plan" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tbpc_icod_tipo_planilla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tbpc_icod_situacion_concepto_plan" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cipc_vdescripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="cipc_bafecto_renta_quinta" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="tbpc_icod_tipo_concepto_planilla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tbpc_icod_tipo_accion_planilla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cipc_nmonto_calculo_planilla" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="cipc_nmonto_porcentaje_planilla" Type="System.Decimal" DbType="Decimal(5,2)" />
+    <Parameter Name="tbpc_icod_tipo_calculo_planilla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctcc_icod_cuenta_contable_debe" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctcc_icod_cuenta_contable_haber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cipc_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cipc_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="ctacc_numero_cuenta_contable" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="ctacc_numero_cuenta_contable_haber" Type="System.String" DbType="VarChar(15)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_INGRESO_ELIMINAR" Method="SGEP_INGRESO_ELIMINAR">
+    <Parameter Name="cipc_icod_concepto_ingreso_plan" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cipc_iusuario_elimina" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cipc_vcp_elimina" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_LISTAR_COMBO_TABLA_PLANILLA_DETALLE" Method="SGEP_LISTAR_COMBO_TABLA_PLANILLA_DETALLE">
+    <Parameter Name="COD" Parameter="cOD" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEP_LISTAR_COMBO_TABLA_PLANILLA_DETALLEResult">
+      <Column Name="tbpc_icod_tabla_planilla" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tbpd_icod_tabla_planilla_detalle" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tbpd_vdescripcion_detalle" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEP_CONCEPTO_DESCUENTO_LISTAR" Method="SGEP_CONCEPTO_DESCUENTO_LISTAR">
+    <ElementType Name="SGEP_CONCEPTO_DESCUENTO_LISTARResult">
+      <Column Name="cdpc_icod_concepto_descuento_plan" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tbpc_icod_tipo_planilla" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TipoPlanilla" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="tbpc_icod_situacion_concepto_plan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Situacion" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="cdpc_iid_concepto_desc_plan" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="cdpc_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tbpc_icod_tipo_accion_planilla" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Accion" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="cdpc_nmonto_calculo_planilla" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="cdpc_nmonto_porcentaje_planilla" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="tbpc_icod_tipo_calculo_planilla" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TipoCalculo" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ctcc_icod_cuenta_contable_debe" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ctacc_numero_cuenta_contable" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="ctcc_icod_cuenta_contable_haber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ctacc_numero_cuenta_contable_haber" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="cdpc_flag_estado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEP_CONCEPTO_DESCUENTO_INSERTAR" Method="SGEP_CONCEPTO_DESCUENTO_INSERTAR">
+    <Parameter Name="cdpc_icod_concepto_descuento_plan" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="tbpc_icod_tipo_planilla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tbpc_icod_situacion_concepto_plan" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cdpc_iid_concepto_desc_plan" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="cdpc_vdescripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="tbpc_icod_tipo_accion_planilla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cdpc_nmonto_calculo_planilla" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="cdpc_nmonto_porcentaje_planilla" Type="System.Decimal" DbType="Decimal(5,2)" />
+    <Parameter Name="tbpc_icod_tipo_calculo_planilla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctcc_icod_cuenta_contable_debe" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctcc_icod_cuenta_contable_haber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cdpc_flag_estado" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="cdpc_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cdpc_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="ctacc_numero_cuenta_contable" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="ctacc_numero_cuenta_contable_haber" Type="System.String" DbType="VarChar(15)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_CONCEPTO_DESCUENTO_MODIFICAR" Method="SGEP_CONCEPTO_DESCUENTO_MODIFICAR">
+    <Parameter Name="cdpc_icod_concepto_descuento_plan" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tbpc_icod_tipo_planilla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tbpc_icod_situacion_concepto_plan" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cdpc_vdescripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="tbpc_icod_tipo_accion_planilla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cdpc_nmonto_calculo_planilla" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="cdpc_nmonto_porcentaje_planilla" Type="System.Decimal" DbType="Decimal(5,2)" />
+    <Parameter Name="tbpc_icod_tipo_calculo_planilla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctcc_icod_cuenta_contable_debe" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctcc_icod_cuenta_contable_haber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cdpc_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cdpc_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="ctacc_numero_cuenta_contable" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="ctacc_numero_cuenta_contable_haber" Type="System.String" DbType="VarChar(15)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_CONCEPTO_DESCUENTO_ELIMINAR" Method="SGEP_CONCEPTO_DESCUENTO_ELIMINAR">
+    <Parameter Name="cdpc_icod_concepto_descuento_plan" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cdpc_iusuario_elimina" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cdpc_vcp_elimina" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_CONCEPTO_APORTACION_LISTAR" Method="SGEP_CONCEPTO_APORTACION_LISTAR">
+    <ElementType Name="SGEP_CONCEPTO_APORTACION_LISTARResult">
+      <Column Name="capc_icod_concepto_aportaciones_plan" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tbpc_icod_tipo_planilla" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TipoPlanilla" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="tbpc_icod_situacion_concepto_plan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Situacion" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="capc_iid_concepto_apor_plan" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="capc_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tbpc_icod_tipo_accion_planilla" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Accion" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="capc_nmonto_calculo_planilla" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="capc_nmonto_porcentaje_planilla" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="tbpc_icod_tipo_calculo_planilla" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TipoCalculo" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ctcc_icod_cuenta_contable_debe" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ctcc_icod_cuenta_contable_haber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="capc_flag_estado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ctacc_numero_cuenta_contable" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="ctacc_numero_cuenta_contable_haber" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEP_CONCEPTO_APORTACION_INSERTAR" Method="SGEP_CONCEPTO_APORTACION_INSERTAR">
+    <Parameter Name="capc_icod_concepto_aportaciones_plan" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="tbpc_icod_tipo_planilla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tbpc_icod_situacion_concepto_plan" Type="System.Int32" DbType="Int" />
+    <Parameter Name="capc_iid_concepto_apor_plan" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="capc_vdescripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="tbpc_icod_tipo_accion_planilla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="capc_nmonto_calculo_planilla" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="capc_nmonto_porcentaje_planilla" Type="System.Decimal" DbType="Decimal(5,2)" />
+    <Parameter Name="tbpc_icod_tipo_calculo_planilla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctcc_icod_cuenta_contable_debe" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctcc_icod_cuenta_contable_haber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="capc_flag_estado" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="capc_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="capc_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="ctacc_numero_cuenta_contable" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="ctacc_numero_cuenta_contable_haber" Type="System.String" DbType="VarChar(15)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_CONCEPTO_APORTACION_MODIFICAR" Method="SGEP_CONCEPTO_APORTACION_MODIFICAR">
+    <Parameter Name="capc_icod_concepto_aportaciones_plan" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tbpc_icod_tipo_planilla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tbpc_icod_situacion_concepto_plan" Type="System.Int32" DbType="Int" />
+    <Parameter Name="capc_vdescripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="tbpc_icod_tipo_accion_planilla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="capc_nmonto_calculo_planilla" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="capc_nmonto_porcentaje_planilla" Type="System.Decimal" DbType="Decimal(5,2)" />
+    <Parameter Name="tbpc_icod_tipo_calculo_planilla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctcc_icod_cuenta_contable_debe" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ctcc_icod_cuenta_contable_haber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="capc_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="capc_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="ctacc_numero_cuenta_contable" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="ctacc_numero_cuenta_contable_haber" Type="System.String" DbType="VarChar(15)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_CONCEPTO_APORTACION_ELIMINAR" Method="SGEP_CONCEPTO_APORTACION_ELIMINAR">
+    <Parameter Name="capc_icod_concepto_aportaciones_plan" Type="System.Int32" DbType="Int" />
+    <Parameter Name="capc_iusuario_elimina" Type="System.Int32" DbType="Int" />
+    <Parameter Name="capc_vcp_elimina" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_PERSONAL_ELIMINAR" Method="SGEP_PERSONAL_ELIMINAR">
+    <Parameter Name="perc_icod_personal" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_isuario_elimina" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_vpc_elimina" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_PERSONAL_CCOSTOS_ELIMINAR" Method="SGEP_PERSONAL_CCOSTOS_ELIMINAR">
+    <Parameter Name="pccd_icod_ccosto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pccd_iusuario_elimina" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pccd_vcp_elimina" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_PERSONAL_CONTRATACION_ELIMINAR" Method="SGE_PERSONAL_CONTRATACION_ELIMINAR">
+    <Parameter Name="perc_icod_personal_contrato" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pctd_iusuario_elimina" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pctd_vcp_elimina" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_ARCHIVOS_PERSONAL_MODIFICAR" Method="SGE_ARCHIVOS_PERSONAL_MODIFICAR">
+    <Parameter Name="arch_icod_archivos" Type="System.Int32" DbType="Int" />
+    <Parameter Name="arch_iid_correlativo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="arch_iid_personal" Type="System.Int32" DbType="Int" />
+    <Parameter Name="arch_vdescripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="arch_vruta" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="arch_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="arch_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_ARCHIVOS_PERSONAL_LISTAR" Method="SGE_ARCHIVOS_PERSONAL_LISTAR">
+    <Parameter Name="ocod_icod_detalle_oc" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_ARCHIVOS_PERSONAL_LISTARResult">
+      <Column Name="arch_icod_archivos" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="arch_iid_correlativo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="arch_iid_personal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="arch_vdescripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="arch_vruta" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_ARCHIVOS_PERSONAL_INSERTAR" Method="SGE_ARCHIVOS_PERSONAL_INSERTAR">
+    <Parameter Name="arch_icod_archivos" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="arch_iid_correlativo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="arch_iid_orden_compra_local" Type="System.Int32" DbType="Int" />
+    <Parameter Name="arch_vdescripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="arch_vruta" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="arch_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="arch_vcp_crea" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="arch_flag_estado" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_ARCHIVOS_PERSONAL_ELIMINAR" Method="SGE_ARCHIVOS_PERSONAL_ELIMINAR">
+    <Parameter Name="arch_icod_archivos" Type="System.Int32" DbType="Int" />
+    <Parameter Name="arch_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="arch_vcp_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_PERSONAL_CONTRATACIONES_LISTAR" Method="SGE_PERSONAL_CONTRATACIONES_LISTAR">
+    <Parameter Name="perc_icod_personal" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_PERSONAL_CONTRATACIONES_LISTARResult">
+      <Column Name="pctd_icod_persona_contratacion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="pctd_sfecha_ini_contrato" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="pctd_sfecha_fin_contrato" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="pctd_sfecha_ini_actividad" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="pctd_sfecha_fin_actividad" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="pctd_sfecha_cese" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="tbpd_icod_motivo_cese" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="strMotivo" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_PERSONAL_CONTRACION_MODIFICAR" Method="SGE_PERSONAL_CONTRACION_MODIFICAR">
+    <Parameter Name="pctd_icod_persona_contrato" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_icod_personal" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pctd_sfecha_ini_contrato" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="pctd_sfecha_fin_contrato" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="pctd_sfecha_ini_actividad" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="pctd_sfecha_fin_actividad" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="pctd_sfecha_cese" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="tbpd_icod_motivo_cese" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pctd_iusuario_modificar" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pctd_vpc_modificar" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_PERSONAL_CONTRACION_INSERTAR" Method="SGE_PERSONAL_CONTRACION_INSERTAR">
+    <Parameter Name="perc_icod_personal" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pctd_sfecha_ini_contrato" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="pctd_sfecha_fin_contrato" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="pctd_sfecha_ini_actividad" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="pctd_sfecha_fin_actividad" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="pctd_sfecha_cese" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="tbpd_icod_motivo_cese" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pctd_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pctd_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_PLANILLA_PERSONAL_ELIMINAR" Method="SGE_PLANILLA_PERSONAL_ELIMINAR">
+    <Parameter Name="planc_icod_planilla_personal" Type="System.Int32" DbType="Int" />
+    <Parameter Name="planc_iusuario_elimina" Type="System.Int32" DbType="Int" />
+    <Parameter Name="planc_vpc_elimina" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_PLANILLA_PERSONAL_DETALLE_ELIMINAR" Method="SGE_PLANILLA_PERSONAL_DETALLE_ELIMINAR">
+    <Parameter Name="pland_icod_planilla_personal_det" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pland_iusuario_elimina" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pland_vpc_elimina" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_PERSONAL_CONTROL_CCOSTOS_LISTAR" Method="SGEP_PERSONAL_CONTROL_CCOSTOS_LISTAR">
+    <ElementType Name="SGEP_PERSONAL_CONTROL_CCOSTOS_LISTARResult">
+      <Column Name="pccd_icod_ccosto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="perc_icod_personal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="perc_vnum_doc" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="pccd_sfecha" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ccoc_numero_centro_costo" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="ccoc_vdescripcion_ccosto" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="pccd_iusuario_crea" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pccd_vpc_crea" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="pccd_sfecha_crea" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="pccd_iusuario_modifica" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pccd_vpc_modifica" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="pccd_sfecha_modifica" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="pccd_iusuario_elimina" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pccd_vcp_elimina" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="pccd_sfecha_elimina" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="pccd_flag_estado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="pccd_imes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pccd_iaño" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="strMes" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_PROVISION_PLANILLA_PERSONAL_ELIMINAR" Method="SGE_PROVISION_PLANILLA_PERSONAL_ELIMINAR">
+    <Parameter Name="planc_icod_planilla_personal" Type="System.Int32" DbType="Int" />
+    <Parameter Name="planc_iusuario_elimina" Type="System.Int32" DbType="Int" />
+    <Parameter Name="planc_vpc_elimina" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_PROVISION_PLANILLA_PERSONAL_DETALLE_ELIMINAR" Method="SGE_PROVISION_PLANILLA_PERSONAL_DETALLE_ELIMINAR">
+    <Parameter Name="pland_icod_planilla_personal_det" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pland_iusuario_elimina" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pland_vpc_elimina" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_PROVISION_PLANILLA_PERSONAL_INSERTAR" Method="SGE_PROVISION_PLANILLA_PERSONAL_INSERTAR">
+    <Parameter Name="planc_icod_planilla_personal" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="planc_iid_planilla_personal" Type="System.Int32" DbType="Int" />
+    <Parameter Name="mesec_iid_mes" Type="System.Int32" DbType="Int" />
+    <Parameter Name="planc_iid_anio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="planc_vdescripcion" Type="System.String" DbType="VarChar(80)" />
+    <Parameter Name="tablc_iid_situacion_planilla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="planc_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="planc_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="planc_iid_tipo_planilla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="planc_sfecha" Type="System.DateTime" DbType="SmallDateTime" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_PROVISION_PLANILLA_PERSONAL_LISTAR" Method="SGE_PROVISION_PLANILLA_PERSONAL_LISTAR">
+    <ElementType Name="SGE_PROVISION_PLANILLA_PERSONAL_LISTARResult">
+      <Column Name="planc_icod_planilla_personal" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="planc_iid_planilla_personal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mesec_iid_mes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Mes" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="planc_iid_anio" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="planc_vdescripcion" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="tablc_iid_situacion_planilla" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Situacion" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Tipo" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="planc_iid_tipo_planilla" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="planc_sfecha" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_PROVISION_PLANILLA_PERSONAL_MODIFICAR" Method="SGE_PROVISION_PLANILLA_PERSONAL_MODIFICAR">
+    <Parameter Name="planc_icod_planilla_personal" Type="System.Int32" DbType="Int" />
+    <Parameter Name="planc_iid_planilla_personal" Type="System.Int32" DbType="Int" />
+    <Parameter Name="mesec_iid_mes" Type="System.Int32" DbType="Int" />
+    <Parameter Name="planc_iid_anio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="planc_vdescripcion" Type="System.String" DbType="VarChar(80)" />
+    <Parameter Name="tablc_iid_situacion_planilla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="planc_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="planc_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="planc_sfecha" Type="System.DateTime" DbType="SmallDateTime" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_PERSONAL_CCOSTOS_INSERTAR" Method="SGEP_PERSONAL_CCOSTOS_INSERTAR">
+    <Parameter Name="pccd_icod_ccosto" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="perc_icod_personal" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_vnum_doc" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="pccd_sfecha" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="ccoc_numero_centro_costo" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="ccoc_vdescripcion_ccosto" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="pccd_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pccd_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="pccd_flag_estado" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="pccd_imes" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pccd_iaño" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pccd_nmonto_vacaciones" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pccd_nmonto_gratificaciones" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pccd_nmonto_cts" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_PERSONAL_CCOSTOS_MODIFICAR" Method="SGEP_PERSONAL_CCOSTOS_MODIFICAR">
+    <Parameter Name="pccd_icod_ccosto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_icod_personal" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_vnum_doc" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="pccd_sfecha" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="ccoc_numero_centro_costo" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="ccoc_vdescripcion_ccosto" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="pccd_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pccd_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="pccd_imes" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pccd_iaño" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pccd_nmonto_vacaciones" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pccd_nmonto_gratificaciones" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pccd_nmonto_cts" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_PARAMETRO_PLANILLA_LISTAR" Method="SGEP_PARAMETRO_PLANILLA_LISTAR">
+    <ElementType Name="SGEP_PARAMETRO_PLANILLA_LISTARResult">
+      <Column Name="prpc_nasignacion_familiar" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="prpc_ngratificacion_essalud" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="prpc_ngratificacion_eps" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="prpc_id_cta_remuneracion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CuentaRemuneracion" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="prpc_id_cta_vacaciones" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CuentaVacaciones" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="prpc_id_cta_gratificaciones" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CuentaGratificaciones" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="prpc_id_cta_cts" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CuentaCTS" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="prpc_nporc_essalud" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="prpc_nporc_eps_pacifico" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="prpc_nporc_eps_essalud" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="prpc_nsueldo_minimo" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="prpc_id_cta_destino_vacaciones" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CuentaDestinoVacaciones" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="prpc_id_cta_destino_gratificaciones" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CuentaDestinoGratificaciones" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="prpc_id_cta_destino_cts" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CuentaDestinoCTS" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="prpc_ndias_trabajo" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEP_PARAMETRO_PLANILLA_INSERTAR" Method="SGEP_PARAMETRO_PLANILLA_INSERTAR">
+    <Parameter Name="prpc_nasignacion_familiar" Type="System.Decimal" DbType="Decimal(10,2)" />
+    <Parameter Name="prpc_ngratificacion_essalud" Type="System.Decimal" DbType="Decimal(6,2)" />
+    <Parameter Name="prpc_ngratificacion_eps" Type="System.Decimal" DbType="Decimal(6,2)" />
+    <Parameter Name="prpc_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prpc_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="prpc_id_cta_remuneracion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prpc_id_cta_vacaciones" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prpc_id_cta_gratificaciones" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prpc_id_cta_cts" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prpc_nporc_essalud" Type="System.Decimal" DbType="Decimal(10,2)" />
+    <Parameter Name="prpc_nporc_eps_pacifico" Type="System.Decimal" DbType="Decimal(10,2)" />
+    <Parameter Name="prpc_nporc_eps_essalud" Type="System.Decimal" DbType="Decimal(10,2)" />
+    <Parameter Name="prpc_nsueldo_minimo" Type="System.Decimal" DbType="Decimal(10,2)" />
+    <Parameter Name="prpc_id_cta_destino_vacaciones" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prpc_id_cta_destino_gratificaciones" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prpc_id_cta_destino_cts" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prpc_ndias_trabajo" Type="System.Decimal" DbType="Decimal(10,2)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_PARAMETRO_PLANILLA_MODIFICAR" Method="SGEP_PARAMETRO_PLANILLA_MODIFICAR">
+    <Parameter Name="prpc_nasignacion_familiar" Type="System.Decimal" DbType="Decimal(10,2)" />
+    <Parameter Name="prpc_ngratificacion_essalud" Type="System.Decimal" DbType="Decimal(6,2)" />
+    <Parameter Name="prpc_ngratificacion_eps" Type="System.Decimal" DbType="Decimal(6,2)" />
+    <Parameter Name="prpc_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prpc_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="prpc_id_cta_remuneracion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prpc_id_cta_vacaciones" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prpc_id_cta_gratificaciones" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prpc_id_cta_cts" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prpc_nporc_essalud" Type="System.Decimal" DbType="Decimal(10,2)" />
+    <Parameter Name="prpc_nporc_eps_pacifico" Type="System.Decimal" DbType="Decimal(10,2)" />
+    <Parameter Name="prpc_nporc_eps_essalud" Type="System.Decimal" DbType="Decimal(10,2)" />
+    <Parameter Name="prpc_nsueldo_minimo" Type="System.Decimal" DbType="Decimal(10,2)" />
+    <Parameter Name="prpc_id_cta_destino_vacaciones" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prpc_id_cta_destino_gratificaciones" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prpc_id_cta_destino_cts" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prpc_ndias_trabajo" Type="System.Decimal" DbType="Decimal(10,2)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_PROVISION_PLANILLA_PERSONAL_DETALLE_LISTAR_GRATIF" Method="SGE_PROVISION_PLANILLA_PERSONAL_DETALLE_LISTAR_GRATIF">
+    <ElementType Name="SGE_PROVISION_PLANILLA_PERSONAL_DETALLE_LISTAR_GRATIFResult">
+      <Column Name="pland_icod_planilla_personal_det" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="pland_iid_planilla_personal_det" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="planc_icod_planilla_personal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pland_ape_nom" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="pland_num_doc" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="pland_cussp" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="pland_rem_basica" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_icod_personal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pland_beps" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="pland_sfecha_incio" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="pland_sfecha_cese" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="pland_basignacion_familiar" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="prpc_nasignacion_familiar" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="prpc_ngratificacion_essalud" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="prpc_ngratificacion_eps" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="pland_nasignacion_familiar" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="pland_nrem_computable" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_nmonto_gratificacion" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_nbonificacion_mes" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_ncts_gratificacion" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_nctssexto_gratificacion" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_ncts_comision" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_nctssexto_comision" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_ncts_total" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_icts_meses" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pland_icts_dias" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pland_ncts_meses_monto" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_ncts_dias_monto" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_ncts_por_mes" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_nctsprovision_acumulada" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_nctsprovision_mes" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_ncts_horas_extras" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEP_CCOSTOS_LISTAR" Method="SGEP_CCOSTOS_LISTAR">
+    <ElementType Name="SGEP_CCOSTOS_LISTARResult">
+      <Column Name="pccd_icod_ccosto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="perc_icod_personal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="perc_vnum_doc" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="pccd_sfecha" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ccoc_numero_centro_costo" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="ccoc_vdescripcion_ccosto" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="pccd_iusuario_crea" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pccd_vpc_crea" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="pccd_sfecha_crea" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="pccd_iusuario_modifica" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pccd_vpc_modifica" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="pccd_sfecha_modifica" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="pccd_iusuario_elimina" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pccd_vcp_elimina" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="pccd_sfecha_elimina" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="pccd_flag_estado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="pccd_imes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pccd_iaño" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="strMes" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="pccd_nmonto_vacaciones" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pccd_nmonto_gratificaciones" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pccd_nmonto_cts" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="cecoc_icod_centro_costo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEP_PERSONAL_CCOSTOS_LISTAR" Method="SGEP_PERSONAL_CCOSTOS_LISTAR">
+    <Parameter Name="perc_icod_personal" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEP_PERSONAL_CCOSTOS_LISTARResult">
+      <Column Name="pccd_icod_ccosto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="perc_icod_personal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="perc_vnum_doc" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="pccd_sfecha" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ccoc_numero_centro_costo" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="ccoc_vdescripcion_ccosto" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="pccd_iusuario_crea" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pccd_vpc_crea" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="pccd_sfecha_crea" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="pccd_iusuario_modifica" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pccd_vpc_modifica" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="pccd_sfecha_modifica" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="pccd_iusuario_elimina" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pccd_vcp_elimina" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="pccd_sfecha_elimina" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="pccd_flag_estado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="pccd_imes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pccd_iaño" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="strMes" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="pccd_nmonto_vacaciones" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pccd_nmonto_gratificaciones" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pccd_nmonto_cts" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEP_INICIAL_PROVISION_PLANILLA_LISTAR" Method="SGEP_INICIAL_PROVISION_PLANILLA_LISTAR">
+    <ElementType Name="SGEP_INICIAL_PROVISION_PLANILLA_LISTARResult">
+      <Column Name="ippc_icod_inicial_provision_planilla" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ippc_iid_inicial_provision_planilla" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ippc_vdescripcion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEP_INICIAL_PROVISION_PLANILLA_MODIFICAR" Method="SGEP_INICIAL_PROVISION_PLANILLA_MODIFICAR">
+    <Parameter Name="ippc_icod_inicial_provision_planilla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ippc_vdescripcion" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="ippc_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ippc_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_INICIAL_PROVISION_PLANILLA_INSERTAR" Method="SGEP_INICIAL_PROVISION_PLANILLA_INSERTAR">
+    <Parameter Name="ippc_icod_inicial_provision_planilla" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ippc_iid_inicial_provision_planilla" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="ippc_vdescripcion" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="ippc_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ippc_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_INICIAL_PROVISION_PLANILLA_ELIMINAR" Method="SGEP_INICIAL_PROVISION_PLANILLA_ELIMINAR">
+    <Parameter Name="ippc_icod_inicial_provision_planilla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ippc_iusuario_elimina" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ippc_vcp_elimina" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_INICIAL_PROVISION_PLANILLA_DETALLE_MODIFICAR" Method="SGEP_INICIAL_PROVISION_PLANILLA_DETALLE_MODIFICAR">
+    <Parameter Name="ippd_icod_inicial_provision_planilla_detalle" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ippd_ninicial" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="ippd_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ippd_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_INICIAL_PROVISION_PLANILLA_DETALLE_INSERTAR" Method="SGEP_INICIAL_PROVISION_PLANILLA_DETALLE_INSERTAR">
+    <Parameter Name="ippd_icod_inicial_provision_planilla_detalle" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ippc_icod_inicial_provision_planilla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ippd_iid_inicial_provision_planilla_detalle" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="perc_icod_personal" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ippd_ninicial" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="ippd_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ippd_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_INICIAL_PROVISION_PLANILLA_DETALLE_LISTAR" Method="SGEP_INICIAL_PROVISION_PLANILLA_DETALLE_LISTAR">
+    <ElementType Name="SGEP_INICIAL_PROVISION_PLANILLA_DETALLE_LISTARResult">
+      <Column Name="ippd_icod_inicial_provision_planilla_detalle" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ippc_icod_inicial_provision_planilla" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ippd_iid_inicial_provision_planilla_detalle" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="perc_icod_personal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ippd_ninicial" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="ippd_sflag_estado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="strIdPersonal" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="strNomyApell" Type="System.String" DbType="VarChar(124)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEP_INICIAL_PROVISION_PLANILLA_DETALLE_ELIMINAR" Method="SGEP_INICIAL_PROVISION_PLANILLA_DETALLE_ELIMINAR">
+    <Parameter Name="ippd_icod_inicial_provision_planilla_detalle" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ippd_iusuario_elimina" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ippd_vcp_elimina" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_PERSONAL_INSERTAR" Method="SGEP_PERSONAL_INSERTAR">
+    <Parameter Name="perc_icod_personal" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="perc_iid_personal" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="perc_sfecha_registro" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="tbpd_icod_tip_doc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_vnum_doc" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="tbpd_icod_pais_emi_doc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_sfecha_nacimiento" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="perc_vapellido_pat" Type="System.String" DbType="VarChar(40)" />
+    <Parameter Name="perc_vapellido_mat" Type="System.String" DbType="VarChar(40)" />
+    <Parameter Name="perc_vnombres" Type="System.String" DbType="VarChar(40)" />
+    <Parameter Name="perc_icod_sexo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tbpd_icod_nacionalidad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tbpd_icod_telf_ldn" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_vnum_telf_ldn" Type="System.String" DbType="VarChar(9)" />
+    <Parameter Name="perc_vcorreo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="tbpd_icod_tip_via" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_vnomb_via" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="perc_vnum_via" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="perc_vdepartamento" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="perc_vinterior" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="perc_vmanzana" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="perc_vlote" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="perc_vkilometro" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="perc_vblock" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="perc_vetapa" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="tbpd_icod_tip_zona" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_vnomb_zona" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="perc_vreferencia" Type="System.String" DbType="VarChar(40)" />
+    <Parameter Name="tbpd_icod_ubi_geo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tarec_icod_est_civil" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tablc_iid_tipo_cargo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tablc_iid_tipo_area" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_vruc" Type="System.String" DbType="VarChar(11)" />
+    <Parameter Name="perc_vnum_seguro" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="perc_icod_tip_fdo_pension" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_sfech_inicio" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="perc_icod_afp" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_icod_tip_comision" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_vcuspp" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="perc_beps" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="perc_icod_tip_personal" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_nmont_basico" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="tarec_icod_moneda" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_brta_5ta" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="perc_nmont_ant_afecto" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="perc_nmont_retenido" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="perc_basig_familiar" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="perc_sfech_cese" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="perc_iid_situacion_perso" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_isuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="perc_hora_inicio_lv" Type="System.String" DbType="Char(15)" />
+    <Parameter Name="perc_hora_final_lv" Type="System.String" DbType="Char(15)" />
+    <Parameter Name="perc_hora_inicio_s" Type="System.String" DbType="Char(15)" />
+    <Parameter Name="perc_hora_final_s" Type="System.String" DbType="Char(15)" />
+    <Parameter Name="perc_hora_total_lv" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="perc_hora_total_s" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="perc_icod_tip_contrato" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_icod_banc_haber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_vbanc_haber" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="perc_icod_banc_cts" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_vbanc_cts" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="perc_sfecha_cese" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="perc_icod_motiv_cese" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_retenc_judicial" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="perc_nasig_transporte" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_PERSONAL_LISTAR" Method="SGEP_PERSONAL_LISTAR">
+    <ElementType Name="SGEP_PERSONAL_LISTARResult">
+      <Column Name="perc_icod_personal" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="perc_iid_personal" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="perc_sfecha_registro" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="tbpd_icod_tip_doc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="perc_vnum_doc" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="tbpd_icod_pais_emi_doc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="perc_sfecha_nacimiento" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="perc_vapellido_pat" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="perc_vapellido_mat" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="perc_vnombres" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="perc_icod_sexo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tbpd_icod_nacionalidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tbpd_icod_telf_ldn" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="perc_vnum_telf_ldn" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="perc_vcorreo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tbpd_icod_tip_via" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="perc_vnomb_via" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="perc_vnum_via" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="perc_vdepartamento" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="perc_vinterior" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="perc_vmanzana" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="perc_vlote" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="perc_vkilometro" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="perc_vblock" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="perc_vetapa" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="tbpd_icod_tip_zona" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="perc_vnomb_zona" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="perc_vreferencia" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="tbpd_icod_ubi_geo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tarec_icod_est_civil" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_cargo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_area" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="perc_vruc" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="perc_vnum_seguro" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="perc_icod_tip_fdo_pension" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="perc_sfech_inicio" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="perc_icod_afp" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="perc_icod_tip_comision" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="perc_vcuspp" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="perc_beps" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="perc_icod_tip_personal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="perc_nmont_basico" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="tarec_icod_moneda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="perc_brta_5ta" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="perc_nmont_ant_afecto" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="perc_nmont_retenido" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="perc_basig_familiar" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="perc_sfech_cese" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ApellNomb" Type="System.String" DbType="VarChar(124)" CanBeNull="true" />
+      <Column Name="perc_iid_situacion_perso" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="strCargo" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="strArea" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="perc_hora_inicio_lv" Type="System.String" DbType="Char(15)" CanBeNull="true" />
+      <Column Name="perc_hora_final_lv" Type="System.String" DbType="Char(15)" CanBeNull="true" />
+      <Column Name="perc_hora_inicio_s" Type="System.String" DbType="Char(15)" CanBeNull="true" />
+      <Column Name="perc_hora_final_s" Type="System.String" DbType="Char(15)" CanBeNull="true" />
+      <Column Name="perc_hora_total_lv" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="perc_hora_total_s" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="perc_icod_tip_contrato" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="perc_icod_banc_haber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="perc_vbanc_haber" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="perc_icod_banc_cts" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="perc_vbanc_cts" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="perc_sfecha_cese" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="perc_icod_motiv_cese" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="perc_retenc_judicial" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="NumAnalitica" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="perc_nasig_transporte" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEP_PERSONAL_MODIFICAR" Method="SGEP_PERSONAL_MODIFICAR">
+    <Parameter Name="perc_icod_personal" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_iid_personal" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="perc_sfecha_registro" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="tbpd_icod_tip_doc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_vnum_doc" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="tbpd_icod_pais_emi_doc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_sfecha_nacimiento" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="perc_vapellido_pat" Type="System.String" DbType="VarChar(40)" />
+    <Parameter Name="perc_vapellido_mat" Type="System.String" DbType="VarChar(40)" />
+    <Parameter Name="perc_vnombres" Type="System.String" DbType="VarChar(40)" />
+    <Parameter Name="perc_icod_sexo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tbpd_icod_nacionalidad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tbpd_icod_telf_ldn" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_vnum_telf_ldn" Type="System.String" DbType="VarChar(9)" />
+    <Parameter Name="perc_vcorreo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="tbpd_icod_tip_via" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_vnomb_via" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="perc_vnum_via" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="perc_vdepartamento" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="perc_vinterior" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="perc_vmanzana" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="perc_vlote" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="perc_vkilometro" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="perc_vblock" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="perc_vetapa" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="tbpd_icod_tip_zona" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_vnomb_zona" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="perc_vreferencia" Type="System.String" DbType="VarChar(40)" />
+    <Parameter Name="tbpd_icod_ubi_geo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tarec_icod_est_civil" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tablc_iid_tipo_cargo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tablc_iid_tipo_area" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_vruc" Type="System.String" DbType="VarChar(11)" />
+    <Parameter Name="perc_vnum_seguro" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="perc_icod_tip_fdo_pension" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_sfech_inicio" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="perc_icod_afp" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_icod_tip_comision" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_vcuspp" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="perc_beps" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="perc_icod_tip_personal" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_nmont_basico" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="tarec_icod_moneda" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_brta_5ta" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="perc_nmont_ant_afecto" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="perc_nmont_retenido" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="perc_basig_familiar" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="perc_sfech_cese" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="perc_iid_situacion_perso" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_isuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="perc_hora_inicio_lv" Type="System.String" DbType="Char(15)" />
+    <Parameter Name="perc_hora_final_lv" Type="System.String" DbType="Char(15)" />
+    <Parameter Name="perc_hora_inicio_s" Type="System.String" DbType="Char(15)" />
+    <Parameter Name="perc_hora_final_s" Type="System.String" DbType="Char(15)" />
+    <Parameter Name="perc_hora_total_lv" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="perc_hora_total_s" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="perc_icod_tip_contrato" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_icod_banc_haber" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_vbanc_haber" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="perc_icod_banc_cts" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_vbanc_cts" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="perc_sfecha_cese" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="perc_icod_motiv_cese" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_retenc_judicial" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="anac_icod_analitica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_nasig_transporte" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_PROVISION_PLANILLA_PERSONAL_DETALLE_LISTAR" Method="SGE_PROVISION_PLANILLA_PERSONAL_DETALLE_LISTAR">
+    <Parameter Name="planc_icod_planilla_personal" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_PROVISION_PLANILLA_PERSONAL_DETALLE_LISTARResult">
+      <Column Name="pland_icod_planilla_personal_det" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="pland_iid_planilla_personal_det" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="planc_icod_planilla_personal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pland_ape_nom" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="pland_num_doc" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="pland_cussp" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="pland_rem_basica" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_icod_personal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pland_beps" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="pland_sfecha_incio" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="pland_sfecha_cese" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="pland_basignacion_familiar" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="prpc_nasignacion_familiar" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="prpc_ngratificacion_essalud" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="prpc_ngratificacion_eps" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="pland_nasignacion_familiar" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="pland_nrem_computable" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_nmonto_gratificacion" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_nbonificacion_mes" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_ncts_gratificacion" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_nctssexto_gratificacion" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_ncts_comision" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_nctssexto_comision" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_ncts_total" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_icts_meses" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pland_icts_dias" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pland_ncts_meses_monto" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_ncts_dias_monto" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_ncts_por_mes" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_nctsprovision_acumulada" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_nctsprovision_mes" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_ncts_horas_extras" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pland_vac_dias_Prov_mensual" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_vac_dias_acumulado" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_vac_provision_mes" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_vac_ajuste_mes" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_vac_prov_tot_mensual" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="strCargo" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_PROVISION_PLANILLA_PERSONAL_DETALLE_MODIFICAR" Method="SGE_PROVISION_PLANILLA_PERSONAL_DETALLE_MODIFICAR">
+    <Parameter Name="pland_icod_planilla_personal_det" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pland_ape_nom" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="pland_num_doc" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="pland_cussp" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="pland_rem_basica" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pland_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="pland_nrem_computable" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nmonto_gratificacion" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nbonificacion_mes" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_ncts_gratificacion" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nctssexto_gratificacion" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_ncts_comision" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nctssexto_comision" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_ncts_total" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_icts_meses" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pland_icts_dias" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pland_ncts_meses_monto" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_ncts_dias_monto" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_ncts_por_mes" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nctsprovision_acumulada" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nctsprovision_mes" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_ncts_horas_extras" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pland_vac_dias_Prov_mensual" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_vac_dias_acumulado" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_vac_provision_mes" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_vac_ajuste_mes" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_vac_prov_tot_mensual" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_PROVISION_PLANILLA_PERSONAL_DETALLE_INSERTAR" Method="SGE_PROVISION_PLANILLA_PERSONAL_DETALLE_INSERTAR">
+    <Parameter Name="pland_icod_planilla_personal_det" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="pland_iid_planilla_personal_det" Type="System.Int32" DbType="Int" />
+    <Parameter Name="planc_icod_planilla_personal" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pland_ape_nom" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="pland_num_doc" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="pland_cussp" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="pland_rem_basica" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pland_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="pland_flag_estado" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="pland_icod_personal" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pland_beps" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="pland_sfecha_incio" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="pland_sfecha_cese" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="pland_basignacion_familiar" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="prpc_nasignacion_familiar" Type="System.Decimal" DbType="Decimal(10,2)" />
+    <Parameter Name="prpc_ngratificacion_essalud" Type="System.Decimal" DbType="Decimal(6,2)" />
+    <Parameter Name="prpc_ngratificacion_eps" Type="System.Decimal" DbType="Decimal(6,2)" />
+    <Parameter Name="pland_nasignacion_familiar" Type="System.Decimal" DbType="Decimal(10,2)" />
+    <Parameter Name="pland_nrem_computable" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nmonto_gratificacion" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nbonificacion_mes" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_ncts_gratificacion" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nctssexto_gratificacion" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_ncts_comision" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nctssexto_comision" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_ncts_total" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_icts_meses" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pland_icts_dias" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pland_ncts_meses_monto" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_ncts_dias_monto" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_ncts_por_mes" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nctsprovision_acumulada" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nctsprovision_mes" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_ncts_horas_extras" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pland_vac_dias_Prov_mensual" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_vac_dias_acumulado" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_vac_provision_mes" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_vac_ajuste_mes" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_vac_prov_tot_mensual" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_VACACIONES_MODIFICAR" Method="SGEP_VACACIONES_MODIFICAR">
+    <Parameter Name="vacd_icod_vacaciones" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vacd_ndias" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vacd_sfecha_ini" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="vacd_sfecha_fin" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="vacd_mes" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vacd_año" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vacd_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vacd_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_VACACIONES_LISTAR" Method="SGEP_VACACIONES_LISTAR">
+    <ElementType Name="SGEP_VACACIONES_LISTARResult">
+      <Column Name="vacd_icod_vacaciones" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="vacd_iid_vacaciones" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="vacd_icod_personal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vacd_ndias" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vacd_sfecha_ini" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="vacd_sfecha_fin" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="vacd_mes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vacd_año" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vacd_sflag_estado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="strMes" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEP_VACACIONES_INSERTAR" Method="SGEP_VACACIONES_INSERTAR">
+    <Parameter Name="vacd_icod_vacaciones" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="vacd_iid_vacaciones" Type="System.String" DbType="VarChar(11)" />
+    <Parameter Name="vacd_icod_personal" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vacd_ndias" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vacd_sfecha_ini" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="vacd_sfecha_fin" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="vacd_mes" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vacd_año" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vacd_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vacd_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEP_VACACIONES_ELIMINAR" Method="SGEP_VACACIONES_ELIMINAR">
+    <Parameter Name="vacd_icod_vacaciones" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vacd_iusuario_elimina" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vacd_vcp_elimina" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_PLANILLA_PERSONAL_INSERTAR" Method="SGE_PLANILLA_PERSONAL_INSERTAR">
+    <Parameter Name="planc_icod_planilla_personal" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="planc_iid_planilla_personal" Type="System.Int32" DbType="Int" />
+    <Parameter Name="mesec_iid_mes" Type="System.Int32" DbType="Int" />
+    <Parameter Name="planc_iid_anio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="planc_vdescripcion" Type="System.String" DbType="VarChar(80)" />
+    <Parameter Name="tablc_iid_situacion_planilla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="planc_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="planc_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="planc_iid_tipo_planilla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="planc_sfecha" Type="System.DateTime" DbType="SmallDateTime" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_PLANILLA_PERSONAL_LISTAR" Method="SGE_PLANILLA_PERSONAL_LISTAR">
+    <ElementType Name="SGE_PLANILLA_PERSONAL_LISTARResult">
+      <Column Name="planc_icod_planilla_personal" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="planc_iid_planilla_personal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mesec_iid_mes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Mes" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="planc_iid_anio" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="planc_vdescripcion" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="tablc_iid_situacion_planilla" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Situacion" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Tipo" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="planc_iid_tipo_planilla" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="planc_sfecha" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_PLANILLA_PERSONAL_MODIFICAR" Method="SGE_PLANILLA_PERSONAL_MODIFICAR">
+    <Parameter Name="planc_icod_planilla_personal" Type="System.Int32" DbType="Int" />
+    <Parameter Name="planc_iid_planilla_personal" Type="System.Int32" DbType="Int" />
+    <Parameter Name="mesec_iid_mes" Type="System.Int32" DbType="Int" />
+    <Parameter Name="planc_iid_anio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="planc_vdescripcion" Type="System.String" DbType="VarChar(80)" />
+    <Parameter Name="tablc_iid_situacion_planilla" Type="System.Int32" DbType="Int" />
+    <Parameter Name="planc_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="planc_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="planc_sfecha" Type="System.DateTime" DbType="SmallDateTime" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_PLANILLA_PERSONAL_DETALLE_LISTAR" Method="SGE_PLANILLA_PERSONAL_DETALLE_LISTAR">
+    <Parameter Name="planc_icod_planilla_personal" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_PLANILLA_PERSONAL_DETALLE_LISTARResult">
+      <Column Name="pland_icod_planilla_personal_det" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="pland_iid_planilla_personal_det" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="planc_icod_planilla_personal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pland_ape_nom" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="pland_num_doc" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="pland_cussp" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="pland_sueldo_basico" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_rem_basica" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_icod_personal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pland_sfecha_incio" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="pland_sfecha_cese" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="pland_nasignacion_familiar" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="pland_nrem_computable" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_reg_pension" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_comision" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_cargo" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_hijo" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_dias" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_faltas" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_vacaciones" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_descanso_medico" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_dias_subsidios" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_dias_efectivos" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_nmonto_vacaciones" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_nhoras_25" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_nhoras_35" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_nferiado_descanso" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_notros_ingresos" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_nsubsidios_essalud" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_ncomision_venta" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_ncomision_eventual" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_nasignacion_transporte" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_nvales_alimentos" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_nadelanto_sueldo" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_ngratif_afecto" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_nbonif_afecto" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_nvacaciones_truncas" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_ngratif_no_afecto" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_nbonif_no_afecto" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_nCTS" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_nutilidades" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_nremun_bruta" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_nremun_computable_neta" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_ninasistencias" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_ntardanzas" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_npago_utilid" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="str_cargo" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="pland_desc_onp" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_desc_fondo" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_desc_comision" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_desc_seguro" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_desc_tot_afp" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_desc_renta5" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_desc_adelanto" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_desc_prestamo" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_desc_eps" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_desc_otros_desc_no_afect" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_desc_retenc_judicial" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_desc_otros_desc_afect" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_desc_total_desc" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_aport_essalud9" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_aport_eps_pacifico" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_aport_essalud" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_total_neto_pagar" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="str_fondo_pension" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="pland_nutilidad_convencional" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_npago_utilidad_convencional" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="vccn_nvacaciones" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="vccn_nfondo" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="vccn_ncomision" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="vccn_nseguro" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="vccn_ntotal_afp" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="vccn_nopn" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="vccn_nrenta5" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="vccn_notros_desc" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="vccn_nessalud" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="vccn_nvacaciones_neto" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="rmcn_remun_computable" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="rmcn_fondo" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="rmcn_comision" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="rmcn_seguro" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="rmcn_total_afp" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="rmcn_onp" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="rmcn_rta_5ta" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="rmcn_otros_dstos" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="rmcn_reten_judicial" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="rmcn_essalud" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="rmcn_remun_neto" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_desc_aporte_c_prov" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="pland_desc_aporte_s_prov" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="rmcn_aporte_c_prov" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="rmcn_aporte_s_prov" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_PLANILLA_PERSONAL_DETALLE_MODIFICAR" Method="SGE_PLANILLA_PERSONAL_DETALLE_MODIFICAR">
+    <Parameter Name="pland_icod_planilla_personal_det" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pland_ape_nom" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="pland_num_doc" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="pland_cussp" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="pland_sueldo_basico" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_rem_basica" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pland_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="pland_nrem_computable" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_reg_pension" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_comision" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_cargo" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_hijo" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_dias" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_faltas" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_vacaciones" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_descanso_medico" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_dias_subsidios" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_dias_efectivos" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nmonto_vacaciones" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nhoras_25" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nhoras_35" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nferiado_descanso" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_notros_ingresos" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nsubsidios_essalud" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_ncomision_venta" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_ncomision_eventual" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nasignacion_transporte" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nvales_alimentos" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nadelanto_sueldo" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_ngratif_afecto" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nbonif_afecto" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nvacaciones_truncas" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_ngratif_no_afecto" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nbonif_no_afecto" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nCTS" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nutilidades" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nremun_bruta" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nremun_computable_neta" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_ninasistencias" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_ntardanzas" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_npago_utilid" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_desc_onp" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_desc_fondo" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_desc_comision" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_desc_seguro" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_desc_tot_afp" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_desc_renta5" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_desc_adelanto" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_desc_prestamo" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_desc_eps" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_desc_otros_desc_no_afect" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_desc_retenc_judicial" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_desc_otros_desc_afect" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_desc_total_desc" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_aport_essalud9" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_aport_eps_pacifico" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_aport_essalud" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_total_neto_pagar" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_icod_fondo_pension" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pland_nutilidad_convencional" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_npago_utilidad_convencional" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nasignacion_familiar" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="vccn_nvacaciones" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="vccn_nfondo" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="vccn_ncomision" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="vccn_nseguro" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="vccn_ntotal_afp" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="vccn_nopn" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="vccn_nrenta5" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="vccn_notros_desc" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="vccn_nessalud" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="vccn_nvacaciones_neto" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="rmcn_remun_computable" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="rmcn_fondo" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="rmcn_comision" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="rmcn_seguro" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="rmcn_total_afp" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="rmcn_onp" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="rmcn_rta_5ta" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="rmcn_otros_dstos" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="rmcn_reten_judicial" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="rmcn_essalud" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="rmcn_remun_neto" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_desc_aporte_c_prov" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_desc_aporte_s_prov" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="rmcn_aporte_c_prov" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="rmcn_aporte_s_prov" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_PLANILLA_PERSONAL_DETALLE_INSERTAR" Method="SGE_PLANILLA_PERSONAL_DETALLE_INSERTAR">
+    <Parameter Name="pland_icod_planilla_personal_det" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="pland_iid_planilla_personal_det" Type="System.Int32" DbType="Int" />
+    <Parameter Name="planc_icod_planilla_personal" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pland_ape_nom" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="pland_num_doc" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="pland_cussp" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="pland_sueldo_basico" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_rem_basica" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pland_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="pland_flag_estado" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="pland_icod_personal" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pland_sfecha_incio" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="pland_sfecha_cese" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="pland_nasignacion_familiar" Type="System.Decimal" DbType="Decimal(10,2)" />
+    <Parameter Name="pland_nrem_computable" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_reg_pension" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_comision" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_cargo" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_hijo" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_dias" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_faltas" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_vacaciones" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_descanso_medico" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_dias_subsidios" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_dias_efectivos" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nmonto_vacaciones" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nhoras_25" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nhoras_35" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nferiado_descanso" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_notros_ingresos" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nsubsidios_essalud" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_ncomision_venta" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_ncomision_eventual" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nasignacion_transporte" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nvales_alimentos" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nadelanto_sueldo" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_ngratif_afecto" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nbonif_afecto" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nvacaciones_truncas" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_ngratif_no_afecto" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nbonif_no_afecto" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nCTS" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nutilidades" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nremun_bruta" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_nremun_computable_neta" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_ninasistencias" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_ntardanzas" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_npago_utilid" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_desc_onp" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_desc_fondo" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_desc_comision" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_desc_seguro" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_desc_tot_afp" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_desc_renta5" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_desc_adelanto" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_desc_prestamo" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_desc_eps" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_desc_otros_desc_no_afect" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_desc_retenc_judicial" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_desc_otros_desc_afect" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_desc_total_desc" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_aport_essalud9" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_aport_eps_pacifico" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_aport_essalud" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_total_neto_pagar" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_icod_fondo_pension" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pland_nutilidad_convencional" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_npago_utilidad_convencional" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="vccn_nvacaciones" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="vccn_nfondo" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="vccn_ncomision" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="vccn_nseguro" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="vccn_ntotal_afp" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="vccn_nopn" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="vccn_nrenta5" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="vccn_notros_desc" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="vccn_nessalud" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="vccn_nvacaciones_neto" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="rmcn_remun_computable" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="rmcn_fondo" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="rmcn_comision" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="rmcn_seguro" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="rmcn_total_afp" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="rmcn_onp" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="rmcn_rta_5ta" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="rmcn_otros_dstos" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="rmcn_reten_judicial" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="rmcn_essalud" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="rmcn_remun_neto" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_desc_aporte_c_prov" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="pland_desc_aporte_s_prov" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="rmcn_aporte_c_prov" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Parameter Name="rmcn_aporte_s_prov" Type="System.Decimal" DbType="Decimal(11,2)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

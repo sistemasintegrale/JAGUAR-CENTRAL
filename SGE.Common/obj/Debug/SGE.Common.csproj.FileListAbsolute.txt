@@ -1,0 +1,9 @@
+D:\PROYECTOS RAFHAEL\SOLUCIONES\JAGUAR\Calzado Jaguar\SGE.Common\bin\Debug\SGE.Common.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\JAGUAR\Calzado Jaguar\SGE.Common\bin\Debug\SGE.Common.pdb
+D:\PROYECTOS RAFHAEL\SOLUCIONES\JAGUAR\Calzado Jaguar\SGE.Common\bin\Debug\Newtonsoft.Json.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\JAGUAR\Calzado Jaguar\SGE.Common\bin\Debug\Newtonsoft.Json.xml
+D:\PROYECTOS RAFHAEL\SOLUCIONES\JAGUAR\Calzado Jaguar\SGE.Common\obj\Debug\SGE.Common.csproj.CoreCompileInputs.cache
+D:\PROYECTOS RAFHAEL\SOLUCIONES\JAGUAR\Calzado Jaguar\SGE.Common\obj\Debug\SGE.Common.csproj.CopyComplete
+D:\PROYECTOS RAFHAEL\SOLUCIONES\JAGUAR\Calzado Jaguar\SGE.Common\obj\Debug\SGE.Common.dll
+D:\PROYECTOS RAFHAEL\SOLUCIONES\JAGUAR\Calzado Jaguar\SGE.Common\obj\Debug\SGE.Common.pdb
+D:\PROYECTOS RAFHAEL\SOLUCIONES\JAGUAR\Calzado Jaguar\SGE.Common\obj\Debug\SGE.Common.csproj.AssemblyReference.cache

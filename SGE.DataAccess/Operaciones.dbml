@@ -1,0 +1,744 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SGE_CALZADOS_JAGUAR" Class="OperacionesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LENOVO;Initial Catalog=SGE_CALZADOS_JAGUAR;Integrated Security=True" SettingsObjectName="SGE.DataAccess.Properties.Settings" SettingsPropertyName="SGE_CALZADOS_JAGUARConnectionString1" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.SGEOP_PERSONAL_ELIMINAR" Method="SGEOP_PERSONAL_ELIMINAR">
+    <Parameter Name="perc_icod_personal" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_isuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_EXTEND_PROFORMA_ELIMINAR" Method="SGE_EXTEND_PROFORMA_ELIMINAR">
+    <Parameter Name="prfc_icod_proforma" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPc" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_EXTEND_PROFORMA_DET_ELIMINAR" Method="SGE_EXTEND_PROFORMA_DET_ELIMINAR">
+    <Parameter Name="prfd_icod_item_proforma" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPC" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_EXTEND_PROFORMA_DET_MODIFICAR" Method="SGE_EXTEND_PROFORMA_DET_MODIFICAR">
+    <Parameter Name="prfd_icod_item_proforma" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prfc_icod_proforma" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prfd_iitem_proforma" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prfd_iid_producto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prfd_ncantidad" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="prfd_vdescripcion" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="prfd_nprecio_unitario_item" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="prfd_nprecio_total_item" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPC" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_EXTEND_PROFORMA_DET_INSERTAR" Method="SGE_EXTEND_PROFORMA_DET_INSERTAR">
+    <Parameter Name="prfc_icod_proforma" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prfd_iitem_proforma" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prfd_iid_producto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prfd_ncantidad" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="prfd_vdescripcion" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="prfd_nprecio_unitario_item" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="prfd_nprecio_total_item" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPC" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_EXTEND_PROFORMA_DET_LISTAR" Method="SGE_EXTEND_PROFORMA_DET_LISTAR">
+    <Parameter Name="intProforma" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_EXTEND_PROFORMA_DET_LISTARResult">
+      <Column Name="prfd_icod_item_proforma" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prfc_icod_proforma" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="prfd_iitem_proforma" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="prfd_iid_producto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="prfd_ncantidad" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="prfd_vdescripcion" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="prfd_nprecio_unitario_item" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="prfd_nprecio_total_item" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="strCodProducto" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="strDesProducto" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strLinea" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="strSubLinea" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="strDesUM" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="strMoneda" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_EXTEND_ORDEN_TRABAJO_ELIMINAR" Method="SGE_EXTEND_ORDEN_TRABAJO_ELIMINAR">
+    <Parameter Name="otrc_icod_orden_trabajo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPc" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_EXTEND_ORDEN_TRABAJO_GET_CORRELATIVO" Method="SGE_EXTEND_ORDEN_TRABAJO_GET_CORRELATIVO">
+    <Parameter Name="intCorrelativo" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_EXTEND_OT_RECEPCION_INSERTAR" Method="SGE_EXTEND_OT_RECEPCION_INSERTAR">
+    <Parameter Name="otrr_icod_ot_recepcion" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="otrr_iid_orden_trabajo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otrr_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otrr_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="otrr_tarj_prop_1" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_soat_2" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_revision_tec_3" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_manu_instruc_4" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_cuader_serv_5" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_juego_llaves_6" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_control_alarm_7" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_bocina_8" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_luces_9" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_neblineros_10" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_limpia_parabri_11" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_aire_acond_12" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_perillas_13" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_reloj_14" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_tablero_15" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_encendor_16" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_radio_17" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_radio_cd_18" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_mascar_radio_19" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_parlantes_20" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_ampli_subwoof_21" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_consola_22" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_manijas_23" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_coderas_24" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_cintur_seg_25" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_tapiz_26" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_cabezeras_27" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_tapa_sol_28" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_luz_salon_29" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_retrovisor_30" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_piso_jebe_31" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_espej_ext_32" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_cromo_mold_33" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_emble_late_34" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_vaso_rueda_35" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_direcc_late_36" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_emble_malet_37" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_luz_malet_38" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_rueda_repues_39" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_gata_palanca_40" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_llave_rueda_41" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_triang_seg_42" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_herramie_43" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_seguro_rueda_44" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_caj_cd_45" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_faros_post_46" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_tapa_combus_47" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_emblema_mascara_48" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_faros_delan_direcc_49" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_disp_agua_50" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_braz_plumilla_51" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_antena_52" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_tapa_radiador_53" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_tapa_liq_emb_54" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_tapa_aceit_mot_55" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_tapa_liq_fren_56" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_varill_aceit_57" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_tapa_purif_purif_58" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_seg_bateria_59" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_bateria_60" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_escarpine_61" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_bajo_62" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_botiquin_63" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_cable_remol_64" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_extintor_65" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_cable_bater_66" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_perm_lun_pola_67" Type="System.Int16" DbType="SmallInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_EXTEND_OT_RECEPCION_ELIMINAR" Method="SGE_EXTEND_OT_RECEPCION_ELIMINAR">
+    <Parameter Name="otrr_icod_ot_recepcion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otrr_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otrr_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_EXTEND_OT_RECEPCION_LISTAR" Method="SGE_EXTEND_OT_RECEPCION_LISTAR">
+    <Parameter Name="otrr_iid_orden_trabajo" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_EXTEND_OT_RECEPCION_LISTARResult">
+      <Column Name="otrr_icod_ot_recepcion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="otrr_tarj_prop_1" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_soat_2" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_revision_tec_3" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_manu_instruc_4" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_cuader_serv_5" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_juego_llaves_6" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_control_alarm_7" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_bocina_8" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_luces_9" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_neblineros_10" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_limpia_parabri_11" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_aire_acond_12" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_perillas_13" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_reloj_14" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_tablero_15" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_encendor_16" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_radio_17" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_radio_cd_18" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_mascar_radio_19" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_parlantes_20" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_ampli_subwoof_21" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_consola_22" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_manijas_23" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_coderas_24" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_cintur_seg_25" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_tapiz_26" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_cabezeras_27" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_tapa_sol_28" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_luz_salon_29" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_retrovisor_30" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_piso_jebe_31" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_espej_ext_32" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_cromo_mold_33" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_emble_late_34" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_vaso_rueda_35" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_direcc_late_36" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_emble_malet_37" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_luz_malet_38" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_rueda_repues_39" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_gata_palanca_40" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_llave_rueda_41" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_triang_seg_42" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_herramie_43" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_seguro_rueda_44" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_caj_cd_45" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_faros_post_46" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_tapa_combus_47" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_emblema_mascara_48" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_faros_delan_direcc_49" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_disp_agua_50" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_braz_plumilla_51" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_antena_52" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_tapa_radiador_53" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_tapa_liq_emb_54" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_tapa_aceit_mot_55" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_tapa_liq_fren_56" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_varill_aceit_57" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_tapa_purif_purif_58" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_seg_bateria_59" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_bateria_60" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_escarpine_61" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_bajo_62" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_botiquin_63" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_cable_remol_64" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_extintor_65" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_cable_bater_66" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="otrr_perm_lun_pola_67" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_EXTEND_OT_RECEPCION_MODIFICAR" Method="SGE_EXTEND_OT_RECEPCION_MODIFICAR">
+    <Parameter Name="otrr_icod_ot_recepcion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otrr_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otrr_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="otrr_tarj_prop_1" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_soat_2" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_revision_tec_3" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_manu_instruc_4" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_cuader_serv_5" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_juego_llaves_6" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_control_alarm_7" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_bocina_8" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_luces_9" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_neblineros_10" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_limpia_parabri_11" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_aire_acond_12" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_perillas_13" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_reloj_14" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_tablero_15" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_encendor_16" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_radio_17" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_radio_cd_18" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_mascar_radio_19" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_parlantes_20" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_ampli_subwoof_21" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_consola_22" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_manijas_23" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_coderas_24" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_cintur_seg_25" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_tapiz_26" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_cabezeras_27" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_tapa_sol_28" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_luz_salon_29" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_retrovisor_30" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_piso_jebe_31" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_espej_ext_32" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_cromo_mold_33" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_emble_late_34" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_vaso_rueda_35" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_direcc_late_36" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_emble_malet_37" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_luz_malet_38" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_rueda_repues_39" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_gata_palanca_40" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_llave_rueda_41" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_triang_seg_42" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_herramie_43" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_seguro_rueda_44" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_caj_cd_45" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_faros_post_46" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_tapa_combus_47" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_emblema_mascara_48" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_faros_delan_direcc_49" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_disp_agua_50" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_braz_plumilla_51" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_antena_52" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_tapa_radiador_53" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_tapa_liq_emb_54" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_tapa_aceit_mot_55" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_tapa_liq_fren_56" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_varill_aceit_57" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_tapa_purif_purif_58" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_seg_bateria_59" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_bateria_60" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_escarpine_61" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_bajo_62" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_botiquin_63" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_cable_remol_64" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_extintor_65" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_cable_bater_66" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="otrr_perm_lun_pola_67" Type="System.Int16" DbType="SmallInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_EXTEND_OT_SERV_SOLIC_ELIMINAR" Method="SGE_EXTEND_OT_SERV_SOLIC_ELIMINAR">
+    <Parameter Name="otss_icod_ot_ssolicitado" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPc" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_EXTEND_OT_REPUESTO_ELIMINAR" Method="SGE_EXTEND_OT_REPUESTO_ELIMINAR">
+    <Parameter Name="otrs_icod_ot_repuesto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPc" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_PROFORMA_RECEP_RECOM_INSERTAR_ACTUALIZAR" Method="SGE_PROFORMA_RECEP_RECOM_INSERTAR_ACTUALIZAR">
+    <Parameter Name="prfc_icod_proforma" Type="System.Int32" DbType="Int" />
+    <Parameter Name="profc_recepcion" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="profc_recomendacion" Type="System.String" DbType="VarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_EXTEND_PROFORMA_INSERTAR" Method="SGE_EXTEND_PROFORMA_INSERTAR">
+    <Parameter Name="prfc_icod_proforma" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="prfc_vnumero_proforma" Type="System.String" DbType="VarChar(8)" />
+    <Parameter Name="prfc_sfecha_proforma" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="prfc_iid_orden_trabajo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prfc_vnumero_orden_trabajo" Type="System.String" DbType="VarChar(8)" />
+    <Parameter Name="prfc_icod_cliente" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prfc_iid_vehiculo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prfc_vkilometraje" Type="System.String" DbType="VarChar(8)" />
+    <Parameter Name="prfc_vcolor" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prfc_nmonto_neto" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="prfc_npor_imp_igv" Type="System.Decimal" DbType="Decimal(6,2)" />
+    <Parameter Name="prfc_nmonto_igv" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="prfc_nmonto_total" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="prfc_nmonto_descuento" Type="System.Decimal" DbType="Decimal(10,2)" />
+    <Parameter Name="prfc_iid_situacion_proforma" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPc" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_EXTEND_PROFORMA_MODIFICAR" Method="SGE_EXTEND_PROFORMA_MODIFICAR">
+    <Parameter Name="prfc_icod_proforma" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prfc_vnumero_proforma" Type="System.String" DbType="VarChar(8)" />
+    <Parameter Name="prfc_sfecha_proforma" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="prfc_iid_orden_trabajo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prfc_vnumero_orden_trabajo" Type="System.String" DbType="VarChar(8)" />
+    <Parameter Name="prfc_icod_cliente" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prfc_iid_vehiculo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prfc_vkilometraje" Type="System.String" DbType="VarChar(8)" />
+    <Parameter Name="prfc_vcolor" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" />
+    <Parameter Name="prfc_nmonto_neto" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="prfc_npor_imp_igv" Type="System.Decimal" DbType="Decimal(6,2)" />
+    <Parameter Name="prfc_nmonto_igv" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="prfc_nmonto_total" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="prfc_nmonto_descuento" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="prfc_iid_situacion_proforma" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPc" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_EXTEND_PROFORMA_LISTAR" Method="SGE_EXTEND_PROFORMA_LISTAR">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_EXTEND_PROFORMA_LISTARResult">
+      <Column Name="prfc_icod_proforma" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="prfc_vnumero_proforma" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="prfc_sfecha_proforma" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="prfc_iid_orden_trabajo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="prfc_vnumero_orden_trabajo" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="prfc_icod_cliente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="prfc_iid_vehiculo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="prfc_vkilometraje" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="prfc_vcolor" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="prfc_nmonto_neto" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="prfc_npor_imp_igv" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="prfc_nmonto_igv" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="prfc_nmonto_total" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="prfc_nmonto_descuento" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="prfc_iid_situacion_proforma" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="strDesCliente" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="strPlaca" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="strMarca" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="strModelo" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="strSituacion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strNroOrdenTrabajo" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="strNroPresupuesto" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="strTelefonoCliente" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="strCorreo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strDireccion" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="strRuc" Type="System.String" DbType="Char(11)" CanBeNull="true" />
+      <Column Name="strAnioVehiculo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="strMoneda" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="profc_recepcion" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="profc_recomendacion" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_EXTEND_ORDEN_TRABAJO_MODIFICAR" Method="SGE_EXTEND_ORDEN_TRABAJO_MODIFICAR">
+    <Parameter Name="otrc_icod_orden_trabajo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otrc_vnumero_orden" Type="System.String" DbType="VarChar(8)" />
+    <Parameter Name="prfc_iid_proforma" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otrc_sfecha_orden" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="otrc_icod_cliente" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otrc_vnumero_dni" Type="System.String" DbType="VarChar(8)" />
+    <Parameter Name="otrc_iid_vehiculo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otrc_vkilometraje" Type="System.String" DbType="VarChar(8)" />
+    <Parameter Name="otrc_vcolor" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="otrc_vnumero_vin" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="otrc_porc_nivel_combustible" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otrc_itipo_pago" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otrc_icod_cliente_afacturar" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otrc_itipo_facturacion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otrc_nmonto_neto" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="otrc_npor_imp_igv" Type="System.Decimal" DbType="Decimal(6,2)" />
+    <Parameter Name="otrc_nmonto_igv" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="otrc_nmonto_total" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="otrc_nmonto_descuento" Type="System.Decimal" DbType="Decimal(10,2)" />
+    <Parameter Name="otrc_iid_situacion_orden" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPc" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_EXTEND_ORDEN_TRABAJO_INSERTAR" Method="SGE_EXTEND_ORDEN_TRABAJO_INSERTAR">
+    <Parameter Name="otrc_icod_orden_trabajo" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="otrc_vnumero_orden" Type="System.String" DbType="VarChar(8)" />
+    <Parameter Name="prfc_iid_proforma" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otrc_sfecha_orden" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="otrc_icod_cliente" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otrc_vnumero_dni" Type="System.String" DbType="VarChar(8)" />
+    <Parameter Name="otrc_iid_vehiculo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otrc_vkilometraje" Type="System.String" DbType="VarChar(8)" />
+    <Parameter Name="otrc_vcolor" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="otrc_vnumero_vin" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="otrc_porc_nivel_combustible" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otrc_itipo_pago" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otrc_icod_cliente_afacturar" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otrc_itipo_facturacion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otrc_nmonto_neto" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="otrc_npor_imp_igv" Type="System.Decimal" DbType="Decimal(6,2)" />
+    <Parameter Name="otrc_nmonto_igv" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="otrc_nmonto_total" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="otrc_nmonto_descuento" Type="System.Decimal" DbType="Decimal(10,2)" />
+    <Parameter Name="otrc_iid_situacion_orden" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPc" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_PRODUCTIVIDAD_ACUMULADO_LISTAR" Method="SGE_PRODUCTIVIDAD_ACUMULADO_LISTAR">
+    <Parameter Name="dtFecha_Inicio" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="dtFecha_Fin" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_PRODUCTIVIDAD_ACUMULADO_LISTARResult">
+      <Column Name="icod_personal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="perc_iid_personal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="perc_vapellidos_nombres" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tarec_vdescripcion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="cantidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="total_comision" Type="System.Decimal" DbType="Decimal(38,10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_PRODUCTIVIDAD_DETALLE_LISTAR" Method="SGE_PRODUCTIVIDAD_DETALLE_LISTAR">
+    <Parameter Name="icod_personal" Type="System.Int32" DbType="Int" />
+    <Parameter Name="dtFecha_Inicio" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="dtFecha_Fin" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_PRODUCTIVIDAD_DETALLE_LISTARResult">
+      <Column Name="icod_personal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fecha" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="strTipoDoc" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="strNroDoc" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="strNroOrden" Type="System.String" DbType="VarChar(14)" CanBeNull="true" />
+      <Column Name="vehd_vplaca" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="prdc_vcode_producto" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="prdc_vdescripcion_larga" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="dblCantidad" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="dblPrecioUnitario" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="dblMonto" Type="System.Decimal" DbType="Decimal(34,10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_EXTEND_OT_CAMBIAR_SITUACION" Method="SGE_EXTEND_OT_CAMBIAR_SITUACION">
+    <Parameter Name="id_orden_trabajo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="id_situacion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="id_usuario_cierra" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_EXTEND_BOLETA_CAB_SET_DXC_ICOD" Method="SGE_EXTEND_BOLETA_CAB_SET_DXC_ICOD">
+    <Parameter Name="intboleta" Type="System.Int32" DbType="Int" />
+    <Parameter Name="intDXC" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_EXTEND_OT_SERV_SOLIC_LISTAR" Method="SGE_EXTEND_OT_SERV_SOLIC_LISTAR">
+    <Parameter Name="otss_iid_orden_trabajo" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_EXTEND_OT_SERV_SOLIC_LISTARResult">
+      <Column Name="otss_icod_ot_ssolicitado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="otss_iid_orden_trabajo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="otss_iitem_ssolicitado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="otss_iid_moneda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="otss_iid_producto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="otss_ncantidad" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="otss_nprecio_unitario_item" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="otss_nporc_productividad" Type="System.Decimal" DbType="Decimal(4,2)" CanBeNull="true" />
+      <Column Name="otss_nprecio_total_itam" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="otss_icod_personal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="otss_area_personal" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="otss_fecha_servicio" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="strCodProducto" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="strDesProducto" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strMoneda" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="otss_flag_extension" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="perc_vapellidos_nombres" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="otss_nmonto_descuento" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_EXTEND_OT_SERV_SOLIC_INSERTAR" Method="SGE_EXTEND_OT_SERV_SOLIC_INSERTAR">
+    <Parameter Name="otss_iid_orden_trabajo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otss_iitem_ssolicitado" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otss_iid_moneda" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otss_iid_producto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otss_ncantidad" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="otss_nprecio_unitario_item" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="otss_nporc_productividad" Type="System.Decimal" DbType="Decimal(4,2)" />
+    <Parameter Name="otss_nprecio_total_itam" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="otss_flag_extension" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="otss_icod_personal" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otss_area_personal" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="otss_fecha_servicio" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="otss_nmonto_descuento" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPc" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_EXTEND_OT_SERV_SOLIC_MODIFICAR" Method="SGE_EXTEND_OT_SERV_SOLIC_MODIFICAR">
+    <Parameter Name="otss_icod_ot_ssolicitado" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otss_iid_orden_trabajo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otss_iitem_ssolicitado" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otss_iid_moneda" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otss_iid_producto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otss_ncantidad" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="otss_nprecio_unitario_item" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="otss_nporc_productividad" Type="System.Decimal" DbType="Decimal(4,2)" />
+    <Parameter Name="otss_nprecio_total_itam" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="otss_icod_personal" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otss_area_personal" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="otss_fecha_servicio" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="otss_nmonto_descuento" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPc" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_EXTEND_OT_REPUESTO_LISTAR" Method="SGE_EXTEND_OT_REPUESTO_LISTAR">
+    <Parameter Name="otrs_iid_orden_trabajo" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_EXTEND_OT_REPUESTO_LISTARResult">
+      <Column Name="otrs_icod_ot_repuesto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="otrs_iitem_repuesto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="otrs_iid_moneda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="otrs_iid_producto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="otrs_ncantidad" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="otrs_nprecio_unitario_item" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="otrs_nprecio_total_item" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="otrs_iid_almacen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="otrs_iid_kardex" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="otrs_icod_personal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="otrs_area_personal" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="otrs_fecha_servicio" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="otrs_nmonto_productividad" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="strCodProducto" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="strDesProducto" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strLinea" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="strSubLinea" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="strDesUM" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="strAlmacen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="strMoneda" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="strPersonal" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="dblStockDisponible" Type="System.Decimal" DbType="Decimal(12,4) NOT NULL" CanBeNull="false" />
+      <Column Name="otrs_nmonto_descuento" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_EXTEND_OT_REPUESTO_INSERTAR" Method="SGE_EXTEND_OT_REPUESTO_INSERTAR">
+    <Parameter Name="otrs_icod_ot_repuesto" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="otrs_iid_orden_trabajo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otrs_iitem_repuesto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otrs_iid_moneda" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otrs_iid_almacen" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otrs_iid_producto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otrs_ncantidad" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="otrs_nprecio_unitario_item" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="otrs_nprecio_total_item" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="otrs_iid_kardex" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="otrs_icod_personal" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otrs_area_personal" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="otrs_fecha_servicio" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="otrs_nmonto_descuento" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPc" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="otrs_nmonto_productividad" Type="System.Decimal" DbType="Decimal(6,2)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_EXTEND_ORDEN_TRABAJO_LISTAR" Method="SGE_EXTEND_ORDEN_TRABAJO_LISTAR">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="dtFechaInicio" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="dtFechaFin" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="intSituacion" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_EXTEND_ORDEN_TRABAJO_LISTARResult">
+      <Column Name="otrc_icod_orden_trabajo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="otrc_vnumero_orden" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="prfc_iid_proforma" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="otrc_sfecha_orden" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="otrc_icod_cliente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="otrc_vnumero_dni" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="otrc_iid_vehiculo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="otrc_vkilometraje" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="otrc_vcolor" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="otrc_vnumero_vin" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="otrc_porc_nivel_combustible" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="otrc_itipo_pago" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="otrc_icod_cliente_afacturar" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="otrc_itipo_facturacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="otrc_nmonto_neto" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="otrc_npor_imp_igv" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="otrc_nmonto_igv" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Column Name="otrc_nmonto_total" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="otrc_nmonto_descuento" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="otrc_iid_situacion_orden" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="otrc_icod_usuario_cierra" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="strDesCliente" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="strTelefonoCliente" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="strRuc" Type="System.String" DbType="Char(11)" CanBeNull="true" />
+      <Column Name="strDni" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="strDireccionCliente" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="strCorreoCliente" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strDesClienteFactura" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="strRucFactura" Type="System.String" DbType="Char(11)" CanBeNull="true" />
+      <Column Name="strDireccionClienteFactura" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="strPlaca" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="strMarca" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="strModelo" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="strSituacion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strAnioVehiculo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="strNroProforma" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="strUsuarioCierra" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="strDocFacturacion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_EXTEND_OT_REPUESTO_MODIFICAR" Method="SGE_EXTEND_OT_REPUESTO_MODIFICAR">
+    <Parameter Name="otrs_icod_ot_repuesto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otrs_iid_orden_trabajo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otrs_iitem_repuesto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otrs_iid_moneda" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otrs_iid_producto" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otrs_ncantidad" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="otrs_nprecio_unitario_item" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="otrs_nprecio_total_item" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="otrs_icod_personal" Type="System.Int32" DbType="Int" />
+    <Parameter Name="otrs_area_personal" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="otrs_fecha_servicio" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="otrs_nmonto_descuento" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPc" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="otrs_nmonto_productividad" Type="System.Decimal" DbType="Decimal(6,2)" />
+    <Parameter Name="otrs_iid_kardex" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEOP_PERSONAL_INSERTAR" Method="SGEOP_PERSONAL_INSERTAR">
+    <Parameter Name="perc_icod_personal" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="perc_iid_personal" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="perc_sfecha_registro" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="perc_vnombres" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="perc_sfecha_nacimiento" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="tablc_iid_tipo_cargo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tablc_iid_tipo_area" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_iid_situacion_perso" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_isuario_crea" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_vpc_crea" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEOP_PERSONAL_LISTAR" Method="SGEOP_PERSONAL_LISTAR">
+    <ElementType Name="SGEOP_PERSONAL_LISTARResult">
+      <Column Name="perc_icod_personal" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="perc_iid_personal" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="perc_sfecha_registro" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="perc_vnombres" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="perc_sfecha_nacimiento" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_cargo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_area" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="perc_iid_situacion_perso" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="strCargo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="strArea" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEOP_PERSONAL_MODIFICAR" Method="SGEOP_PERSONAL_MODIFICAR">
+    <Parameter Name="perc_icod_personal" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_iid_personal" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="perc_sfecha_registro" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="perc_vnombres" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="perc_sfecha_nacimiento" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="tablc_iid_tipo_cargo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tablc_iid_tipo_area" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_iid_situacion_perso" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_isuario_modifica" Type="System.Int32" DbType="Int" />
+    <Parameter Name="perc_vpc_modifica" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEV_VENDEDORES_ELIMINAR" Method="SGEV_VENDEDORES_ELIMINAR">
+    <Parameter Name="vdrsc_icod_vendedor" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vdrsc_isuario_modifica" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEV_VENDEDORES_MODIFICAR" Method="SGEV_VENDEDORES_MODIFICAR">
+    <Parameter Name="vdrsc_icod_vendedor" Type="System.Int32" DbType="Int" />
+    <Parameter Name="vdrsc_vcod_vendedor" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="vdrsc_vnombre_vendedor" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="vdrsc_vdireccion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="vdrsc_vnumero_telefono" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="vdrsc_vnumero_dni" Type="System.String" DbType="VarChar(8)" />
+    <Parameter Name="vdrsc_vcorreo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="vdrsc_iusuario_modifica" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEV_VENDEDORES_LISTAR" Method="SGEV_VENDEDORES_LISTAR">
+    <ElementType Name="SGEV_VENDEDORES_LISTARResult">
+      <Column Name="vdrsc_icod_vendedor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="vdrsc_vcod_vendedor" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="vdrsc_vnombre_vendedor" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="vdrsc_vdireccion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="vdrsc_vnumero_telefono" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="vdrsc_vnumero_dni" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="vdrsc_vcorreo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="vdrsc_iactivo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEV_VENDEDORES_INSERTAR" Method="SGEV_VENDEDORES_INSERTAR">
+    <Parameter Name="vdrsc_icod_vendedor" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="vdrsc_vcod_vendedor" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="vdrsc_vnombre_vendedor" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="vdrsc_vdireccion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="vdrsc_vnumero_telefono" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="vdrsc_vnumero_dni" Type="System.String" DbType="VarChar(8)" />
+    <Parameter Name="vdrsc_vcorreo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="vdrsc_iusuario_crea" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

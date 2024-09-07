@@ -1,0 +1,676 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblMontoProvD.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 7pt</value>
+  </data>
+  <assembly alias="DevExpress.Utils.v19.2" name="DevExpress.Utils.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="lblMontoProvD.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v19.2">
+    <value>522.9167, 5.83333969</value>
+  </data>
+  <data name="lblMontoProvD.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>75.5, 12.92</value>
+  </data>
+  <data name="lblMontoProvD.Text" xml:space="preserve">
+    <value>99,999,999.00</value>
+  </data>
+  <assembly alias="DevExpress.Data.v19.2" name="DevExpress.Data.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="lblMontoProvD.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v19.2">
+    <value>TopRight</value>
+  </data>
+  <data name="lblCodProv.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 7pt</value>
+  </data>
+  <data name="lblCodProv.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v19.2">
+    <value>1.04166663, 5.83333969</value>
+  </data>
+  <data name="lblCodProv.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>73.29168, 12.92</value>
+  </data>
+  <data name="lblCodProv.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v19.2">
+    <value>TopLeft</value>
+  </data>
+  <data name="lblNomProv.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 7pt</value>
+  </data>
+  <data name="lblNomProv.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v19.2">
+    <value>81.6250458, 5.83333969</value>
+  </data>
+  <data name="lblNomProv.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>242.8333, 12.92</value>
+  </data>
+  <data name="lblMontoProvS.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 7pt</value>
+  </data>
+  <data name="lblMontoProvS.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v19.2">
+    <value>427.2917, 5.83333969</value>
+  </data>
+  <data name="lblMontoProvS.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>75.5, 12.92</value>
+  </data>
+  <data name="lblMontoProvS.Text" xml:space="preserve">
+    <value>99,999,999.00</value>
+  </data>
+  <data name="lblMontoProvS.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v19.2">
+    <value>TopRight</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Detail.HeightF" type="System.Single, mscorlib">
+    <value>26.0450039</value>
+  </data>
+  <data name="Detail.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v19.2">
+    <value>TopLeft</value>
+  </data>
+  <data name="lblConcepto.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 7pt</value>
+  </data>
+  <data name="lblConcepto.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v19.2">
+    <value>509.375, 0</value>
+  </data>
+  <data name="lblConcepto.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>199.583344, 12.92</value>
+  </data>
+  <data name="lblConcepto.Text" xml:space="preserve">
+    <value>aaaaaaaaaaaaaaaaaaaaaaabbbbbbcccccc</value>
+  </data>
+  <data name="lblMontoD.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 7pt</value>
+  </data>
+  <data name="lblMontoD.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v19.2">
+    <value>340.625, 0</value>
+  </data>
+  <data name="lblMontoD.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>75.5, 12.92</value>
+  </data>
+  <data name="lblMontoD.Text" xml:space="preserve">
+    <value>99,999,999.00</value>
+  </data>
+  <data name="lblMontoD.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v19.2">
+    <value>TopRight</value>
+  </data>
+  <data name="lblTC.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 7pt</value>
+  </data>
+  <data name="lblTC.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v19.2">
+    <value>442.708344, 0</value>
+  </data>
+  <data name="lblTC.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>41, 12.92</value>
+  </data>
+  <data name="lblTC.Text" xml:space="preserve">
+    <value>122.6548</value>
+  </data>
+  <data name="lblTC.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v19.2">
+    <value>TopRight</value>
+  </data>
+  <data name="lblMontoS.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 7pt</value>
+  </data>
+  <data name="lblMontoS.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v19.2">
+    <value>250.000031, 0</value>
+  </data>
+  <data name="lblMontoS.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>73.41664, 12.92</value>
+  </data>
+  <data name="lblMontoS.Text" xml:space="preserve">
+    <value>99,999,999.00</value>
+  </data>
+  <data name="lblMontoS.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v19.2">
+    <value>TopRight</value>
+  </data>
+  <data name="lblMoneda.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 7pt</value>
+  </data>
+  <data name="lblMoneda.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v19.2">
+    <value>200.916672, 0</value>
+  </data>
+  <data name="lblMoneda.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>22, 12.91999</value>
+  </data>
+  <data name="lblMoneda.Text" xml:space="preserve">
+    <value>S/.</value>
+  </data>
+  <data name="lblMoneda.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v19.2">
+    <value>TopLeft</value>
+  </data>
+  <data name="lblFecha.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 7pt</value>
+  </data>
+  <data name="lblFecha.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v19.2">
+    <value>125, 0</value>
+  </data>
+  <data name="lblFecha.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>56.25, 12.92</value>
+  </data>
+  <data name="lblFecha.Text" xml:space="preserve">
+    <value>16/01/2012</value>
+  </data>
+  <data name="lblNumDoc.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 7pt</value>
+  </data>
+  <data name="lblNumDoc.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v19.2">
+    <value>41.6666679, 0</value>
+  </data>
+  <data name="lblNumDoc.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>63.5416679, 12.92</value>
+  </data>
+  <data name="lblNumDoc.Text" xml:space="preserve">
+    <value>123-1234567</value>
+  </data>
+  <data name="lblTipoDoc.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 7pt</value>
+  </data>
+  <data name="lblTipoDoc.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v19.2">
+    <value>0, 0</value>
+  </data>
+  <data name="lblTipoDoc.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>29.375, 12.92</value>
+  </data>
+  <data name="lblTipoDoc.Text" xml:space="preserve">
+    <value>RHO</value>
+  </data>
+  <data name="TopMargin.HeightF" type="System.Single, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="TopMargin.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v19.2">
+    <value>TopLeft</value>
+  </data>
+  <data name="BottomMargin.HeightF" type="System.Single, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="BottomMargin.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v19.2">
+    <value>TopLeft</value>
+  </data>
+  <data name="xrLabel13.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 7pt</value>
+  </data>
+  <data name="xrLabel13.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v19.2">
+    <value>578.7433, 73.08668</value>
+  </data>
+  <data name="xrLabel13.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>58, 12.92</value>
+  </data>
+  <data name="xrLabel13.Text" xml:space="preserve">
+    <value>CONCEPTO</value>
+  </data>
+  <data name="xrLabel13.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v19.2">
+    <value>TopCenter</value>
+  </data>
+  <data name="xrLabel12.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 7pt</value>
+  </data>
+  <data name="xrLabel12.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v19.2">
+    <value>443.75, 73.08668</value>
+  </data>
+  <data name="xrLabel12.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>58, 12.92</value>
+  </data>
+  <data name="xrLabel12.Text" xml:space="preserve">
+    <value>T. CAMBIO</value>
+  </data>
+  <data name="xrLabel12.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v19.2">
+    <value>TopCenter</value>
+  </data>
+  <data name="xrLabel11.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 7pt</value>
+  </data>
+  <data name="xrLabel11.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v19.2">
+    <value>341.666656, 73.08668</value>
+  </data>
+  <data name="xrLabel11.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>80, 12.9199982</value>
+  </data>
+  <data name="xrLabel11.Text" xml:space="preserve">
+    <value>MONTO DOLARES</value>
+  </data>
+  <data name="xrLabel11.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v19.2">
+    <value>TopCenter</value>
+  </data>
+  <data name="xrLabel10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 7pt</value>
+  </data>
+  <data name="xrLabel10.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v19.2">
+    <value>261.458344, 73.08668</value>
+  </data>
+  <data name="xrLabel10.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>70, 12.9199982</value>
+  </data>
+  <data name="xrLabel10.Text" xml:space="preserve">
+    <value>MONTO SOLES</value>
+  </data>
+  <data name="xrLabel10.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v19.2">
+    <value>TopCenter</value>
+  </data>
+  <data name="xrLabel9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 7pt</value>
+  </data>
+  <data name="xrLabel9.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v19.2">
+    <value>198.958328, 73.08668</value>
+  </data>
+  <data name="xrLabel9.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>25, 12.92</value>
+  </data>
+  <data name="xrLabel9.Text" xml:space="preserve">
+    <value>MON</value>
+  </data>
+  <data name="xrLabel9.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v19.2">
+    <value>TopCenter</value>
+  </data>
+  <data name="xrLabel8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 7pt</value>
+  </data>
+  <data name="xrLabel8.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v19.2">
+    <value>136, 73.08668</value>
+  </data>
+  <data name="xrLabel8.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>35, 12.92</value>
+  </data>
+  <data name="xrLabel8.Text" xml:space="preserve">
+    <value>FECHA</value>
+  </data>
+  <data name="xrLabel8.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v19.2">
+    <value>TopCenter</value>
+  </data>
+  <data name="xrLabel7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 7pt</value>
+  </data>
+  <data name="xrLabel7.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v19.2">
+    <value>16.3333416, 73.08668</value>
+  </data>
+  <data name="xrLabel7.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>58, 12.92</value>
+  </data>
+  <data name="xrLabel7.Text" xml:space="preserve">
+    <value>DOCUMENTO</value>
+  </data>
+  <data name="xrLabel7.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v19.2">
+    <value>TopCenter</value>
+  </data>
+  <data name="xrLabel24.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 7pt</value>
+  </data>
+  <data name="xrLabel24.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v19.2">
+    <value>16.3333416, 60.1666756</value>
+  </data>
+  <data name="xrLabel24.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>58, 12.92</value>
+  </data>
+  <data name="xrLabel24.Text" xml:space="preserve">
+    <value>CÓDIGO</value>
+  </data>
+  <data name="xrLabel24.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v19.2">
+    <value>TopCenter</value>
+  </data>
+  <data name="xrLine1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v19.2">
+    <value>0, 54.1666679</value>
+  </data>
+  <data name="xrLine1.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>710, 2.083332</value>
+  </data>
+  <data name="xrLine2.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v19.2">
+    <value>0, 89.16664</value>
+  </data>
+  <data name="xrLine2.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>710, 5.208336</value>
+  </data>
+  <data name="xrLabel4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 7pt</value>
+  </data>
+  <data name="xrLabel4.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v19.2">
+    <value>539.375, 60.1666756</value>
+  </data>
+  <data name="xrLabel4.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>58, 12.92</value>
+  </data>
+  <data name="xrLabel4.Text" xml:space="preserve">
+    <value>TOTAL $</value>
+  </data>
+  <data name="xrLabel4.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v19.2">
+    <value>TopCenter</value>
+  </data>
+  <data name="xrLabel5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 7pt</value>
+  </data>
+  <data name="xrLabel5.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v19.2">
+    <value>448.75, 60.1666756</value>
+  </data>
+  <data name="xrLabel5.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>58, 12.92</value>
+  </data>
+  <data name="xrLabel5.Text" xml:space="preserve">
+    <value>TOTAL S/.</value>
+  </data>
+  <data name="xrLabel5.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v19.2">
+    <value>TopCenter</value>
+  </data>
+  <data name="xrLabel6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 7pt</value>
+  </data>
+  <data name="xrLabel6.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v19.2">
+    <value>212.5, 60.1666756</value>
+  </data>
+  <data name="xrLabel6.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>154.875, 12.92</value>
+  </data>
+  <data name="xrLabel6.Text" xml:space="preserve">
+    <value>RAZÓN SOCIAL DEL PROVEEDOR</value>
+  </data>
+  <data name="xrLabel6.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v19.2">
+    <value>TopCenter</value>
+  </data>
+  <data name="xrPageInfo4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 7pt</value>
+  </data>
+  <data name="xrPageInfo4.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v19.2">
+    <value>647.16, 0</value>
+  </data>
+  <data name="xrPageInfo4.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>62.84, 10</value>
+  </data>
+  <data name="xrPageInfo4.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v19.2">
+    <value>MiddleRight</value>
+  </data>
+  <data name="xrPageInfo5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 7pt</value>
+  </data>
+  <data name="xrPageInfo5.Format" xml:space="preserve">
+    <value>{0:HH:mm:ss}</value>
+  </data>
+  <data name="xrPageInfo5.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v19.2">
+    <value>647.16, 20</value>
+  </data>
+  <data name="xrPageInfo5.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>62.84, 10</value>
+  </data>
+  <data name="xrPageInfo5.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v19.2">
+    <value>MiddleRight</value>
+  </data>
+  <data name="xrPageInfo6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 7pt</value>
+  </data>
+  <data name="xrPageInfo6.Format" xml:space="preserve">
+    <value>{0:dd/MM/yyyy}</value>
+  </data>
+  <data name="xrPageInfo6.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v19.2">
+    <value>647.16, 10</value>
+  </data>
+  <data name="xrPageInfo6.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>62.84, 10</value>
+  </data>
+  <data name="xrPageInfo6.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v19.2">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblTitulo2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 7pt</value>
+  </data>
+  <data name="lblTitulo2.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v19.2">
+    <value>224.999969, 30.00002</value>
+  </data>
+  <data name="lblTitulo2.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>300, 10</value>
+  </data>
+  <data name="lblTitulo2.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v19.2">
+    <value>TopCenter</value>
+  </data>
+  <data name="xrLabel20.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 7pt</value>
+  </data>
+  <data name="xrLabel20.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v19.2">
+    <value>598.7439, 10</value>
+  </data>
+  <data name="xrLabel20.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>48.41608, 9.970001</value>
+  </data>
+  <data name="xrLabel20.Text" xml:space="preserve">
+    <value>FECHA :</value>
+  </data>
+  <data name="xrLabel20.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v19.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="lblEmpresa.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 7pt</value>
+  </data>
+  <data name="lblEmpresa.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v19.2">
+    <value>0, 0</value>
+  </data>
+  <data name="lblEmpresa.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>293, 10</value>
+  </data>
+  <data name="lblModulo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 7pt</value>
+  </data>
+  <data name="lblModulo.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v19.2">
+    <value>0, 10.0000067</value>
+  </data>
+  <data name="lblModulo.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>106.25, 9.999997</value>
+  </data>
+  <data name="lblModulo.Text" xml:space="preserve">
+    <value>COMPRAS</value>
+  </data>
+  <data name="lblTitulo1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 7pt</value>
+  </data>
+  <data name="lblTitulo1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v19.2">
+    <value>225, 20.0000134</value>
+  </data>
+  <data name="lblTitulo1.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>300, 10</value>
+  </data>
+  <data name="lblTitulo1.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v19.2">
+    <value>TopCenter</value>
+  </data>
+  <data name="xrLabel14.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 7pt</value>
+  </data>
+  <data name="xrLabel14.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v19.2">
+    <value>598.74, 0</value>
+  </data>
+  <data name="xrLabel14.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>48.42, 10</value>
+  </data>
+  <data name="xrLabel14.Text" xml:space="preserve">
+    <value>PÁGINA:</value>
+  </data>
+  <data name="xrLabel14.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v19.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrLabel19.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 7pt</value>
+  </data>
+  <data name="xrLabel19.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v19.2">
+    <value>598.744, 19.9700012</value>
+  </data>
+  <data name="xrLabel19.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>48.41595, 9.969999</value>
+  </data>
+  <data name="xrLabel19.Text" xml:space="preserve">
+    <value>HORA  :</value>
+  </data>
+  <data name="xrLabel19.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v19.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="PageHeader.HeightF" type="System.Single, mscorlib">
+    <value>103.125</value>
+  </data>
+  <data name="lblMontoST.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 7pt</value>
+  </data>
+  <data name="lblMontoST.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v19.2">
+    <value>250, 5.208336</value>
+  </data>
+  <data name="lblMontoST.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>74.45831, 12.92</value>
+  </data>
+  <data name="xrSummary1.FormatString" xml:space="preserve">
+    <value>{0:n2}</value>
+  </data>
+  <data name="lblMontoST.Text" xml:space="preserve">
+    <value>99,999,999.00</value>
+  </data>
+  <data name="lblMontoST.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v19.2">
+    <value>TopRight</value>
+  </data>
+  <data name="lblMontoDT.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 7pt</value>
+  </data>
+  <data name="lblMontoDT.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v19.2">
+    <value>343.749969, 5.208336</value>
+  </data>
+  <data name="lblMontoDT.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>73.41669, 12.92</value>
+  </data>
+  <data name="xrSummary2.FormatString" xml:space="preserve">
+    <value>{0:n2}</value>
+  </data>
+  <data name="lblMontoDT.Text" xml:space="preserve">
+    <value>99,999,999.00</value>
+  </data>
+  <data name="lblMontoDT.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v19.2">
+    <value>TopRight</value>
+  </data>
+  <data name="xrLine5.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v19.2">
+    <value>0, 20</value>
+  </data>
+  <data name="xrLine5.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>710, 2.083332</value>
+  </data>
+  <data name="xrLine4.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v19.2">
+    <value>0, 23</value>
+  </data>
+  <data name="xrLine4.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>710, 2.083332</value>
+  </data>
+  <data name="xrLine3.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v19.2">
+    <value>0, 0</value>
+  </data>
+  <data name="xrLine3.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>710, 5.208336</value>
+  </data>
+  <data name="ReportFooter.HeightF" type="System.Single, mscorlib">
+    <value>25.0833321</value>
+  </data>
+  <data name="Detail1.HeightF" type="System.Single, mscorlib">
+    <value>12.92</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+</root>

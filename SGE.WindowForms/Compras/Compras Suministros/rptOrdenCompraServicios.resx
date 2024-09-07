@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="xrLabel63.Text" xml:space="preserve">
+    <value>9. Confidencialidad. El proveedor tendrá que observar confidencialidad y no revelar secreto comercial alguno, información empresarial o cualquier otra información respecto de este contrato, salvo cuando así lo requiera la ley o mediante una orden judicial o cuando así lo aprobase por escrito CALZADOS JAGUAR S.A.C </value>
+  </data>
+  <data name="xrLabel60.Text" xml:space="preserve">
+    <value>10. Traslado de multas impuestas por cliente final de CALZADOS JAGUAR S.A.C.: El Proveedor asumirá cualquier multa o sanción que deba pagar CALZADOS JAGUAR S.A.C. y que tenga como causa el incumplimiento de este Contrato por parte del proveedor. </value>
+  </data>
+  <data name="xrLabel59.Text" xml:space="preserve">
+    <value>8. Con la presente orden de servicio se aceptan las condiciones de la oferta (precio, objeto, plazo de entrega de mercancías, plazo de pago) comprendidas en la cotización indicada en la orden de servicio, quedando perfeccionada la compraventa de las mercancías a que hace referencia la presente orden de servicio. Las condiciones son inmodificables salvo nuevo acuerdo entre las partes; la venta perfeccionada está en firme y el no cumplimiento de las obligaciones de cualquiera de las partes dará lugar al inicio de las acciones legales de la parte cumplida en contra de la incumplida junto con el cobro de los respectivos perjuicios por incumplimiento.</value>
+  </data>
+  <data name="xrLabel49.Text" xml:space="preserve">
+    <value>5. Fecha y lugar de entrega: La orden de compra tiene un tiempo de entrega dispuesto en la casilla “fecha de entrega” especificada al lado de cada ítem, descrito en la orden de servicio, así como el lugar y la ciudad donde deberán ser entregados. </value>
+  </data>
+  <data name="xrLabel48.Text" xml:space="preserve">
+    <value>4. CALZADOS JAGUAR  S.A.C se reserva el derecho de rechazar los equipos, productos y/o materiales servicios que no cumplan con las especificaciones acordadas o que al momento de su recepción presenten daño, vencimiento, avería o deterioro. Así mismo, podrá devolver aquel material que no sea empleado. </value>
+  </data>
+  <data name="xrLabel47.Text" xml:space="preserve">
+    <value>3. El Representante del Proveedor acepta las condiciones, especificaciones, calidad, precios, plazo y forma de pago, establecidos en el presente documento, consentimiento que se entiende prestado con la suscripción del mismo. </value>
+  </data>
+  <data name="xrLabel46.Text" xml:space="preserve">
+    <value>2. El Proveedor expresamente señala que dará cumplimiento a todas las Especificaciones Técnicas que le sean aplicables en cuanto a la calidad de equipos, productos y/o materiales a suministrar, las cuales declara conocer y aceptar en su totalidad. </value>
+  </data>
+  <data name="xrLabel23.Text" xml:space="preserve">
+    <value>Todos los despachos deben venir con su guia de remision y copia de la orden de compra. no se recibiran mercancias que vengan sin esta documentacion. para que su factura se tenga en cuenta para pago debe ser recibida en la recepcion de Calzados Jaguar s.a.c. en Calle Antonio de Sucre N° 1638 El Porvenir  y no en otra dependencia.</value>
+  </data>
+</root>

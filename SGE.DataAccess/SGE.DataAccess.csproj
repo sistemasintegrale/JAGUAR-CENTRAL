@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{51CBC09F-26F2-475E-A6D2-6470C4AF7DCC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SGE.DataAccess</RootNamespace>
+    <AssemblyName>SGE.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>..\SGE.WindowForms\Librerias\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdministracionSistema.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdministracionSistema.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="AdministracionSistemaData.cs" />
+    <Compile Include="Almacen.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Almacen.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="AlmacenData.cs" />
+    <Compile Include="Central.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Central.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="CentralData.cs" />
+    <Compile Include="Compras.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Compras.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="ComprasData.cs" />
+    <Compile Include="Contabilidad.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Contabilidad.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="ContabilidadData.cs" />
+    <Compile Include="Convertir.cs" />
+    <Compile Include="CuentasPorCobrar.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CuentasPorCobrar.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasPorCobrarData.cs" />
+    <Compile Include="CuentasPorPagar.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CuentasPorPagar.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasPorPagarData.cs" />
+    <Compile Include="DocumentoEMysql\DocumentoEMysqlData.cs" />
+    <Compile Include="General.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>General.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralData.cs" />
+    <Compile Include="Helper.cs" />
+    <Compile Include="Operaciones.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Operaciones.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="OperacionesData.cs" />
+    <Compile Include="Planillas.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Planillas.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="PlanillasData.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Tesoreria.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="TesoreriaData.cs" />
+    <Compile Include="Ventas.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ventas.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="VentasData.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SGE.Entity\SGE.Entity.csproj">
+      <Project>{F2BDFEF4-7234-438A-B547-5A326E8E7FC4}</Project>
+      <Name>SGE.Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AdministracionSistema.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>AdministracionSistema.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Almacen.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Almacen.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="app.config" />
+    <None Include="Central.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Central.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Compras.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Compras.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Contabilidad.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Contabilidad.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CuentasPorCobrar.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>CuentasPorCobrar.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CuentasPorPagar.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>CuentasPorPagar.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="General.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>General.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Operaciones.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Operaciones.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Planillas.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Planillas.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Tesoreria.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Tesoreria.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Ventas.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Ventas.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AdministracionSistema.dbml.layout">
+      <DependentUpon>AdministracionSistema.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Almacen.dbml.layout">
+      <DependentUpon>Almacen.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Compras.dbml.layout">
+      <DependentUpon>Compras.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CuentasPorPagar.dbml.layout">
+      <DependentUpon>CuentasPorPagar.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tesoreria.dbml.layout">
+      <DependentUpon>Tesoreria.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Ventas.dbml.layout">
+      <DependentUpon>Ventas.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="General.dbml.layout">
+      <DependentUpon>General.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Contabilidad.dbml.layout">
+      <DependentUpon>Contabilidad.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Operaciones.dbml.layout">
+      <DependentUpon>Operaciones.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CuentasPorCobrar.dbml.layout">
+      <DependentUpon>CuentasPorCobrar.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Planillas.dbml.layout">
+      <DependentUpon>Planillas.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Central.dbml.layout">
+      <DependentUpon>Central.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
