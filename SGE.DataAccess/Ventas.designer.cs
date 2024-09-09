@@ -1698,13 +1698,6 @@ namespace SGE.DataAccess
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SGE_NOTA_CREDITO_VENTA_LISTAR")]
-		public ISingleResult<SGE_NOTA_CREDITO_VENTA_LISTARResult> SGE_NOTA_CREDITO_VENTA_LISTAR([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> intEjercicio)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), intEjercicio);
-			return ((ISingleResult<SGE_NOTA_CREDITO_VENTA_LISTARResult>)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SGE_NOTA_DEBITO_VENTA_LISTAR")]
 		public ISingleResult<SGE_NOTA_DEBITO_VENTA_LISTARResult> SGE_NOTA_DEBITO_VENTA_LISTAR([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> intEjercicio)
 		{
@@ -2332,50 +2325,6 @@ namespace SGE.DataAccess
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SGE_NOTA_CREDITO_VENTA_INSERTAR")]
-		public int SGE_NOTA_CREDITO_VENTA_INSERTAR(
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> ncrec_icod_credito, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(12)")] string ncrec_vnumero_credito, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="SmallDateTime")] System.Nullable<System.DateTime> ncrec_sfecha_credito, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> cliec_icod_cliente, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> ncrec_ianio, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(20)")] string ncrec_vreferencia, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> tdocc_icod_tipo_doc, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> tablc_iid_tipo_nota_credito_venta, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> tdodc_iid_correlativo, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(12)")] string ncrec_vnumero_documento, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="SmallDateTime")] System.Nullable<System.DateTime> ncrec_sfecha_documento, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> vendc_icod_vendedor, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> tablc_iid_tipo_moneda, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Decimal(16,4)")] System.Nullable<decimal> ncrec_nmonto_neto, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Decimal(6,2)")] System.Nullable<decimal> ncrec_npor_imp_igv, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Decimal(16,4)")] System.Nullable<decimal> ncrec_nmonto_total, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> ncrec_iid_situacion_credito, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> almac_icod_almacen, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Decimal(16,2)")] System.Nullable<decimal> ncrec_tipo_cambio_fecha_doc_venta, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Decimal(16,4)")] System.Nullable<decimal> ncrec_nmonto_iva, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> intUsuario, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(30)")] string strPc, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Decimal(16,2)")] System.Nullable<decimal> ncrec_nmonto_pagado, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="BigInt")] System.Nullable<long> ncrec_icod_dxc, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Bit")] System.Nullable<bool> ncrec_bincluye_igv, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> ncrec_iclase_doc, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> ncrec_tipo_nota_credito, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(5)")] string ncrec_vmotivo_sunat, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(100)")] string ncrec_vdetalle)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ncrec_icod_credito, ncrec_vnumero_credito, ncrec_sfecha_credito, cliec_icod_cliente, ncrec_ianio, ncrec_vreferencia, tdocc_icod_tipo_doc, tablc_iid_tipo_nota_credito_venta, tdodc_iid_correlativo, ncrec_vnumero_documento, ncrec_sfecha_documento, vendc_icod_vendedor, tablc_iid_tipo_moneda, ncrec_nmonto_neto, ncrec_npor_imp_igv, ncrec_nmonto_total, ncrec_iid_situacion_credito, almac_icod_almacen, ncrec_tipo_cambio_fecha_doc_venta, ncrec_nmonto_iva, intUsuario, strPc, ncrec_nmonto_pagado, ncrec_icod_dxc, ncrec_bincluye_igv, ncrec_iclase_doc, ncrec_tipo_nota_credito, ncrec_vmotivo_sunat, ncrec_vdetalle);
-			ncrec_icod_credito = ((System.Nullable<int>)(result.GetParameterValue(0)));
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SGE_NOTA_CREDITO_VENTA_LISTAR")]
-		public ISingleResult<SGE_NOTA_CREDITO_VENTA_LISTARResult1> SGE_NOTA_CREDITO_VENTA_LISTAR1([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> intEjercicio)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), intEjercicio);
-			return ((ISingleResult<SGE_NOTA_CREDITO_VENTA_LISTARResult1>)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SGE_NOTA_CREDITO_VENTA_MODIFICAR")]
 		public int SGE_NOTA_CREDITO_VENTA_MODIFICAR(
 					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> ncrec_icod_credito, 
@@ -2849,52 +2798,6 @@ namespace SGE.DataAccess
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id);
 			return ((ISingleResult<SGEV_FACTURA_CAB_GET_X_DXPResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SGEV_FACTURA_VENTA_ELECTRONICA_DETALLE_INSERTAR")]
-		public int SGEV_FACTURA_VENTA_ELECTRONICA_DETALLE_INSERTAR(
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="IdItems", DbType="Int")] ref System.Nullable<int> idItems, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="IdCabezera", DbType="Int")] System.Nullable<int> idCabezera, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="NumeroOrdenItem", DbType="Int")] System.Nullable<int> numeroOrdenItem, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Decimal(12,2)")] System.Nullable<decimal> cantidad, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Char(10)")] string unidadMedida, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="ValorVentaItem", DbType="Decimal(12,2)")] System.Nullable<decimal> valorVentaItem, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="CodMotivoDescuentoItem", DbType="Int")] System.Nullable<int> codMotivoDescuentoItem, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="FactorDescuentoItem", DbType="Decimal(12,2)")] System.Nullable<decimal> factorDescuentoItem, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="DescuentoItem", DbType="Decimal(12,2)")] System.Nullable<decimal> descuentoItem, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="BaseDescuentotem", DbType="Decimal(12,2)")] System.Nullable<decimal> baseDescuentotem, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="CodMotivoCargoItem", DbType="Int")] System.Nullable<int> codMotivoCargoItem, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="FactorCargoItem", DbType="Decimal(12,2)")] System.Nullable<decimal> factorCargoItem, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="MontoCargoItem", DbType="Decimal(12,2)")] System.Nullable<decimal> montoCargoItem, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="BaseCargoItem", DbType="Decimal(12,2)")] System.Nullable<decimal> baseCargoItem, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="MontoTotalImpuestosItem", DbType="Decimal(12,2)")] System.Nullable<decimal> montoTotalImpuestosItem, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="MontoImpuestoIgvItem", DbType="Decimal(12,2)")] System.Nullable<decimal> montoImpuestoIgvItem, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="MontoAfectoImpuestoIgv", DbType="Decimal(12,2)")] System.Nullable<decimal> montoAfectoImpuestoIgv, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="PorcentajeIGVItem", DbType="Decimal(12,2)")] System.Nullable<decimal> porcentajeIGVItem, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="MontoInafectoItem", DbType="Decimal(12,2)")] System.Nullable<decimal> montoInafectoItem, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="MontoImpuestoISCItem", DbType="Decimal(12,2)")] System.Nullable<decimal> montoImpuestoISCItem, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="MontoAfectoImpuestoIsc", DbType="Decimal(12,2)")] System.Nullable<decimal> montoAfectoImpuestoIsc, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="PorcentajeISCtem", DbType="Decimal(12,2)")] System.Nullable<decimal> porcentajeISCtem, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="MontoImpuestoIVAPtem", DbType="Decimal(12,2)")] System.Nullable<decimal> montoImpuestoIVAPtem, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="MontoAfectoImpuestoIVAPItem", DbType="Decimal(12,2)")] System.Nullable<decimal> montoAfectoImpuestoIVAPItem, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="PorcentajeIVAPItem", DbType="Decimal(12,2)")] System.Nullable<decimal> porcentajeIVAPItem, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string descripcion, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Char(20)")] string codigoItem, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="ObservacionesItem", DbType="VarChar(500)")] string observacionesItem, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="ValorUnitarioItem", DbType="Decimal(12,2)")] System.Nullable<decimal> valorUnitarioItem, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="PrecioVentaUnitarioItem", DbType="Decimal(12,2)")] System.Nullable<decimal> precioVentaUnitarioItem, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Char(7)")] string tipoImpuesto)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idItems, idCabezera, numeroOrdenItem, cantidad, unidadMedida, valorVentaItem, codMotivoDescuentoItem, factorDescuentoItem, descuentoItem, baseDescuentotem, codMotivoCargoItem, factorCargoItem, montoCargoItem, baseCargoItem, montoTotalImpuestosItem, montoImpuestoIgvItem, montoAfectoImpuestoIgv, porcentajeIGVItem, montoInafectoItem, montoImpuestoISCItem, montoAfectoImpuestoIsc, porcentajeISCtem, montoImpuestoIVAPtem, montoAfectoImpuestoIVAPItem, porcentajeIVAPItem, descripcion, codigoItem, observacionesItem, valorUnitarioItem, precioVentaUnitarioItem, tipoImpuesto);
-			idItems = ((System.Nullable<int>)(result.GetParameterValue(0)));
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SGEV_FACTURA_VENTA_ELECTRONICA_DETALLE_LISTAR")]
-		public ISingleResult<SGEV_FACTURA_VENTA_ELECTRONICA_DETALLE_LISTARResult> SGEV_FACTURA_VENTA_ELECTRONICA_DETALLE_LISTAR([global::System.Data.Linq.Mapping.ParameterAttribute(Name="IdCabezera", DbType="Int")] System.Nullable<int> idCabezera)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idCabezera);
-			return ((ISingleResult<SGEV_FACTURA_VENTA_ELECTRONICA_DETALLE_LISTARResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SGEV_RESUEMEN_RESPONSE_MODIFCAR")]
@@ -3443,6 +3346,98 @@ namespace SGE.DataAccess
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), doc_icod_documento, tipoDocumento);
 			return ((ISingleResult<SGEV_FACTURA_VENTA_ELECTRONICA_LISTAR_X_IDResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SGEV_FACTURA_VENTA_ELECTRONICA_DETALLE_INSERTAR")]
+		public int SGEV_FACTURA_VENTA_ELECTRONICA_DETALLE_INSERTAR(
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="IdItems", DbType="Int")] ref System.Nullable<int> idItems, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="IdCabezera", DbType="Int")] System.Nullable<int> idCabezera, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="NumeroOrdenItem", DbType="Int")] System.Nullable<int> numeroOrdenItem, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Decimal(12,2)")] System.Nullable<decimal> cantidad, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Char(10)")] string unidadMedida, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="ValorVentaItem", DbType="Decimal(12,2)")] System.Nullable<decimal> valorVentaItem, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="CodMotivoDescuentoItem", DbType="Int")] System.Nullable<int> codMotivoDescuentoItem, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="FactorDescuentoItem", DbType="Decimal(12,2)")] System.Nullable<decimal> factorDescuentoItem, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="DescuentoItem", DbType="Decimal(12,2)")] System.Nullable<decimal> descuentoItem, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="BaseDescuentotem", DbType="Decimal(12,2)")] System.Nullable<decimal> baseDescuentotem, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="CodMotivoCargoItem", DbType="Int")] System.Nullable<int> codMotivoCargoItem, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="FactorCargoItem", DbType="Decimal(12,2)")] System.Nullable<decimal> factorCargoItem, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="MontoCargoItem", DbType="Decimal(12,2)")] System.Nullable<decimal> montoCargoItem, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="BaseCargoItem", DbType="Decimal(12,2)")] System.Nullable<decimal> baseCargoItem, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="MontoTotalImpuestosItem", DbType="Decimal(12,2)")] System.Nullable<decimal> montoTotalImpuestosItem, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="MontoImpuestoIgvItem", DbType="Decimal(12,2)")] System.Nullable<decimal> montoImpuestoIgvItem, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="MontoAfectoImpuestoIgv", DbType="Decimal(12,2)")] System.Nullable<decimal> montoAfectoImpuestoIgv, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="PorcentajeIGVItem", DbType="Decimal(12,2)")] System.Nullable<decimal> porcentajeIGVItem, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="MontoInafectoItem", DbType="Decimal(12,2)")] System.Nullable<decimal> montoInafectoItem, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="MontoImpuestoISCItem", DbType="Decimal(12,2)")] System.Nullable<decimal> montoImpuestoISCItem, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="MontoAfectoImpuestoIsc", DbType="Decimal(12,2)")] System.Nullable<decimal> montoAfectoImpuestoIsc, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="PorcentajeISCtem", DbType="Decimal(12,2)")] System.Nullable<decimal> porcentajeISCtem, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="MontoImpuestoIVAPtem", DbType="Decimal(12,2)")] System.Nullable<decimal> montoImpuestoIVAPtem, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="MontoAfectoImpuestoIVAPItem", DbType="Decimal(12,2)")] System.Nullable<decimal> montoAfectoImpuestoIVAPItem, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="PorcentajeIVAPItem", DbType="Decimal(12,2)")] System.Nullable<decimal> porcentajeIVAPItem, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string descripcion, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Char(20)")] string codigoItem, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="ObservacionesItem", DbType="VarChar(500)")] string observacionesItem, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="ValorUnitarioItem", DbType="Decimal(12,2)")] System.Nullable<decimal> valorUnitarioItem, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="PrecioVentaUnitarioItem", DbType="Decimal(12,2)")] System.Nullable<decimal> precioVentaUnitarioItem, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Char(7)")] string tipoImpuesto, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="UMedida", DbType="VarChar(10)")] string uMedida)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idItems, idCabezera, numeroOrdenItem, cantidad, unidadMedida, valorVentaItem, codMotivoDescuentoItem, factorDescuentoItem, descuentoItem, baseDescuentotem, codMotivoCargoItem, factorCargoItem, montoCargoItem, baseCargoItem, montoTotalImpuestosItem, montoImpuestoIgvItem, montoAfectoImpuestoIgv, porcentajeIGVItem, montoInafectoItem, montoImpuestoISCItem, montoAfectoImpuestoIsc, porcentajeISCtem, montoImpuestoIVAPtem, montoAfectoImpuestoIVAPItem, porcentajeIVAPItem, descripcion, codigoItem, observacionesItem, valorUnitarioItem, precioVentaUnitarioItem, tipoImpuesto, uMedida);
+			idItems = ((System.Nullable<int>)(result.GetParameterValue(0)));
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SGEV_FACTURA_VENTA_ELECTRONICA_DETALLE_LISTAR")]
+		public ISingleResult<SGEV_FACTURA_VENTA_ELECTRONICA_DETALLE_LISTARResult> SGEV_FACTURA_VENTA_ELECTRONICA_DETALLE_LISTAR([global::System.Data.Linq.Mapping.ParameterAttribute(Name="IdCabezera", DbType="Int")] System.Nullable<int> idCabezera)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idCabezera);
+			return ((ISingleResult<SGEV_FACTURA_VENTA_ELECTRONICA_DETALLE_LISTARResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SGE_NOTA_CREDITO_VENTA_INSERTAR")]
+		public int SGE_NOTA_CREDITO_VENTA_INSERTAR(
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> ncrec_icod_credito, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(12)")] string ncrec_vnumero_credito, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="SmallDateTime")] System.Nullable<System.DateTime> ncrec_sfecha_credito, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> cliec_icod_cliente, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> ncrec_ianio, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(20)")] string ncrec_vreferencia, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> tdocc_icod_tipo_doc, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> tablc_iid_tipo_nota_credito_venta, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> tdodc_iid_correlativo, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(12)")] string ncrec_vnumero_documento, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="SmallDateTime")] System.Nullable<System.DateTime> ncrec_sfecha_documento, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> vendc_icod_vendedor, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> tablc_iid_tipo_moneda, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Decimal(16,4)")] System.Nullable<decimal> ncrec_nmonto_neto, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Decimal(6,2)")] System.Nullable<decimal> ncrec_npor_imp_igv, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Decimal(16,4)")] System.Nullable<decimal> ncrec_nmonto_total, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> ncrec_iid_situacion_credito, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> almac_icod_almacen, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Decimal(16,2)")] System.Nullable<decimal> ncrec_tipo_cambio_fecha_doc_venta, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Decimal(16,4)")] System.Nullable<decimal> ncrec_nmonto_iva, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> intUsuario, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(30)")] string strPc, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Decimal(16,2)")] System.Nullable<decimal> ncrec_nmonto_pagado, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="BigInt")] System.Nullable<long> ncrec_icod_dxc, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Bit")] System.Nullable<bool> ncrec_bincluye_igv, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> ncrec_iclase_doc, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> ncrec_tipo_nota_credito, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(5)")] string ncrec_vmotivo_sunat, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(100)")] string ncrec_vdetalle, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> puvec_icod_punto_venta)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ncrec_icod_credito, ncrec_vnumero_credito, ncrec_sfecha_credito, cliec_icod_cliente, ncrec_ianio, ncrec_vreferencia, tdocc_icod_tipo_doc, tablc_iid_tipo_nota_credito_venta, tdodc_iid_correlativo, ncrec_vnumero_documento, ncrec_sfecha_documento, vendc_icod_vendedor, tablc_iid_tipo_moneda, ncrec_nmonto_neto, ncrec_npor_imp_igv, ncrec_nmonto_total, ncrec_iid_situacion_credito, almac_icod_almacen, ncrec_tipo_cambio_fecha_doc_venta, ncrec_nmonto_iva, intUsuario, strPc, ncrec_nmonto_pagado, ncrec_icod_dxc, ncrec_bincluye_igv, ncrec_iclase_doc, ncrec_tipo_nota_credito, ncrec_vmotivo_sunat, ncrec_vdetalle, puvec_icod_punto_venta);
+			ncrec_icod_credito = ((System.Nullable<int>)(result.GetParameterValue(0)));
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SGE_NOTA_CREDITO_VENTA_LISTAR")]
+		public ISingleResult<SGE_NOTA_CREDITO_VENTA_LISTARResult> SGE_NOTA_CREDITO_VENTA_LISTAR([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> intEjercicio)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), intEjercicio);
+			return ((ISingleResult<SGE_NOTA_CREDITO_VENTA_LISTARResult>)(result.ReturnValue));
 		}
 	}
 	
@@ -16866,626 +16861,6 @@ namespace SGE.DataAccess
 		}
 	}
 	
-	public partial class SGE_NOTA_CREDITO_VENTA_LISTARResult
-	{
-		
-		private int _ncrec_icod_credito;
-		
-		private string _ncrec_vnumero_credito;
-		
-		private System.DateTime _ncrec_sfecha_credito;
-		
-		private int _cliec_icod_cliente;
-		
-		private System.Nullable<int> _ncrec_ianio;
-		
-		private string _ncrec_vreferencia;
-		
-		private System.Nullable<int> _tdocc_icod_tipo_doc;
-		
-		private System.Nullable<int> _tablc_iid_tipo_nota_credito_venta;
-		
-		private System.Nullable<int> _tdodc_iid_correlativo;
-		
-		private string _ncrec_vnumero_documento;
-		
-		private System.DateTime _ncrec_sfecha_documento;
-		
-		private System.Nullable<int> _vendc_icod_vendedor;
-		
-		private int _tablc_iid_tipo_moneda;
-		
-		private decimal _ncrec_nmonto_neto;
-		
-		private decimal _ncrec_npor_imp_igv;
-		
-		private decimal _ncrec_nmonto_total;
-		
-		private int _ncrec_iid_situacion_credito;
-		
-		private System.Nullable<int> _almac_icod_almacen;
-		
-		private decimal _ncrec_tipo_cambio_fecha_doc_venta;
-		
-		private decimal _ncrec_nmonto_pagado;
-		
-		private System.Nullable<long> _ncrec_icod_dxc;
-		
-		private string _strSituacion;
-		
-		private string _strDesCliente;
-		
-		private string _strRuc;
-		
-		private string _DireccionCliente;
-		
-		private string _strTipoDoc;
-		
-		private string _strMoneda;
-		
-		private System.Nullable<bool> _ncrec_bincluye_igv;
-		
-		private int _ubicc_icod_ubicacion;
-		
-		private System.Nullable<int> _ncrec_iclase_doc;
-		
-		private string _StrClaseDocumento;
-		
-		private System.Nullable<int> _ncrec_tipo_nota_credito;
-		
-		private string _ncrec_vmotivo_sunat;
-		
-		private string _ncrec_vdetalle;
-		
-		public SGE_NOTA_CREDITO_VENTA_LISTARResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_icod_credito", DbType="Int NOT NULL")]
-		public int ncrec_icod_credito
-		{
-			get
-			{
-				return this._ncrec_icod_credito;
-			}
-			set
-			{
-				if ((this._ncrec_icod_credito != value))
-				{
-					this._ncrec_icod_credito = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_vnumero_credito", DbType="VarChar(12) NOT NULL", CanBeNull=false)]
-		public string ncrec_vnumero_credito
-		{
-			get
-			{
-				return this._ncrec_vnumero_credito;
-			}
-			set
-			{
-				if ((this._ncrec_vnumero_credito != value))
-				{
-					this._ncrec_vnumero_credito = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_sfecha_credito", DbType="SmallDateTime NOT NULL")]
-		public System.DateTime ncrec_sfecha_credito
-		{
-			get
-			{
-				return this._ncrec_sfecha_credito;
-			}
-			set
-			{
-				if ((this._ncrec_sfecha_credito != value))
-				{
-					this._ncrec_sfecha_credito = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cliec_icod_cliente", DbType="Int NOT NULL")]
-		public int cliec_icod_cliente
-		{
-			get
-			{
-				return this._cliec_icod_cliente;
-			}
-			set
-			{
-				if ((this._cliec_icod_cliente != value))
-				{
-					this._cliec_icod_cliente = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_ianio", DbType="Int")]
-		public System.Nullable<int> ncrec_ianio
-		{
-			get
-			{
-				return this._ncrec_ianio;
-			}
-			set
-			{
-				if ((this._ncrec_ianio != value))
-				{
-					this._ncrec_ianio = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_vreferencia", DbType="VarChar(20)")]
-		public string ncrec_vreferencia
-		{
-			get
-			{
-				return this._ncrec_vreferencia;
-			}
-			set
-			{
-				if ((this._ncrec_vreferencia != value))
-				{
-					this._ncrec_vreferencia = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tdocc_icod_tipo_doc", DbType="Int")]
-		public System.Nullable<int> tdocc_icod_tipo_doc
-		{
-			get
-			{
-				return this._tdocc_icod_tipo_doc;
-			}
-			set
-			{
-				if ((this._tdocc_icod_tipo_doc != value))
-				{
-					this._tdocc_icod_tipo_doc = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tablc_iid_tipo_nota_credito_venta", DbType="Int")]
-		public System.Nullable<int> tablc_iid_tipo_nota_credito_venta
-		{
-			get
-			{
-				return this._tablc_iid_tipo_nota_credito_venta;
-			}
-			set
-			{
-				if ((this._tablc_iid_tipo_nota_credito_venta != value))
-				{
-					this._tablc_iid_tipo_nota_credito_venta = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tdodc_iid_correlativo", DbType="Int")]
-		public System.Nullable<int> tdodc_iid_correlativo
-		{
-			get
-			{
-				return this._tdodc_iid_correlativo;
-			}
-			set
-			{
-				if ((this._tdodc_iid_correlativo != value))
-				{
-					this._tdodc_iid_correlativo = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_vnumero_documento", DbType="VarChar(12) NOT NULL", CanBeNull=false)]
-		public string ncrec_vnumero_documento
-		{
-			get
-			{
-				return this._ncrec_vnumero_documento;
-			}
-			set
-			{
-				if ((this._ncrec_vnumero_documento != value))
-				{
-					this._ncrec_vnumero_documento = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_sfecha_documento", DbType="SmallDateTime NOT NULL")]
-		public System.DateTime ncrec_sfecha_documento
-		{
-			get
-			{
-				return this._ncrec_sfecha_documento;
-			}
-			set
-			{
-				if ((this._ncrec_sfecha_documento != value))
-				{
-					this._ncrec_sfecha_documento = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vendc_icod_vendedor", DbType="Int")]
-		public System.Nullable<int> vendc_icod_vendedor
-		{
-			get
-			{
-				return this._vendc_icod_vendedor;
-			}
-			set
-			{
-				if ((this._vendc_icod_vendedor != value))
-				{
-					this._vendc_icod_vendedor = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tablc_iid_tipo_moneda", DbType="Int NOT NULL")]
-		public int tablc_iid_tipo_moneda
-		{
-			get
-			{
-				return this._tablc_iid_tipo_moneda;
-			}
-			set
-			{
-				if ((this._tablc_iid_tipo_moneda != value))
-				{
-					this._tablc_iid_tipo_moneda = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_nmonto_neto", DbType="Decimal(16,2) NOT NULL")]
-		public decimal ncrec_nmonto_neto
-		{
-			get
-			{
-				return this._ncrec_nmonto_neto;
-			}
-			set
-			{
-				if ((this._ncrec_nmonto_neto != value))
-				{
-					this._ncrec_nmonto_neto = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_npor_imp_igv", DbType="Decimal(6,2) NOT NULL")]
-		public decimal ncrec_npor_imp_igv
-		{
-			get
-			{
-				return this._ncrec_npor_imp_igv;
-			}
-			set
-			{
-				if ((this._ncrec_npor_imp_igv != value))
-				{
-					this._ncrec_npor_imp_igv = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_nmonto_total", DbType="Decimal(16,2) NOT NULL")]
-		public decimal ncrec_nmonto_total
-		{
-			get
-			{
-				return this._ncrec_nmonto_total;
-			}
-			set
-			{
-				if ((this._ncrec_nmonto_total != value))
-				{
-					this._ncrec_nmonto_total = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_iid_situacion_credito", DbType="Int NOT NULL")]
-		public int ncrec_iid_situacion_credito
-		{
-			get
-			{
-				return this._ncrec_iid_situacion_credito;
-			}
-			set
-			{
-				if ((this._ncrec_iid_situacion_credito != value))
-				{
-					this._ncrec_iid_situacion_credito = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_almac_icod_almacen", DbType="Int")]
-		public System.Nullable<int> almac_icod_almacen
-		{
-			get
-			{
-				return this._almac_icod_almacen;
-			}
-			set
-			{
-				if ((this._almac_icod_almacen != value))
-				{
-					this._almac_icod_almacen = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_tipo_cambio_fecha_doc_venta", DbType="Decimal(16,2) NOT NULL")]
-		public decimal ncrec_tipo_cambio_fecha_doc_venta
-		{
-			get
-			{
-				return this._ncrec_tipo_cambio_fecha_doc_venta;
-			}
-			set
-			{
-				if ((this._ncrec_tipo_cambio_fecha_doc_venta != value))
-				{
-					this._ncrec_tipo_cambio_fecha_doc_venta = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_nmonto_pagado", DbType="Decimal(16,2) NOT NULL")]
-		public decimal ncrec_nmonto_pagado
-		{
-			get
-			{
-				return this._ncrec_nmonto_pagado;
-			}
-			set
-			{
-				if ((this._ncrec_nmonto_pagado != value))
-				{
-					this._ncrec_nmonto_pagado = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_icod_dxc", DbType="BigInt")]
-		public System.Nullable<long> ncrec_icod_dxc
-		{
-			get
-			{
-				return this._ncrec_icod_dxc;
-			}
-			set
-			{
-				if ((this._ncrec_icod_dxc != value))
-				{
-					this._ncrec_icod_dxc = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strSituacion", DbType="VarChar(14)")]
-		public string strSituacion
-		{
-			get
-			{
-				return this._strSituacion;
-			}
-			set
-			{
-				if ((this._strSituacion != value))
-				{
-					this._strSituacion = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strDesCliente", DbType="VarChar(120)")]
-		public string strDesCliente
-		{
-			get
-			{
-				return this._strDesCliente;
-			}
-			set
-			{
-				if ((this._strDesCliente != value))
-				{
-					this._strDesCliente = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strRuc", DbType="Char(11)")]
-		public string strRuc
-		{
-			get
-			{
-				return this._strRuc;
-			}
-			set
-			{
-				if ((this._strRuc != value))
-				{
-					this._strRuc = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DireccionCliente", DbType="VarChar(120)")]
-		public string DireccionCliente
-		{
-			get
-			{
-				return this._DireccionCliente;
-			}
-			set
-			{
-				if ((this._DireccionCliente != value))
-				{
-					this._DireccionCliente = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strTipoDoc", DbType="VarChar(3)")]
-		public string strTipoDoc
-		{
-			get
-			{
-				return this._strTipoDoc;
-			}
-			set
-			{
-				if ((this._strTipoDoc != value))
-				{
-					this._strTipoDoc = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strMoneda", DbType="VarChar(3)")]
-		public string strMoneda
-		{
-			get
-			{
-				return this._strMoneda;
-			}
-			set
-			{
-				if ((this._strMoneda != value))
-				{
-					this._strMoneda = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_bincluye_igv", DbType="Bit")]
-		public System.Nullable<bool> ncrec_bincluye_igv
-		{
-			get
-			{
-				return this._ncrec_bincluye_igv;
-			}
-			set
-			{
-				if ((this._ncrec_bincluye_igv != value))
-				{
-					this._ncrec_bincluye_igv = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ubicc_icod_ubicacion", DbType="Int NOT NULL")]
-		public int ubicc_icod_ubicacion
-		{
-			get
-			{
-				return this._ubicc_icod_ubicacion;
-			}
-			set
-			{
-				if ((this._ubicc_icod_ubicacion != value))
-				{
-					this._ubicc_icod_ubicacion = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_iclase_doc", DbType="Int")]
-		public System.Nullable<int> ncrec_iclase_doc
-		{
-			get
-			{
-				return this._ncrec_iclase_doc;
-			}
-			set
-			{
-				if ((this._ncrec_iclase_doc != value))
-				{
-					this._ncrec_iclase_doc = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StrClaseDocumento", DbType="VarChar(100)")]
-		public string StrClaseDocumento
-		{
-			get
-			{
-				return this._StrClaseDocumento;
-			}
-			set
-			{
-				if ((this._StrClaseDocumento != value))
-				{
-					this._StrClaseDocumento = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_tipo_nota_credito", DbType="Int")]
-		public System.Nullable<int> ncrec_tipo_nota_credito
-		{
-			get
-			{
-				return this._ncrec_tipo_nota_credito;
-			}
-			set
-			{
-				if ((this._ncrec_tipo_nota_credito != value))
-				{
-					this._ncrec_tipo_nota_credito = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_vmotivo_sunat", DbType="VarChar(5)")]
-		public string ncrec_vmotivo_sunat
-		{
-			get
-			{
-				return this._ncrec_vmotivo_sunat;
-			}
-			set
-			{
-				if ((this._ncrec_vmotivo_sunat != value))
-				{
-					this._ncrec_vmotivo_sunat = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_vdetalle", DbType="VarChar(100)")]
-		public string ncrec_vdetalle
-		{
-			get
-			{
-				return this._ncrec_vdetalle;
-			}
-			set
-			{
-				if ((this._ncrec_vdetalle != value))
-				{
-					this._ncrec_vdetalle = value;
-				}
-			}
-		}
-	}
-	
 	public partial class SGE_NOTA_DEBITO_VENTA_LISTARResult
 	{
 		
@@ -22062,626 +21437,6 @@ namespace SGE.DataAccess
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_nmonto_total", DbType="Decimal(16,2) NOT NULL")]
-		public decimal ncrec_nmonto_total
-		{
-			get
-			{
-				return this._ncrec_nmonto_total;
-			}
-			set
-			{
-				if ((this._ncrec_nmonto_total != value))
-				{
-					this._ncrec_nmonto_total = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_iid_situacion_credito", DbType="Int NOT NULL")]
-		public int ncrec_iid_situacion_credito
-		{
-			get
-			{
-				return this._ncrec_iid_situacion_credito;
-			}
-			set
-			{
-				if ((this._ncrec_iid_situacion_credito != value))
-				{
-					this._ncrec_iid_situacion_credito = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_almac_icod_almacen", DbType="Int")]
-		public System.Nullable<int> almac_icod_almacen
-		{
-			get
-			{
-				return this._almac_icod_almacen;
-			}
-			set
-			{
-				if ((this._almac_icod_almacen != value))
-				{
-					this._almac_icod_almacen = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_tipo_cambio_fecha_doc_venta", DbType="Decimal(16,2) NOT NULL")]
-		public decimal ncrec_tipo_cambio_fecha_doc_venta
-		{
-			get
-			{
-				return this._ncrec_tipo_cambio_fecha_doc_venta;
-			}
-			set
-			{
-				if ((this._ncrec_tipo_cambio_fecha_doc_venta != value))
-				{
-					this._ncrec_tipo_cambio_fecha_doc_venta = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_nmonto_pagado", DbType="Decimal(16,2) NOT NULL")]
-		public decimal ncrec_nmonto_pagado
-		{
-			get
-			{
-				return this._ncrec_nmonto_pagado;
-			}
-			set
-			{
-				if ((this._ncrec_nmonto_pagado != value))
-				{
-					this._ncrec_nmonto_pagado = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_icod_dxc", DbType="BigInt")]
-		public System.Nullable<long> ncrec_icod_dxc
-		{
-			get
-			{
-				return this._ncrec_icod_dxc;
-			}
-			set
-			{
-				if ((this._ncrec_icod_dxc != value))
-				{
-					this._ncrec_icod_dxc = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strSituacion", DbType="VarChar(14)")]
-		public string strSituacion
-		{
-			get
-			{
-				return this._strSituacion;
-			}
-			set
-			{
-				if ((this._strSituacion != value))
-				{
-					this._strSituacion = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strDesCliente", DbType="VarChar(120)")]
-		public string strDesCliente
-		{
-			get
-			{
-				return this._strDesCliente;
-			}
-			set
-			{
-				if ((this._strDesCliente != value))
-				{
-					this._strDesCliente = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strRuc", DbType="Char(11)")]
-		public string strRuc
-		{
-			get
-			{
-				return this._strRuc;
-			}
-			set
-			{
-				if ((this._strRuc != value))
-				{
-					this._strRuc = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DireccionCliente", DbType="VarChar(120)")]
-		public string DireccionCliente
-		{
-			get
-			{
-				return this._DireccionCliente;
-			}
-			set
-			{
-				if ((this._DireccionCliente != value))
-				{
-					this._DireccionCliente = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strTipoDoc", DbType="VarChar(3)")]
-		public string strTipoDoc
-		{
-			get
-			{
-				return this._strTipoDoc;
-			}
-			set
-			{
-				if ((this._strTipoDoc != value))
-				{
-					this._strTipoDoc = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strMoneda", DbType="VarChar(3)")]
-		public string strMoneda
-		{
-			get
-			{
-				return this._strMoneda;
-			}
-			set
-			{
-				if ((this._strMoneda != value))
-				{
-					this._strMoneda = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_bincluye_igv", DbType="Bit")]
-		public System.Nullable<bool> ncrec_bincluye_igv
-		{
-			get
-			{
-				return this._ncrec_bincluye_igv;
-			}
-			set
-			{
-				if ((this._ncrec_bincluye_igv != value))
-				{
-					this._ncrec_bincluye_igv = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ubicc_icod_ubicacion", DbType="Int NOT NULL")]
-		public int ubicc_icod_ubicacion
-		{
-			get
-			{
-				return this._ubicc_icod_ubicacion;
-			}
-			set
-			{
-				if ((this._ubicc_icod_ubicacion != value))
-				{
-					this._ubicc_icod_ubicacion = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_iclase_doc", DbType="Int")]
-		public System.Nullable<int> ncrec_iclase_doc
-		{
-			get
-			{
-				return this._ncrec_iclase_doc;
-			}
-			set
-			{
-				if ((this._ncrec_iclase_doc != value))
-				{
-					this._ncrec_iclase_doc = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StrClaseDocumento", DbType="VarChar(100)")]
-		public string StrClaseDocumento
-		{
-			get
-			{
-				return this._StrClaseDocumento;
-			}
-			set
-			{
-				if ((this._StrClaseDocumento != value))
-				{
-					this._StrClaseDocumento = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_tipo_nota_credito", DbType="Int")]
-		public System.Nullable<int> ncrec_tipo_nota_credito
-		{
-			get
-			{
-				return this._ncrec_tipo_nota_credito;
-			}
-			set
-			{
-				if ((this._ncrec_tipo_nota_credito != value))
-				{
-					this._ncrec_tipo_nota_credito = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_vmotivo_sunat", DbType="VarChar(5)")]
-		public string ncrec_vmotivo_sunat
-		{
-			get
-			{
-				return this._ncrec_vmotivo_sunat;
-			}
-			set
-			{
-				if ((this._ncrec_vmotivo_sunat != value))
-				{
-					this._ncrec_vmotivo_sunat = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_vdetalle", DbType="VarChar(100)")]
-		public string ncrec_vdetalle
-		{
-			get
-			{
-				return this._ncrec_vdetalle;
-			}
-			set
-			{
-				if ((this._ncrec_vdetalle != value))
-				{
-					this._ncrec_vdetalle = value;
-				}
-			}
-		}
-	}
-	
-	public partial class SGE_NOTA_CREDITO_VENTA_LISTARResult1
-	{
-		
-		private int _ncrec_icod_credito;
-		
-		private string _ncrec_vnumero_credito;
-		
-		private System.DateTime _ncrec_sfecha_credito;
-		
-		private int _cliec_icod_cliente;
-		
-		private System.Nullable<int> _ncrec_ianio;
-		
-		private string _ncrec_vreferencia;
-		
-		private System.Nullable<int> _tdocc_icod_tipo_doc;
-		
-		private System.Nullable<int> _tablc_iid_tipo_nota_credito_venta;
-		
-		private System.Nullable<int> _tdodc_iid_correlativo;
-		
-		private string _ncrec_vnumero_documento;
-		
-		private System.DateTime _ncrec_sfecha_documento;
-		
-		private System.Nullable<int> _vendc_icod_vendedor;
-		
-		private int _tablc_iid_tipo_moneda;
-		
-		private decimal _ncrec_nmonto_neto;
-		
-		private decimal _ncrec_npor_imp_igv;
-		
-		private decimal _ncrec_nmonto_total;
-		
-		private int _ncrec_iid_situacion_credito;
-		
-		private System.Nullable<int> _almac_icod_almacen;
-		
-		private decimal _ncrec_tipo_cambio_fecha_doc_venta;
-		
-		private decimal _ncrec_nmonto_pagado;
-		
-		private System.Nullable<long> _ncrec_icod_dxc;
-		
-		private string _strSituacion;
-		
-		private string _strDesCliente;
-		
-		private string _strRuc;
-		
-		private string _DireccionCliente;
-		
-		private string _strTipoDoc;
-		
-		private string _strMoneda;
-		
-		private System.Nullable<bool> _ncrec_bincluye_igv;
-		
-		private int _ubicc_icod_ubicacion;
-		
-		private System.Nullable<int> _ncrec_iclase_doc;
-		
-		private string _StrClaseDocumento;
-		
-		private System.Nullable<int> _ncrec_tipo_nota_credito;
-		
-		private string _ncrec_vmotivo_sunat;
-		
-		private string _ncrec_vdetalle;
-		
-		public SGE_NOTA_CREDITO_VENTA_LISTARResult1()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_icod_credito", DbType="Int NOT NULL")]
-		public int ncrec_icod_credito
-		{
-			get
-			{
-				return this._ncrec_icod_credito;
-			}
-			set
-			{
-				if ((this._ncrec_icod_credito != value))
-				{
-					this._ncrec_icod_credito = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_vnumero_credito", DbType="VarChar(12) NOT NULL", CanBeNull=false)]
-		public string ncrec_vnumero_credito
-		{
-			get
-			{
-				return this._ncrec_vnumero_credito;
-			}
-			set
-			{
-				if ((this._ncrec_vnumero_credito != value))
-				{
-					this._ncrec_vnumero_credito = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_sfecha_credito", DbType="SmallDateTime NOT NULL")]
-		public System.DateTime ncrec_sfecha_credito
-		{
-			get
-			{
-				return this._ncrec_sfecha_credito;
-			}
-			set
-			{
-				if ((this._ncrec_sfecha_credito != value))
-				{
-					this._ncrec_sfecha_credito = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cliec_icod_cliente", DbType="Int NOT NULL")]
-		public int cliec_icod_cliente
-		{
-			get
-			{
-				return this._cliec_icod_cliente;
-			}
-			set
-			{
-				if ((this._cliec_icod_cliente != value))
-				{
-					this._cliec_icod_cliente = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_ianio", DbType="Int")]
-		public System.Nullable<int> ncrec_ianio
-		{
-			get
-			{
-				return this._ncrec_ianio;
-			}
-			set
-			{
-				if ((this._ncrec_ianio != value))
-				{
-					this._ncrec_ianio = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_vreferencia", DbType="VarChar(20)")]
-		public string ncrec_vreferencia
-		{
-			get
-			{
-				return this._ncrec_vreferencia;
-			}
-			set
-			{
-				if ((this._ncrec_vreferencia != value))
-				{
-					this._ncrec_vreferencia = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tdocc_icod_tipo_doc", DbType="Int")]
-		public System.Nullable<int> tdocc_icod_tipo_doc
-		{
-			get
-			{
-				return this._tdocc_icod_tipo_doc;
-			}
-			set
-			{
-				if ((this._tdocc_icod_tipo_doc != value))
-				{
-					this._tdocc_icod_tipo_doc = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tablc_iid_tipo_nota_credito_venta", DbType="Int")]
-		public System.Nullable<int> tablc_iid_tipo_nota_credito_venta
-		{
-			get
-			{
-				return this._tablc_iid_tipo_nota_credito_venta;
-			}
-			set
-			{
-				if ((this._tablc_iid_tipo_nota_credito_venta != value))
-				{
-					this._tablc_iid_tipo_nota_credito_venta = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tdodc_iid_correlativo", DbType="Int")]
-		public System.Nullable<int> tdodc_iid_correlativo
-		{
-			get
-			{
-				return this._tdodc_iid_correlativo;
-			}
-			set
-			{
-				if ((this._tdodc_iid_correlativo != value))
-				{
-					this._tdodc_iid_correlativo = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_vnumero_documento", DbType="VarChar(12) NOT NULL", CanBeNull=false)]
-		public string ncrec_vnumero_documento
-		{
-			get
-			{
-				return this._ncrec_vnumero_documento;
-			}
-			set
-			{
-				if ((this._ncrec_vnumero_documento != value))
-				{
-					this._ncrec_vnumero_documento = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_sfecha_documento", DbType="SmallDateTime NOT NULL")]
-		public System.DateTime ncrec_sfecha_documento
-		{
-			get
-			{
-				return this._ncrec_sfecha_documento;
-			}
-			set
-			{
-				if ((this._ncrec_sfecha_documento != value))
-				{
-					this._ncrec_sfecha_documento = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vendc_icod_vendedor", DbType="Int")]
-		public System.Nullable<int> vendc_icod_vendedor
-		{
-			get
-			{
-				return this._vendc_icod_vendedor;
-			}
-			set
-			{
-				if ((this._vendc_icod_vendedor != value))
-				{
-					this._vendc_icod_vendedor = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tablc_iid_tipo_moneda", DbType="Int NOT NULL")]
-		public int tablc_iid_tipo_moneda
-		{
-			get
-			{
-				return this._tablc_iid_tipo_moneda;
-			}
-			set
-			{
-				if ((this._tablc_iid_tipo_moneda != value))
-				{
-					this._tablc_iid_tipo_moneda = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_nmonto_neto", DbType="Decimal(16,4) NOT NULL")]
-		public decimal ncrec_nmonto_neto
-		{
-			get
-			{
-				return this._ncrec_nmonto_neto;
-			}
-			set
-			{
-				if ((this._ncrec_nmonto_neto != value))
-				{
-					this._ncrec_nmonto_neto = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_npor_imp_igv", DbType="Decimal(6,2) NOT NULL")]
-		public decimal ncrec_npor_imp_igv
-		{
-			get
-			{
-				return this._ncrec_npor_imp_igv;
-			}
-			set
-			{
-				if ((this._ncrec_npor_imp_igv != value))
-				{
-					this._ncrec_npor_imp_igv = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_nmonto_total", DbType="Decimal(16,4) NOT NULL")]
 		public decimal ncrec_nmonto_total
 		{
 			get
@@ -27599,572 +26354,6 @@ namespace SGE.DataAccess
 				if ((this._facv_nmonto_credito != value))
 				{
 					this._facv_nmonto_credito = value;
-				}
-			}
-		}
-	}
-	
-	public partial class SGEV_FACTURA_VENTA_ELECTRONICA_DETALLE_LISTARResult
-	{
-		
-		private int _IdItems;
-		
-		private System.Nullable<int> _IdCabecera;
-		
-		private System.Nullable<int> _NumeroOrdenItem;
-		
-		private System.Nullable<decimal> _cantidad;
-		
-		private string _unidadMedida;
-		
-		private System.Nullable<decimal> _ValorVentaItem;
-		
-		private System.Nullable<int> _CodMotivoDescuentoItem;
-		
-		private System.Nullable<decimal> _FactorDescuentoItem;
-		
-		private System.Nullable<decimal> _DescuentoItem;
-		
-		private System.Nullable<decimal> _BaseDescuentotem;
-		
-		private System.Nullable<int> _CodMotivoCargoItem;
-		
-		private System.Nullable<decimal> _FactorCargoItem;
-		
-		private System.Nullable<decimal> _MontoCargoItem;
-		
-		private System.Nullable<decimal> _BaseCargoItem;
-		
-		private System.Nullable<decimal> _MontoTotalImpuestosItem;
-		
-		private System.Nullable<decimal> _MontoImpuestoIgvItem;
-		
-		private System.Nullable<decimal> _MontoAfectoImpuestoIgv;
-		
-		private System.Nullable<decimal> _PorcentajeIGVItem;
-		
-		private System.Nullable<decimal> _MontoInafectoItem;
-		
-		private System.Nullable<decimal> _MontoImpuestoISCItem;
-		
-		private System.Nullable<decimal> _MontoAfectoImpuestoIsc;
-		
-		private System.Nullable<decimal> _PorcentajeISCtem;
-		
-		private System.Nullable<decimal> _MontoImpuestoIVAPtem;
-		
-		private System.Nullable<decimal> _MontoAfectoImpuestoIVAPItem;
-		
-		private System.Nullable<decimal> _PorcentajeIVAPItem;
-		
-		private string _descripcion;
-		
-		private string _codigoItem;
-		
-		private string _ObservacionesItem;
-		
-		private System.Nullable<decimal> _ValorUnitarioItem;
-		
-		private string _tipoImpuesto;
-		
-		private System.Nullable<decimal> _PrecioVentaUnitarioItem;
-		
-		public SGEV_FACTURA_VENTA_ELECTRONICA_DETALLE_LISTARResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdItems", DbType="Int NOT NULL")]
-		public int IdItems
-		{
-			get
-			{
-				return this._IdItems;
-			}
-			set
-			{
-				if ((this._IdItems != value))
-				{
-					this._IdItems = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdCabecera", DbType="Int")]
-		public System.Nullable<int> IdCabecera
-		{
-			get
-			{
-				return this._IdCabecera;
-			}
-			set
-			{
-				if ((this._IdCabecera != value))
-				{
-					this._IdCabecera = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NumeroOrdenItem", DbType="Int")]
-		public System.Nullable<int> NumeroOrdenItem
-		{
-			get
-			{
-				return this._NumeroOrdenItem;
-			}
-			set
-			{
-				if ((this._NumeroOrdenItem != value))
-				{
-					this._NumeroOrdenItem = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cantidad", DbType="Decimal(12,2)")]
-		public System.Nullable<decimal> cantidad
-		{
-			get
-			{
-				return this._cantidad;
-			}
-			set
-			{
-				if ((this._cantidad != value))
-				{
-					this._cantidad = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_unidadMedida", DbType="Char(10)")]
-		public string unidadMedida
-		{
-			get
-			{
-				return this._unidadMedida;
-			}
-			set
-			{
-				if ((this._unidadMedida != value))
-				{
-					this._unidadMedida = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ValorVentaItem", DbType="Decimal(16,4)")]
-		public System.Nullable<decimal> ValorVentaItem
-		{
-			get
-			{
-				return this._ValorVentaItem;
-			}
-			set
-			{
-				if ((this._ValorVentaItem != value))
-				{
-					this._ValorVentaItem = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CodMotivoDescuentoItem", DbType="Int")]
-		public System.Nullable<int> CodMotivoDescuentoItem
-		{
-			get
-			{
-				return this._CodMotivoDescuentoItem;
-			}
-			set
-			{
-				if ((this._CodMotivoDescuentoItem != value))
-				{
-					this._CodMotivoDescuentoItem = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FactorDescuentoItem", DbType="Decimal(16,4)")]
-		public System.Nullable<decimal> FactorDescuentoItem
-		{
-			get
-			{
-				return this._FactorDescuentoItem;
-			}
-			set
-			{
-				if ((this._FactorDescuentoItem != value))
-				{
-					this._FactorDescuentoItem = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DescuentoItem", DbType="Decimal(16,4)")]
-		public System.Nullable<decimal> DescuentoItem
-		{
-			get
-			{
-				return this._DescuentoItem;
-			}
-			set
-			{
-				if ((this._DescuentoItem != value))
-				{
-					this._DescuentoItem = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BaseDescuentotem", DbType="Decimal(16,4)")]
-		public System.Nullable<decimal> BaseDescuentotem
-		{
-			get
-			{
-				return this._BaseDescuentotem;
-			}
-			set
-			{
-				if ((this._BaseDescuentotem != value))
-				{
-					this._BaseDescuentotem = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CodMotivoCargoItem", DbType="Int")]
-		public System.Nullable<int> CodMotivoCargoItem
-		{
-			get
-			{
-				return this._CodMotivoCargoItem;
-			}
-			set
-			{
-				if ((this._CodMotivoCargoItem != value))
-				{
-					this._CodMotivoCargoItem = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FactorCargoItem", DbType="Decimal(16,4)")]
-		public System.Nullable<decimal> FactorCargoItem
-		{
-			get
-			{
-				return this._FactorCargoItem;
-			}
-			set
-			{
-				if ((this._FactorCargoItem != value))
-				{
-					this._FactorCargoItem = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MontoCargoItem", DbType="Decimal(16,4)")]
-		public System.Nullable<decimal> MontoCargoItem
-		{
-			get
-			{
-				return this._MontoCargoItem;
-			}
-			set
-			{
-				if ((this._MontoCargoItem != value))
-				{
-					this._MontoCargoItem = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BaseCargoItem", DbType="Decimal(16,4)")]
-		public System.Nullable<decimal> BaseCargoItem
-		{
-			get
-			{
-				return this._BaseCargoItem;
-			}
-			set
-			{
-				if ((this._BaseCargoItem != value))
-				{
-					this._BaseCargoItem = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MontoTotalImpuestosItem", DbType="Decimal(16,4)")]
-		public System.Nullable<decimal> MontoTotalImpuestosItem
-		{
-			get
-			{
-				return this._MontoTotalImpuestosItem;
-			}
-			set
-			{
-				if ((this._MontoTotalImpuestosItem != value))
-				{
-					this._MontoTotalImpuestosItem = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MontoImpuestoIgvItem", DbType="Decimal(16,4)")]
-		public System.Nullable<decimal> MontoImpuestoIgvItem
-		{
-			get
-			{
-				return this._MontoImpuestoIgvItem;
-			}
-			set
-			{
-				if ((this._MontoImpuestoIgvItem != value))
-				{
-					this._MontoImpuestoIgvItem = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MontoAfectoImpuestoIgv", DbType="Decimal(16,4)")]
-		public System.Nullable<decimal> MontoAfectoImpuestoIgv
-		{
-			get
-			{
-				return this._MontoAfectoImpuestoIgv;
-			}
-			set
-			{
-				if ((this._MontoAfectoImpuestoIgv != value))
-				{
-					this._MontoAfectoImpuestoIgv = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PorcentajeIGVItem", DbType="Decimal(12,2)")]
-		public System.Nullable<decimal> PorcentajeIGVItem
-		{
-			get
-			{
-				return this._PorcentajeIGVItem;
-			}
-			set
-			{
-				if ((this._PorcentajeIGVItem != value))
-				{
-					this._PorcentajeIGVItem = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MontoInafectoItem", DbType="Decimal(16,4)")]
-		public System.Nullable<decimal> MontoInafectoItem
-		{
-			get
-			{
-				return this._MontoInafectoItem;
-			}
-			set
-			{
-				if ((this._MontoInafectoItem != value))
-				{
-					this._MontoInafectoItem = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MontoImpuestoISCItem", DbType="Decimal(16,4)")]
-		public System.Nullable<decimal> MontoImpuestoISCItem
-		{
-			get
-			{
-				return this._MontoImpuestoISCItem;
-			}
-			set
-			{
-				if ((this._MontoImpuestoISCItem != value))
-				{
-					this._MontoImpuestoISCItem = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MontoAfectoImpuestoIsc", DbType="Decimal(16,4)")]
-		public System.Nullable<decimal> MontoAfectoImpuestoIsc
-		{
-			get
-			{
-				return this._MontoAfectoImpuestoIsc;
-			}
-			set
-			{
-				if ((this._MontoAfectoImpuestoIsc != value))
-				{
-					this._MontoAfectoImpuestoIsc = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PorcentajeISCtem", DbType="Decimal(16,4)")]
-		public System.Nullable<decimal> PorcentajeISCtem
-		{
-			get
-			{
-				return this._PorcentajeISCtem;
-			}
-			set
-			{
-				if ((this._PorcentajeISCtem != value))
-				{
-					this._PorcentajeISCtem = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MontoImpuestoIVAPtem", DbType="Decimal(12,2)")]
-		public System.Nullable<decimal> MontoImpuestoIVAPtem
-		{
-			get
-			{
-				return this._MontoImpuestoIVAPtem;
-			}
-			set
-			{
-				if ((this._MontoImpuestoIVAPtem != value))
-				{
-					this._MontoImpuestoIVAPtem = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MontoAfectoImpuestoIVAPItem", DbType="Decimal(16,4)")]
-		public System.Nullable<decimal> MontoAfectoImpuestoIVAPItem
-		{
-			get
-			{
-				return this._MontoAfectoImpuestoIVAPItem;
-			}
-			set
-			{
-				if ((this._MontoAfectoImpuestoIVAPItem != value))
-				{
-					this._MontoAfectoImpuestoIVAPItem = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PorcentajeIVAPItem", DbType="Decimal(12,2)")]
-		public System.Nullable<decimal> PorcentajeIVAPItem
-		{
-			get
-			{
-				return this._PorcentajeIVAPItem;
-			}
-			set
-			{
-				if ((this._PorcentajeIVAPItem != value))
-				{
-					this._PorcentajeIVAPItem = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_descripcion", DbType="VarChar(MAX)")]
-		public string descripcion
-		{
-			get
-			{
-				return this._descripcion;
-			}
-			set
-			{
-				if ((this._descripcion != value))
-				{
-					this._descripcion = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_codigoItem", DbType="Char(20)")]
-		public string codigoItem
-		{
-			get
-			{
-				return this._codigoItem;
-			}
-			set
-			{
-				if ((this._codigoItem != value))
-				{
-					this._codigoItem = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ObservacionesItem", DbType="VarChar(500)")]
-		public string ObservacionesItem
-		{
-			get
-			{
-				return this._ObservacionesItem;
-			}
-			set
-			{
-				if ((this._ObservacionesItem != value))
-				{
-					this._ObservacionesItem = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ValorUnitarioItem", DbType="Decimal(16,4)")]
-		public System.Nullable<decimal> ValorUnitarioItem
-		{
-			get
-			{
-				return this._ValorUnitarioItem;
-			}
-			set
-			{
-				if ((this._ValorUnitarioItem != value))
-				{
-					this._ValorUnitarioItem = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tipoImpuesto", DbType="Char(7)")]
-		public string tipoImpuesto
-		{
-			get
-			{
-				return this._tipoImpuesto;
-			}
-			set
-			{
-				if ((this._tipoImpuesto != value))
-				{
-					this._tipoImpuesto = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrecioVentaUnitarioItem", DbType="Decimal(12,2)")]
-		public System.Nullable<decimal> PrecioVentaUnitarioItem
-		{
-			get
-			{
-				return this._PrecioVentaUnitarioItem;
-			}
-			set
-			{
-				if ((this._PrecioVentaUnitarioItem != value))
-				{
-					this._PrecioVentaUnitarioItem = value;
 				}
 			}
 		}
@@ -37491,6 +35680,1228 @@ namespace SGE.DataAccess
 				if ((this._TramaZipCdr != value))
 				{
 					this._TramaZipCdr = value;
+				}
+			}
+		}
+	}
+	
+	public partial class SGEV_FACTURA_VENTA_ELECTRONICA_DETALLE_LISTARResult
+	{
+		
+		private int _IdItems;
+		
+		private System.Nullable<int> _IdCabecera;
+		
+		private System.Nullable<int> _NumeroOrdenItem;
+		
+		private System.Nullable<decimal> _cantidad;
+		
+		private string _unidadMedida;
+		
+		private System.Nullable<decimal> _ValorVentaItem;
+		
+		private System.Nullable<int> _CodMotivoDescuentoItem;
+		
+		private System.Nullable<decimal> _FactorDescuentoItem;
+		
+		private System.Nullable<decimal> _DescuentoItem;
+		
+		private System.Nullable<decimal> _BaseDescuentotem;
+		
+		private System.Nullable<int> _CodMotivoCargoItem;
+		
+		private System.Nullable<decimal> _FactorCargoItem;
+		
+		private System.Nullable<decimal> _MontoCargoItem;
+		
+		private System.Nullable<decimal> _BaseCargoItem;
+		
+		private System.Nullable<decimal> _MontoTotalImpuestosItem;
+		
+		private System.Nullable<decimal> _MontoImpuestoIgvItem;
+		
+		private System.Nullable<decimal> _MontoAfectoImpuestoIgv;
+		
+		private System.Nullable<decimal> _PorcentajeIGVItem;
+		
+		private System.Nullable<decimal> _MontoInafectoItem;
+		
+		private System.Nullable<decimal> _MontoImpuestoISCItem;
+		
+		private System.Nullable<decimal> _MontoAfectoImpuestoIsc;
+		
+		private System.Nullable<decimal> _PorcentajeISCtem;
+		
+		private System.Nullable<decimal> _MontoImpuestoIVAPtem;
+		
+		private System.Nullable<decimal> _MontoAfectoImpuestoIVAPItem;
+		
+		private System.Nullable<decimal> _PorcentajeIVAPItem;
+		
+		private string _descripcion;
+		
+		private string _codigoItem;
+		
+		private string _ObservacionesItem;
+		
+		private System.Nullable<decimal> _ValorUnitarioItem;
+		
+		private string _tipoImpuesto;
+		
+		private System.Nullable<decimal> _PrecioVentaUnitarioItem;
+		
+		private string _UMedida;
+		
+		public SGEV_FACTURA_VENTA_ELECTRONICA_DETALLE_LISTARResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdItems", DbType="Int NOT NULL")]
+		public int IdItems
+		{
+			get
+			{
+				return this._IdItems;
+			}
+			set
+			{
+				if ((this._IdItems != value))
+				{
+					this._IdItems = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdCabecera", DbType="Int")]
+		public System.Nullable<int> IdCabecera
+		{
+			get
+			{
+				return this._IdCabecera;
+			}
+			set
+			{
+				if ((this._IdCabecera != value))
+				{
+					this._IdCabecera = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NumeroOrdenItem", DbType="Int")]
+		public System.Nullable<int> NumeroOrdenItem
+		{
+			get
+			{
+				return this._NumeroOrdenItem;
+			}
+			set
+			{
+				if ((this._NumeroOrdenItem != value))
+				{
+					this._NumeroOrdenItem = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cantidad", DbType="Decimal(12,2)")]
+		public System.Nullable<decimal> cantidad
+		{
+			get
+			{
+				return this._cantidad;
+			}
+			set
+			{
+				if ((this._cantidad != value))
+				{
+					this._cantidad = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_unidadMedida", DbType="Char(10)")]
+		public string unidadMedida
+		{
+			get
+			{
+				return this._unidadMedida;
+			}
+			set
+			{
+				if ((this._unidadMedida != value))
+				{
+					this._unidadMedida = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ValorVentaItem", DbType="Decimal(16,4)")]
+		public System.Nullable<decimal> ValorVentaItem
+		{
+			get
+			{
+				return this._ValorVentaItem;
+			}
+			set
+			{
+				if ((this._ValorVentaItem != value))
+				{
+					this._ValorVentaItem = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CodMotivoDescuentoItem", DbType="Int")]
+		public System.Nullable<int> CodMotivoDescuentoItem
+		{
+			get
+			{
+				return this._CodMotivoDescuentoItem;
+			}
+			set
+			{
+				if ((this._CodMotivoDescuentoItem != value))
+				{
+					this._CodMotivoDescuentoItem = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FactorDescuentoItem", DbType="Decimal(16,4)")]
+		public System.Nullable<decimal> FactorDescuentoItem
+		{
+			get
+			{
+				return this._FactorDescuentoItem;
+			}
+			set
+			{
+				if ((this._FactorDescuentoItem != value))
+				{
+					this._FactorDescuentoItem = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DescuentoItem", DbType="Decimal(16,4)")]
+		public System.Nullable<decimal> DescuentoItem
+		{
+			get
+			{
+				return this._DescuentoItem;
+			}
+			set
+			{
+				if ((this._DescuentoItem != value))
+				{
+					this._DescuentoItem = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BaseDescuentotem", DbType="Decimal(16,4)")]
+		public System.Nullable<decimal> BaseDescuentotem
+		{
+			get
+			{
+				return this._BaseDescuentotem;
+			}
+			set
+			{
+				if ((this._BaseDescuentotem != value))
+				{
+					this._BaseDescuentotem = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CodMotivoCargoItem", DbType="Int")]
+		public System.Nullable<int> CodMotivoCargoItem
+		{
+			get
+			{
+				return this._CodMotivoCargoItem;
+			}
+			set
+			{
+				if ((this._CodMotivoCargoItem != value))
+				{
+					this._CodMotivoCargoItem = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FactorCargoItem", DbType="Decimal(16,4)")]
+		public System.Nullable<decimal> FactorCargoItem
+		{
+			get
+			{
+				return this._FactorCargoItem;
+			}
+			set
+			{
+				if ((this._FactorCargoItem != value))
+				{
+					this._FactorCargoItem = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MontoCargoItem", DbType="Decimal(16,4)")]
+		public System.Nullable<decimal> MontoCargoItem
+		{
+			get
+			{
+				return this._MontoCargoItem;
+			}
+			set
+			{
+				if ((this._MontoCargoItem != value))
+				{
+					this._MontoCargoItem = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BaseCargoItem", DbType="Decimal(16,4)")]
+		public System.Nullable<decimal> BaseCargoItem
+		{
+			get
+			{
+				return this._BaseCargoItem;
+			}
+			set
+			{
+				if ((this._BaseCargoItem != value))
+				{
+					this._BaseCargoItem = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MontoTotalImpuestosItem", DbType="Decimal(16,4)")]
+		public System.Nullable<decimal> MontoTotalImpuestosItem
+		{
+			get
+			{
+				return this._MontoTotalImpuestosItem;
+			}
+			set
+			{
+				if ((this._MontoTotalImpuestosItem != value))
+				{
+					this._MontoTotalImpuestosItem = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MontoImpuestoIgvItem", DbType="Decimal(16,4)")]
+		public System.Nullable<decimal> MontoImpuestoIgvItem
+		{
+			get
+			{
+				return this._MontoImpuestoIgvItem;
+			}
+			set
+			{
+				if ((this._MontoImpuestoIgvItem != value))
+				{
+					this._MontoImpuestoIgvItem = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MontoAfectoImpuestoIgv", DbType="Decimal(16,4)")]
+		public System.Nullable<decimal> MontoAfectoImpuestoIgv
+		{
+			get
+			{
+				return this._MontoAfectoImpuestoIgv;
+			}
+			set
+			{
+				if ((this._MontoAfectoImpuestoIgv != value))
+				{
+					this._MontoAfectoImpuestoIgv = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PorcentajeIGVItem", DbType="Decimal(12,2)")]
+		public System.Nullable<decimal> PorcentajeIGVItem
+		{
+			get
+			{
+				return this._PorcentajeIGVItem;
+			}
+			set
+			{
+				if ((this._PorcentajeIGVItem != value))
+				{
+					this._PorcentajeIGVItem = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MontoInafectoItem", DbType="Decimal(16,4)")]
+		public System.Nullable<decimal> MontoInafectoItem
+		{
+			get
+			{
+				return this._MontoInafectoItem;
+			}
+			set
+			{
+				if ((this._MontoInafectoItem != value))
+				{
+					this._MontoInafectoItem = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MontoImpuestoISCItem", DbType="Decimal(16,4)")]
+		public System.Nullable<decimal> MontoImpuestoISCItem
+		{
+			get
+			{
+				return this._MontoImpuestoISCItem;
+			}
+			set
+			{
+				if ((this._MontoImpuestoISCItem != value))
+				{
+					this._MontoImpuestoISCItem = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MontoAfectoImpuestoIsc", DbType="Decimal(16,4)")]
+		public System.Nullable<decimal> MontoAfectoImpuestoIsc
+		{
+			get
+			{
+				return this._MontoAfectoImpuestoIsc;
+			}
+			set
+			{
+				if ((this._MontoAfectoImpuestoIsc != value))
+				{
+					this._MontoAfectoImpuestoIsc = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PorcentajeISCtem", DbType="Decimal(16,4)")]
+		public System.Nullable<decimal> PorcentajeISCtem
+		{
+			get
+			{
+				return this._PorcentajeISCtem;
+			}
+			set
+			{
+				if ((this._PorcentajeISCtem != value))
+				{
+					this._PorcentajeISCtem = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MontoImpuestoIVAPtem", DbType="Decimal(12,2)")]
+		public System.Nullable<decimal> MontoImpuestoIVAPtem
+		{
+			get
+			{
+				return this._MontoImpuestoIVAPtem;
+			}
+			set
+			{
+				if ((this._MontoImpuestoIVAPtem != value))
+				{
+					this._MontoImpuestoIVAPtem = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MontoAfectoImpuestoIVAPItem", DbType="Decimal(16,4)")]
+		public System.Nullable<decimal> MontoAfectoImpuestoIVAPItem
+		{
+			get
+			{
+				return this._MontoAfectoImpuestoIVAPItem;
+			}
+			set
+			{
+				if ((this._MontoAfectoImpuestoIVAPItem != value))
+				{
+					this._MontoAfectoImpuestoIVAPItem = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PorcentajeIVAPItem", DbType="Decimal(12,2)")]
+		public System.Nullable<decimal> PorcentajeIVAPItem
+		{
+			get
+			{
+				return this._PorcentajeIVAPItem;
+			}
+			set
+			{
+				if ((this._PorcentajeIVAPItem != value))
+				{
+					this._PorcentajeIVAPItem = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_descripcion", DbType="VarChar(MAX)")]
+		public string descripcion
+		{
+			get
+			{
+				return this._descripcion;
+			}
+			set
+			{
+				if ((this._descripcion != value))
+				{
+					this._descripcion = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_codigoItem", DbType="Char(20)")]
+		public string codigoItem
+		{
+			get
+			{
+				return this._codigoItem;
+			}
+			set
+			{
+				if ((this._codigoItem != value))
+				{
+					this._codigoItem = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ObservacionesItem", DbType="VarChar(500)")]
+		public string ObservacionesItem
+		{
+			get
+			{
+				return this._ObservacionesItem;
+			}
+			set
+			{
+				if ((this._ObservacionesItem != value))
+				{
+					this._ObservacionesItem = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ValorUnitarioItem", DbType="Decimal(16,4)")]
+		public System.Nullable<decimal> ValorUnitarioItem
+		{
+			get
+			{
+				return this._ValorUnitarioItem;
+			}
+			set
+			{
+				if ((this._ValorUnitarioItem != value))
+				{
+					this._ValorUnitarioItem = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tipoImpuesto", DbType="Char(7)")]
+		public string tipoImpuesto
+		{
+			get
+			{
+				return this._tipoImpuesto;
+			}
+			set
+			{
+				if ((this._tipoImpuesto != value))
+				{
+					this._tipoImpuesto = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrecioVentaUnitarioItem", DbType="Decimal(12,2)")]
+		public System.Nullable<decimal> PrecioVentaUnitarioItem
+		{
+			get
+			{
+				return this._PrecioVentaUnitarioItem;
+			}
+			set
+			{
+				if ((this._PrecioVentaUnitarioItem != value))
+				{
+					this._PrecioVentaUnitarioItem = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UMedida", DbType="VarChar(30)")]
+		public string UMedida
+		{
+			get
+			{
+				return this._UMedida;
+			}
+			set
+			{
+				if ((this._UMedida != value))
+				{
+					this._UMedida = value;
+				}
+			}
+		}
+	}
+	
+	public partial class SGE_NOTA_CREDITO_VENTA_LISTARResult
+	{
+		
+		private int _ncrec_icod_credito;
+		
+		private string _ncrec_vnumero_credito;
+		
+		private System.DateTime _ncrec_sfecha_credito;
+		
+		private int _cliec_icod_cliente;
+		
+		private System.Nullable<int> _ncrec_ianio;
+		
+		private string _ncrec_vreferencia;
+		
+		private System.Nullable<int> _tdocc_icod_tipo_doc;
+		
+		private System.Nullable<int> _tablc_iid_tipo_nota_credito_venta;
+		
+		private System.Nullable<int> _tdodc_iid_correlativo;
+		
+		private string _ncrec_vnumero_documento;
+		
+		private System.DateTime _ncrec_sfecha_documento;
+		
+		private System.Nullable<int> _vendc_icod_vendedor;
+		
+		private int _tablc_iid_tipo_moneda;
+		
+		private decimal _ncrec_nmonto_neto;
+		
+		private decimal _ncrec_npor_imp_igv;
+		
+		private decimal _ncrec_nmonto_total;
+		
+		private int _ncrec_iid_situacion_credito;
+		
+		private System.Nullable<int> _almac_icod_almacen;
+		
+		private decimal _ncrec_tipo_cambio_fecha_doc_venta;
+		
+		private decimal _ncrec_nmonto_pagado;
+		
+		private System.Nullable<long> _ncrec_icod_dxc;
+		
+		private string _strSituacion;
+		
+		private string _strDesCliente;
+		
+		private string _strRuc;
+		
+		private string _DireccionCliente;
+		
+		private string _strTipoDoc;
+		
+		private string _strMoneda;
+		
+		private System.Nullable<bool> _ncrec_bincluye_igv;
+		
+		private int _ubicc_icod_ubicacion;
+		
+		private System.Nullable<int> _ncrec_iclase_doc;
+		
+		private string _StrClaseDocumento;
+		
+		private System.Nullable<int> _ncrec_tipo_nota_credito;
+		
+		private string _ncrec_vmotivo_sunat;
+		
+		private string _ncrec_vdetalle;
+		
+		private System.Nullable<int> _puvec_icod_punto_venta;
+		
+		public SGE_NOTA_CREDITO_VENTA_LISTARResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_icod_credito", DbType="Int NOT NULL")]
+		public int ncrec_icod_credito
+		{
+			get
+			{
+				return this._ncrec_icod_credito;
+			}
+			set
+			{
+				if ((this._ncrec_icod_credito != value))
+				{
+					this._ncrec_icod_credito = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_vnumero_credito", DbType="VarChar(12) NOT NULL", CanBeNull=false)]
+		public string ncrec_vnumero_credito
+		{
+			get
+			{
+				return this._ncrec_vnumero_credito;
+			}
+			set
+			{
+				if ((this._ncrec_vnumero_credito != value))
+				{
+					this._ncrec_vnumero_credito = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_sfecha_credito", DbType="SmallDateTime NOT NULL")]
+		public System.DateTime ncrec_sfecha_credito
+		{
+			get
+			{
+				return this._ncrec_sfecha_credito;
+			}
+			set
+			{
+				if ((this._ncrec_sfecha_credito != value))
+				{
+					this._ncrec_sfecha_credito = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cliec_icod_cliente", DbType="Int NOT NULL")]
+		public int cliec_icod_cliente
+		{
+			get
+			{
+				return this._cliec_icod_cliente;
+			}
+			set
+			{
+				if ((this._cliec_icod_cliente != value))
+				{
+					this._cliec_icod_cliente = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_ianio", DbType="Int")]
+		public System.Nullable<int> ncrec_ianio
+		{
+			get
+			{
+				return this._ncrec_ianio;
+			}
+			set
+			{
+				if ((this._ncrec_ianio != value))
+				{
+					this._ncrec_ianio = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_vreferencia", DbType="VarChar(20)")]
+		public string ncrec_vreferencia
+		{
+			get
+			{
+				return this._ncrec_vreferencia;
+			}
+			set
+			{
+				if ((this._ncrec_vreferencia != value))
+				{
+					this._ncrec_vreferencia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tdocc_icod_tipo_doc", DbType="Int")]
+		public System.Nullable<int> tdocc_icod_tipo_doc
+		{
+			get
+			{
+				return this._tdocc_icod_tipo_doc;
+			}
+			set
+			{
+				if ((this._tdocc_icod_tipo_doc != value))
+				{
+					this._tdocc_icod_tipo_doc = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tablc_iid_tipo_nota_credito_venta", DbType="Int")]
+		public System.Nullable<int> tablc_iid_tipo_nota_credito_venta
+		{
+			get
+			{
+				return this._tablc_iid_tipo_nota_credito_venta;
+			}
+			set
+			{
+				if ((this._tablc_iid_tipo_nota_credito_venta != value))
+				{
+					this._tablc_iid_tipo_nota_credito_venta = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tdodc_iid_correlativo", DbType="Int")]
+		public System.Nullable<int> tdodc_iid_correlativo
+		{
+			get
+			{
+				return this._tdodc_iid_correlativo;
+			}
+			set
+			{
+				if ((this._tdodc_iid_correlativo != value))
+				{
+					this._tdodc_iid_correlativo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_vnumero_documento", DbType="VarChar(12) NOT NULL", CanBeNull=false)]
+		public string ncrec_vnumero_documento
+		{
+			get
+			{
+				return this._ncrec_vnumero_documento;
+			}
+			set
+			{
+				if ((this._ncrec_vnumero_documento != value))
+				{
+					this._ncrec_vnumero_documento = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_sfecha_documento", DbType="SmallDateTime NOT NULL")]
+		public System.DateTime ncrec_sfecha_documento
+		{
+			get
+			{
+				return this._ncrec_sfecha_documento;
+			}
+			set
+			{
+				if ((this._ncrec_sfecha_documento != value))
+				{
+					this._ncrec_sfecha_documento = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vendc_icod_vendedor", DbType="Int")]
+		public System.Nullable<int> vendc_icod_vendedor
+		{
+			get
+			{
+				return this._vendc_icod_vendedor;
+			}
+			set
+			{
+				if ((this._vendc_icod_vendedor != value))
+				{
+					this._vendc_icod_vendedor = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tablc_iid_tipo_moneda", DbType="Int NOT NULL")]
+		public int tablc_iid_tipo_moneda
+		{
+			get
+			{
+				return this._tablc_iid_tipo_moneda;
+			}
+			set
+			{
+				if ((this._tablc_iid_tipo_moneda != value))
+				{
+					this._tablc_iid_tipo_moneda = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_nmonto_neto", DbType="Decimal(16,4) NOT NULL")]
+		public decimal ncrec_nmonto_neto
+		{
+			get
+			{
+				return this._ncrec_nmonto_neto;
+			}
+			set
+			{
+				if ((this._ncrec_nmonto_neto != value))
+				{
+					this._ncrec_nmonto_neto = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_npor_imp_igv", DbType="Decimal(6,2) NOT NULL")]
+		public decimal ncrec_npor_imp_igv
+		{
+			get
+			{
+				return this._ncrec_npor_imp_igv;
+			}
+			set
+			{
+				if ((this._ncrec_npor_imp_igv != value))
+				{
+					this._ncrec_npor_imp_igv = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_nmonto_total", DbType="Decimal(16,4) NOT NULL")]
+		public decimal ncrec_nmonto_total
+		{
+			get
+			{
+				return this._ncrec_nmonto_total;
+			}
+			set
+			{
+				if ((this._ncrec_nmonto_total != value))
+				{
+					this._ncrec_nmonto_total = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_iid_situacion_credito", DbType="Int NOT NULL")]
+		public int ncrec_iid_situacion_credito
+		{
+			get
+			{
+				return this._ncrec_iid_situacion_credito;
+			}
+			set
+			{
+				if ((this._ncrec_iid_situacion_credito != value))
+				{
+					this._ncrec_iid_situacion_credito = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_almac_icod_almacen", DbType="Int")]
+		public System.Nullable<int> almac_icod_almacen
+		{
+			get
+			{
+				return this._almac_icod_almacen;
+			}
+			set
+			{
+				if ((this._almac_icod_almacen != value))
+				{
+					this._almac_icod_almacen = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_tipo_cambio_fecha_doc_venta", DbType="Decimal(16,2) NOT NULL")]
+		public decimal ncrec_tipo_cambio_fecha_doc_venta
+		{
+			get
+			{
+				return this._ncrec_tipo_cambio_fecha_doc_venta;
+			}
+			set
+			{
+				if ((this._ncrec_tipo_cambio_fecha_doc_venta != value))
+				{
+					this._ncrec_tipo_cambio_fecha_doc_venta = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_nmonto_pagado", DbType="Decimal(16,2) NOT NULL")]
+		public decimal ncrec_nmonto_pagado
+		{
+			get
+			{
+				return this._ncrec_nmonto_pagado;
+			}
+			set
+			{
+				if ((this._ncrec_nmonto_pagado != value))
+				{
+					this._ncrec_nmonto_pagado = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_icod_dxc", DbType="BigInt")]
+		public System.Nullable<long> ncrec_icod_dxc
+		{
+			get
+			{
+				return this._ncrec_icod_dxc;
+			}
+			set
+			{
+				if ((this._ncrec_icod_dxc != value))
+				{
+					this._ncrec_icod_dxc = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strSituacion", DbType="VarChar(14)")]
+		public string strSituacion
+		{
+			get
+			{
+				return this._strSituacion;
+			}
+			set
+			{
+				if ((this._strSituacion != value))
+				{
+					this._strSituacion = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strDesCliente", DbType="VarChar(120)")]
+		public string strDesCliente
+		{
+			get
+			{
+				return this._strDesCliente;
+			}
+			set
+			{
+				if ((this._strDesCliente != value))
+				{
+					this._strDesCliente = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strRuc", DbType="Char(11)")]
+		public string strRuc
+		{
+			get
+			{
+				return this._strRuc;
+			}
+			set
+			{
+				if ((this._strRuc != value))
+				{
+					this._strRuc = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DireccionCliente", DbType="VarChar(120)")]
+		public string DireccionCliente
+		{
+			get
+			{
+				return this._DireccionCliente;
+			}
+			set
+			{
+				if ((this._DireccionCliente != value))
+				{
+					this._DireccionCliente = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strTipoDoc", DbType="VarChar(3)")]
+		public string strTipoDoc
+		{
+			get
+			{
+				return this._strTipoDoc;
+			}
+			set
+			{
+				if ((this._strTipoDoc != value))
+				{
+					this._strTipoDoc = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_strMoneda", DbType="VarChar(3)")]
+		public string strMoneda
+		{
+			get
+			{
+				return this._strMoneda;
+			}
+			set
+			{
+				if ((this._strMoneda != value))
+				{
+					this._strMoneda = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_bincluye_igv", DbType="Bit")]
+		public System.Nullable<bool> ncrec_bincluye_igv
+		{
+			get
+			{
+				return this._ncrec_bincluye_igv;
+			}
+			set
+			{
+				if ((this._ncrec_bincluye_igv != value))
+				{
+					this._ncrec_bincluye_igv = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ubicc_icod_ubicacion", DbType="Int NOT NULL")]
+		public int ubicc_icod_ubicacion
+		{
+			get
+			{
+				return this._ubicc_icod_ubicacion;
+			}
+			set
+			{
+				if ((this._ubicc_icod_ubicacion != value))
+				{
+					this._ubicc_icod_ubicacion = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_iclase_doc", DbType="Int")]
+		public System.Nullable<int> ncrec_iclase_doc
+		{
+			get
+			{
+				return this._ncrec_iclase_doc;
+			}
+			set
+			{
+				if ((this._ncrec_iclase_doc != value))
+				{
+					this._ncrec_iclase_doc = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StrClaseDocumento", DbType="VarChar(100)")]
+		public string StrClaseDocumento
+		{
+			get
+			{
+				return this._StrClaseDocumento;
+			}
+			set
+			{
+				if ((this._StrClaseDocumento != value))
+				{
+					this._StrClaseDocumento = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_tipo_nota_credito", DbType="Int")]
+		public System.Nullable<int> ncrec_tipo_nota_credito
+		{
+			get
+			{
+				return this._ncrec_tipo_nota_credito;
+			}
+			set
+			{
+				if ((this._ncrec_tipo_nota_credito != value))
+				{
+					this._ncrec_tipo_nota_credito = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_vmotivo_sunat", DbType="VarChar(5)")]
+		public string ncrec_vmotivo_sunat
+		{
+			get
+			{
+				return this._ncrec_vmotivo_sunat;
+			}
+			set
+			{
+				if ((this._ncrec_vmotivo_sunat != value))
+				{
+					this._ncrec_vmotivo_sunat = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ncrec_vdetalle", DbType="VarChar(100)")]
+		public string ncrec_vdetalle
+		{
+			get
+			{
+				return this._ncrec_vdetalle;
+			}
+			set
+			{
+				if ((this._ncrec_vdetalle != value))
+				{
+					this._ncrec_vdetalle = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_puvec_icod_punto_venta", DbType="Int")]
+		public System.Nullable<int> puvec_icod_punto_venta
+		{
+			get
+			{
+				return this._puvec_icod_punto_venta;
+			}
+			set
+			{
+				if ((this._puvec_icod_punto_venta != value))
+				{
+					this._puvec_icod_punto_venta = value;
 				}
 			}
 		}

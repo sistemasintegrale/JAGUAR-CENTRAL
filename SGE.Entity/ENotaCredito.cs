@@ -93,5 +93,6 @@ namespace SGE.Entity
         public string EstadoSunat { get; set; }
         public string direccionReceptor { get; set; }
         public string UsuarioOSE { get; set; }
+        public int puvec_icod_punto_venta { get; set; }
     }
 }

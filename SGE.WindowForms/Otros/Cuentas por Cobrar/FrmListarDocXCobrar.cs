@@ -21,6 +21,8 @@ namespace SGE.WindowForms.Otros.Cuentas_por_Cobrar
         public long? icod_dxc_letra;
         public int icod_tipo_doc = 0;
         public int icod_tipo_documento_MP_MER;
+        public bool flagPVT = false;
+        public int puvec_icod_punto_venta;
         public FrmListarDocXCobrar()
         {
             InitializeComponent();
@@ -69,6 +71,10 @@ namespace SGE.WindowForms.Otros.Cuentas_por_Cobrar
             else
                 mlist = new BCuentasPorCobrar().listarDxcPendientes(Parametros.intEjercicio).Where(dxc => dxc.tdocc_icod_tipo_doc != 1 && dxc.tdocc_icod_tipo_doc != 36 && dxc.doxcc_icod_correlativo != icod_dxc_letra && dxc.cliec_icod_cliente == intCliente).ToList(); //Para el módulo de Cuentas por Pagar
 
+            if (flagPVT)
+            {
+                mlist = mlist.Where(x => x.puvec_icod_punto_venta == puvec_icod_punto_venta).ToList();
+            }
             grdDxc.DataSource = mlist;
         }
 

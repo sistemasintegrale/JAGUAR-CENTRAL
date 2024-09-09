@@ -22,7 +22,7 @@ namespace SGE.DataAccess
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="SGE_CALZADOS_JAGUAR")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="jaguar_com_pe_CJ")]
 	public partial class CuentasPorCobrarDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -33,7 +33,7 @@ namespace SGE.DataAccess
     #endregion
 		
 		public CuentasPorCobrarDataContext() : 
-				base(global::SGE.DataAccess.Properties.Settings.Default.SGE_CALZADOS_JAGUARConnectionString, mappingSource)
+				base(global::SGE.DataAccess.Properties.Settings.Default.jaguar_com_pe_CJConnectionString2, mappingSource)
 		{
 			OnCreated();
 		}
@@ -710,20 +710,6 @@ namespace SGE.DataAccess
 			return ((ISingleResult<SGEDXC_DOC_X_COBRAR_PAGO_DIRECTO_LISTARResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SGE_DOC_X_COBRAR_CON_PAGOS_LISTAR")]
-		public ISingleResult<SGE_DOC_X_COBRAR_CON_PAGOS_LISTARResult> SGE_DOC_X_COBRAR_CON_PAGOS_LISTAR([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> intEjercicio, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> intCliente)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), intEjercicio, intCliente);
-			return ((ISingleResult<SGE_DOC_X_COBRAR_CON_PAGOS_LISTARResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SGEDXC_DOC_X_COBRAR_LISTAR_PENDIENTES")]
-		public ISingleResult<SGEDXC_DOC_X_COBRAR_LISTAR_PENDIENTESResult> SGEDXC_DOC_X_COBRAR_LISTAR_PENDIENTES([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ANIO", DbType="Int")] System.Nullable<int> aNIO)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), aNIO);
-			return ((ISingleResult<SGEDXC_DOC_X_COBRAR_LISTAR_PENDIENTESResult>)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SGE_DOC_X_COBRAR_CON_PAGOS_LISTAR_SUMINISTROS")]
 		public ISingleResult<SGE_DOC_X_COBRAR_CON_PAGOS_LISTAR_SUMINISTROSResult> SGE_DOC_X_COBRAR_CON_PAGOS_LISTAR_SUMINISTROS([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> intEjercicio, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> intCliente)
 		{
@@ -849,6 +835,20 @@ namespace SGE.DataAccess
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), intEjercicio, intPeriodo);
 			return ((ISingleResult<SGE_DXC_PARA_VCO_LISTARResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SGEDXC_DOC_X_COBRAR_LISTAR_PENDIENTES")]
+		public ISingleResult<SGEDXC_DOC_X_COBRAR_LISTAR_PENDIENTESResult> SGEDXC_DOC_X_COBRAR_LISTAR_PENDIENTES([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ANIO", DbType="Int")] System.Nullable<int> aNIO)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), aNIO);
+			return ((ISingleResult<SGEDXC_DOC_X_COBRAR_LISTAR_PENDIENTESResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SGE_DOC_X_COBRAR_CON_PAGOS_LISTAR")]
+		public ISingleResult<SGE_DOC_X_COBRAR_CON_PAGOS_LISTARResult> SGE_DOC_X_COBRAR_CON_PAGOS_LISTAR([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> intEjercicio, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> intCliente)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), intEjercicio, intCliente);
+			return ((ISingleResult<SGE_DOC_X_COBRAR_CON_PAGOS_LISTARResult>)(result.ReturnValue));
 		}
 	}
 	
@@ -13344,1498 +13344,6 @@ namespace SGE.DataAccess
 		}
 	}
 	
-	public partial class SGE_DOC_X_COBRAR_CON_PAGOS_LISTARResult
-	{
-		
-		private long _doxcc_icod_correlativo;
-		
-		private short _mesec_iid_mes;
-		
-		private int _tdocc_icod_tipo_doc;
-		
-		private string _Abreviatura;
-		
-		private System.Nullable<int> _tdodc_iid_correlativo;
-		
-		private System.Nullable<int> _ClaseDocumento;
-		
-		private string _DescripcionClaseDocumento;
-		
-		private string _doxcc_vnumero_doc;
-		
-		private int _cliec_icod_cliente;
-		
-		private string _cliec_vnombre_cliente;
-		
-		private string _DireccionCliente;
-		
-		private string _NumDocCliente;
-		
-		private System.DateTime _doxcc_sfecha_doc;
-		
-		private System.DateTime _doxcc_sfecha_vencimiento_doc;
-		
-		private int _tablc_iid_tipo_moneda;
-		
-		private string _Moneda;
-		
-		private decimal _doxcc_nmonto_tipo_cambio;
-		
-		private int _tablc_iid_tipo_pago;
-		
-		private string _FormaPago;
-		
-		private string _doxcc_vdescrip_transaccion;
-		
-		private decimal _doxcc_nmonto_afecto;
-		
-		private decimal _doxcc_nmonto_inafecto;
-		
-		private System.Nullable<decimal> _ValorVenta;
-		
-		private decimal _doxcc_nporcentaje_igv;
-		
-		private decimal _doxcc_nmonto_impuesto;
-		
-		private decimal _doxcc_nmonto_total;
-		
-		private decimal _doxcc_nmonto_saldo;
-		
-		private decimal _doxcc_nmonto_pagado;
-		
-		private int _tablc_iid_situacion_documento;
-		
-		private string _Situacion;
-		
-		private string _doxcc_vobservaciones;
-		
-		private bool _doxc_bind_cuenta_corriente;
-		
-		private System.Nullable<System.DateTime> _doxcc_sfecha_entrega;
-		
-		private bool _doxcc_bind_impresion_nogerencia;
-		
-		private bool _doxc_bind_situacion_legal;
-		
-		private bool _doxc_bind_cierre_cuenta_corriente;
-		
-		private System.Nullable<int> _doxcc_tipo_comprobante_referencia;
-		
-		private string _doxcc_num_serie_referencia;
-		
-		private string _doxcc_num_comprobante_referencia;
-		
-		private System.Nullable<System.DateTime> _doxcc_sfecha_emision_referencia;
-		
-		private int _doxcc_ianio;
-		
-		public SGE_DOC_X_COBRAR_CON_PAGOS_LISTARResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_icod_correlativo", DbType="BigInt NOT NULL")]
-		public long doxcc_icod_correlativo
-		{
-			get
-			{
-				return this._doxcc_icod_correlativo;
-			}
-			set
-			{
-				if ((this._doxcc_icod_correlativo != value))
-				{
-					this._doxcc_icod_correlativo = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mesec_iid_mes", DbType="SmallInt NOT NULL")]
-		public short mesec_iid_mes
-		{
-			get
-			{
-				return this._mesec_iid_mes;
-			}
-			set
-			{
-				if ((this._mesec_iid_mes != value))
-				{
-					this._mesec_iid_mes = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tdocc_icod_tipo_doc", DbType="Int NOT NULL")]
-		public int tdocc_icod_tipo_doc
-		{
-			get
-			{
-				return this._tdocc_icod_tipo_doc;
-			}
-			set
-			{
-				if ((this._tdocc_icod_tipo_doc != value))
-				{
-					this._tdocc_icod_tipo_doc = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Abreviatura", DbType="VarChar(3)")]
-		public string Abreviatura
-		{
-			get
-			{
-				return this._Abreviatura;
-			}
-			set
-			{
-				if ((this._Abreviatura != value))
-				{
-					this._Abreviatura = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tdodc_iid_correlativo", DbType="Int")]
-		public System.Nullable<int> tdodc_iid_correlativo
-		{
-			get
-			{
-				return this._tdodc_iid_correlativo;
-			}
-			set
-			{
-				if ((this._tdodc_iid_correlativo != value))
-				{
-					this._tdodc_iid_correlativo = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClaseDocumento", DbType="Int")]
-		public System.Nullable<int> ClaseDocumento
-		{
-			get
-			{
-				return this._ClaseDocumento;
-			}
-			set
-			{
-				if ((this._ClaseDocumento != value))
-				{
-					this._ClaseDocumento = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DescripcionClaseDocumento", DbType="VarChar(50)")]
-		public string DescripcionClaseDocumento
-		{
-			get
-			{
-				return this._DescripcionClaseDocumento;
-			}
-			set
-			{
-				if ((this._DescripcionClaseDocumento != value))
-				{
-					this._DescripcionClaseDocumento = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_vnumero_doc", DbType="VarChar(15) NOT NULL", CanBeNull=false)]
-		public string doxcc_vnumero_doc
-		{
-			get
-			{
-				return this._doxcc_vnumero_doc;
-			}
-			set
-			{
-				if ((this._doxcc_vnumero_doc != value))
-				{
-					this._doxcc_vnumero_doc = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cliec_icod_cliente", DbType="Int NOT NULL")]
-		public int cliec_icod_cliente
-		{
-			get
-			{
-				return this._cliec_icod_cliente;
-			}
-			set
-			{
-				if ((this._cliec_icod_cliente != value))
-				{
-					this._cliec_icod_cliente = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cliec_vnombre_cliente", DbType="VarChar(120)")]
-		public string cliec_vnombre_cliente
-		{
-			get
-			{
-				return this._cliec_vnombre_cliente;
-			}
-			set
-			{
-				if ((this._cliec_vnombre_cliente != value))
-				{
-					this._cliec_vnombre_cliente = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DireccionCliente", DbType="VarChar(120)")]
-		public string DireccionCliente
-		{
-			get
-			{
-				return this._DireccionCliente;
-			}
-			set
-			{
-				if ((this._DireccionCliente != value))
-				{
-					this._DireccionCliente = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NumDocCliente", DbType="VarChar(15)")]
-		public string NumDocCliente
-		{
-			get
-			{
-				return this._NumDocCliente;
-			}
-			set
-			{
-				if ((this._NumDocCliente != value))
-				{
-					this._NumDocCliente = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_sfecha_doc", DbType="SmallDateTime NOT NULL")]
-		public System.DateTime doxcc_sfecha_doc
-		{
-			get
-			{
-				return this._doxcc_sfecha_doc;
-			}
-			set
-			{
-				if ((this._doxcc_sfecha_doc != value))
-				{
-					this._doxcc_sfecha_doc = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_sfecha_vencimiento_doc", DbType="SmallDateTime NOT NULL")]
-		public System.DateTime doxcc_sfecha_vencimiento_doc
-		{
-			get
-			{
-				return this._doxcc_sfecha_vencimiento_doc;
-			}
-			set
-			{
-				if ((this._doxcc_sfecha_vencimiento_doc != value))
-				{
-					this._doxcc_sfecha_vencimiento_doc = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tablc_iid_tipo_moneda", DbType="Int NOT NULL")]
-		public int tablc_iid_tipo_moneda
-		{
-			get
-			{
-				return this._tablc_iid_tipo_moneda;
-			}
-			set
-			{
-				if ((this._tablc_iid_tipo_moneda != value))
-				{
-					this._tablc_iid_tipo_moneda = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Moneda", DbType="VarChar(100)")]
-		public string Moneda
-		{
-			get
-			{
-				return this._Moneda;
-			}
-			set
-			{
-				if ((this._Moneda != value))
-				{
-					this._Moneda = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_nmonto_tipo_cambio", DbType="Decimal(8,4) NOT NULL")]
-		public decimal doxcc_nmonto_tipo_cambio
-		{
-			get
-			{
-				return this._doxcc_nmonto_tipo_cambio;
-			}
-			set
-			{
-				if ((this._doxcc_nmonto_tipo_cambio != value))
-				{
-					this._doxcc_nmonto_tipo_cambio = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tablc_iid_tipo_pago", DbType="Int NOT NULL")]
-		public int tablc_iid_tipo_pago
-		{
-			get
-			{
-				return this._tablc_iid_tipo_pago;
-			}
-			set
-			{
-				if ((this._tablc_iid_tipo_pago != value))
-				{
-					this._tablc_iid_tipo_pago = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FormaPago", DbType="VarChar(100)")]
-		public string FormaPago
-		{
-			get
-			{
-				return this._FormaPago;
-			}
-			set
-			{
-				if ((this._FormaPago != value))
-				{
-					this._FormaPago = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_vdescrip_transaccion", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string doxcc_vdescrip_transaccion
-		{
-			get
-			{
-				return this._doxcc_vdescrip_transaccion;
-			}
-			set
-			{
-				if ((this._doxcc_vdescrip_transaccion != value))
-				{
-					this._doxcc_vdescrip_transaccion = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_nmonto_afecto", DbType="Decimal(16,2) NOT NULL")]
-		public decimal doxcc_nmonto_afecto
-		{
-			get
-			{
-				return this._doxcc_nmonto_afecto;
-			}
-			set
-			{
-				if ((this._doxcc_nmonto_afecto != value))
-				{
-					this._doxcc_nmonto_afecto = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_nmonto_inafecto", DbType="Decimal(16,2) NOT NULL")]
-		public decimal doxcc_nmonto_inafecto
-		{
-			get
-			{
-				return this._doxcc_nmonto_inafecto;
-			}
-			set
-			{
-				if ((this._doxcc_nmonto_inafecto != value))
-				{
-					this._doxcc_nmonto_inafecto = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ValorVenta", DbType="Decimal(17,2)")]
-		public System.Nullable<decimal> ValorVenta
-		{
-			get
-			{
-				return this._ValorVenta;
-			}
-			set
-			{
-				if ((this._ValorVenta != value))
-				{
-					this._ValorVenta = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_nporcentaje_igv", DbType="Decimal(6,2) NOT NULL")]
-		public decimal doxcc_nporcentaje_igv
-		{
-			get
-			{
-				return this._doxcc_nporcentaje_igv;
-			}
-			set
-			{
-				if ((this._doxcc_nporcentaje_igv != value))
-				{
-					this._doxcc_nporcentaje_igv = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_nmonto_impuesto", DbType="Decimal(16,2) NOT NULL")]
-		public decimal doxcc_nmonto_impuesto
-		{
-			get
-			{
-				return this._doxcc_nmonto_impuesto;
-			}
-			set
-			{
-				if ((this._doxcc_nmonto_impuesto != value))
-				{
-					this._doxcc_nmonto_impuesto = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_nmonto_total", DbType="Decimal(16,2) NOT NULL")]
-		public decimal doxcc_nmonto_total
-		{
-			get
-			{
-				return this._doxcc_nmonto_total;
-			}
-			set
-			{
-				if ((this._doxcc_nmonto_total != value))
-				{
-					this._doxcc_nmonto_total = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_nmonto_saldo", DbType="Decimal(16,2) NOT NULL")]
-		public decimal doxcc_nmonto_saldo
-		{
-			get
-			{
-				return this._doxcc_nmonto_saldo;
-			}
-			set
-			{
-				if ((this._doxcc_nmonto_saldo != value))
-				{
-					this._doxcc_nmonto_saldo = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_nmonto_pagado", DbType="Decimal(16,2) NOT NULL")]
-		public decimal doxcc_nmonto_pagado
-		{
-			get
-			{
-				return this._doxcc_nmonto_pagado;
-			}
-			set
-			{
-				if ((this._doxcc_nmonto_pagado != value))
-				{
-					this._doxcc_nmonto_pagado = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tablc_iid_situacion_documento", DbType="Int NOT NULL")]
-		public int tablc_iid_situacion_documento
-		{
-			get
-			{
-				return this._tablc_iid_situacion_documento;
-			}
-			set
-			{
-				if ((this._tablc_iid_situacion_documento != value))
-				{
-					this._tablc_iid_situacion_documento = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Situacion", DbType="VarChar(100)")]
-		public string Situacion
-		{
-			get
-			{
-				return this._Situacion;
-			}
-			set
-			{
-				if ((this._Situacion != value))
-				{
-					this._Situacion = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_vobservaciones", DbType="VarChar(100)")]
-		public string doxcc_vobservaciones
-		{
-			get
-			{
-				return this._doxcc_vobservaciones;
-			}
-			set
-			{
-				if ((this._doxcc_vobservaciones != value))
-				{
-					this._doxcc_vobservaciones = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxc_bind_cuenta_corriente", DbType="Bit NOT NULL")]
-		public bool doxc_bind_cuenta_corriente
-		{
-			get
-			{
-				return this._doxc_bind_cuenta_corriente;
-			}
-			set
-			{
-				if ((this._doxc_bind_cuenta_corriente != value))
-				{
-					this._doxc_bind_cuenta_corriente = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_sfecha_entrega", DbType="SmallDateTime")]
-		public System.Nullable<System.DateTime> doxcc_sfecha_entrega
-		{
-			get
-			{
-				return this._doxcc_sfecha_entrega;
-			}
-			set
-			{
-				if ((this._doxcc_sfecha_entrega != value))
-				{
-					this._doxcc_sfecha_entrega = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_bind_impresion_nogerencia", DbType="Bit NOT NULL")]
-		public bool doxcc_bind_impresion_nogerencia
-		{
-			get
-			{
-				return this._doxcc_bind_impresion_nogerencia;
-			}
-			set
-			{
-				if ((this._doxcc_bind_impresion_nogerencia != value))
-				{
-					this._doxcc_bind_impresion_nogerencia = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxc_bind_situacion_legal", DbType="Bit NOT NULL")]
-		public bool doxc_bind_situacion_legal
-		{
-			get
-			{
-				return this._doxc_bind_situacion_legal;
-			}
-			set
-			{
-				if ((this._doxc_bind_situacion_legal != value))
-				{
-					this._doxc_bind_situacion_legal = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxc_bind_cierre_cuenta_corriente", DbType="Bit NOT NULL")]
-		public bool doxc_bind_cierre_cuenta_corriente
-		{
-			get
-			{
-				return this._doxc_bind_cierre_cuenta_corriente;
-			}
-			set
-			{
-				if ((this._doxc_bind_cierre_cuenta_corriente != value))
-				{
-					this._doxc_bind_cierre_cuenta_corriente = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_tipo_comprobante_referencia", DbType="Int")]
-		public System.Nullable<int> doxcc_tipo_comprobante_referencia
-		{
-			get
-			{
-				return this._doxcc_tipo_comprobante_referencia;
-			}
-			set
-			{
-				if ((this._doxcc_tipo_comprobante_referencia != value))
-				{
-					this._doxcc_tipo_comprobante_referencia = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_num_serie_referencia", DbType="VarChar(10)")]
-		public string doxcc_num_serie_referencia
-		{
-			get
-			{
-				return this._doxcc_num_serie_referencia;
-			}
-			set
-			{
-				if ((this._doxcc_num_serie_referencia != value))
-				{
-					this._doxcc_num_serie_referencia = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_num_comprobante_referencia", DbType="VarChar(20)")]
-		public string doxcc_num_comprobante_referencia
-		{
-			get
-			{
-				return this._doxcc_num_comprobante_referencia;
-			}
-			set
-			{
-				if ((this._doxcc_num_comprobante_referencia != value))
-				{
-					this._doxcc_num_comprobante_referencia = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_sfecha_emision_referencia", DbType="SmallDateTime")]
-		public System.Nullable<System.DateTime> doxcc_sfecha_emision_referencia
-		{
-			get
-			{
-				return this._doxcc_sfecha_emision_referencia;
-			}
-			set
-			{
-				if ((this._doxcc_sfecha_emision_referencia != value))
-				{
-					this._doxcc_sfecha_emision_referencia = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_ianio", DbType="Int NOT NULL")]
-		public int doxcc_ianio
-		{
-			get
-			{
-				return this._doxcc_ianio;
-			}
-			set
-			{
-				if ((this._doxcc_ianio != value))
-				{
-					this._doxcc_ianio = value;
-				}
-			}
-		}
-	}
-	
-	public partial class SGEDXC_DOC_X_COBRAR_LISTAR_PENDIENTESResult
-	{
-		
-		private long _doxcc_icod_correlativo;
-		
-		private short _mesec_iid_mes;
-		
-		private int _tdocc_icod_tipo_doc;
-		
-		private string _Abreviatura;
-		
-		private System.Nullable<int> _tdodc_iid_correlativo;
-		
-		private System.Nullable<int> _ClaseDocumento;
-		
-		private string _DescripcionClaseDocumento;
-		
-		private string _doxcc_vnumero_doc;
-		
-		private int _cliec_icod_cliente;
-		
-		private string _cliec_vnombre_cliente;
-		
-		private string _cliec_cruc;
-		
-		private string _DireccionCliente;
-		
-		private string _NumDocCliente;
-		
-		private System.DateTime _doxcc_sfecha_doc;
-		
-		private System.DateTime _doxcc_sfecha_vencimiento_doc;
-		
-		private int _tablc_iid_tipo_moneda;
-		
-		private string _Moneda;
-		
-		private decimal _doxcc_nmonto_tipo_cambio;
-		
-		private int _tablc_iid_tipo_pago;
-		
-		private string _FormaPago;
-		
-		private string _doxcc_vdescrip_transaccion;
-		
-		private decimal _doxcc_nmonto_afecto;
-		
-		private decimal _doxcc_nmonto_inafecto;
-		
-		private System.Nullable<decimal> _ValorVenta;
-		
-		private decimal _doxcc_nporcentaje_igv;
-		
-		private decimal _doxcc_nmonto_impuesto;
-		
-		private decimal _doxcc_nmonto_total;
-		
-		private decimal _doxcc_nmonto_saldo;
-		
-		private decimal _doxcc_nmonto_pagado;
-		
-		private int _tablc_iid_situacion_documento;
-		
-		private string _Situacion;
-		
-		private string _doxcc_vobservaciones;
-		
-		private bool _doxc_bind_cuenta_corriente;
-		
-		private System.Nullable<System.DateTime> _doxcc_sfecha_entrega;
-		
-		private bool _doxcc_bind_impresion_nogerencia;
-		
-		private bool _doxc_bind_situacion_legal;
-		
-		private bool _doxc_bind_cierre_cuenta_corriente;
-		
-		private System.Nullable<int> _doxcc_tipo_comprobante_referencia;
-		
-		private string _doxcc_num_serie_referencia;
-		
-		private string _doxcc_num_comprobante_referencia;
-		
-		private System.Nullable<System.DateTime> _doxcc_sfecha_emision_referencia;
-		
-		public SGEDXC_DOC_X_COBRAR_LISTAR_PENDIENTESResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_icod_correlativo", DbType="BigInt NOT NULL")]
-		public long doxcc_icod_correlativo
-		{
-			get
-			{
-				return this._doxcc_icod_correlativo;
-			}
-			set
-			{
-				if ((this._doxcc_icod_correlativo != value))
-				{
-					this._doxcc_icod_correlativo = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mesec_iid_mes", DbType="SmallInt NOT NULL")]
-		public short mesec_iid_mes
-		{
-			get
-			{
-				return this._mesec_iid_mes;
-			}
-			set
-			{
-				if ((this._mesec_iid_mes != value))
-				{
-					this._mesec_iid_mes = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tdocc_icod_tipo_doc", DbType="Int NOT NULL")]
-		public int tdocc_icod_tipo_doc
-		{
-			get
-			{
-				return this._tdocc_icod_tipo_doc;
-			}
-			set
-			{
-				if ((this._tdocc_icod_tipo_doc != value))
-				{
-					this._tdocc_icod_tipo_doc = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Abreviatura", DbType="VarChar(3)")]
-		public string Abreviatura
-		{
-			get
-			{
-				return this._Abreviatura;
-			}
-			set
-			{
-				if ((this._Abreviatura != value))
-				{
-					this._Abreviatura = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tdodc_iid_correlativo", DbType="Int")]
-		public System.Nullable<int> tdodc_iid_correlativo
-		{
-			get
-			{
-				return this._tdodc_iid_correlativo;
-			}
-			set
-			{
-				if ((this._tdodc_iid_correlativo != value))
-				{
-					this._tdodc_iid_correlativo = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClaseDocumento", DbType="Int")]
-		public System.Nullable<int> ClaseDocumento
-		{
-			get
-			{
-				return this._ClaseDocumento;
-			}
-			set
-			{
-				if ((this._ClaseDocumento != value))
-				{
-					this._ClaseDocumento = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DescripcionClaseDocumento", DbType="VarChar(50)")]
-		public string DescripcionClaseDocumento
-		{
-			get
-			{
-				return this._DescripcionClaseDocumento;
-			}
-			set
-			{
-				if ((this._DescripcionClaseDocumento != value))
-				{
-					this._DescripcionClaseDocumento = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_vnumero_doc", DbType="VarChar(15) NOT NULL", CanBeNull=false)]
-		public string doxcc_vnumero_doc
-		{
-			get
-			{
-				return this._doxcc_vnumero_doc;
-			}
-			set
-			{
-				if ((this._doxcc_vnumero_doc != value))
-				{
-					this._doxcc_vnumero_doc = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cliec_icod_cliente", DbType="Int NOT NULL")]
-		public int cliec_icod_cliente
-		{
-			get
-			{
-				return this._cliec_icod_cliente;
-			}
-			set
-			{
-				if ((this._cliec_icod_cliente != value))
-				{
-					this._cliec_icod_cliente = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cliec_vnombre_cliente", DbType="VarChar(120)")]
-		public string cliec_vnombre_cliente
-		{
-			get
-			{
-				return this._cliec_vnombre_cliente;
-			}
-			set
-			{
-				if ((this._cliec_vnombre_cliente != value))
-				{
-					this._cliec_vnombre_cliente = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cliec_cruc", DbType="Char(11)")]
-		public string cliec_cruc
-		{
-			get
-			{
-				return this._cliec_cruc;
-			}
-			set
-			{
-				if ((this._cliec_cruc != value))
-				{
-					this._cliec_cruc = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DireccionCliente", DbType="VarChar(120)")]
-		public string DireccionCliente
-		{
-			get
-			{
-				return this._DireccionCliente;
-			}
-			set
-			{
-				if ((this._DireccionCliente != value))
-				{
-					this._DireccionCliente = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NumDocCliente", DbType="VarChar(15)")]
-		public string NumDocCliente
-		{
-			get
-			{
-				return this._NumDocCliente;
-			}
-			set
-			{
-				if ((this._NumDocCliente != value))
-				{
-					this._NumDocCliente = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_sfecha_doc", DbType="SmallDateTime NOT NULL")]
-		public System.DateTime doxcc_sfecha_doc
-		{
-			get
-			{
-				return this._doxcc_sfecha_doc;
-			}
-			set
-			{
-				if ((this._doxcc_sfecha_doc != value))
-				{
-					this._doxcc_sfecha_doc = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_sfecha_vencimiento_doc", DbType="SmallDateTime NOT NULL")]
-		public System.DateTime doxcc_sfecha_vencimiento_doc
-		{
-			get
-			{
-				return this._doxcc_sfecha_vencimiento_doc;
-			}
-			set
-			{
-				if ((this._doxcc_sfecha_vencimiento_doc != value))
-				{
-					this._doxcc_sfecha_vencimiento_doc = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tablc_iid_tipo_moneda", DbType="Int NOT NULL")]
-		public int tablc_iid_tipo_moneda
-		{
-			get
-			{
-				return this._tablc_iid_tipo_moneda;
-			}
-			set
-			{
-				if ((this._tablc_iid_tipo_moneda != value))
-				{
-					this._tablc_iid_tipo_moneda = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Moneda", DbType="VarChar(100)")]
-		public string Moneda
-		{
-			get
-			{
-				return this._Moneda;
-			}
-			set
-			{
-				if ((this._Moneda != value))
-				{
-					this._Moneda = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_nmonto_tipo_cambio", DbType="Decimal(8,4) NOT NULL")]
-		public decimal doxcc_nmonto_tipo_cambio
-		{
-			get
-			{
-				return this._doxcc_nmonto_tipo_cambio;
-			}
-			set
-			{
-				if ((this._doxcc_nmonto_tipo_cambio != value))
-				{
-					this._doxcc_nmonto_tipo_cambio = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tablc_iid_tipo_pago", DbType="Int NOT NULL")]
-		public int tablc_iid_tipo_pago
-		{
-			get
-			{
-				return this._tablc_iid_tipo_pago;
-			}
-			set
-			{
-				if ((this._tablc_iid_tipo_pago != value))
-				{
-					this._tablc_iid_tipo_pago = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FormaPago", DbType="VarChar(100)")]
-		public string FormaPago
-		{
-			get
-			{
-				return this._FormaPago;
-			}
-			set
-			{
-				if ((this._FormaPago != value))
-				{
-					this._FormaPago = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_vdescrip_transaccion", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string doxcc_vdescrip_transaccion
-		{
-			get
-			{
-				return this._doxcc_vdescrip_transaccion;
-			}
-			set
-			{
-				if ((this._doxcc_vdescrip_transaccion != value))
-				{
-					this._doxcc_vdescrip_transaccion = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_nmonto_afecto", DbType="Decimal(16,2) NOT NULL")]
-		public decimal doxcc_nmonto_afecto
-		{
-			get
-			{
-				return this._doxcc_nmonto_afecto;
-			}
-			set
-			{
-				if ((this._doxcc_nmonto_afecto != value))
-				{
-					this._doxcc_nmonto_afecto = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_nmonto_inafecto", DbType="Decimal(16,2) NOT NULL")]
-		public decimal doxcc_nmonto_inafecto
-		{
-			get
-			{
-				return this._doxcc_nmonto_inafecto;
-			}
-			set
-			{
-				if ((this._doxcc_nmonto_inafecto != value))
-				{
-					this._doxcc_nmonto_inafecto = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ValorVenta", DbType="Decimal(17,2)")]
-		public System.Nullable<decimal> ValorVenta
-		{
-			get
-			{
-				return this._ValorVenta;
-			}
-			set
-			{
-				if ((this._ValorVenta != value))
-				{
-					this._ValorVenta = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_nporcentaje_igv", DbType="Decimal(6,2) NOT NULL")]
-		public decimal doxcc_nporcentaje_igv
-		{
-			get
-			{
-				return this._doxcc_nporcentaje_igv;
-			}
-			set
-			{
-				if ((this._doxcc_nporcentaje_igv != value))
-				{
-					this._doxcc_nporcentaje_igv = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_nmonto_impuesto", DbType="Decimal(16,2) NOT NULL")]
-		public decimal doxcc_nmonto_impuesto
-		{
-			get
-			{
-				return this._doxcc_nmonto_impuesto;
-			}
-			set
-			{
-				if ((this._doxcc_nmonto_impuesto != value))
-				{
-					this._doxcc_nmonto_impuesto = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_nmonto_total", DbType="Decimal(16,2) NOT NULL")]
-		public decimal doxcc_nmonto_total
-		{
-			get
-			{
-				return this._doxcc_nmonto_total;
-			}
-			set
-			{
-				if ((this._doxcc_nmonto_total != value))
-				{
-					this._doxcc_nmonto_total = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_nmonto_saldo", DbType="Decimal(16,2) NOT NULL")]
-		public decimal doxcc_nmonto_saldo
-		{
-			get
-			{
-				return this._doxcc_nmonto_saldo;
-			}
-			set
-			{
-				if ((this._doxcc_nmonto_saldo != value))
-				{
-					this._doxcc_nmonto_saldo = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_nmonto_pagado", DbType="Decimal(16,2) NOT NULL")]
-		public decimal doxcc_nmonto_pagado
-		{
-			get
-			{
-				return this._doxcc_nmonto_pagado;
-			}
-			set
-			{
-				if ((this._doxcc_nmonto_pagado != value))
-				{
-					this._doxcc_nmonto_pagado = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tablc_iid_situacion_documento", DbType="Int NOT NULL")]
-		public int tablc_iid_situacion_documento
-		{
-			get
-			{
-				return this._tablc_iid_situacion_documento;
-			}
-			set
-			{
-				if ((this._tablc_iid_situacion_documento != value))
-				{
-					this._tablc_iid_situacion_documento = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Situacion", DbType="VarChar(100)")]
-		public string Situacion
-		{
-			get
-			{
-				return this._Situacion;
-			}
-			set
-			{
-				if ((this._Situacion != value))
-				{
-					this._Situacion = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_vobservaciones", DbType="VarChar(100)")]
-		public string doxcc_vobservaciones
-		{
-			get
-			{
-				return this._doxcc_vobservaciones;
-			}
-			set
-			{
-				if ((this._doxcc_vobservaciones != value))
-				{
-					this._doxcc_vobservaciones = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxc_bind_cuenta_corriente", DbType="Bit NOT NULL")]
-		public bool doxc_bind_cuenta_corriente
-		{
-			get
-			{
-				return this._doxc_bind_cuenta_corriente;
-			}
-			set
-			{
-				if ((this._doxc_bind_cuenta_corriente != value))
-				{
-					this._doxc_bind_cuenta_corriente = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_sfecha_entrega", DbType="SmallDateTime")]
-		public System.Nullable<System.DateTime> doxcc_sfecha_entrega
-		{
-			get
-			{
-				return this._doxcc_sfecha_entrega;
-			}
-			set
-			{
-				if ((this._doxcc_sfecha_entrega != value))
-				{
-					this._doxcc_sfecha_entrega = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_bind_impresion_nogerencia", DbType="Bit NOT NULL")]
-		public bool doxcc_bind_impresion_nogerencia
-		{
-			get
-			{
-				return this._doxcc_bind_impresion_nogerencia;
-			}
-			set
-			{
-				if ((this._doxcc_bind_impresion_nogerencia != value))
-				{
-					this._doxcc_bind_impresion_nogerencia = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxc_bind_situacion_legal", DbType="Bit NOT NULL")]
-		public bool doxc_bind_situacion_legal
-		{
-			get
-			{
-				return this._doxc_bind_situacion_legal;
-			}
-			set
-			{
-				if ((this._doxc_bind_situacion_legal != value))
-				{
-					this._doxc_bind_situacion_legal = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxc_bind_cierre_cuenta_corriente", DbType="Bit NOT NULL")]
-		public bool doxc_bind_cierre_cuenta_corriente
-		{
-			get
-			{
-				return this._doxc_bind_cierre_cuenta_corriente;
-			}
-			set
-			{
-				if ((this._doxc_bind_cierre_cuenta_corriente != value))
-				{
-					this._doxc_bind_cierre_cuenta_corriente = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_tipo_comprobante_referencia", DbType="Int")]
-		public System.Nullable<int> doxcc_tipo_comprobante_referencia
-		{
-			get
-			{
-				return this._doxcc_tipo_comprobante_referencia;
-			}
-			set
-			{
-				if ((this._doxcc_tipo_comprobante_referencia != value))
-				{
-					this._doxcc_tipo_comprobante_referencia = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_num_serie_referencia", DbType="VarChar(10)")]
-		public string doxcc_num_serie_referencia
-		{
-			get
-			{
-				return this._doxcc_num_serie_referencia;
-			}
-			set
-			{
-				if ((this._doxcc_num_serie_referencia != value))
-				{
-					this._doxcc_num_serie_referencia = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_num_comprobante_referencia", DbType="VarChar(20)")]
-		public string doxcc_num_comprobante_referencia
-		{
-			get
-			{
-				return this._doxcc_num_comprobante_referencia;
-			}
-			set
-			{
-				if ((this._doxcc_num_comprobante_referencia != value))
-				{
-					this._doxcc_num_comprobante_referencia = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_sfecha_emision_referencia", DbType="SmallDateTime")]
-		public System.Nullable<System.DateTime> doxcc_sfecha_emision_referencia
-		{
-			get
-			{
-				return this._doxcc_sfecha_emision_referencia;
-			}
-			set
-			{
-				if ((this._doxcc_sfecha_emision_referencia != value))
-				{
-					this._doxcc_sfecha_emision_referencia = value;
-				}
-			}
-		}
-	}
-	
 	public partial class SGE_DOC_X_COBRAR_CON_PAGOS_LISTAR_SUMINISTROSResult
 	{
 		
@@ -17275,6 +15783,1534 @@ namespace SGE.DataAccess
 				if ((this._docxc_icod_documento1 != value))
 				{
 					this._docxc_icod_documento1 = value;
+				}
+			}
+		}
+	}
+	
+	public partial class SGEDXC_DOC_X_COBRAR_LISTAR_PENDIENTESResult
+	{
+		
+		private long _doxcc_icod_correlativo;
+		
+		private short _mesec_iid_mes;
+		
+		private int _tdocc_icod_tipo_doc;
+		
+		private string _Abreviatura;
+		
+		private System.Nullable<int> _tdodc_iid_correlativo;
+		
+		private System.Nullable<int> _ClaseDocumento;
+		
+		private string _DescripcionClaseDocumento;
+		
+		private string _doxcc_vnumero_doc;
+		
+		private int _cliec_icod_cliente;
+		
+		private string _cliec_vnombre_cliente;
+		
+		private string _cliec_cruc;
+		
+		private string _DireccionCliente;
+		
+		private string _NumDocCliente;
+		
+		private System.DateTime _doxcc_sfecha_doc;
+		
+		private System.DateTime _doxcc_sfecha_vencimiento_doc;
+		
+		private int _tablc_iid_tipo_moneda;
+		
+		private string _Moneda;
+		
+		private decimal _doxcc_nmonto_tipo_cambio;
+		
+		private int _tablc_iid_tipo_pago;
+		
+		private string _FormaPago;
+		
+		private string _doxcc_vdescrip_transaccion;
+		
+		private decimal _doxcc_nmonto_afecto;
+		
+		private decimal _doxcc_nmonto_inafecto;
+		
+		private System.Nullable<decimal> _ValorVenta;
+		
+		private decimal _doxcc_nporcentaje_igv;
+		
+		private decimal _doxcc_nmonto_impuesto;
+		
+		private decimal _doxcc_nmonto_total;
+		
+		private decimal _doxcc_nmonto_saldo;
+		
+		private decimal _doxcc_nmonto_pagado;
+		
+		private int _tablc_iid_situacion_documento;
+		
+		private string _Situacion;
+		
+		private string _doxcc_vobservaciones;
+		
+		private bool _doxc_bind_cuenta_corriente;
+		
+		private System.Nullable<System.DateTime> _doxcc_sfecha_entrega;
+		
+		private bool _doxcc_bind_impresion_nogerencia;
+		
+		private bool _doxc_bind_situacion_legal;
+		
+		private bool _doxc_bind_cierre_cuenta_corriente;
+		
+		private System.Nullable<int> _doxcc_tipo_comprobante_referencia;
+		
+		private string _doxcc_num_serie_referencia;
+		
+		private string _doxcc_num_comprobante_referencia;
+		
+		private System.Nullable<System.DateTime> _doxcc_sfecha_emision_referencia;
+		
+		private System.Nullable<int> _puvec_icod_punto_venta;
+		
+		public SGEDXC_DOC_X_COBRAR_LISTAR_PENDIENTESResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_icod_correlativo", DbType="BigInt NOT NULL")]
+		public long doxcc_icod_correlativo
+		{
+			get
+			{
+				return this._doxcc_icod_correlativo;
+			}
+			set
+			{
+				if ((this._doxcc_icod_correlativo != value))
+				{
+					this._doxcc_icod_correlativo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mesec_iid_mes", DbType="SmallInt NOT NULL")]
+		public short mesec_iid_mes
+		{
+			get
+			{
+				return this._mesec_iid_mes;
+			}
+			set
+			{
+				if ((this._mesec_iid_mes != value))
+				{
+					this._mesec_iid_mes = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tdocc_icod_tipo_doc", DbType="Int NOT NULL")]
+		public int tdocc_icod_tipo_doc
+		{
+			get
+			{
+				return this._tdocc_icod_tipo_doc;
+			}
+			set
+			{
+				if ((this._tdocc_icod_tipo_doc != value))
+				{
+					this._tdocc_icod_tipo_doc = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Abreviatura", DbType="VarChar(3)")]
+		public string Abreviatura
+		{
+			get
+			{
+				return this._Abreviatura;
+			}
+			set
+			{
+				if ((this._Abreviatura != value))
+				{
+					this._Abreviatura = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tdodc_iid_correlativo", DbType="Int")]
+		public System.Nullable<int> tdodc_iid_correlativo
+		{
+			get
+			{
+				return this._tdodc_iid_correlativo;
+			}
+			set
+			{
+				if ((this._tdodc_iid_correlativo != value))
+				{
+					this._tdodc_iid_correlativo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClaseDocumento", DbType="Int")]
+		public System.Nullable<int> ClaseDocumento
+		{
+			get
+			{
+				return this._ClaseDocumento;
+			}
+			set
+			{
+				if ((this._ClaseDocumento != value))
+				{
+					this._ClaseDocumento = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DescripcionClaseDocumento", DbType="VarChar(50)")]
+		public string DescripcionClaseDocumento
+		{
+			get
+			{
+				return this._DescripcionClaseDocumento;
+			}
+			set
+			{
+				if ((this._DescripcionClaseDocumento != value))
+				{
+					this._DescripcionClaseDocumento = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_vnumero_doc", DbType="VarChar(15) NOT NULL", CanBeNull=false)]
+		public string doxcc_vnumero_doc
+		{
+			get
+			{
+				return this._doxcc_vnumero_doc;
+			}
+			set
+			{
+				if ((this._doxcc_vnumero_doc != value))
+				{
+					this._doxcc_vnumero_doc = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cliec_icod_cliente", DbType="Int NOT NULL")]
+		public int cliec_icod_cliente
+		{
+			get
+			{
+				return this._cliec_icod_cliente;
+			}
+			set
+			{
+				if ((this._cliec_icod_cliente != value))
+				{
+					this._cliec_icod_cliente = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cliec_vnombre_cliente", DbType="VarChar(120)")]
+		public string cliec_vnombre_cliente
+		{
+			get
+			{
+				return this._cliec_vnombre_cliente;
+			}
+			set
+			{
+				if ((this._cliec_vnombre_cliente != value))
+				{
+					this._cliec_vnombre_cliente = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cliec_cruc", DbType="Char(11)")]
+		public string cliec_cruc
+		{
+			get
+			{
+				return this._cliec_cruc;
+			}
+			set
+			{
+				if ((this._cliec_cruc != value))
+				{
+					this._cliec_cruc = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DireccionCliente", DbType="VarChar(120)")]
+		public string DireccionCliente
+		{
+			get
+			{
+				return this._DireccionCliente;
+			}
+			set
+			{
+				if ((this._DireccionCliente != value))
+				{
+					this._DireccionCliente = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NumDocCliente", DbType="VarChar(15)")]
+		public string NumDocCliente
+		{
+			get
+			{
+				return this._NumDocCliente;
+			}
+			set
+			{
+				if ((this._NumDocCliente != value))
+				{
+					this._NumDocCliente = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_sfecha_doc", DbType="SmallDateTime NOT NULL")]
+		public System.DateTime doxcc_sfecha_doc
+		{
+			get
+			{
+				return this._doxcc_sfecha_doc;
+			}
+			set
+			{
+				if ((this._doxcc_sfecha_doc != value))
+				{
+					this._doxcc_sfecha_doc = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_sfecha_vencimiento_doc", DbType="SmallDateTime NOT NULL")]
+		public System.DateTime doxcc_sfecha_vencimiento_doc
+		{
+			get
+			{
+				return this._doxcc_sfecha_vencimiento_doc;
+			}
+			set
+			{
+				if ((this._doxcc_sfecha_vencimiento_doc != value))
+				{
+					this._doxcc_sfecha_vencimiento_doc = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tablc_iid_tipo_moneda", DbType="Int NOT NULL")]
+		public int tablc_iid_tipo_moneda
+		{
+			get
+			{
+				return this._tablc_iid_tipo_moneda;
+			}
+			set
+			{
+				if ((this._tablc_iid_tipo_moneda != value))
+				{
+					this._tablc_iid_tipo_moneda = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Moneda", DbType="VarChar(100)")]
+		public string Moneda
+		{
+			get
+			{
+				return this._Moneda;
+			}
+			set
+			{
+				if ((this._Moneda != value))
+				{
+					this._Moneda = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_nmonto_tipo_cambio", DbType="Decimal(8,4) NOT NULL")]
+		public decimal doxcc_nmonto_tipo_cambio
+		{
+			get
+			{
+				return this._doxcc_nmonto_tipo_cambio;
+			}
+			set
+			{
+				if ((this._doxcc_nmonto_tipo_cambio != value))
+				{
+					this._doxcc_nmonto_tipo_cambio = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tablc_iid_tipo_pago", DbType="Int NOT NULL")]
+		public int tablc_iid_tipo_pago
+		{
+			get
+			{
+				return this._tablc_iid_tipo_pago;
+			}
+			set
+			{
+				if ((this._tablc_iid_tipo_pago != value))
+				{
+					this._tablc_iid_tipo_pago = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FormaPago", DbType="VarChar(100)")]
+		public string FormaPago
+		{
+			get
+			{
+				return this._FormaPago;
+			}
+			set
+			{
+				if ((this._FormaPago != value))
+				{
+					this._FormaPago = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_vdescrip_transaccion", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string doxcc_vdescrip_transaccion
+		{
+			get
+			{
+				return this._doxcc_vdescrip_transaccion;
+			}
+			set
+			{
+				if ((this._doxcc_vdescrip_transaccion != value))
+				{
+					this._doxcc_vdescrip_transaccion = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_nmonto_afecto", DbType="Decimal(16,2) NOT NULL")]
+		public decimal doxcc_nmonto_afecto
+		{
+			get
+			{
+				return this._doxcc_nmonto_afecto;
+			}
+			set
+			{
+				if ((this._doxcc_nmonto_afecto != value))
+				{
+					this._doxcc_nmonto_afecto = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_nmonto_inafecto", DbType="Decimal(16,2) NOT NULL")]
+		public decimal doxcc_nmonto_inafecto
+		{
+			get
+			{
+				return this._doxcc_nmonto_inafecto;
+			}
+			set
+			{
+				if ((this._doxcc_nmonto_inafecto != value))
+				{
+					this._doxcc_nmonto_inafecto = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ValorVenta", DbType="Decimal(17,2)")]
+		public System.Nullable<decimal> ValorVenta
+		{
+			get
+			{
+				return this._ValorVenta;
+			}
+			set
+			{
+				if ((this._ValorVenta != value))
+				{
+					this._ValorVenta = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_nporcentaje_igv", DbType="Decimal(6,2) NOT NULL")]
+		public decimal doxcc_nporcentaje_igv
+		{
+			get
+			{
+				return this._doxcc_nporcentaje_igv;
+			}
+			set
+			{
+				if ((this._doxcc_nporcentaje_igv != value))
+				{
+					this._doxcc_nporcentaje_igv = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_nmonto_impuesto", DbType="Decimal(16,2) NOT NULL")]
+		public decimal doxcc_nmonto_impuesto
+		{
+			get
+			{
+				return this._doxcc_nmonto_impuesto;
+			}
+			set
+			{
+				if ((this._doxcc_nmonto_impuesto != value))
+				{
+					this._doxcc_nmonto_impuesto = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_nmonto_total", DbType="Decimal(16,2) NOT NULL")]
+		public decimal doxcc_nmonto_total
+		{
+			get
+			{
+				return this._doxcc_nmonto_total;
+			}
+			set
+			{
+				if ((this._doxcc_nmonto_total != value))
+				{
+					this._doxcc_nmonto_total = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_nmonto_saldo", DbType="Decimal(16,2) NOT NULL")]
+		public decimal doxcc_nmonto_saldo
+		{
+			get
+			{
+				return this._doxcc_nmonto_saldo;
+			}
+			set
+			{
+				if ((this._doxcc_nmonto_saldo != value))
+				{
+					this._doxcc_nmonto_saldo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_nmonto_pagado", DbType="Decimal(16,2) NOT NULL")]
+		public decimal doxcc_nmonto_pagado
+		{
+			get
+			{
+				return this._doxcc_nmonto_pagado;
+			}
+			set
+			{
+				if ((this._doxcc_nmonto_pagado != value))
+				{
+					this._doxcc_nmonto_pagado = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tablc_iid_situacion_documento", DbType="Int NOT NULL")]
+		public int tablc_iid_situacion_documento
+		{
+			get
+			{
+				return this._tablc_iid_situacion_documento;
+			}
+			set
+			{
+				if ((this._tablc_iid_situacion_documento != value))
+				{
+					this._tablc_iid_situacion_documento = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Situacion", DbType="VarChar(100)")]
+		public string Situacion
+		{
+			get
+			{
+				return this._Situacion;
+			}
+			set
+			{
+				if ((this._Situacion != value))
+				{
+					this._Situacion = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_vobservaciones", DbType="VarChar(100)")]
+		public string doxcc_vobservaciones
+		{
+			get
+			{
+				return this._doxcc_vobservaciones;
+			}
+			set
+			{
+				if ((this._doxcc_vobservaciones != value))
+				{
+					this._doxcc_vobservaciones = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxc_bind_cuenta_corriente", DbType="Bit NOT NULL")]
+		public bool doxc_bind_cuenta_corriente
+		{
+			get
+			{
+				return this._doxc_bind_cuenta_corriente;
+			}
+			set
+			{
+				if ((this._doxc_bind_cuenta_corriente != value))
+				{
+					this._doxc_bind_cuenta_corriente = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_sfecha_entrega", DbType="SmallDateTime")]
+		public System.Nullable<System.DateTime> doxcc_sfecha_entrega
+		{
+			get
+			{
+				return this._doxcc_sfecha_entrega;
+			}
+			set
+			{
+				if ((this._doxcc_sfecha_entrega != value))
+				{
+					this._doxcc_sfecha_entrega = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_bind_impresion_nogerencia", DbType="Bit NOT NULL")]
+		public bool doxcc_bind_impresion_nogerencia
+		{
+			get
+			{
+				return this._doxcc_bind_impresion_nogerencia;
+			}
+			set
+			{
+				if ((this._doxcc_bind_impresion_nogerencia != value))
+				{
+					this._doxcc_bind_impresion_nogerencia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxc_bind_situacion_legal", DbType="Bit NOT NULL")]
+		public bool doxc_bind_situacion_legal
+		{
+			get
+			{
+				return this._doxc_bind_situacion_legal;
+			}
+			set
+			{
+				if ((this._doxc_bind_situacion_legal != value))
+				{
+					this._doxc_bind_situacion_legal = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxc_bind_cierre_cuenta_corriente", DbType="Bit NOT NULL")]
+		public bool doxc_bind_cierre_cuenta_corriente
+		{
+			get
+			{
+				return this._doxc_bind_cierre_cuenta_corriente;
+			}
+			set
+			{
+				if ((this._doxc_bind_cierre_cuenta_corriente != value))
+				{
+					this._doxc_bind_cierre_cuenta_corriente = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_tipo_comprobante_referencia", DbType="Int")]
+		public System.Nullable<int> doxcc_tipo_comprobante_referencia
+		{
+			get
+			{
+				return this._doxcc_tipo_comprobante_referencia;
+			}
+			set
+			{
+				if ((this._doxcc_tipo_comprobante_referencia != value))
+				{
+					this._doxcc_tipo_comprobante_referencia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_num_serie_referencia", DbType="VarChar(10)")]
+		public string doxcc_num_serie_referencia
+		{
+			get
+			{
+				return this._doxcc_num_serie_referencia;
+			}
+			set
+			{
+				if ((this._doxcc_num_serie_referencia != value))
+				{
+					this._doxcc_num_serie_referencia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_num_comprobante_referencia", DbType="VarChar(20)")]
+		public string doxcc_num_comprobante_referencia
+		{
+			get
+			{
+				return this._doxcc_num_comprobante_referencia;
+			}
+			set
+			{
+				if ((this._doxcc_num_comprobante_referencia != value))
+				{
+					this._doxcc_num_comprobante_referencia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_sfecha_emision_referencia", DbType="SmallDateTime")]
+		public System.Nullable<System.DateTime> doxcc_sfecha_emision_referencia
+		{
+			get
+			{
+				return this._doxcc_sfecha_emision_referencia;
+			}
+			set
+			{
+				if ((this._doxcc_sfecha_emision_referencia != value))
+				{
+					this._doxcc_sfecha_emision_referencia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_puvec_icod_punto_venta", DbType="Int")]
+		public System.Nullable<int> puvec_icod_punto_venta
+		{
+			get
+			{
+				return this._puvec_icod_punto_venta;
+			}
+			set
+			{
+				if ((this._puvec_icod_punto_venta != value))
+				{
+					this._puvec_icod_punto_venta = value;
+				}
+			}
+		}
+	}
+	
+	public partial class SGE_DOC_X_COBRAR_CON_PAGOS_LISTARResult
+	{
+		
+		private long _doxcc_icod_correlativo;
+		
+		private short _mesec_iid_mes;
+		
+		private int _tdocc_icod_tipo_doc;
+		
+		private string _Abreviatura;
+		
+		private System.Nullable<int> _tdodc_iid_correlativo;
+		
+		private System.Nullable<int> _ClaseDocumento;
+		
+		private string _DescripcionClaseDocumento;
+		
+		private string _doxcc_vnumero_doc;
+		
+		private int _cliec_icod_cliente;
+		
+		private string _cliec_vnombre_cliente;
+		
+		private string _DireccionCliente;
+		
+		private string _NumDocCliente;
+		
+		private System.DateTime _doxcc_sfecha_doc;
+		
+		private System.DateTime _doxcc_sfecha_vencimiento_doc;
+		
+		private int _tablc_iid_tipo_moneda;
+		
+		private string _Moneda;
+		
+		private decimal _doxcc_nmonto_tipo_cambio;
+		
+		private int _tablc_iid_tipo_pago;
+		
+		private string _FormaPago;
+		
+		private string _doxcc_vdescrip_transaccion;
+		
+		private decimal _doxcc_nmonto_afecto;
+		
+		private decimal _doxcc_nmonto_inafecto;
+		
+		private System.Nullable<decimal> _ValorVenta;
+		
+		private decimal _doxcc_nporcentaje_igv;
+		
+		private decimal _doxcc_nmonto_impuesto;
+		
+		private decimal _doxcc_nmonto_total;
+		
+		private decimal _doxcc_nmonto_saldo;
+		
+		private decimal _doxcc_nmonto_pagado;
+		
+		private int _tablc_iid_situacion_documento;
+		
+		private string _Situacion;
+		
+		private string _doxcc_vobservaciones;
+		
+		private bool _doxc_bind_cuenta_corriente;
+		
+		private System.Nullable<System.DateTime> _doxcc_sfecha_entrega;
+		
+		private bool _doxcc_bind_impresion_nogerencia;
+		
+		private bool _doxc_bind_situacion_legal;
+		
+		private bool _doxc_bind_cierre_cuenta_corriente;
+		
+		private System.Nullable<int> _doxcc_tipo_comprobante_referencia;
+		
+		private string _doxcc_num_serie_referencia;
+		
+		private string _doxcc_num_comprobante_referencia;
+		
+		private System.Nullable<System.DateTime> _doxcc_sfecha_emision_referencia;
+		
+		private int _doxcc_ianio;
+		
+		private System.Nullable<int> _puvec_icod_punto_venta;
+		
+		public SGE_DOC_X_COBRAR_CON_PAGOS_LISTARResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_icod_correlativo", DbType="BigInt NOT NULL")]
+		public long doxcc_icod_correlativo
+		{
+			get
+			{
+				return this._doxcc_icod_correlativo;
+			}
+			set
+			{
+				if ((this._doxcc_icod_correlativo != value))
+				{
+					this._doxcc_icod_correlativo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mesec_iid_mes", DbType="SmallInt NOT NULL")]
+		public short mesec_iid_mes
+		{
+			get
+			{
+				return this._mesec_iid_mes;
+			}
+			set
+			{
+				if ((this._mesec_iid_mes != value))
+				{
+					this._mesec_iid_mes = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tdocc_icod_tipo_doc", DbType="Int NOT NULL")]
+		public int tdocc_icod_tipo_doc
+		{
+			get
+			{
+				return this._tdocc_icod_tipo_doc;
+			}
+			set
+			{
+				if ((this._tdocc_icod_tipo_doc != value))
+				{
+					this._tdocc_icod_tipo_doc = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Abreviatura", DbType="VarChar(3)")]
+		public string Abreviatura
+		{
+			get
+			{
+				return this._Abreviatura;
+			}
+			set
+			{
+				if ((this._Abreviatura != value))
+				{
+					this._Abreviatura = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tdodc_iid_correlativo", DbType="Int")]
+		public System.Nullable<int> tdodc_iid_correlativo
+		{
+			get
+			{
+				return this._tdodc_iid_correlativo;
+			}
+			set
+			{
+				if ((this._tdodc_iid_correlativo != value))
+				{
+					this._tdodc_iid_correlativo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClaseDocumento", DbType="Int")]
+		public System.Nullable<int> ClaseDocumento
+		{
+			get
+			{
+				return this._ClaseDocumento;
+			}
+			set
+			{
+				if ((this._ClaseDocumento != value))
+				{
+					this._ClaseDocumento = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DescripcionClaseDocumento", DbType="VarChar(50)")]
+		public string DescripcionClaseDocumento
+		{
+			get
+			{
+				return this._DescripcionClaseDocumento;
+			}
+			set
+			{
+				if ((this._DescripcionClaseDocumento != value))
+				{
+					this._DescripcionClaseDocumento = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_vnumero_doc", DbType="VarChar(15) NOT NULL", CanBeNull=false)]
+		public string doxcc_vnumero_doc
+		{
+			get
+			{
+				return this._doxcc_vnumero_doc;
+			}
+			set
+			{
+				if ((this._doxcc_vnumero_doc != value))
+				{
+					this._doxcc_vnumero_doc = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cliec_icod_cliente", DbType="Int NOT NULL")]
+		public int cliec_icod_cliente
+		{
+			get
+			{
+				return this._cliec_icod_cliente;
+			}
+			set
+			{
+				if ((this._cliec_icod_cliente != value))
+				{
+					this._cliec_icod_cliente = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cliec_vnombre_cliente", DbType="VarChar(120)")]
+		public string cliec_vnombre_cliente
+		{
+			get
+			{
+				return this._cliec_vnombre_cliente;
+			}
+			set
+			{
+				if ((this._cliec_vnombre_cliente != value))
+				{
+					this._cliec_vnombre_cliente = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DireccionCliente", DbType="VarChar(120)")]
+		public string DireccionCliente
+		{
+			get
+			{
+				return this._DireccionCliente;
+			}
+			set
+			{
+				if ((this._DireccionCliente != value))
+				{
+					this._DireccionCliente = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NumDocCliente", DbType="VarChar(15)")]
+		public string NumDocCliente
+		{
+			get
+			{
+				return this._NumDocCliente;
+			}
+			set
+			{
+				if ((this._NumDocCliente != value))
+				{
+					this._NumDocCliente = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_sfecha_doc", DbType="SmallDateTime NOT NULL")]
+		public System.DateTime doxcc_sfecha_doc
+		{
+			get
+			{
+				return this._doxcc_sfecha_doc;
+			}
+			set
+			{
+				if ((this._doxcc_sfecha_doc != value))
+				{
+					this._doxcc_sfecha_doc = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_sfecha_vencimiento_doc", DbType="SmallDateTime NOT NULL")]
+		public System.DateTime doxcc_sfecha_vencimiento_doc
+		{
+			get
+			{
+				return this._doxcc_sfecha_vencimiento_doc;
+			}
+			set
+			{
+				if ((this._doxcc_sfecha_vencimiento_doc != value))
+				{
+					this._doxcc_sfecha_vencimiento_doc = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tablc_iid_tipo_moneda", DbType="Int NOT NULL")]
+		public int tablc_iid_tipo_moneda
+		{
+			get
+			{
+				return this._tablc_iid_tipo_moneda;
+			}
+			set
+			{
+				if ((this._tablc_iid_tipo_moneda != value))
+				{
+					this._tablc_iid_tipo_moneda = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Moneda", DbType="VarChar(100)")]
+		public string Moneda
+		{
+			get
+			{
+				return this._Moneda;
+			}
+			set
+			{
+				if ((this._Moneda != value))
+				{
+					this._Moneda = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_nmonto_tipo_cambio", DbType="Decimal(8,4) NOT NULL")]
+		public decimal doxcc_nmonto_tipo_cambio
+		{
+			get
+			{
+				return this._doxcc_nmonto_tipo_cambio;
+			}
+			set
+			{
+				if ((this._doxcc_nmonto_tipo_cambio != value))
+				{
+					this._doxcc_nmonto_tipo_cambio = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tablc_iid_tipo_pago", DbType="Int NOT NULL")]
+		public int tablc_iid_tipo_pago
+		{
+			get
+			{
+				return this._tablc_iid_tipo_pago;
+			}
+			set
+			{
+				if ((this._tablc_iid_tipo_pago != value))
+				{
+					this._tablc_iid_tipo_pago = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FormaPago", DbType="VarChar(100)")]
+		public string FormaPago
+		{
+			get
+			{
+				return this._FormaPago;
+			}
+			set
+			{
+				if ((this._FormaPago != value))
+				{
+					this._FormaPago = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_vdescrip_transaccion", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string doxcc_vdescrip_transaccion
+		{
+			get
+			{
+				return this._doxcc_vdescrip_transaccion;
+			}
+			set
+			{
+				if ((this._doxcc_vdescrip_transaccion != value))
+				{
+					this._doxcc_vdescrip_transaccion = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_nmonto_afecto", DbType="Decimal(16,2) NOT NULL")]
+		public decimal doxcc_nmonto_afecto
+		{
+			get
+			{
+				return this._doxcc_nmonto_afecto;
+			}
+			set
+			{
+				if ((this._doxcc_nmonto_afecto != value))
+				{
+					this._doxcc_nmonto_afecto = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_nmonto_inafecto", DbType="Decimal(16,2) NOT NULL")]
+		public decimal doxcc_nmonto_inafecto
+		{
+			get
+			{
+				return this._doxcc_nmonto_inafecto;
+			}
+			set
+			{
+				if ((this._doxcc_nmonto_inafecto != value))
+				{
+					this._doxcc_nmonto_inafecto = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ValorVenta", DbType="Decimal(17,2)")]
+		public System.Nullable<decimal> ValorVenta
+		{
+			get
+			{
+				return this._ValorVenta;
+			}
+			set
+			{
+				if ((this._ValorVenta != value))
+				{
+					this._ValorVenta = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_nporcentaje_igv", DbType="Decimal(6,2) NOT NULL")]
+		public decimal doxcc_nporcentaje_igv
+		{
+			get
+			{
+				return this._doxcc_nporcentaje_igv;
+			}
+			set
+			{
+				if ((this._doxcc_nporcentaje_igv != value))
+				{
+					this._doxcc_nporcentaje_igv = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_nmonto_impuesto", DbType="Decimal(16,2) NOT NULL")]
+		public decimal doxcc_nmonto_impuesto
+		{
+			get
+			{
+				return this._doxcc_nmonto_impuesto;
+			}
+			set
+			{
+				if ((this._doxcc_nmonto_impuesto != value))
+				{
+					this._doxcc_nmonto_impuesto = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_nmonto_total", DbType="Decimal(16,2) NOT NULL")]
+		public decimal doxcc_nmonto_total
+		{
+			get
+			{
+				return this._doxcc_nmonto_total;
+			}
+			set
+			{
+				if ((this._doxcc_nmonto_total != value))
+				{
+					this._doxcc_nmonto_total = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_nmonto_saldo", DbType="Decimal(16,2) NOT NULL")]
+		public decimal doxcc_nmonto_saldo
+		{
+			get
+			{
+				return this._doxcc_nmonto_saldo;
+			}
+			set
+			{
+				if ((this._doxcc_nmonto_saldo != value))
+				{
+					this._doxcc_nmonto_saldo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_nmonto_pagado", DbType="Decimal(16,2) NOT NULL")]
+		public decimal doxcc_nmonto_pagado
+		{
+			get
+			{
+				return this._doxcc_nmonto_pagado;
+			}
+			set
+			{
+				if ((this._doxcc_nmonto_pagado != value))
+				{
+					this._doxcc_nmonto_pagado = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tablc_iid_situacion_documento", DbType="Int NOT NULL")]
+		public int tablc_iid_situacion_documento
+		{
+			get
+			{
+				return this._tablc_iid_situacion_documento;
+			}
+			set
+			{
+				if ((this._tablc_iid_situacion_documento != value))
+				{
+					this._tablc_iid_situacion_documento = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Situacion", DbType="VarChar(100)")]
+		public string Situacion
+		{
+			get
+			{
+				return this._Situacion;
+			}
+			set
+			{
+				if ((this._Situacion != value))
+				{
+					this._Situacion = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_vobservaciones", DbType="VarChar(100)")]
+		public string doxcc_vobservaciones
+		{
+			get
+			{
+				return this._doxcc_vobservaciones;
+			}
+			set
+			{
+				if ((this._doxcc_vobservaciones != value))
+				{
+					this._doxcc_vobservaciones = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxc_bind_cuenta_corriente", DbType="Bit NOT NULL")]
+		public bool doxc_bind_cuenta_corriente
+		{
+			get
+			{
+				return this._doxc_bind_cuenta_corriente;
+			}
+			set
+			{
+				if ((this._doxc_bind_cuenta_corriente != value))
+				{
+					this._doxc_bind_cuenta_corriente = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_sfecha_entrega", DbType="SmallDateTime")]
+		public System.Nullable<System.DateTime> doxcc_sfecha_entrega
+		{
+			get
+			{
+				return this._doxcc_sfecha_entrega;
+			}
+			set
+			{
+				if ((this._doxcc_sfecha_entrega != value))
+				{
+					this._doxcc_sfecha_entrega = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_bind_impresion_nogerencia", DbType="Bit NOT NULL")]
+		public bool doxcc_bind_impresion_nogerencia
+		{
+			get
+			{
+				return this._doxcc_bind_impresion_nogerencia;
+			}
+			set
+			{
+				if ((this._doxcc_bind_impresion_nogerencia != value))
+				{
+					this._doxcc_bind_impresion_nogerencia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxc_bind_situacion_legal", DbType="Bit NOT NULL")]
+		public bool doxc_bind_situacion_legal
+		{
+			get
+			{
+				return this._doxc_bind_situacion_legal;
+			}
+			set
+			{
+				if ((this._doxc_bind_situacion_legal != value))
+				{
+					this._doxc_bind_situacion_legal = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxc_bind_cierre_cuenta_corriente", DbType="Bit NOT NULL")]
+		public bool doxc_bind_cierre_cuenta_corriente
+		{
+			get
+			{
+				return this._doxc_bind_cierre_cuenta_corriente;
+			}
+			set
+			{
+				if ((this._doxc_bind_cierre_cuenta_corriente != value))
+				{
+					this._doxc_bind_cierre_cuenta_corriente = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_tipo_comprobante_referencia", DbType="Int")]
+		public System.Nullable<int> doxcc_tipo_comprobante_referencia
+		{
+			get
+			{
+				return this._doxcc_tipo_comprobante_referencia;
+			}
+			set
+			{
+				if ((this._doxcc_tipo_comprobante_referencia != value))
+				{
+					this._doxcc_tipo_comprobante_referencia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_num_serie_referencia", DbType="VarChar(10)")]
+		public string doxcc_num_serie_referencia
+		{
+			get
+			{
+				return this._doxcc_num_serie_referencia;
+			}
+			set
+			{
+				if ((this._doxcc_num_serie_referencia != value))
+				{
+					this._doxcc_num_serie_referencia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_num_comprobante_referencia", DbType="VarChar(20)")]
+		public string doxcc_num_comprobante_referencia
+		{
+			get
+			{
+				return this._doxcc_num_comprobante_referencia;
+			}
+			set
+			{
+				if ((this._doxcc_num_comprobante_referencia != value))
+				{
+					this._doxcc_num_comprobante_referencia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_sfecha_emision_referencia", DbType="SmallDateTime")]
+		public System.Nullable<System.DateTime> doxcc_sfecha_emision_referencia
+		{
+			get
+			{
+				return this._doxcc_sfecha_emision_referencia;
+			}
+			set
+			{
+				if ((this._doxcc_sfecha_emision_referencia != value))
+				{
+					this._doxcc_sfecha_emision_referencia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_doxcc_ianio", DbType="Int NOT NULL")]
+		public int doxcc_ianio
+		{
+			get
+			{
+				return this._doxcc_ianio;
+			}
+			set
+			{
+				if ((this._doxcc_ianio != value))
+				{
+					this._doxcc_ianio = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_puvec_icod_punto_venta", DbType="Int")]
+		public System.Nullable<int> puvec_icod_punto_venta
+		{
+			get
+			{
+				return this._puvec_icod_punto_venta;
+			}
+			set
+			{
+				if ((this._puvec_icod_punto_venta != value))
+				{
+					this._puvec_icod_punto_venta = value;
 				}
 			}
 		}

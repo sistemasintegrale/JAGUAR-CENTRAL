@@ -7342,78 +7342,6 @@ namespace SGE.BusinessLogic
             }
             objVentasData.insertarNotaCreditoClienteDet(objDet);
         }
-
-
-
-        public int insertarNotaCreditoClienteCab(ENotaCredito oBe, List<ENotaCreditoDet> lstDetalle)
-        {
-
-            try
-            {
-                using (TransactionScope tx = new TransactionScope(TransactionScopeOption.Required))
-                {
-                    oBe.ncrec_icod_credito = objVentasData.insertarNotaCreditoClienteCab(oBe);
-                    oBe.doc_icod_documento = oBe.ncrec_icod_credito;
-                    oBe.IdCabecera = objVentasData.insertarNotaCreditoVentaElectronica(oBe);
-                    new BAdministracionSistema().updateCorrelativoTipoDocumentoSeries(oBe.ncrec_vnumero_credito.Substring(0, 4), Convert.ToInt32(oBe.ncrec_vnumero_credito.Substring(4, 8)));
-
-                    #region Dxc...
-                    EDocXCobrar objDXC = new EDocXCobrar();
-                    //objDXC.doxcc_icod_correlativo = objEBoleta.dxcc_iid_doc_por_cobrar;
-                    objDXC.mesec_iid_mes = Convert.ToInt16(oBe.ncrec_sfecha_credito.Month);
-                    objDXC.tdocc_icod_tipo_doc = Parametros.intTipoDocNotaCreditoCliente;
-                    objDXC.tdodc_iid_correlativo = Parametros.intClaseTipoDocNotaCredClienteDevolucion;
-                    objDXC.doxcc_vnumero_doc = oBe.ncrec_vnumero_credito;
-                    objDXC.cliec_icod_cliente = oBe.cliec_icod_cliente;
-                    objDXC.cliec_vnombre_cliente = oBe.strDesCliente;
-                    objDXC.doxcc_sfecha_doc = oBe.ncrec_sfecha_credito;
-                    objDXC.doxcc_sfecha_vencimiento_doc = oBe.ncrec_sfecha_credito;
-                    objDXC.tablc_iid_tipo_moneda = oBe.tablc_iid_tipo_moneda;
-                    objDXC.doxcc_nmonto_tipo_cambio = new ContabilidadData().getTipoCambioPorFecha(oBe.ncrec_sfecha_credito);
-                    if (objDXC.doxcc_nmonto_tipo_cambio == 0)
-                        throw new ArgumentException("No se encontró Tipo de Cambio para la fecha de la factura, favor de registrar Tipo de Cambio");
-                    objDXC.doxcc_vdescrip_transaccion = "";
-                    objDXC.doxcc_nmonto_afecto = (Convert.ToInt32(oBe.ncrec_npor_imp_igv) > 0) ? oBe.ncrec_nmonto_neto : 0;
-                    objDXC.doxcc_nmonto_inafecto = (Convert.ToInt32(oBe.ncrec_npor_imp_igv) == 0) ? oBe.ncrec_nmonto_neto : 0;
-                    objDXC.doxcc_nporcentaje_igv = oBe.ncrec_npor_imp_igv;
-                    objDXC.doxcc_nmonto_impuesto = oBe.ncrec_nmonto_total - oBe.ncrec_nmonto_neto;
-                    objDXC.doxcc_nmonto_total = oBe.ncrec_nmonto_total;
-                    objDXC.doxcc_nmonto_saldo = oBe.ncrec_nmonto_total;
-                    objDXC.doxcc_nmonto_pagado = 0;
-                    objDXC.tablc_iid_situacion_documento = Parametros.intSitDocGenerado;
-                    objDXC.doxcc_vobservaciones = "";
-                    objDXC.intUsuario = oBe.intUsuario;
-                    objDXC.strPc = oBe.strPc;
-                    objDXC.tablc_iid_tipo_pago = 176;//Nota de Credito
-                    //objDXC.docxc_icod_documento = oBe.ncrec_icod_credito;
-                    objDXC.anio = oBe.ncrec_sfecha_credito.Year;
-                    objDXC.doxcc_flag_estado = true;
-                    objDXC.doxcc_origen = "N";
-                    oBe.ncrec_icod_dxc = new CuentasPorCobrarData().insertarDxc(objDXC, new List<EDocXCobrarCuentaContable>());
-                    #endregion
-                    objVentasData.modificarNotaCreditoClienteCab(oBe);//se modifica el registro, solo para poder contar con el icod del dxc
-                    #region Detalle de la NC...
-
-                    foreach (var item in lstDetalle)
-                    {
-                        insertarNotaCreditoClienteDetalle(oBe, item);
-                        item.IdCabecera = oBe.IdCabecera;
-                        objVentasData.insertarNotaCreditoVentaElectronicaDetalle(item);
-                    }
-
-                    #endregion
-
-
-                    tx.Complete();
-                }
-                return oBe.ncrec_icod_credito;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
         private void eliminarNotaCreditoClienteDetalle(ENotaCredito oBe, ENotaCreditoDet x)
         {
             x.intUsuario = oBe.intUsuario;
@@ -7443,8 +7371,6 @@ namespace SGE.BusinessLogic
             }
             objVentasData.eliminarNotaCreditoClienteDet(x);
         }
-
-
         private void modificarNotaCreditoClienteDetalle(ENotaCredito oBe, ENotaCreditoDet objDet)
         {
             objDet.ncrec_icod_credito = oBe.ncrec_icod_credito;
@@ -7496,6 +7422,79 @@ namespace SGE.BusinessLogic
             }
             objVentasData.insertarNotaCreditoClienteDet(objDet);
         }
+        public int insertarNotaCreditoClienteCab(ENotaCredito oBe, List<ENotaCreditoDet> lstDetalle)
+        {
+
+            try
+            {
+                using (TransactionScope tx = new TransactionScope(TransactionScopeOption.Required))
+                {
+                    oBe.ncrec_icod_credito = objVentasData.insertarNotaCreditoClienteCab(oBe);
+                    oBe.doc_icod_documento = oBe.ncrec_icod_credito;
+                    oBe.IdCabecera = objVentasData.insertarNotaCreditoVentaElectronica(oBe);
+                    new BAdministracionSistema().updateCorrelativoTipoDocumentoSeries(oBe.ncrec_vnumero_credito.Substring(0, 4), Convert.ToInt32(oBe.ncrec_vnumero_credito.Substring(4, 8)));
+
+                    #region Dxc...
+                    EDocXCobrar objDXC = new EDocXCobrar();
+                    //objDXC.doxcc_icod_correlativo = objEBoleta.dxcc_iid_doc_por_cobrar;
+                    objDXC.mesec_iid_mes = Convert.ToInt16(oBe.ncrec_sfecha_credito.Month);
+                    objDXC.tdocc_icod_tipo_doc = Parametros.intTipoDocNotaCreditoCliente;
+                    objDXC.tdodc_iid_correlativo = Parametros.intClaseTipoDocNotaCredClienteDevolucion;
+                    objDXC.doxcc_vnumero_doc = oBe.ncrec_vnumero_credito;
+                    objDXC.cliec_icod_cliente = oBe.cliec_icod_cliente;
+                    objDXC.cliec_vnombre_cliente = oBe.strDesCliente;
+                    objDXC.doxcc_sfecha_doc = oBe.ncrec_sfecha_credito;
+                    objDXC.doxcc_sfecha_vencimiento_doc = oBe.ncrec_sfecha_credito;
+                    objDXC.tablc_iid_tipo_moneda = oBe.tablc_iid_tipo_moneda;
+                    objDXC.doxcc_nmonto_tipo_cambio = new ContabilidadData().getTipoCambioPorFecha(oBe.ncrec_sfecha_credito);
+                    if (objDXC.doxcc_nmonto_tipo_cambio == 0)
+                        throw new ArgumentException("No se encontró Tipo de Cambio para la fecha de la factura, favor de registrar Tipo de Cambio");
+                    objDXC.doxcc_vdescrip_transaccion = "";
+                    objDXC.doxcc_nmonto_afecto = (Convert.ToInt32(oBe.ncrec_npor_imp_igv) > 0) ? oBe.ncrec_nmonto_neto : 0;
+                    objDXC.doxcc_nmonto_inafecto = (Convert.ToInt32(oBe.ncrec_npor_imp_igv) == 0) ? oBe.ncrec_nmonto_neto : 0;
+                    objDXC.doxcc_nporcentaje_igv = oBe.ncrec_npor_imp_igv;
+                    objDXC.doxcc_nmonto_impuesto = oBe.ncrec_nmonto_total - oBe.ncrec_nmonto_neto;
+                    objDXC.doxcc_nmonto_total = oBe.ncrec_nmonto_total;
+                    objDXC.doxcc_nmonto_saldo = oBe.ncrec_nmonto_total;
+                    objDXC.doxcc_nmonto_pagado = 0;
+                    objDXC.tablc_iid_situacion_documento = Parametros.intSitDocGenerado;
+                    objDXC.doxcc_vobservaciones = "";
+                    objDXC.intUsuario = oBe.intUsuario;
+                    objDXC.strPc = oBe.strPc;
+                    objDXC.tablc_iid_tipo_pago = 176;//Nota de Credito
+                    //objDXC.docxc_icod_documento = oBe.ncrec_icod_credito;
+                    objDXC.anio = oBe.ncrec_sfecha_credito.Year;
+                    objDXC.doxcc_flag_estado = true;
+                    objDXC.doxcc_origen = "N";
+                    objDXC.doxcc_tipo_comprobante_referencia = Convert.ToInt32(oBe.tdocc_icod_tipo_doc);
+                    objDXC.doxcc_num_serie_referencia = oBe.ncrec_vnumero_documento.Substring(0, 4);
+                    objDXC.doxcc_num_comprobante_referencia = oBe.ncrec_vnumero_documento.Substring(4, 8);
+                    objDXC.doxcc_sfecha_emision_referencia = oBe.ncrec_sfecha_documento;
+                    objDXC.puvec_icod_punto_venta = oBe.puvec_icod_punto_venta;
+                    oBe.ncrec_icod_dxc = new CuentasPorCobrarData().insertarDxc(objDXC, new List<EDocXCobrarCuentaContable>());
+                    #endregion
+                    objVentasData.modificarNotaCreditoClienteCab(oBe);//se modifica el registro, solo para poder contar con el icod del dxc
+                    #region Detalle de la NC...
+
+                    foreach (var item in lstDetalle)
+                    {
+                        insertarNotaCreditoClienteDetalle(oBe, item);
+                        item.IdCabecera = oBe.IdCabecera;
+                        objVentasData.insertarNotaCreditoVentaElectronicaDetalle(item);
+                    }
+
+                    #endregion
+
+
+                    tx.Complete();
+                }
+                return oBe.ncrec_icod_credito;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
 
         public void modificarNotaCreditoClienteCab(ENotaCredito oBe, List<ENotaCreditoDet> lstDetalle, List<ENotaCreditoDet> lstDelete)
@@ -7536,6 +7535,11 @@ namespace SGE.BusinessLogic
                     objDXC.anio = oBe.ncrec_sfecha_credito.Year;
                     objDXC.doxcc_flag_estado = true;
                     objDXC.doxcc_origen = "N";
+                    objDXC.doxcc_tipo_comprobante_referencia = Convert.ToInt32(oBe.tdocc_icod_tipo_doc);
+                    objDXC.doxcc_num_serie_referencia = oBe.ncrec_vnumero_documento.Substring(0, 4);
+                    objDXC.doxcc_num_comprobante_referencia = oBe.ncrec_vnumero_documento.Substring(4, 8);
+                    objDXC.doxcc_sfecha_emision_referencia = oBe.ncrec_sfecha_documento;
+                    objDXC.puvec_icod_punto_venta = oBe.puvec_icod_punto_venta;
                     List<EDocXCobrarCuentaContable> Lista = new List<EDocXCobrarCuentaContable>();
                     new CuentasPorCobrarData().modificarDxc(objDXC, Lista, Lista);
                     #endregion

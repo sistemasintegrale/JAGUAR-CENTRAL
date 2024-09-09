@@ -2393,45 +2393,6 @@
     <Parameter Name="strPc" Type="System.String" DbType="VarChar(30)" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.SGE_NOTA_CREDITO_VENTA_LISTAR" Method="SGE_NOTA_CREDITO_VENTA_LISTAR">
-    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
-    <ElementType Name="SGE_NOTA_CREDITO_VENTA_LISTARResult">
-      <Column Name="ncrec_icod_credito" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="ncrec_vnumero_credito" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
-      <Column Name="ncrec_sfecha_credito" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
-      <Column Name="cliec_icod_cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="ncrec_ianio" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="ncrec_vreferencia" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
-      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="tablc_iid_tipo_nota_credito_venta" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="tdodc_iid_correlativo" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="ncrec_vnumero_documento" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
-      <Column Name="ncrec_sfecha_documento" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
-      <Column Name="vendc_icod_vendedor" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="ncrec_nmonto_neto" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
-      <Column Name="ncrec_npor_imp_igv" Type="System.Decimal" DbType="Decimal(6,2) NOT NULL" CanBeNull="false" />
-      <Column Name="ncrec_nmonto_total" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
-      <Column Name="ncrec_iid_situacion_credito" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="almac_icod_almacen" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="ncrec_tipo_cambio_fecha_doc_venta" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
-      <Column Name="ncrec_nmonto_pagado" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
-      <Column Name="ncrec_icod_dxc" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
-      <Column Name="strSituacion" Type="System.String" DbType="VarChar(14)" CanBeNull="true" />
-      <Column Name="strDesCliente" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
-      <Column Name="strRuc" Type="System.String" DbType="Char(11)" CanBeNull="true" />
-      <Column Name="DireccionCliente" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
-      <Column Name="strTipoDoc" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
-      <Column Name="strMoneda" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
-      <Column Name="ncrec_bincluye_igv" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="ubicc_icod_ubicacion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="ncrec_iclase_doc" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="StrClaseDocumento" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Column Name="ncrec_tipo_nota_credito" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="ncrec_vmotivo_sunat" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
-      <Column Name="ncrec_vdetalle" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.SGE_NOTA_DEBITO_VENTA_LISTAR" Method="SGE_NOTA_DEBITO_VENTA_LISTAR">
     <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
     <ElementType Name="SGE_NOTA_DEBITO_VENTA_LISTARResult">
@@ -3291,77 +3252,6 @@
     <Parameter Name="dcrec_nneto_igv" Type="System.Decimal" DbType="Decimal(16,4)" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.SGE_NOTA_CREDITO_VENTA_INSERTAR" Method="SGE_NOTA_CREDITO_VENTA_INSERTAR">
-    <Parameter Name="ncrec_icod_credito" Type="System.Int32" DbType="Int" Direction="InOut" />
-    <Parameter Name="ncrec_vnumero_credito" Type="System.String" DbType="VarChar(12)" />
-    <Parameter Name="ncrec_sfecha_credito" Type="System.DateTime" DbType="SmallDateTime" />
-    <Parameter Name="cliec_icod_cliente" Type="System.Int32" DbType="Int" />
-    <Parameter Name="ncrec_ianio" Type="System.Int32" DbType="Int" />
-    <Parameter Name="ncrec_vreferencia" Type="System.String" DbType="VarChar(20)" />
-    <Parameter Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" />
-    <Parameter Name="tablc_iid_tipo_nota_credito_venta" Type="System.Int32" DbType="Int" />
-    <Parameter Name="tdodc_iid_correlativo" Type="System.Int32" DbType="Int" />
-    <Parameter Name="ncrec_vnumero_documento" Type="System.String" DbType="VarChar(12)" />
-    <Parameter Name="ncrec_sfecha_documento" Type="System.DateTime" DbType="SmallDateTime" />
-    <Parameter Name="vendc_icod_vendedor" Type="System.Int32" DbType="Int" />
-    <Parameter Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" />
-    <Parameter Name="ncrec_nmonto_neto" Type="System.Decimal" DbType="Decimal(16,4)" />
-    <Parameter Name="ncrec_npor_imp_igv" Type="System.Decimal" DbType="Decimal(6,2)" />
-    <Parameter Name="ncrec_nmonto_total" Type="System.Decimal" DbType="Decimal(16,4)" />
-    <Parameter Name="ncrec_iid_situacion_credito" Type="System.Int32" DbType="Int" />
-    <Parameter Name="almac_icod_almacen" Type="System.Int32" DbType="Int" />
-    <Parameter Name="ncrec_tipo_cambio_fecha_doc_venta" Type="System.Decimal" DbType="Decimal(16,2)" />
-    <Parameter Name="ncrec_nmonto_iva" Type="System.Decimal" DbType="Decimal(16,4)" />
-    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
-    <Parameter Name="strPc" Type="System.String" DbType="VarChar(30)" />
-    <Parameter Name="ncrec_nmonto_pagado" Type="System.Decimal" DbType="Decimal(16,2)" />
-    <Parameter Name="ncrec_icod_dxc" Type="System.Int64" DbType="BigInt" />
-    <Parameter Name="ncrec_bincluye_igv" Type="System.Boolean" DbType="Bit" />
-    <Parameter Name="ncrec_iclase_doc" Type="System.Int32" DbType="Int" />
-    <Parameter Name="ncrec_tipo_nota_credito" Type="System.Int32" DbType="Int" />
-    <Parameter Name="ncrec_vmotivo_sunat" Type="System.String" DbType="VarChar(5)" />
-    <Parameter Name="ncrec_vdetalle" Type="System.String" DbType="VarChar(100)" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.SGE_NOTA_CREDITO_VENTA_LISTAR" Method="SGE_NOTA_CREDITO_VENTA_LISTAR1">
-    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
-    <ElementType Name="SGE_NOTA_CREDITO_VENTA_LISTARResult1">
-      <Column Name="ncrec_icod_credito" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="ncrec_vnumero_credito" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
-      <Column Name="ncrec_sfecha_credito" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
-      <Column Name="cliec_icod_cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="ncrec_ianio" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="ncrec_vreferencia" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
-      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="tablc_iid_tipo_nota_credito_venta" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="tdodc_iid_correlativo" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="ncrec_vnumero_documento" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
-      <Column Name="ncrec_sfecha_documento" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
-      <Column Name="vendc_icod_vendedor" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="ncrec_nmonto_neto" Type="System.Decimal" DbType="Decimal(16,4) NOT NULL" CanBeNull="false" />
-      <Column Name="ncrec_npor_imp_igv" Type="System.Decimal" DbType="Decimal(6,2) NOT NULL" CanBeNull="false" />
-      <Column Name="ncrec_nmonto_total" Type="System.Decimal" DbType="Decimal(16,4) NOT NULL" CanBeNull="false" />
-      <Column Name="ncrec_iid_situacion_credito" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="almac_icod_almacen" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="ncrec_tipo_cambio_fecha_doc_venta" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
-      <Column Name="ncrec_nmonto_pagado" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
-      <Column Name="ncrec_icod_dxc" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
-      <Column Name="strSituacion" Type="System.String" DbType="VarChar(14)" CanBeNull="true" />
-      <Column Name="strDesCliente" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
-      <Column Name="strRuc" Type="System.String" DbType="Char(11)" CanBeNull="true" />
-      <Column Name="DireccionCliente" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
-      <Column Name="strTipoDoc" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
-      <Column Name="strMoneda" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
-      <Column Name="ncrec_bincluye_igv" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="ubicc_icod_ubicacion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="ncrec_iclase_doc" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="StrClaseDocumento" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Column Name="ncrec_tipo_nota_credito" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="ncrec_vmotivo_sunat" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
-      <Column Name="ncrec_vdetalle" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.SGE_NOTA_CREDITO_VENTA_MODIFICAR" Method="SGE_NOTA_CREDITO_VENTA_MODIFICAR">
     <Parameter Name="ncrec_icod_credito" Type="System.Int32" DbType="Int" />
     <Parameter Name="ncrec_vnumero_credito" Type="System.String" DbType="VarChar(12)" />
@@ -4036,76 +3926,6 @@
       <Column Name="facv_nmonto_1era_cuota" Type="System.Decimal" DbType="Decimal(12,4)" CanBeNull="true" />
       <Column Name="facv_sfecha_pago_1era_cuota" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
       <Column Name="facv_nmonto_credito" Type="System.Decimal" DbType="Decimal(12,4)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.SGEV_FACTURA_VENTA_ELECTRONICA_DETALLE_INSERTAR" Method="SGEV_FACTURA_VENTA_ELECTRONICA_DETALLE_INSERTAR">
-    <Parameter Name="IdItems" Parameter="idItems" Type="System.Int32" DbType="Int" Direction="InOut" />
-    <Parameter Name="IdCabezera" Parameter="idCabezera" Type="System.Int32" DbType="Int" />
-    <Parameter Name="NumeroOrdenItem" Parameter="numeroOrdenItem" Type="System.Int32" DbType="Int" />
-    <Parameter Name="cantidad" Type="System.Decimal" DbType="Decimal(12,2)" />
-    <Parameter Name="unidadMedida" Type="System.String" DbType="Char(10)" />
-    <Parameter Name="ValorVentaItem" Parameter="valorVentaItem" Type="System.Decimal" DbType="Decimal(12,2)" />
-    <Parameter Name="CodMotivoDescuentoItem" Parameter="codMotivoDescuentoItem" Type="System.Int32" DbType="Int" />
-    <Parameter Name="FactorDescuentoItem" Parameter="factorDescuentoItem" Type="System.Decimal" DbType="Decimal(12,2)" />
-    <Parameter Name="DescuentoItem" Parameter="descuentoItem" Type="System.Decimal" DbType="Decimal(12,2)" />
-    <Parameter Name="BaseDescuentotem" Parameter="baseDescuentotem" Type="System.Decimal" DbType="Decimal(12,2)" />
-    <Parameter Name="CodMotivoCargoItem" Parameter="codMotivoCargoItem" Type="System.Int32" DbType="Int" />
-    <Parameter Name="FactorCargoItem" Parameter="factorCargoItem" Type="System.Decimal" DbType="Decimal(12,2)" />
-    <Parameter Name="MontoCargoItem" Parameter="montoCargoItem" Type="System.Decimal" DbType="Decimal(12,2)" />
-    <Parameter Name="BaseCargoItem" Parameter="baseCargoItem" Type="System.Decimal" DbType="Decimal(12,2)" />
-    <Parameter Name="MontoTotalImpuestosItem" Parameter="montoTotalImpuestosItem" Type="System.Decimal" DbType="Decimal(12,2)" />
-    <Parameter Name="MontoImpuestoIgvItem" Parameter="montoImpuestoIgvItem" Type="System.Decimal" DbType="Decimal(12,2)" />
-    <Parameter Name="MontoAfectoImpuestoIgv" Parameter="montoAfectoImpuestoIgv" Type="System.Decimal" DbType="Decimal(12,2)" />
-    <Parameter Name="PorcentajeIGVItem" Parameter="porcentajeIGVItem" Type="System.Decimal" DbType="Decimal(12,2)" />
-    <Parameter Name="MontoInafectoItem" Parameter="montoInafectoItem" Type="System.Decimal" DbType="Decimal(12,2)" />
-    <Parameter Name="MontoImpuestoISCItem" Parameter="montoImpuestoISCItem" Type="System.Decimal" DbType="Decimal(12,2)" />
-    <Parameter Name="MontoAfectoImpuestoIsc" Parameter="montoAfectoImpuestoIsc" Type="System.Decimal" DbType="Decimal(12,2)" />
-    <Parameter Name="PorcentajeISCtem" Parameter="porcentajeISCtem" Type="System.Decimal" DbType="Decimal(12,2)" />
-    <Parameter Name="MontoImpuestoIVAPtem" Parameter="montoImpuestoIVAPtem" Type="System.Decimal" DbType="Decimal(12,2)" />
-    <Parameter Name="MontoAfectoImpuestoIVAPItem" Parameter="montoAfectoImpuestoIVAPItem" Type="System.Decimal" DbType="Decimal(12,2)" />
-    <Parameter Name="PorcentajeIVAPItem" Parameter="porcentajeIVAPItem" Type="System.Decimal" DbType="Decimal(12,2)" />
-    <Parameter Name="descripcion" Type="System.String" DbType="Text" />
-    <Parameter Name="codigoItem" Type="System.String" DbType="Char(20)" />
-    <Parameter Name="ObservacionesItem" Parameter="observacionesItem" Type="System.String" DbType="VarChar(500)" />
-    <Parameter Name="ValorUnitarioItem" Parameter="valorUnitarioItem" Type="System.Decimal" DbType="Decimal(12,2)" />
-    <Parameter Name="PrecioVentaUnitarioItem" Parameter="precioVentaUnitarioItem" Type="System.Decimal" DbType="Decimal(12,2)" />
-    <Parameter Name="tipoImpuesto" Type="System.String" DbType="Char(7)" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.SGEV_FACTURA_VENTA_ELECTRONICA_DETALLE_LISTAR" Method="SGEV_FACTURA_VENTA_ELECTRONICA_DETALLE_LISTAR">
-    <Parameter Name="IdCabezera" Parameter="idCabezera" Type="System.Int32" DbType="Int" />
-    <ElementType Name="SGEV_FACTURA_VENTA_ELECTRONICA_DETALLE_LISTARResult">
-      <Column Name="IdItems" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="IdCabecera" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="NumeroOrdenItem" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="cantidad" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
-      <Column Name="unidadMedida" Type="System.String" DbType="Char(10)" CanBeNull="true" />
-      <Column Name="ValorVentaItem" Type="System.Decimal" DbType="Decimal(16,4)" CanBeNull="true" />
-      <Column Name="CodMotivoDescuentoItem" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="FactorDescuentoItem" Type="System.Decimal" DbType="Decimal(16,4)" CanBeNull="true" />
-      <Column Name="DescuentoItem" Type="System.Decimal" DbType="Decimal(16,4)" CanBeNull="true" />
-      <Column Name="BaseDescuentotem" Type="System.Decimal" DbType="Decimal(16,4)" CanBeNull="true" />
-      <Column Name="CodMotivoCargoItem" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="FactorCargoItem" Type="System.Decimal" DbType="Decimal(16,4)" CanBeNull="true" />
-      <Column Name="MontoCargoItem" Type="System.Decimal" DbType="Decimal(16,4)" CanBeNull="true" />
-      <Column Name="BaseCargoItem" Type="System.Decimal" DbType="Decimal(16,4)" CanBeNull="true" />
-      <Column Name="MontoTotalImpuestosItem" Type="System.Decimal" DbType="Decimal(16,4)" CanBeNull="true" />
-      <Column Name="MontoImpuestoIgvItem" Type="System.Decimal" DbType="Decimal(16,4)" CanBeNull="true" />
-      <Column Name="MontoAfectoImpuestoIgv" Type="System.Decimal" DbType="Decimal(16,4)" CanBeNull="true" />
-      <Column Name="PorcentajeIGVItem" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
-      <Column Name="MontoInafectoItem" Type="System.Decimal" DbType="Decimal(16,4)" CanBeNull="true" />
-      <Column Name="MontoImpuestoISCItem" Type="System.Decimal" DbType="Decimal(16,4)" CanBeNull="true" />
-      <Column Name="MontoAfectoImpuestoIsc" Type="System.Decimal" DbType="Decimal(16,4)" CanBeNull="true" />
-      <Column Name="PorcentajeISCtem" Type="System.Decimal" DbType="Decimal(16,4)" CanBeNull="true" />
-      <Column Name="MontoImpuestoIVAPtem" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
-      <Column Name="MontoAfectoImpuestoIVAPItem" Type="System.Decimal" DbType="Decimal(16,4)" CanBeNull="true" />
-      <Column Name="PorcentajeIVAPItem" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
-      <Column Name="descripcion" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
-      <Column Name="codigoItem" Type="System.String" DbType="Char(20)" CanBeNull="true" />
-      <Column Name="ObservacionesItem" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
-      <Column Name="ValorUnitarioItem" Type="System.Decimal" DbType="Decimal(16,4)" CanBeNull="true" />
-      <Column Name="tipoImpuesto" Type="System.String" DbType="Char(7)" CanBeNull="true" />
-      <Column Name="PrecioVentaUnitarioItem" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
     </ElementType>
   </Function>
   <Function Name="dbo.SGEV_RESUEMEN_RESPONSE_MODIFCAR" Method="SGEV_RESUEMEN_RESPONSE_MODIFCAR">
@@ -5126,6 +4946,151 @@
       <Column Name="FormaPago1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="NroTicketCdr" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
       <Column Name="TramaZipCdr" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGEV_FACTURA_VENTA_ELECTRONICA_DETALLE_INSERTAR" Method="SGEV_FACTURA_VENTA_ELECTRONICA_DETALLE_INSERTAR">
+    <Parameter Name="IdItems" Parameter="idItems" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="IdCabezera" Parameter="idCabezera" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NumeroOrdenItem" Parameter="numeroOrdenItem" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cantidad" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="unidadMedida" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="ValorVentaItem" Parameter="valorVentaItem" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="CodMotivoDescuentoItem" Parameter="codMotivoDescuentoItem" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FactorDescuentoItem" Parameter="factorDescuentoItem" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="DescuentoItem" Parameter="descuentoItem" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="BaseDescuentotem" Parameter="baseDescuentotem" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="CodMotivoCargoItem" Parameter="codMotivoCargoItem" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FactorCargoItem" Parameter="factorCargoItem" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="MontoCargoItem" Parameter="montoCargoItem" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="BaseCargoItem" Parameter="baseCargoItem" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="MontoTotalImpuestosItem" Parameter="montoTotalImpuestosItem" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="MontoImpuestoIgvItem" Parameter="montoImpuestoIgvItem" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="MontoAfectoImpuestoIgv" Parameter="montoAfectoImpuestoIgv" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="PorcentajeIGVItem" Parameter="porcentajeIGVItem" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="MontoInafectoItem" Parameter="montoInafectoItem" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="MontoImpuestoISCItem" Parameter="montoImpuestoISCItem" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="MontoAfectoImpuestoIsc" Parameter="montoAfectoImpuestoIsc" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="PorcentajeISCtem" Parameter="porcentajeISCtem" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="MontoImpuestoIVAPtem" Parameter="montoImpuestoIVAPtem" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="MontoAfectoImpuestoIVAPItem" Parameter="montoAfectoImpuestoIVAPItem" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="PorcentajeIVAPItem" Parameter="porcentajeIVAPItem" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="descripcion" Type="System.String" DbType="Text" />
+    <Parameter Name="codigoItem" Type="System.String" DbType="Char(20)" />
+    <Parameter Name="ObservacionesItem" Parameter="observacionesItem" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="ValorUnitarioItem" Parameter="valorUnitarioItem" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="PrecioVentaUnitarioItem" Parameter="precioVentaUnitarioItem" Type="System.Decimal" DbType="Decimal(12,2)" />
+    <Parameter Name="tipoImpuesto" Type="System.String" DbType="Char(7)" />
+    <Parameter Name="UMedida" Parameter="uMedida" Type="System.String" DbType="VarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGEV_FACTURA_VENTA_ELECTRONICA_DETALLE_LISTAR" Method="SGEV_FACTURA_VENTA_ELECTRONICA_DETALLE_LISTAR">
+    <Parameter Name="IdCabezera" Parameter="idCabezera" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGEV_FACTURA_VENTA_ELECTRONICA_DETALLE_LISTARResult">
+      <Column Name="IdItems" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdCabecera" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NumeroOrdenItem" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cantidad" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="unidadMedida" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="ValorVentaItem" Type="System.Decimal" DbType="Decimal(16,4)" CanBeNull="true" />
+      <Column Name="CodMotivoDescuentoItem" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FactorDescuentoItem" Type="System.Decimal" DbType="Decimal(16,4)" CanBeNull="true" />
+      <Column Name="DescuentoItem" Type="System.Decimal" DbType="Decimal(16,4)" CanBeNull="true" />
+      <Column Name="BaseDescuentotem" Type="System.Decimal" DbType="Decimal(16,4)" CanBeNull="true" />
+      <Column Name="CodMotivoCargoItem" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FactorCargoItem" Type="System.Decimal" DbType="Decimal(16,4)" CanBeNull="true" />
+      <Column Name="MontoCargoItem" Type="System.Decimal" DbType="Decimal(16,4)" CanBeNull="true" />
+      <Column Name="BaseCargoItem" Type="System.Decimal" DbType="Decimal(16,4)" CanBeNull="true" />
+      <Column Name="MontoTotalImpuestosItem" Type="System.Decimal" DbType="Decimal(16,4)" CanBeNull="true" />
+      <Column Name="MontoImpuestoIgvItem" Type="System.Decimal" DbType="Decimal(16,4)" CanBeNull="true" />
+      <Column Name="MontoAfectoImpuestoIgv" Type="System.Decimal" DbType="Decimal(16,4)" CanBeNull="true" />
+      <Column Name="PorcentajeIGVItem" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="MontoInafectoItem" Type="System.Decimal" DbType="Decimal(16,4)" CanBeNull="true" />
+      <Column Name="MontoImpuestoISCItem" Type="System.Decimal" DbType="Decimal(16,4)" CanBeNull="true" />
+      <Column Name="MontoAfectoImpuestoIsc" Type="System.Decimal" DbType="Decimal(16,4)" CanBeNull="true" />
+      <Column Name="PorcentajeISCtem" Type="System.Decimal" DbType="Decimal(16,4)" CanBeNull="true" />
+      <Column Name="MontoImpuestoIVAPtem" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="MontoAfectoImpuestoIVAPItem" Type="System.Decimal" DbType="Decimal(16,4)" CanBeNull="true" />
+      <Column Name="PorcentajeIVAPItem" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="codigoItem" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="ObservacionesItem" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="ValorUnitarioItem" Type="System.Decimal" DbType="Decimal(16,4)" CanBeNull="true" />
+      <Column Name="tipoImpuesto" Type="System.String" DbType="Char(7)" CanBeNull="true" />
+      <Column Name="PrecioVentaUnitarioItem" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+      <Column Name="UMedida" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SGE_NOTA_CREDITO_VENTA_INSERTAR" Method="SGE_NOTA_CREDITO_VENTA_INSERTAR">
+    <Parameter Name="ncrec_icod_credito" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ncrec_vnumero_credito" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="ncrec_sfecha_credito" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="cliec_icod_cliente" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ncrec_ianio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ncrec_vreferencia" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tablc_iid_tipo_nota_credito_venta" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tdodc_iid_correlativo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ncrec_vnumero_documento" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="ncrec_sfecha_documento" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="vendc_icod_vendedor" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ncrec_nmonto_neto" Type="System.Decimal" DbType="Decimal(16,4)" />
+    <Parameter Name="ncrec_npor_imp_igv" Type="System.Decimal" DbType="Decimal(6,2)" />
+    <Parameter Name="ncrec_nmonto_total" Type="System.Decimal" DbType="Decimal(16,4)" />
+    <Parameter Name="ncrec_iid_situacion_credito" Type="System.Int32" DbType="Int" />
+    <Parameter Name="almac_icod_almacen" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ncrec_tipo_cambio_fecha_doc_venta" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="ncrec_nmonto_iva" Type="System.Decimal" DbType="Decimal(16,4)" />
+    <Parameter Name="intUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="strPc" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="ncrec_nmonto_pagado" Type="System.Decimal" DbType="Decimal(16,2)" />
+    <Parameter Name="ncrec_icod_dxc" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ncrec_bincluye_igv" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ncrec_iclase_doc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ncrec_tipo_nota_credito" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ncrec_vmotivo_sunat" Type="System.String" DbType="VarChar(5)" />
+    <Parameter Name="ncrec_vdetalle" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="puvec_icod_punto_venta" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SGE_NOTA_CREDITO_VENTA_LISTAR" Method="SGE_NOTA_CREDITO_VENTA_LISTAR">
+    <Parameter Name="intEjercicio" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SGE_NOTA_CREDITO_VENTA_LISTARResult">
+      <Column Name="ncrec_icod_credito" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ncrec_vnumero_credito" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="ncrec_sfecha_credito" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="cliec_icod_cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ncrec_ianio" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ncrec_vreferencia" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="tdocc_icod_tipo_doc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_nota_credito_venta" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tdodc_iid_correlativo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ncrec_vnumero_documento" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="ncrec_sfecha_documento" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="vendc_icod_vendedor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tablc_iid_tipo_moneda" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ncrec_nmonto_neto" Type="System.Decimal" DbType="Decimal(16,4) NOT NULL" CanBeNull="false" />
+      <Column Name="ncrec_npor_imp_igv" Type="System.Decimal" DbType="Decimal(6,2) NOT NULL" CanBeNull="false" />
+      <Column Name="ncrec_nmonto_total" Type="System.Decimal" DbType="Decimal(16,4) NOT NULL" CanBeNull="false" />
+      <Column Name="ncrec_iid_situacion_credito" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="almac_icod_almacen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ncrec_tipo_cambio_fecha_doc_venta" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="ncrec_nmonto_pagado" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
+      <Column Name="ncrec_icod_dxc" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="strSituacion" Type="System.String" DbType="VarChar(14)" CanBeNull="true" />
+      <Column Name="strDesCliente" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="strRuc" Type="System.String" DbType="Char(11)" CanBeNull="true" />
+      <Column Name="DireccionCliente" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="strTipoDoc" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="strMoneda" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="ncrec_bincluye_igv" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ubicc_icod_ubicacion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ncrec_iclase_doc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StrClaseDocumento" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ncrec_tipo_nota_credito" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ncrec_vmotivo_sunat" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="ncrec_vdetalle" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="puvec_icod_punto_venta" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </ElementType>
   </Function>
 </Database>

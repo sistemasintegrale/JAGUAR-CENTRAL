@@ -254,7 +254,8 @@ namespace SGE.DataAccess
                             doxcc_tipo_comprobante_referencia = Convert.ToInt32(item.doxcc_tipo_comprobante_referencia),
                             doxcc_num_serie_referencia = item.doxcc_num_serie_referencia,
                             doxcc_num_comprobante_referencia = item.doxcc_num_comprobante_referencia,
-                            doxcc_sfecha_emision_referencia = item.doxcc_sfecha_emision_referencia
+                            doxcc_sfecha_emision_referencia = item.doxcc_sfecha_emision_referencia,
+                            puvec_icod_punto_venta = Convert.ToInt32(item.puvec_icod_punto_venta)
                         });
                     }
                 }
@@ -1344,7 +1345,8 @@ namespace SGE.DataAccess
                             doxcc_tipo_comprobante_referencia = Convert.ToInt32(item.doxcc_tipo_comprobante_referencia),
                             doxcc_num_serie_referencia = item.doxcc_num_serie_referencia,
                             doxcc_num_comprobante_referencia = item.doxcc_num_comprobante_referencia,
-                            doxcc_sfecha_emision_referencia = item.doxcc_sfecha_emision_referencia
+                            doxcc_sfecha_emision_referencia = item.doxcc_sfecha_emision_referencia,
+                            puvec_icod_punto_venta = Convert.ToInt32(item.puvec_icod_punto_venta)
                         });
                     }
                 }

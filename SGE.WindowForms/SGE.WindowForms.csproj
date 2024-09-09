@@ -27,7 +27,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <UpdateUrl>\\DESKTOP-Q038JB4\Publish\</UpdateUrl>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>523</ApplicationRevision>
+    <ApplicationRevision>524</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>

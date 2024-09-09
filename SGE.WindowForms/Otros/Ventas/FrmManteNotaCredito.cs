@@ -316,7 +316,8 @@ namespace SGE.WindowForms.Otros.Ventas
                 oBe.ncrec_tipo_nota_credito = 1;//NOTA DE CREDITO COMERCIAL
                 oBe.ncrec_vmotivo_sunat = lkpMotivoSUNAT.EditValue.ToString();
                 oBe.ncrec_vdetalle = txtDetalle.Text;
-
+                oBe.puvec_icod_punto_venta = 2; //PVT CENTRAL
+                oBe.strDesCliente = bteCliente.Text;
                 #region Facturacion Electronica
                 oBe.idDocumento = oBe.ncrec_vnumero_credito.Remove(4, 8) + '-' + oBe.ncrec_vnumero_credito.Remove(0, 4);
                 oBe.fechaEmision = oBe.ncrec_sfecha_credito.ToString("dd/MM/yyyy hh:mm tt");

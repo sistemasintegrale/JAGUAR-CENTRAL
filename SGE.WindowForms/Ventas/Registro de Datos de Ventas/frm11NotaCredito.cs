@@ -32,7 +32,7 @@ namespace SGE.WindowForms.Ventas.Registro_de_Datos_de_Ventas
         private void cargar()
         {
 
-            lstNotaCredito = new BVentas().listarNotaCreditoClienteCab(Parametros.intEjercicio).Where(OB => OB.ncrec_tipo_nota_credito == 1).ToList();
+            lstNotaCredito = new BVentas().listarNotaCreditoClienteCab(Parametros.intEjercicio).Where(OB => OB.ncrec_tipo_nota_credito == 1 && OB.puvec_icod_punto_venta == 2 ).ToList(); //PVT CENTRAL
             grdNotaCredito.DataSource = lstNotaCredito;
         }
 

@@ -1158,7 +1158,6 @@ namespace SGE.DataAccess
                             NumeroOrdenItem = item.favd_iitem_factura,
                             cantidad = Convert.ToDecimal(item.favd_ncantidad_total_producto),
                             unidadMedida = item.CodigoSUNAT,
-                          
                             ValorVentaItem = Math.Round((Convert.ToDecimal(item.favd_nprecio_total_item) - Convert.ToDecimal(item.favd_nmonto_impuesto_item)), 2),
                             CodMotivoDescuentoItem = 0,
                             FactorDescuentoItem = 0,
@@ -2811,8 +2810,8 @@ namespace SGE.DataAccess
                             ObservacionesItem = item.ObservacionesItem,
                             ValorUnitarioItem = Convert.ToDecimal(item.ValorUnitarioItem),
                             PrecioVentaUnitarioItem = Convert.ToDecimal(item.PrecioVentaUnitarioItem),
-                            tipoImpuesto = item.tipoImpuesto
-
+                            tipoImpuesto = item.tipoImpuesto,
+                            UMedida = item.UMedida
                         });
                     }
                 }
@@ -2861,7 +2860,8 @@ namespace SGE.DataAccess
                                 oBe.ObservacionesItem,
                                 oBe.ValorUnitarioItem,
                                 oBe.PrecioVentaUnitarioItem,
-                                oBe.tipoImpuesto
+                                oBe.tipoImpuesto,
+                                oBe.UMedida
 
                             );
                 }
@@ -2911,7 +2911,8 @@ namespace SGE.DataAccess
                                 oBe.ObservacionesItem,
                                 oBe.ValorUnitarioItem,
                                 oBe.PrecioVentaUnitarioItem,
-                                oBe.tipoImpuesto
+                                oBe.tipoImpuesto,
+                                oBe.UMedida
                                          );
                 }
                 return Convert.ToInt32(intIcod);
@@ -2960,7 +2961,8 @@ namespace SGE.DataAccess
                                 oBe.ObservacionesItem,
                                 oBe.ValorUnitarioItem,
                                 oBe.PrecioVentaUnitarioItem,
-                                oBe.tipoImpuesto
+                                oBe.tipoImpuesto,
+                                oBe.UMedida
 
                             );
                 }
@@ -3012,7 +3014,8 @@ namespace SGE.DataAccess
                                 oBe.ObservacionesItem,
                                 oBe.ValorUnitarioItem,
                                 oBe.PrecioVentaUnitarioItem,
-                                oBe.tipoImpuesto
+                                oBe.tipoImpuesto,
+                                oBe.UMedida
 
                             );
                 }
@@ -3062,7 +3065,8 @@ namespace SGE.DataAccess
                                 oBe.ObservacionesItem,
                                 oBe.ValorUnitarioItem,
                                 oBe.PrecioVentaUnitarioItem,
-                                oBe.tipoImpuesto
+                                oBe.tipoImpuesto,
+                                oBe.UMedida
                                          );
                 }
                 return Convert.ToInt32(intIcod);
@@ -5330,7 +5334,8 @@ namespace SGE.DataAccess
                             ncrec_tipo_nota_credito = Convert.ToInt32(item.ncrec_tipo_nota_credito),
                             ncrec_vmotivo_sunat = item.ncrec_vmotivo_sunat,
                             doc_icod_documento = item.ncrec_icod_credito,
-                            ncrec_vdetalle = item.ncrec_vdetalle
+                            ncrec_vdetalle = item.ncrec_vdetalle,
+                            puvec_icod_punto_venta = Convert.ToInt32(item.puvec_icod_punto_venta)
                         });
                     }
                 }
@@ -5434,7 +5439,8 @@ namespace SGE.DataAccess
                         ob.ncrec_iclase_doc,
                         ob.ncrec_tipo_nota_credito,
                         ob.ncrec_vmotivo_sunat,
-                        ob.ncrec_vdetalle);
+                        ob.ncrec_vdetalle,
+                        ob.puvec_icod_punto_venta);
                 }
                 return Convert.ToInt32(id_retencion);
             }
